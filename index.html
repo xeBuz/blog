@@ -1,0 +1,133 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jesús Roldán</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <script src="bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body> 
+
+    <nav class="top-bar" data-topbar> 
+      <ul class="title-area"> 
+        <li class="name"> 
+          <h1><a class="page" href="#home">Home</a></h1>
+        </li> 
+        <li class="toggle-topbar menu-icon">
+          <a href="#"><span>Menu</span></a>
+        </li> 
+      </ul> 
+
+      <section class="top-bar-section">
+        <!-- Left Nav Section --> 
+        <ul class="left"> 
+          <li><a href="http://blog.jesusroldan.com">Blog</a></li> 
+          <li class="has-dropdown"> 
+            <a href="#">Development</a> 
+            <ul class="dropdown"> 
+              <li><a class="page" href="#pacman">pacman-progressbar</a></li> 
+              <li><a class="page" href="#doge">jQuery Doge</a></li> 
+            </ul> 
+          </li>           
+        </ul> 
+        
+        <!-- Right Nav Section --> 
+        <ul class="right"> 
+          <li class="active">
+            <a href="#" data-reveal-id="reveal-contact">Contact</a>
+          </li> 
+        </ul>         
+      </section> 
+    </nav>
+
+    <div class="container home">
+      <h1>Jesús Roldán</h1>
+      <h2>Front-end Developer</h2>
+      <p></p>
+
+      <ul class="social">
+        <a href="https://www.twitter.com/xeBuz" target="_blank"><li class="icon-twitter">Twitter</li></a>
+        <a href="https://www.facebook.com/JesusRoldan" target="_blank"><li class="icon-facebook">Facebook</li></a>
+        <a href="https://plus.google.com/u/0/+JesúsRoldán" target="_blank"><li class="icon-googleplus">Google+</li></a>
+        <a href="http://www.linkedin.com/pub/jes%C3%BAs-rold%C3%A1n/9/52a/39a" target="_blank"><li class="icon-linkedin">LinkedIn</li></a>
+        <a href="https://github.com/xeBuz" target="_blank"><li class="icon-github">GitHub</li></a>
+        <a href="http://8tracks.com/xebuz" target="_blank"><li class="icon-8tracks">8Tracks</li></a>
+        <a href="http://www.last.fm/user/xeBuz" target="_blank"><li class="icon-lastfm">Last.fm</li></a>
+        <a href="#" data-reveal-id="reveal-contact"><li class="icon-email">Youtube</li></a>
+        <a href="#" data-reveal-id="reveal-qr"><li class="icon-qr">QR Code</li></a>
+      </ul>
+    </div>
+
+    <div class="container pacman">
+      <h2>Pacman-Progressbar</h2>
+      <h5>A ProgressBar for Python, based on Arch Linux progressbar with "ILoveCandy" option enabled.</h5>
+      <h5>Licence Beerware/BSD</h5>
+      <h5>Get on <a href="https://pypi.python.org/pypi/pacmanprogressbar">pypi</a> - source code: <a href="https://github.com/xeBuz/pacman-progressbar">GitHub</a></h5>
+      <img src="http://blog.jesusroldan.com/wp-content/uploads/2012/10/animacion.gif" alt="pacman-progressbar">
+    </div>
+
+    <div class="container doge">
+      <h2>jQuery Doge</h2>
+      <h5>jQuery plugin for display text like doge meme</h5>
+      <h5>Licence Beerware/BSD</h5>
+      <h5>Get on <a href="https://plugins.jquery.com/doge/">jQuery Plugins</a> - source code: <a href="https://github.com/xeBuz/jquery-doge">GitHub</a></h5>
+      
+      <h4>Try it!</h4>
+      <div class="switch round">
+        <input id="dogeOff" name="switch-z" type="radio">
+        <label for="dogeOff" onclick="">Off</label>
+
+        <input id="dogeOn" name="switch-z" type="radio">
+        <label for="dogeOn" onclick="">On</label>
+
+        <span></span>
+      </div>
+    </div>
+
+
+    <div id="reveal-contact" class="reveal-modal medium" data-reveal> 
+      <section class="section">
+        <h5 class="title"><a href="#contact">Send me an Email</a></h5>
+        <div class="content" data-slug="panel1">
+          <form action="" method="post" id="mail">
+            <div class="row collapse">
+              <div class="large-2 hide-for-small-only columns">
+                <label class="inline">Your Name</label>
+              </div>
+              <div class="large-10 columns">
+                <input id="yourName" placeholder="Jesús Roldán" type="text" required>
+              </div>
+            </div>
+            <div class="row collapse">
+              <div class="large-2 hide-for-small-only columns">
+                <label class="inline">Your Email</label>
+              </div>
+              <div class="large-10 columns">
+                <input id="yourEmail" placeholder="jesus.roldan@gmail.com" type="email" required>
+              </div>
+
+            </div>
+            <!--<label>Subject</label>-->
+            <textarea class="body" rows="6"></textarea>
+            <input class="radius button" type="button" value="send" id="submit" />
+            <!--<button type="submit" class="radius button">Submit</button>-->
+            <div id="msg"></div>
+          </form>
+        </div>
+      </section>
+
+      <a class="close-reveal-modal">X</a> 
+    </div>
+
+    <div id="reveal-qr" class="reveal-modal small" data-reveal> 
+      <a class="close-reveal-modal">X</a> 
+      <img id="qrcode" src="images/qrcode.png" alt="scan-me!">
+    <div>
+
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>    
+    <script src="js/doge.jquery.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
