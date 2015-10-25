@@ -1,5 +1,5 @@
 # Site settings
-baseurl = "http://xebuz.github.io/blog"
+baseurl = "http://xebuz.github.io/blog/"
 languageCode = "en-us"
 title = "xeBuz personal blog"
 theme = "hugo-cactus-theme"
