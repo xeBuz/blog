@@ -1,8 +1,17 @@
 # Site settings
 baseurl = "http://xebuz.github.io/blog"
 languageCode = "en-us"
-title = "Personal Blog"
+title = "xeBuz personal blog"
 theme = "hugo-cactus-theme"
+config = "config.toml"
+canonifyurls = true
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+# [permalinks]
+#     post = :year:month:title
 
 [params]
     name = "xeBuz"
@@ -29,7 +38,7 @@ theme = "hugo-cactus-theme"
     readMore = ""
     copyright = ""
     # Sharing options and author information in posts
-    aboutAuthor = "I'm an enthusiastic gopher."
+    aboutAuthor = "lalalala"
     tweet = ""
     share = ""
     # 404 page

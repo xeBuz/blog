@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Test on Personal Blog</title>
+    <title>Test on xeBuz personal blog</title>
     <link>http://xebuz.github.io/blog/categories/test/</link>
-    <description>Recent content in Test on Personal Blog</description>
+    <description>Recent content in Test on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 29 Mar 2014 00:00:00 +0000</lastBuildDate>

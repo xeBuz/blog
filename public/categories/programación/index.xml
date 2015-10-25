@@ -1,140 +1,144 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Programación on Personal Blog</title>
-    <link>http://localhost:1313/blog/categories/programaci%C3%B3n/</link>
-    <description>Recent content in Programación on Personal Blog</description>
+    <title>Programación on xeBuz personal blog</title>
+    <link>http://xebuz.github.io/blog/categories/programaci%C3%B3n/</link>
+    <description>Recent content in Programación on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 05 Mar 2014 15:04:21 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/categories/programaci%C3%B3n/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://xebuz.github.io/blog/categories/programaci%C3%B3n/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Crazy little thing called Perl: Introducción al lenguaje</title>
-      <link>http://localhost:1313/blog/posts/crazy-little-thing-called-perl/</link>
+      <link>http://xebuz.github.io/blog/posts/crazy-little-thing-called-perl/</link>
       <pubDate>Wed, 05 Mar 2014 15:04:21 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/crazy-little-thing-called-perl/</guid>
+      <guid>http://xebuz.github.io/blog/posts/crazy-little-thing-called-perl/</guid>
       <description>&lt;p&gt;Perl está disponible para múltimples plataformas, pueden descargarlo desde &lt;a href=&#34;http://www.perl.org/get.html&#34;&gt;acá&lt;/a&gt; o desde el sistema de paquetes que utilicen. Para verificar si tienen instalado perl, en la terminal escriban &lt;em&gt;perl -v&lt;/em&gt;, si hay salida ya lo tienen instalado.&lt;/p&gt;
 
 &lt;p&gt;Para la instalación de librerías se utiliza &lt;a href=&#34;http://www.cpan.org/&#34;&gt;&lt;strong&gt;CPAN&lt;/strong&gt;&lt;/a&gt;, que es una colección de módulos libres para Perl. Pueden descargar este script o sino instalarlo desde los repositorios, por ejemplo, en un Linux basado en Debian basta correr:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;aptitude install cpanminus
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    aptitude install cpanminus
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Una vez instalado, para instalar módulos deben correr desde la consola el siguiente comando (teniendo en cuenta que el nombre del módulo es case-sensitive):&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;cpan install Modulo
+&lt;pre&gt;&lt;code&gt;    cpan install Modulo
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://www.tiraecol.net/modules/comic/cache/images/tiraecol-15.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Variables&lt;/strong&gt;
-Perl maneja tres tipos de variables:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Variables&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Perl maneja tres tipos de variables:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Scalar&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Array&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Hash&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Scalar&lt;/li&gt;
+&lt;li&gt;Array&lt;/li&gt;
+&lt;li&gt;Hash&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Scalar&lt;/strong&gt;
-Las variables escalares representan un valor simple. Los valores escalares pueden ser cadenas, enteros o números de coma flotante y se definen anteponiendo el signo &lt;strong&gt;$&lt;/strong&gt; al nombre de la variable.
-No hay necesidad de pre-declarar sus tipos de variables , Perl los convertirá automáticamente entre ellos según sea necesario.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Scalar&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;my $animal = &amp;quot;tortuga&amp;quot;;
-my $answer = 42;
+&lt;p&gt;Las variables escalares representan un valor simple. Los valores escalares pueden ser cadenas, enteros o números de coma flotante y se definen anteponiendo el signo &lt;strong&gt;$&lt;/strong&gt; al nombre de la variable.
+No hay necesidad de pre-declarar sus tipos de variables, Perl los convertirá automáticamente entre ellos según sea necesario.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    my $animal = &amp;quot;turtle&amp;quot;;
+    my $answer = 42;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;Array&lt;/strong&gt;
-Las variables de tipo Array representan una lista de valores. Se declaran anteponiendo el signo &lt;strong&gt;@&lt;/strong&gt; al nombre de la variable&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Array&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;my @animals = (&amp;quot;turtle&amp;quot;, &amp;quot;llama&amp;quot;, &amp;quot;cat&amp;quot;);
-my @numbers = (23, 42, 69);
-my @mixed   = (&amp;quot;whale&amp;quot;, 666, 1.23);
+&lt;p&gt;Las variables de tipo Array representan una lista de valores. Se declaran anteponiendo el signo &lt;strong&gt;@&lt;/strong&gt; al nombre de la variable&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    my @animals = (&amp;quot;turtle&amp;quot;, &amp;quot;llama&amp;quot;, &amp;quot;cat&amp;quot;);
+    my @numbers = (23, 42, 69);
+    my @mixed   = (&amp;quot;whale&amp;quot;, 666, 1.23);
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Los Arrays son indexados a cero. Se puede acceder a los valores de la siguiente manera:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;print $animals[0];              # imprime &amp;quot;turtle&amp;quot;. Se utiliza $ porque es un valor scalar
-print $animals[1];              # imprime &amp;quot;llama&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    print $animals[0];              # imprime &amp;quot;turtle&amp;quot;. Se utiliza $ porque es un valor scalar
+    print $animals[1];              # imprime &amp;quot;llama&amp;quot;
+``
 
-&lt;p&gt;La variable especial $#nombrearray nos indica el índice del último elemento.&lt;/p&gt;
+La variable especial $#nombrearray nos indica el índice del último elemento.
 
-&lt;pre&gt;&lt;code&gt;print $#mixed;                # imprime 2
-print $mixed[$#mixed];        # último elemento, imprime 1.23
+```perl
+    print $#mixed;                # imprime 2
+    print $mixed[$#mixed];        # último elemento, imprime 1.23
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Si utilizamos @mixed en contexto escalar, obtendremos el tamaño de nuestro Array:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$arrayLength = @mixed;
-print $arraylength;            #imprime 3
+&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    $arrayLength = @mixed;
+    print $arraylength;            #imprime 3
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Para obtener múltiples valores de nuestro Array:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;@animals[0,1];           # Devuelve (&amp;quot;turtle&amp;quot;, &amp;quot;llama&amp;quot;), @ porque devuelve un array;
-@animals[0..2];          # Devuelve (&amp;quot;turtle&amp;quot;, &amp;quot;llama&amp;quot;, &amp;quot;cat&amp;quot;);
-@animals[1..$#animals];  # Devuelve todo excepto el primer elemento
+&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    @animals[0,1];           # Devuelve (&amp;quot;turtle&amp;quot;, &amp;quot;llama&amp;quot;), @ porque devuelve un array;
+    @animals[0..2];          # Devuelve (&amp;quot;turtle&amp;quot;, &amp;quot;llama&amp;quot;, &amp;quot;cat&amp;quot;);
+    @animals[1..$#animals];  # Devuelve todo excepto el primer elemento
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;Hash&lt;/strong&gt;
-Un hash representa un conjunto de pares clave / valor. En realidad hash son tipo de Arrays, con la excepción de que el índice puede ser un número o una cadena. Están precedidos por el signo &lt;strong&gt;%&lt;/strong&gt; de la siguiente manera:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hash&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;my %fruta_color = (&amp;quot;manzana&amp;quot;, &amp;quot;rojo&amp;quot;, &amp;quot;banana&amp;quot;, &amp;quot;amarillo&amp;quot;);
+&lt;p&gt;Un hash representa un conjunto de pares clave / valor. En realidad hash son tipo de Arrays, con la excepción de que el índice puede ser un número o una cadena. Están precedidos por el signo &lt;strong&gt;%&lt;/strong&gt; de la siguiente manera:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    my %fruta_color = (&amp;quot;manzana&amp;quot;, &amp;quot;rojo&amp;quot;, &amp;quot;banana&amp;quot;, &amp;quot;amarillo&amp;quot;);
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Se pueden utilizar los espacios en blanco y el operador =&amp;gt; para dejarlo mas claro:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;my %fruta_color = (
-    manzana =&amp;gt; &amp;quot;red&amp;quot;,
-    banana =&amp;gt; &amp;quot;amarillo&amp;quot;,
-);
+&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    my %fruta_color = (
+        manzana =&amp;gt; &amp;quot;red&amp;quot;,
+        banana =&amp;gt; &amp;quot;amarillo&amp;quot;,
+    );
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Para obtener un elemento del hash:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$fruta_color{&amp;quot;manzana&amp;quot;}       # Devuelve &amp;quot;rojo&amp;quot;
+&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    $fruta_color{&amp;quot;manzana&amp;quot;}       # Devuelve &amp;quot;rojo&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Podemos obtener una lista con las claves o valores con las funciones predefinidas keys() y values():&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;my @frutas = keys(%fruta_color);
-my colores = values(%fruta_color);
+&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    my @frutas = keys(%fruta_color);
+    my colores = values(%fruta_color);
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;strong&gt;Alcance de las variables&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;En la sección anterior declaramos:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;my $animal = &amp;quot;tortuga&amp;quot;;
+&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    my $animal = &amp;quot;tortuga&amp;quot;;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;El modificador my no es necesario, también se puede usar:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$animal = &amp;quot;tortuga&amp;quot;;
+&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    $animal = &amp;quot;tortuga&amp;quot;;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Sin embargo, el uso anterior creará variables globales a través de su programa, que es mala práctica de programación. my crea variables con ámbito local. Las variables locales están disponibles en el ámbito del bloque (es decir, un grupo de estados rodeadas de llaves) en el que están definidos.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;my $x = &amp;quot;foo&amp;quot;;
-my $condicion = 1;
-if ($condicion) {
-    my $y = &amp;quot;bar&amp;quot;;
-    print $x;           # imprime &amp;quot;foo&amp;quot;
-    print $y;           # imprime &amp;quot;bar&amp;quot;
-}
-print $x;               # imprime &amp;quot;foo&amp;quot;
-print $y;               # no imprime nada ; $y no está en ese scope
+&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    my $x = &amp;quot;foo&amp;quot;;
+    my $condicion = 1;
+    if ($condicion) {
+        my $y = &amp;quot;bar&amp;quot;;
+        print $x;           # imprime &amp;quot;foo&amp;quot;
+        print $y;           # imprime &amp;quot;bar&amp;quot;
+    }
+    print $x;               # imprime &amp;quot;foo&amp;quot;
+    print $y;               # no imprime nada ; $y no está en ese scope
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;Tabla de conversiones de tipos&lt;/strong&gt;
-        &lt;table &gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tabla de conversiones de tipos&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;            &amp;lt;tr &amp;gt;
+&lt;pre&gt;&lt;code&gt;    &amp;lt;table &amp;gt;
+
+            &amp;lt;tr &amp;gt;
                  (1,2,3) [1,2,3] {a=&amp;gt;x} (a=&amp;gt;1) &amp;quot;pepe&amp;quot;
             &amp;lt;/tr&amp;gt; 
 
@@ -359,401 +363,6 @@ done_testing()
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;em&gt;Próximo post: Expresiones regulares en Perl. O sea: Perl.&lt;/em&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>jQuery: Selectores y Traversing</title>
-      <link>http://localhost:1313/blog/posts/jquery-selectores-y-traversing/</link>
-      <pubDate>Wed, 26 Feb 2014 15:56:32 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/jquery-selectores-y-traversing/</guid>
-      <description>&lt;p&gt;Voy a poner esto acá, haciendo las veces de ayudamemoria. Además para el que no sepa, siempre viene bien tener un listado e investigarlos.
-Selectores/Traversing (que no encontré una traducción buena) en jQuery.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Selectores básicos&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  $(&amp;quot;#idName&amp;quot;)          // Por id
-  $(&amp;quot;.className&amp;quot;)       // Por clase
-
-  $(document)           // DOM (Document Object Model)
-  $(window)             // DOM + imágenes + iframes
-
-  $(&amp;quot;*&amp;quot;)                // todos los elementos
-  $(&amp;quot;div.title&amp;quot;)        // &amp;lt;div class=&amp;quot;title&amp;quot;&amp;gt; &amp;lt;/div&amp;gt;
-  $(&amp;quot;div:first&amp;quot;)        // Primer div
-
-  $(&amp;quot;article h1&amp;quot;)       // Todos los h1 dentro de article
-  $(&amp;quot;article &amp;gt; h1&amp;quot;)     // Todos los h1 hijos directo de article
-
-  $(&amp;quot;[href]&amp;quot;)           // Todos los elementos que tengan href
-  $(&amp;quot;li:nth-child(n)&amp;quot;)  // El elmento n - *cuenta desde 1*
-
-  $(&amp;quot;tr:even&amp;quot;)          // TableRows pares  
-  $(&amp;quot;p:hidden&amp;quot;)         // Todos los &amp;lt;p&amp;gt; ocultos (con .hide())
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Selectores &amp;ldquo;avanzados&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  $(&amp;quot;:input&amp;quot;)           // Todos los inputs
-  $(&amp;quot;:text&amp;quot;)                 // Todos los elementos type=&amp;quot;text&amp;quot;
-  $(&amp;quot;:checked&amp;quot;)              // Todos los elementos chequeados
-  $(&amp;quot;:focus&amp;quot;)                // Todos los elementos que tengan foco
-
-  $(&amp;quot;[href=&#39;index.html&#39;]&amp;quot;)   // href que sean igual a index.html
-  $(&amp;quot;[href!=&#39;index.html&#39;]&amp;quot;)  // href que no sean igual a &amp;quot;index.html&amp;quot;
-  $(&amp;quot;[href$=&#39;.html&#39;]&amp;quot;)       // href que terminen en &amp;quot;.html&amp;quot;
-  $(&amp;quot;[href^=&#39;https://&#39;]&amp;quot;)    // href que empiezen en &amp;quot;https://&amp;quot;
-  $(&amp;quot;[href*=&#39;cuenta&#39;]&amp;quot;)      // href que contengan &amp;quot;cuenta&amp;quot;
-
-  $(&amp;quot;#nav ul li:first-child&amp;quot;)   // Primer li dentro de un/los ul que estén dentro de #nav
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;**Traversing **&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  $(&amp;quot;#nav ul:first li:eq(2)&amp;quot;)   // 3er li, dentro del 1er ul que esté en #nav *inicia en 0*
-  $(&amp;quot;#nav ul:eq(0) li:eq(-1)&amp;quot;)  // Último li, dentro del 1er ul que esté en #nav
-  $(&amp;quot;#nav ul li:gt(2)&amp;quot;)         // Los li que tengan un index mayor a 2
-  $(&amp;quot;#nav ul li:lt(2)&amp;quot;)         // Los li que tengan un index menor a 2
-
-  $(&amp;quot;#post&amp;quot;).not(&amp;quot;p&amp;quot;)           // Todos los elementos que no sean &amp;lt;p&amp;gt;
-  $(&amp;quot;#nav ul li&amp;quot;).not(&amp;quot;:even&amp;quot;)  // Todos los li que no sean pares
-  $(&amp;quot;#nav ul&amp;quot;).children(&amp;quot;:contains(&#39;Simulador&#39;)&amp;quot;)   // .children() busca todos los hijos del elemento, :contains() filtra por texto
-  $(&amp;quot;#nav ul li p&amp;quot;).parent(&amp;quot;.active&amp;quot;) // Selecciona el li que tenga un p activo
-
-  $( &amp;quot;#nav ul li&amp;quot; ).each(function( index ) { 
-      console.log( index + &amp;quot;: &amp;quot; + $( this ).text() );
-  });
-
-  if ( $(&amp;quot;#nav&amp;quot;).is(&amp;quot;div&amp;quot;) ) { ... }    
-
-  // Otras opciones:
-  // .end() .find() .first() .last() .has() .next() .nextAll() .prev() .prevAll() ...
-  // https://api.jquery.com/category/traversing/
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>jQuery Doge - such plugin</title>
-      <link>http://localhost:1313/blog/posts/jquery-doge-such-plugin/</link>
-      <pubDate>Mon, 23 Dec 2013 14:31:40 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/jquery-doge-such-plugin/</guid>
-      <description>&lt;p&gt;Hace unos días había liberado un plugin de jQuery bastante tonto, y ahora hice un update del mismo con unos cuantos bugs corregidos y además ahora pemite parametrizarlo, así pasa a estar un poco mas usable de lo que estaba antes.
-Es mi primer plugin así que quizás no está tan optimizado&amp;hellip; aunque considero que no es tan inestable como pensé que podía quedar :)&lt;/p&gt;
-
-&lt;p&gt;Pueden descargarlo &lt;a href=&#34;https://github.com/xeBuz/jquery-doge&#34;&gt;desde GitHub&lt;/a&gt; o ver un ejemplo del funcionamiento &lt;a href=&#34;http://jesusroldan.com/doge/demo.html&#34;&gt;desde esta demo&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;El uso básico es el siguiente, solo deben pasarle un listado de palabras a mostrar, ya incluye algunas por defecto (wow, so doge y asi):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$(document).ready( function() {
-   // Create an array with some words
-   $(&#39;body&#39;).doge({ 
-       wordList : [&amp;quot;such page&amp;quot;, &amp;quot;lorem impsum&amp;quot;, &amp;quot;so cool&amp;quot;, &amp;quot;much jquery&amp;quot;, &amp;quot;kitten&amp;quot;, &amp;quot;such demo&amp;quot;, &amp;quot;Kitten Ipsum&amp;quot;]
-   });
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;También se puede parametrizar un poco, con estas opciones:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$(document).ready( function() {
-   $(&#39;body&#39;).doge({ 
-       wordList : [&amp;quot;such page&amp;quot;, &amp;quot;lorem impsum&amp;quot;, &amp;quot;so cool&amp;quot;, &amp;quot;much jquery&amp;quot;, &amp;quot;text&amp;quot;, &amp;quot;such demo&amp;quot;, &amp;quot;Kitten Ipsum&amp;quot;],
-       showDoge : true,
-       fontSize : &amp;quot;2em&amp;quot;,
-       fontBorder: true,
-       dogeImage : &amp;quot;doge.png&amp;quot;,
-       colours : [&amp;quot;red&amp;quot;, &amp;quot;green&amp;quot;, &amp;quot;orange&amp;quot;, &amp;quot;violet&amp;quot;, &amp;quot;aqua&amp;quot;, &amp;quot;yellow&amp;quot;, &amp;quot;slateblue&amp;quot;, &amp;quot;purple&amp;quot;, &amp;quot;pink&amp;quot;, &amp;quot;lime&amp;quot;, &amp;quot;fuchsia&amp;quot;, &amp;quot;gold&amp;quot;, &amp;quot;indigo&amp;quot;],
-       textDuration: 1200,
-       textRespawn: 1000,       
-   });
-});
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Barra de progreso de Arch Linux para Python</title>
-      <link>http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/</link>
-      <pubDate>Sun, 21 Oct 2012 20:49:21 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/</guid>
-      <description>&lt;p&gt;Hace unos días me puse a &lt;em&gt;portar&lt;/em&gt; la barra de progreso que tiene el sistema de paquetes de &lt;a href=&#34;http://blog.jesusroldan.com/2011/12/28/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/&#34;&gt;&lt;strong&gt;Arch Linux&lt;/strong&gt;&lt;/a&gt; (activando la opción &lt;strong&gt;ILoveCandy&lt;/strong&gt;) a Python &lt;del&gt;3&lt;/del&gt; 3.X y 2.7. De momento está en fase de prueba, pero es dentro de todo funcional, prometo ir actualizándola cuando pueda.&lt;/p&gt;
-
-&lt;p&gt;Para poder instalarlo, pueden bajarse los fuentes &lt;a href=&#34;https://github.com/xeBuz/pacman-progressbar&#34;&gt;desde &lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt; (es licencia Beer-ware, una adaptación de BSD) o mejor aún directamente desde PyPi:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo pip install pacmanprogressbar
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;La utilización es la siguiente (proximamente voy a hacer que se pueda iterar directamente):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/usr/bin/env python
-import time
-from pacmanprogressbar import Pacman
-
-if __name__ == &amp;quot;__main__&amp;quot;:
-    p = Pacman(end=100)
-
-    for x in range(p.len):
-        p.update()
-        time.sleep(.2)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Una vez instanciada la clase, tiene dos métodos públicos:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;update([value])&lt;/strong&gt;, actualiza el progreso sumándole el valor del parámetro, por defecto suma 1.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;progress(value)&lt;/strong&gt;, en vez de sumarizar, se le pasa directamente el valor del progreso.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;La salida en consola sería más o menos como esta:
-&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/10/animacion.gif&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/10/animacion.gif&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Script para grabar la consola en un .gif animado</title>
-      <link>http://localhost:1313/blog/posts/script-para-grabar-la-consola-en-un-gif-animado/</link>
-      <pubDate>Thu, 18 Oct 2012 02:03:52 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/script-para-grabar-la-consola-en-un-gif-animado/</guid>
-      <description>&lt;p&gt;Hoy me surgió una necesidad, que me pareció bastante simple pero no encontré herramientas simples que me lo solucionaran. Les dejo este script, que graba un gif de la consola durante X segundos (idea de @shinax y @rootmyword). Ese valor se lo pasamos por parámetro (no lo valido ni tiene default, porque la vida es demasiado corta para controlarlo) . Hay que correr el script con un &amp;amp; al final de la línea, asi pasa a correr en background y podemos usar la consola.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/bin/bash
-clear
-mkdir temp_gif
-
-segs=`expr $1 \* 5`
-
-for (( i = 1; i &amp;lt;= $segs ; i++ ));
-do
-    printf -v number &amp;quot;%06d&amp;quot; $i
-    import -window $WINDOWID temp_gif/$number.gif 
-    sleep 0.2
-done
-
-convert -delay 20 -loop 0 temp_gif/*.gif animacion.gif
-
-rm -R temp_gif
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;El código terminó siendo más simple de lo que pensaba, toda la magia la hace &lt;strong&gt;ImageMagick&lt;/strong&gt;. Explico por línea, porque la idea siempre es aprender como funciona:
-Línea 5. Toma el primer parámetro que le demos, lo multiplica por 5 porque cada imagen la saco cada 0.2 segundos ;)
-Línea 9. El &lt;strong&gt;printf&lt;/strong&gt; lo utilizo para formatear &amp;i;, neceito hacer un zero-padding, o sea, rellenar con ceros a la izquierda, para que después el conversor me tome el orden correcto. El parámetro -v indica que no lo imprima, sino que lo almacene en una variable.
-Línea 10. ImageMagick se encarga de guardar la imágen de la ventana que le digo, para $WINDOWSID creo que es necesario &lt;strong&gt;xorg-xwininfo&lt;/strong&gt;, ya lo tenía instalado.
-Línea 13. Toma todas las imágenes de la carpeta, las concatena con un delay de 0.2 segundos y hace un loop infinito.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>[Post-charla] Introducción al desarrollo web de videojuegos</title>
-      <link>http://localhost:1313/blog/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</link>
-      <pubDate>Fri, 07 Sep 2012 14:33:06 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/09/supermeatboy.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/09/supermeatboy.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Antes que nada gracias a todos los que fueron ayer a la &lt;a href=&#34;http://blog.jesusroldan.com/2012/09/05/charla-introduccion-al-desarrollo-web-de-videojuegos/&#34;&gt;charla de desarrollo de videojuegos&lt;/a&gt; y a la gente de &lt;a href=&#34;http://uni-code-group.blogspot.com.ar/&#34;&gt;&lt;strong&gt;UNI-CODE&lt;/strong&gt;&lt;/a&gt; por la invitación. Les dejo algunos links que había prometido o temas que quedaron en el aire. Cualquier cosa avisen.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Los slides están &lt;a href=&#34;http://jesusroldan.com/Charlas/Crafty/crafty.html&#34;&gt;online acá&lt;/a&gt;, es recomendable verlo a pantalla completa (espero que el touchpad no los trollée como a mi).&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;El código fuente de &lt;a href=&#34;https://github.com/xeBuz/Charlas/tree/master/Crafty%20-%20Framework%20para%20videojuegos&#34;&gt;los slides está en GitHub&lt;/a&gt;. Usé &lt;a href=&#34;https://github.com/cykod/CoderDeck&#34;&gt;CoderDeck&lt;/a&gt; porque me permitía correr código JS y modificarlo mientras daba la charla.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Esta es la &lt;a href=&#34;http://craftyjs.com/api/&#34;&gt;documentación de Crafty&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Los componente extras de Crafty se pueden ver &lt;a href=&#34;http://craftycomponents.com/&#34;&gt;en este sitio&lt;/a&gt;. Inlcuso ahí está &lt;a href=&#34;http://craftycomponents.com/boilerplate&#34;&gt;Craftyboilerplate&lt;/a&gt; y &lt;a href=&#34;http://flexpi.com/&#34;&gt;Flexpi&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://leo-koppelkamm.de/polyCreator/&#34;&gt;Este sitio tiene el creador de polígonos&lt;/a&gt;, porque hacerlos a mano es muy denso.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;En un momento se comentó de un grupo de gente que se juntaba cada tanto pero nadie tenía demasiados datos, eran de &lt;a href=&#34;http://www.indiegamedev.org/&#34;&gt;IndieGameDev&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Vayan preparándose para la &lt;a href=&#34;http://gamejamcordoba.com/&#34;&gt;GlobalGameJam&lt;/a&gt; ;)&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/09/Logo_Uni-Code.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/09/Logo_Uni-Code-150x150.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>[Charla] Introducción al desarrollo web de videojuegos</title>
-      <link>http://localhost:1313/blog/posts/charla-introduccion-al-desarrollo-web-de-videojuegos/</link>
-      <pubDate>Wed, 05 Sep 2012 12:54:41 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/charla-introduccion-al-desarrollo-web-de-videojuegos/</guid>
-      <description>&lt;p&gt;El jueves 6 a las 19hs voy a estar en la UTN de Córdoba para dar una charla sobre desarrollo de videojuegos para navegadores (en HTML5, todos sabemos que Flash es malvado) invitado por la gente de &lt;a href=&#34;http://uni-code-group.blogspot.com.ar/&#34;&gt;&lt;strong&gt;UNI-CODE&lt;/strong&gt;&lt;/a&gt;, un grupo de estudiantes que se encarga de divulgación de tecnología libre de humo.&lt;/p&gt;
-
-&lt;p&gt;La charla es abierta para todos y está de más decir que es gratis, va a ser muy introductoria con algunos conceptos básicos. También se va a mostrar un framework, &lt;a href=&#34;http://craftyjs.com/&#34;&gt;&lt;strong&gt;Crafty&lt;/strong&gt;&lt;/a&gt;, para simplificar el desarrollo. Si bien está pensada para programadores, la idea es juntar gente con ganas, quien sabe, puede surgir algun proyecto entre las personas que asistan. Las ganas de muchos están, falta organizarnos.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/09/Flyer-6-9-12.jpg&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/09/Flyer-6-9-12-353x500.jpg&#34; alt=&#34;Desarrollo de videojuegos&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Script para generar playlists dinámicas en MPD </title>
-      <link>http://localhost:1313/blog/posts/script-para-generar-playlists-dinamicas-en-mpd/</link>
-      <pubDate>Fri, 10 Aug 2012 13:55:24 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/script-para-generar-playlists-dinamicas-en-mpd/</guid>
-      <description>&lt;p&gt;Revisando scripts viejos, me encontré con este que quizás a alguno le puede servir. La idea es ir generando dinámicamente la lista de reproducción de un server &lt;a href=&#34;http://mpd.wikia.com/&#34;&gt;MPD&lt;/a&gt; usando la &lt;a href=&#34;http://www.last.fm/api&#34;&gt;API&lt;/a&gt; de &lt;a href=&#34;http://www.last.fm/user/xeBuz&#34;&gt;Last.fm&lt;/a&gt; para encontrar artistas similares en el disco.
-Si bien ya hay clientes que tienen esta funcionalidad, como &lt;a href=&#34;http://mpd.wikia.com/wiki/Client:Ario&#34;&gt;Ario&lt;/a&gt;, suelo conectarme por SSH al server y me resulta cómodo correr el script este cuando no se que escuchar.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-import os
-import random
-from mpd import (MPDClient, CommandError)
-from audioscrobbler import AudioScrobblerQuery
-
-&amp;quot;&amp;quot;&amp;quot; MPD &amp;quot;&amp;quot;&amp;quot;
-mpd_host = &#39;localhost&#39;
-mpd_port = &#39;6600&#39;
-mpd_connection = {&#39;host&#39;: mpd_host, &#39;port&#39;: mpd_port}
-client = MPDClient()
-
-COUNT_SONGS = 5
-
-def mpd_connect():
-    try:
-        client.connect(**mpd_connection)
-    except SocketError:
-        return False
-    return True
-
-
-def main():
-    if not mpd_connect():
-        sys.exit(1)
-
-    # Meh, no se si se hace esto, pero bueh
-    recommended_artists = []
-    recommended_songs = []
-
-    # Obtengo la cancion que esta sonando en este momento
-    current = client.currentsong()
-
-    # Saco sólo el artista del diccionario que me devuelve current
-    current_artist = AudioScrobblerQuery(artist=current[&#39;artist&#39;])
-
-    # En base a todos los artistas similares, me fijo cuales tengo en el
-    # server MPD, y los almaceno para usarlos despues.
-    for artist in current_artist.similar():
-        if float(client.count(&amp;quot;artist&amp;quot;, artist.name)[&#39;songs&#39;]) &amp;gt; 0:
-            recommended_artists.append(artist.name)
-
-
-    # Podria hacerlo mas efectivo, pero la idea es hacerlo lo mas random que
-    # pueda, asi que desordeno la lista de similares, que siempre viene ya
-    # ordenada por compatibilidad del current_artist
-    random.shuffle(recommended_artists)
-
-    while len(recommended_songs) &amp;lt; COUNT_SONGS:
-        artist = random.choice(recommended_artists)
-        recommended_songs.append(
-                    random.choice(client.search(&#39;artist&#39;, artist)))
-
-    for song in recommended_songs:
-        print song[&amp;quot;artist&amp;quot;], &amp;quot;-&amp;quot;, song[&amp;quot;title&amp;quot;]
-        client.add(song[&amp;quot;file&amp;quot;])
-
-if __name__ == &#39;__main__&#39;:
-    main()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Descarga desde aca: &lt;a href=&#34;https://gist.github.com/1100627&#34;&gt;GIST&lt;/a&gt;, seguramente la iré modificando, la idea es dejarla corriendo como un servicio.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Un &#34;bot&#34; de Twitter, con Python en un par de minutos</title>
-      <link>http://localhost:1313/blog/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/</link>
-      <pubDate>Wed, 04 Jul 2012 18:40:32 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/</guid>
-      <description>&lt;blockquote&gt;Hace falta un bot que busque los tweets de Foursquare y responda &#34;WHO CARES?!&#34;
-
-— Commander Shepard (@MissFillys) [July 3, 2012](https://twitter.com/MissFillys/status/220272671894671360)&lt;/blockquote&gt;
-
-&lt;p&gt;Todo comenzó con ese tweet de @MissFillys y cómo estaba aburrido lo intenté hacer. Ante mi sorpresa fué mas simple de lo que pensaba. Primero deben registrar la aplicación en el &lt;a href=&#34;https://dev.twitter.com/apps&#34;&gt;área de desarrollo de Twitter&lt;/a&gt;, particularmente usé una cuenta nueva, porque seguro lo reportan como spam o algún tipo de violación a las políticas de Twitter y no quería que caiga mi cuenta también. Para interactuar con Twitter desde Python usé &lt;strong&gt;&lt;a href=&#34;https://github.com/tweepy/tweepy&#34;&gt;tweepy&lt;/a&gt;&lt;/strong&gt;, una librería bastante completa, y sobre todo, muy simple de usar&lt;/p&gt;
-
-&lt;p&gt;Esto es lo necesario para conectarse, los datos de Costumer_Key y Access_Key los sacan cuando registran la aplicación. Bastante simple, con este código ya podemos interactuar con la API&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/usr/bin/python
-# -*- coding: utf-8 -*-
-
-import tweepy
-
-#Twitter information
-CONSUMER_KEY = &amp;quot;AsdAsdDsa&amp;quot;
-CONSUMER_SECRET=&amp;quot;QwertrQWEREwtr&amp;quot;
-ACCESS_KEY=&amp;quot;Asdasd-qeq123123123&amp;quot;
-ACCESS_SECRET=&amp;quot;asdasd342-123213123wqeqweqw&amp;quot;
-
-auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
-auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
-API = tweepy.API(auth)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Para este caso, lo que hago es buscar en la public timeline. Como la librería no tiene implementada la búsqueda por source, no queda otra que traer los 20 resultados y validar si alguno viene desde desde Foursquare. Es un bucle bastante simple, en caso de que exista, se utiliza el método API.update_status() con el username, in_reply_to y algún texto que querramos ponerle.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;...
-public = API.public_timeline()
-for tweet in public:
-    if tweet.source ==&#39;foursquare&#39;:
-    API.update_status( &amp;quot;@&amp;quot;+ tweet.author.screen_name + &amp;quot;WHO CARES?!&amp;quot; , tweet.id)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;También pueden usar búsquedas más específicas. Por ejemplo, &lt;em&gt;personas&lt;/em&gt; que hablan de Tinelli. &lt;a href=&#34;https://dev.twitter.com/docs/using-search&#34;&gt;Acá&lt;/a&gt; pueden sacar ayuda sobre cómo realizar búsquedas y &lt;a href=&#34;http://packages.python.org/tweepy/html/api.html&#34;&gt;acá&lt;/a&gt; pueden leer la documentación de la librería&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;...
-assholes = API.search(&#39;Tinelli&#39;)
-for tweet in assholes:
-    API.update_status( &amp;quot;@&amp;quot;+ tweet.author.screen_name + &amp;quot;Se te está pudriendo el cerebro...&amp;quot; , tweet.id)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;El código final quedó &lt;a href=&#34;https://gist.github.com/3044158&#34;&gt;más o menos así&lt;/a&gt;, sólo necesitan ponerlo en un loop donde quieran. Quizás les sirva y puedan hacer algo interesante, como por ejemplo @pepperMaido :D&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Descargar La Venganza Será Terrible, via Bash</title>
-      <link>http://localhost:1313/blog/posts/descargar-la-venganza-sera-terrible-via-bash/</link>
-      <pubDate>Thu, 21 Jul 2011 02:31:17 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/descargar-la-venganza-sera-terrible-via-bash/</guid>
-      <description>
-
-&lt;p&gt;Este es un pequeño script que descarga (via wget) el programa La Venganza Sera Terrible de &lt;a href=&#34;http://www.alejandrodolina.com.ar/&#34;&gt;Alejando Dolina&lt;/a&gt;; utilizando los archivos que genera a diario el sitio &lt;a href=&#34;http://venganzasdelpasado.com.ar/&#34;&gt;Venganzas del Pasado&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[sourcecode language=&amp;ldquo;bash&amp;rdquo;]
-#!/bin/bash&lt;/p&gt;
-
-&lt;h1 id=&#34;medio-rustico-pero-si-lo-ejecuto-hoy:e7fb311ab5e08ba834ea459d13c1892b&#34;&gt;Medio rustico, pero si lo ejecuto hoy..&lt;/h1&gt;
-
-&lt;h1 id=&#34;necesito-bajar-el-programa-de-anoche:e7fb311ab5e08ba834ea459d13c1892b&#34;&gt;necesito bajar el programa de anoche&lt;/h1&gt;
-
-&lt;p&gt;day=&lt;code&gt;date +%d &#39;--date=-1 day&#39;&lt;/code&gt;
-month=&lt;code&gt;date +%m &#39;--date=-1 day&#39;&lt;/code&gt;
-year=&lt;code&gt;date +%Y &#39;--date=-1 day&#39;&lt;/code&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;directorio-en-donde-se-guarda-el-archivo:e7fb311ab5e08ba834ea459d13c1892b&#34;&gt;Directorio en donde se guarda el archivo&lt;/h1&gt;
-
-&lt;p&gt;folder=&amp;ldquo;$HOME/Dolina/&amp;rdquo;$year&amp;rdquo;/&amp;ldquo;$month&amp;rdquo;/&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;#Si lo ejecuto un lunes o un domingo, no hay nada para bajar
-if [ &lt;code&gt;date +%u&lt;/code&gt; = 1 ] || [ &lt;code&gt;date +%u&lt;/code&gt; = 7 ]; then
-echo &amp;ldquo;Anoche no hubo programa&amp;rdquo;
-else
-wget -q -w 600 -P $folder &amp;ldquo;&lt;a href=&#34;http://venganzasdelpasado.com.ar/&amp;quot;$year&amp;quot;/lavenganza_&amp;quot;$year&amp;quot;-&amp;quot;$month&amp;quot;-&amp;quot;$day&amp;quot;.mp3&amp;quot;&#34;&gt;http://venganzasdelpasado.com.ar/&amp;quot;$year&amp;quot;/lavenganza_&amp;quot;$year&amp;quot;-&amp;quot;$month&amp;quot;-&amp;quot;$day&amp;quot;.mp3&amp;quot;&lt;/a&gt;
-fi
-[/sourcecode]&lt;/p&gt;
-
-&lt;p&gt;Yo lo tengo corriendo con crontab, a las 5 madrugada, cosa de que al levantarme ya lo haya bajado :)
-Así como esta deberia funcionar solo en Linux, estaba haciendo algo con wxWidgets para jugar un rato con eso, que deberia ser multiplataforma, despues (o sea, cuando funcione) lo subo.&lt;/p&gt;
-
-&lt;p&gt;Disponible en &lt;a href=&#34;https://gist.github.com/1079511&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

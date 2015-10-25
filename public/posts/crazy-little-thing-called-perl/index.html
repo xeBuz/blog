@@ -7,25 +7,25 @@
 		<meta name="author" content="xeBuz">
 		<meta name="description" content="Personal Website">
 		<meta name="generator" content="Hugo 0.14" />
-		<title>Crazy little thing called Perl: Introducción al lenguaje &middot; Personal Blog</title>
-		<link rel="shortcut icon" href="http://localhost:1313/blog/images/favicon.ico">
-		<link rel="stylesheet" href="http://localhost:1313/blog/css/style.css">
-		<link rel="stylesheet" href="http://localhost:1313/blog/css/highlight.css">
-		<link href="http://localhost:1313/blog/index.xml" rel="alternate" type="application/rss+xml" title="Personal Blog" />
+		<title>Crazy little thing called Perl: Introducción al lenguaje &middot; xeBuz personal blog</title>
+		<link rel="shortcut icon" href="http://xebuz.github.io/blogimages/favicon.ico">
+		<link rel="stylesheet" href="http://xebuz.github.io/blogcss/style.css">
+		<link rel="stylesheet" href="http://xebuz.github.io/blogcss/highlight.css">
+		<link href="http://xebuz.github.io/blogindex.xml" rel="alternate" type="application/rss+xml" title="xeBuz personal blog" />
 	</head>
     <body>
        <nav class="main-nav">
 	
 	
-		<a href='http://localhost:1313/blog/'> <span class="arrow">←</span>Home</a>
+		<a href='http://xebuz.github.io/blog'> <span class="arrow">←</span>Home</a>
 	
 
 	
-		<a href='http://localhost:1313/blog/about'>About</a>
+		<a href='http://xebuz.github.io/blogabout'>About</a>
 	
 
 	
-	<a class="cta" href="http://localhost:1313/blog/index.xml">Subscribe</a>
+	<a class="cta" href="http://xebuz.github.io/blogindex.xml">Subscribe</a>
 	
 </nav>
 
@@ -40,122 +40,126 @@
 
 <p>Para la instalación de librerías se utiliza <a href="http://www.cpan.org/"><strong>CPAN</strong></a>, que es una colección de módulos libres para Perl. Pueden descargar este script o sino instalarlo desde los repositorios, por ejemplo, en un Linux basado en Debian basta correr:</p>
 
-<pre><code>aptitude install cpanminus
+<pre><code class="language-bash">    aptitude install cpanminus
 </code></pre>
 
 <p>Una vez instalado, para instalar módulos deben correr desde la consola el siguiente comando (teniendo en cuenta que el nombre del módulo es case-sensitive):</p>
 
-<pre><code>cpan install Modulo
+<pre><code>    cpan install Modulo
 </code></pre>
 
 <p><img src="http://www.tiraecol.net/modules/comic/cache/images/tiraecol-15.png" alt="" /></p>
 
-<p><strong>Variables</strong>
-Perl maneja tres tipos de variables:</p>
+<p><strong>Variables</strong></p>
+
+<p>Perl maneja tres tipos de variables:</p>
 
 <ul>
-<li><p>Scalar</p></li>
-
-<li><p>Array</p></li>
-
-<li><p>Hash</p></li>
+<li>Scalar</li>
+<li>Array</li>
+<li>Hash</li>
 </ul>
 
-<p><strong>Scalar</strong>
-Las variables escalares representan un valor simple. Los valores escalares pueden ser cadenas, enteros o números de coma flotante y se definen anteponiendo el signo <strong>$</strong> al nombre de la variable.
-No hay necesidad de pre-declarar sus tipos de variables , Perl los convertirá automáticamente entre ellos según sea necesario.</p>
+<p><strong>Scalar</strong></p>
 
-<pre><code>my $animal = &quot;tortuga&quot;;
-my $answer = 42;
+<p>Las variables escalares representan un valor simple. Los valores escalares pueden ser cadenas, enteros o números de coma flotante y se definen anteponiendo el signo <strong>$</strong> al nombre de la variable.
+No hay necesidad de pre-declarar sus tipos de variables, Perl los convertirá automáticamente entre ellos según sea necesario.</p>
+
+<pre><code class="language-perl">    my $animal = &quot;turtle&quot;;
+    my $answer = 42;
 </code></pre>
 
-<p><strong>Array</strong>
-Las variables de tipo Array representan una lista de valores. Se declaran anteponiendo el signo <strong>@</strong> al nombre de la variable</p>
+<p><strong>Array</strong></p>
 
-<pre><code>my @animals = (&quot;turtle&quot;, &quot;llama&quot;, &quot;cat&quot;);
-my @numbers = (23, 42, 69);
-my @mixed   = (&quot;whale&quot;, 666, 1.23);
+<p>Las variables de tipo Array representan una lista de valores. Se declaran anteponiendo el signo <strong>@</strong> al nombre de la variable</p>
+
+<pre><code class="language-perl">    my @animals = (&quot;turtle&quot;, &quot;llama&quot;, &quot;cat&quot;);
+    my @numbers = (23, 42, 69);
+    my @mixed   = (&quot;whale&quot;, 666, 1.23);
 </code></pre>
 
 <p>Los Arrays son indexados a cero. Se puede acceder a los valores de la siguiente manera:</p>
 
-<pre><code>print $animals[0];              # imprime &quot;turtle&quot;. Se utiliza $ porque es un valor scalar
-print $animals[1];              # imprime &quot;llama&quot;
-</code></pre>
+<pre><code class="language-perl">    print $animals[0];              # imprime &quot;turtle&quot;. Se utiliza $ porque es un valor scalar
+    print $animals[1];              # imprime &quot;llama&quot;
+``
 
-<p>La variable especial $#nombrearray nos indica el índice del último elemento.</p>
+La variable especial $#nombrearray nos indica el índice del último elemento.
 
-<pre><code>print $#mixed;                # imprime 2
-print $mixed[$#mixed];        # último elemento, imprime 1.23
+```perl
+    print $#mixed;                # imprime 2
+    print $mixed[$#mixed];        # último elemento, imprime 1.23
 </code></pre>
 
 <p>Si utilizamos @mixed en contexto escalar, obtendremos el tamaño de nuestro Array:</p>
 
-<pre><code>$arrayLength = @mixed;
-print $arraylength;            #imprime 3
+<pre><code class="language-perl">    $arrayLength = @mixed;
+    print $arraylength;            #imprime 3
 </code></pre>
 
 <p>Para obtener múltiples valores de nuestro Array:</p>
 
-<pre><code>@animals[0,1];           # Devuelve (&quot;turtle&quot;, &quot;llama&quot;), @ porque devuelve un array;
-@animals[0..2];          # Devuelve (&quot;turtle&quot;, &quot;llama&quot;, &quot;cat&quot;);
-@animals[1..$#animals];  # Devuelve todo excepto el primer elemento
+<pre><code class="language-perl">    @animals[0,1];           # Devuelve (&quot;turtle&quot;, &quot;llama&quot;), @ porque devuelve un array;
+    @animals[0..2];          # Devuelve (&quot;turtle&quot;, &quot;llama&quot;, &quot;cat&quot;);
+    @animals[1..$#animals];  # Devuelve todo excepto el primer elemento
 </code></pre>
 
-<p><strong>Hash</strong>
-Un hash representa un conjunto de pares clave / valor. En realidad hash son tipo de Arrays, con la excepción de que el índice puede ser un número o una cadena. Están precedidos por el signo <strong>%</strong> de la siguiente manera:</p>
+<p><strong>Hash</strong></p>
 
-<pre><code>my %fruta_color = (&quot;manzana&quot;, &quot;rojo&quot;, &quot;banana&quot;, &quot;amarillo&quot;);
+<p>Un hash representa un conjunto de pares clave / valor. En realidad hash son tipo de Arrays, con la excepción de que el índice puede ser un número o una cadena. Están precedidos por el signo <strong>%</strong> de la siguiente manera:</p>
+
+<pre><code class="language-perl">    my %fruta_color = (&quot;manzana&quot;, &quot;rojo&quot;, &quot;banana&quot;, &quot;amarillo&quot;);
 </code></pre>
 
 <p>Se pueden utilizar los espacios en blanco y el operador =&gt; para dejarlo mas claro:</p>
 
-<pre><code>my %fruta_color = (
-    manzana =&gt; &quot;red&quot;,
-    banana =&gt; &quot;amarillo&quot;,
-);
+<pre><code class="language-perl">    my %fruta_color = (
+        manzana =&gt; &quot;red&quot;,
+        banana =&gt; &quot;amarillo&quot;,
+    );
 </code></pre>
 
 <p>Para obtener un elemento del hash:</p>
 
-<pre><code>$fruta_color{&quot;manzana&quot;}       # Devuelve &quot;rojo&quot;
+<pre><code class="language-perl">    $fruta_color{&quot;manzana&quot;}       # Devuelve &quot;rojo&quot;
 </code></pre>
 
 <p>Podemos obtener una lista con las claves o valores con las funciones predefinidas keys() y values():</p>
 
-<pre><code>my @frutas = keys(%fruta_color);
-my colores = values(%fruta_color);
+<pre><code class="language-perl">    my @frutas = keys(%fruta_color);
+    my colores = values(%fruta_color);
 </code></pre>
 
 <p><strong>Alcance de las variables</strong></p>
 
 <p>En la sección anterior declaramos:</p>
 
-<pre><code>my $animal = &quot;tortuga&quot;;
+<pre><code class="language-perl">    my $animal = &quot;tortuga&quot;;
 </code></pre>
 
 <p>El modificador my no es necesario, también se puede usar:</p>
 
-<pre><code>$animal = &quot;tortuga&quot;;
+<pre><code class="language-perl">    $animal = &quot;tortuga&quot;;
 </code></pre>
 
 <p>Sin embargo, el uso anterior creará variables globales a través de su programa, que es mala práctica de programación. my crea variables con ámbito local. Las variables locales están disponibles en el ámbito del bloque (es decir, un grupo de estados rodeadas de llaves) en el que están definidos.</p>
 
-<pre><code>my $x = &quot;foo&quot;;
-my $condicion = 1;
-if ($condicion) {
-    my $y = &quot;bar&quot;;
-    print $x;           # imprime &quot;foo&quot;
-    print $y;           # imprime &quot;bar&quot;
-}
-print $x;               # imprime &quot;foo&quot;
-print $y;               # no imprime nada ; $y no está en ese scope
+<pre><code class="language-perl">    my $x = &quot;foo&quot;;
+    my $condicion = 1;
+    if ($condicion) {
+        my $y = &quot;bar&quot;;
+        print $x;           # imprime &quot;foo&quot;
+        print $y;           # imprime &quot;bar&quot;
+    }
+    print $x;               # imprime &quot;foo&quot;
+    print $y;               # no imprime nada ; $y no está en ese scope
 </code></pre>
 
-<p><strong>Tabla de conversiones de tipos</strong>
-        <table ></p>
+<p><strong>Tabla de conversiones de tipos</strong></p>
 
-<pre><code>            &lt;tr &gt;
+<pre><code>    &lt;table &gt;
+
+            &lt;tr &gt;
                  (1,2,3) [1,2,3] {a=&gt;x} (a=&gt;1) &quot;pepe&quot;
             &lt;/tr&gt; 
 
@@ -385,14 +389,14 @@ done_testing()
             </article>
             <footer id="post-meta" class="clearfix">
                 <a href="https://twitter.com/xeBuz">
-                        <img class="avatar" src="http://localhost:1313/blog/images/avatar.png">
+                        <img class="avatar" src="http://xebuz.github.io/blogimages/avatar.png">
                         <div>
                             <span class="dark">xeBuz</span>
-                            <span>I&#39;m an enthusiastic gopher.</span>
+                            <span>lalalala</span>
                         </div>
                     </a>
                 <section id="sharing">
-                    <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2flocalhost%3a1313%2fblog%2fposts%2fcrazy-little-thing-called-perl%2f - Crazy%20little%20thing%20called%20Perl%3a%20Introducci%c3%b3n%20al%20lenguaje by @xeBuz"><span class="icon-twitter"> Tweet</span></a>
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fxebuz.github.io%2fblog%2fposts%2fcrazy-little-thing-called-perl%2f - Crazy%20little%20thing%20called%20Perl%3a%20Introducci%c3%b3n%20al%20lenguaje by @xeBuz"><span class="icon-twitter"> Tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(
@@ -413,67 +417,25 @@ done_testing()
     
         
         <li>
-            <a href="http://localhost:1313/blog/posts/no-close-tabs-firefox-31/">Close Tab en Firefox 31<aside class="dates">May 14</aside></a>
+            <a href="http://xebuz.github.io/blog/posts/newest/">Just another sample post<aside class="dates">Mar 29</aside></a>
         </li>
         
    
     
         
         <li>
-            <a href="http://localhost:1313/blog/posts/newest/">Just another sample post<aside class="dates">Mar 29</aside></a>
+            <a href="http://xebuz.github.io/blog/posts/middle/">Second Post<aside class="dates">Mar 28</aside></a>
         </li>
         
    
     
         
         <li>
-            <a href="http://localhost:1313/blog/posts/middle/">Second Post<aside class="dates">Mar 28</aside></a>
+            <a href="http://xebuz.github.io/blog/posts/oldest/">First Post<aside class="dates">Mar 27</aside></a>
         </li>
         
    
     
-        
-        <li>
-            <a href="http://localhost:1313/blog/posts/oldest/">First Post<aside class="dates">Mar 27</aside></a>
-        </li>
-        
-   
-    
-        
-   
-    
-        
-        <li>
-            <a href="http://localhost:1313/blog/posts/bundles-de-juegos-varias-opciones-disponibles/">Bundles de juegos, varias opciones disponibles<aside class="dates">Feb 27</aside></a>
-        </li>
-        
-   
-    
-        
-        <li>
-            <a href="http://localhost:1313/blog/posts/jquery-selectores-y-traversing/">jQuery: Selectores y Traversing<aside class="dates">Feb 26</aside></a>
-        </li>
-        
-   
-    
-        
-        <li>
-            <a href="http://localhost:1313/blog/posts/jquery-doge-such-plugin/">jQuery Doge - such plugin<aside class="dates">Dec 23</aside></a>
-        </li>
-        
-   
-    
-        
-        <li>
-            <a href="http://localhost:1313/blog/posts/licencia-para-ir-al-cine/">Licencia para ir al cine<aside class="dates">Jul 1</aside></a>
-        </li>
-        
-   
-    
-        
-        <li>
-            <a href="http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/">Barra de progreso de Arch Linux para Python<aside class="dates">Oct 21</aside></a>
-        </li>
         
    
 </ul>
@@ -485,8 +447,8 @@ done_testing()
         </section>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="http://localhost:1313/blog/js/main.js"></script>
-<script src="http://localhost:1313/blog/js/highlight.js"></script>
+<script src="http://xebuz.github.io/blogjs/main.js"></script>
+<script src="http://xebuz.github.io/blogjs/highlight.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
 
