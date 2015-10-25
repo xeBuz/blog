@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Gif on Personal Blog</title>
+    <title>Gif on xeBuz personal blog</title>
     <link>http://localhost:1313/blog/tags/gif/</link>
-    <description>Recent content in Gif on Personal Blog</description>
+    <description>Recent content in Gif on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 18 Oct 2012 02:03:52 +0000</lastBuildDate>

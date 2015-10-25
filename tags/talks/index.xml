@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Talks on xeBuz personal blog</title>
+    <link>http://localhost:1313/blog/tags/talks/</link>
+    <description>Recent content in Talks on xeBuz personal blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 07 Sep 2012 14:33:06 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/talks/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Lo que quedó de la charla de desarrollo web de videojuegos</title>
+      <link>http://localhost:1313/blog/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</link>
+      <pubDate>Fri, 07 Sep 2012 14:33:06 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/gSKUEw1.png&#34; alt=&#34;thumbs&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Antes que nada gracias a todos los que fueron ayer a la charla de desarrollo de videojuegos y a la gente de &lt;a href=&#34;http://uni-code-group.blogspot.com.ar/&#34;&gt;&lt;strong&gt;UNI-CODE&lt;/strong&gt;&lt;/a&gt; por la invitación. Les dejo algunos links que había prometido o temas que quedaron en el aire. Cualquier cosa avisen.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Los slides están &lt;a href=&#34;http://jesusroldan.com/Charlas/Crafty/crafty.html&#34;&gt;online acá&lt;/a&gt;, es recomendable verlo a pantalla completa (espero que el touchpad no los trollée como a mi).&lt;/li&gt;
+&lt;li&gt;El código fuente de &lt;a href=&#34;https://github.com/xeBuz/Charlas/tree/master/Crafty%20-%20Framework%20para%20videojuegos&#34;&gt;los slides está en GitHub&lt;/a&gt;. Usé &lt;a href=&#34;https://github.com/cykod/CoderDeck&#34;&gt;CoderDeck&lt;/a&gt; porque me permitía correr código JS y modificarlo mientras daba la charla.&lt;/li&gt;
+&lt;li&gt;Esta es la &lt;a href=&#34;http://craftyjs.com/api/&#34;&gt;documentación de Crafty&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Los componente extras de Crafty se pueden ver &lt;a href=&#34;http://craftycomponents.com/&#34;&gt;en este sitio&lt;/a&gt;. Inlcuso ahí está &lt;a href=&#34;http://craftycomponents.com/boilerplate&#34;&gt;Craftyboilerplate&lt;/a&gt; y &lt;a href=&#34;http://flexpi.com/&#34;&gt;Flexpi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://leo-koppelkamm.de/polyCreator/&#34;&gt;Este sitio tiene el creador de polígonos&lt;/a&gt;, porque hacerlos a mano es muy denso.&lt;/li&gt;
+&lt;li&gt;En un momento se comentó de un grupo de gente que se juntaba cada tanto pero nadie tenía demasiados datos, eran de &lt;a href=&#34;http://www.indiegamedev.org/&#34;&gt;IndieGameDev&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Vayan preparándose para la &lt;a href=&#34;http://gamejamcordoba.com/&#34;&gt;GlobalGameJam&lt;/a&gt; ;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/UztQoxk.png&#34; alt=&#34;unicode&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

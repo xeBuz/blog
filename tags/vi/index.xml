@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vi on Personal Blog</title>
+    <title>Vi on xeBuz personal blog</title>
     <link>http://localhost:1313/blog/tags/vi/</link>
-    <description>Recent content in Vi on Personal Blog</description>
+    <description>Recent content in Vi on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 07 Sep 2012 14:33:06 +0000</lastBuildDate>
@@ -36,83 +36,6 @@
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/09/Logo_Uni-Code.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/09/Logo_Uni-Code-150x150.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cron, automatizar scripts como un titán</title>
-      <link>http://localhost:1313/blog/posts/cron-automatizar-scripts-como-un-titan/</link>
-      <pubDate>Tue, 22 May 2012 16:48:07 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/cron-automatizar-scripts-como-un-titan/</guid>
-      <description>&lt;p&gt;Hace un tiempo escribí sobre &lt;a href=&#34;http://blog.jesusroldan.com/2012/01/23/comando-at-automatizar-scripts-sin-usar-crontab/&#34;&gt;la utilización del comando &lt;strong&gt;at&lt;/strong&gt;&lt;/a&gt;, ahora le toca el turno a &lt;strong&gt;cron&lt;/strong&gt;. ¿Tron? No, cron. ¡Troz! (?).
-¿Qué es cron? Es un administrador de procesos que se ejecuta a un interválo de tiempo específico. Si vienen del Dark Side, sería el equivalente a las &lt;em&gt;Tareas Programadas&lt;/em&gt; de W.&lt;/p&gt;
-
-&lt;p&gt;La instalación es simple (está en los repos o incluso ya instalada, en toda distribución que se jacte de ser tal), en fín, en Arch podrían hacer:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;pacman -S --needed cronie
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Al principio puede resultar extraña la configuracion de crontab, pero con el tiempo termina siendo más simple de lo que aparenta y se puede lograr cosas muy buenas de una forma muy sencilla.&lt;/p&gt;
-
-&lt;p&gt;Primero, tenemos 5 espacios para colocar los tiempos, que se dividen en minutos, horas, días del mes, meses y días de la semana; si alguno de estos datos no se rellena, se debe colocar un asterísco, que significa &amp;ldquo;todos&amp;rdquo; (para que sea entendible y hasta leíble). Después de eso se coloca la ruta completa del script que quieren que se ejecute en ese determinado lapso de tiempo.&lt;/p&gt;
-
-&lt;p&gt;En cualquier campo, asumiendo que ya entendimos los rangos de cada uno, podemos colocar tanto un valor específico, varios valores separados por coma o un rango separado por un guión. Por ejemplo:&lt;/p&gt;
-
-&lt;p&gt;[code lang=&amp;ldquo;bash&amp;rdquo;]
-#Se ejecuta a las 5 de la mañana, en punto
-0 5 * * * * /home/jesus/Scripts/tomar_cafe.sh&lt;/p&gt;
-
-&lt;p&gt;#Se ejecuta a las 5 y a las 17 horas, en punto
-0 5,17 * * * /home/jesus/Scripts/loquesea.sh&lt;/p&gt;
-
-&lt;p&gt;#Se ejecuta &lt;em&gt;desde&lt;/em&gt; las 5, cada hora &amp;ldquo;en punto&amp;rdquo; &lt;em&gt;hasta&lt;/em&gt; las 17hs.
-0 5-17 * * * /home/jesus/Scripts/latigo.sh&lt;/p&gt;
-
-&lt;p&gt;#Similar al anterior, pero ejecuta cada minuto entre las 5 y las 17
-#miren el primer valor, le estan dicieno &amp;ldquo;todos&amp;rdquo;
-* 5,17 * * * echo &amp;ldquo;trabajen mas duro&amp;rdquo;
-[/code]&lt;/p&gt;
-
-&lt;p&gt;¿Cómo ver las tareas pendientes en cron?
-&lt;strong&gt;crontab -l&lt;/strong&gt; lista las del usuario activo, para ver las de otro usuario, deben ejecutar crontab -u user -l&lt;/p&gt;
-
-&lt;p&gt;¿Cómo se modifican las tareas?
-Con &lt;strong&gt;crontab -e&lt;/strong&gt; se nos abre el archivo para modificar, con el editor que tengamos por defecto. Para cambiarlo debemos cambiar: &lt;em&gt;export EDITOR=&amp;ldquo;/usr/bin/nano&amp;rdquo;&lt;/em&gt;. Como por defecto se abre con vi, por favor no toquen el teclado si no saben como funciona y llamen a un mayor responsable a cargo.
-También pueden editar los archivos de otros usuarios, con **contab -u user -e **.&lt;/p&gt;
-
-&lt;p&gt;Ahora bien, aquí viene lo bueno jóven, algunos ejemplos:&lt;/p&gt;
-
-&lt;p&gt;[code lang=&amp;ldquo;bash&amp;rdquo;]
-#Corre cada minuto, siempre.
-* * * * * /home/xebuz/script/cada_minuto.sh&lt;/p&gt;
-
-&lt;p&gt;#Cada 5 minutos
-*/5 * * * * /home/xebuz/script/cada_cinco_minutos.sh&lt;/p&gt;
-
-&lt;p&gt;#Cada hora, de 8 a 18, de lunes a viernes
-00 08-18 * * 1-5 /home/xebuz/script/laboral.sh&lt;/p&gt;
-
-&lt;p&gt;#Una vez cada mes y medio
-* * */15 */1 * /home/xebuz/goldequilmes.sh&lt;/p&gt;
-
-&lt;p&gt;#Cada 4 años
-* * * */48 * /home/xebuz/script/mundial.sh
-[/code]&lt;/p&gt;
-
-&lt;p&gt;¿Muy engorroso para escribir? ¿Sos un lazy-sysadmin? Existen también algunos (llamémosle) &lt;a href=&#34;http://blog.jesusroldan.com/2011/09/02/tips-para-linux-alias-para-todos/&#34;&gt;alias&lt;/a&gt;, para agilizar la administración, són cómodos y reemplazan a todos los campos de tiempo, es decir, sólo deben poner el alias y despues el script.&lt;/p&gt;
-
-&lt;p&gt;[code lang=&amp;ldquo;bash&amp;rdquo;]
-#Tiempos específicos
-@hourly
-@daily
-@weekly
-@monthly
-#Este se ejecuta (como lo indica el nombre), cuando se resetea el equipo
-@reboot
-[/code]&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Gracias, vuelva prontos.&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     

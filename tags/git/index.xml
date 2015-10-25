@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Git on Personal Blog</title>
+    <title>Git on xeBuz personal blog</title>
     <link>http://localhost:1313/blog/tags/git/</link>
-    <description>Recent content in Git on Personal Blog</description>
+    <description>Recent content in Git on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 10 Aug 2012 13:55:24 +0000</lastBuildDate>
@@ -81,67 +81,6 @@ if __name__ == &#39;__main__&#39;:
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Descarga desde aca: &lt;a href=&#34;https://gist.github.com/1100627&#34;&gt;GIST&lt;/a&gt;, seguramente la iré modificando, la idea es dejarla corriendo como un servicio.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Versionar el directorio /etc con Git</title>
-      <link>http://localhost:1313/blog/posts/versionar-el-directorio-etc-con-git/</link>
-      <pubDate>Mon, 26 Sep 2011 17:23:59 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/versionar-el-directorio-etc-con-git/</guid>
-      <description>&lt;p&gt;Una buena práctica, sobre todo si les gusta modificar los archivos de configuración para probar cosas o instalar aplicaciones constantemnte, es versionar el directorio /etc, para el caso en el que nos &lt;del&gt;mandemos alguna cagada&lt;/del&gt; equivoquemos en alguna configuración, el problema sea facilmente remediable.
-La instalación y configuración es muy sencilla, en este caso es todo manual, si quieren saltearse todo e instalar directamente &lt;strong&gt;&lt;a href=&#34;http://kitenet.net/~joey/code/etckeeper/&#34;&gt;etckeeper&lt;/a&gt;&lt;/strong&gt; es válido igual ;)&lt;/p&gt;
-
-&lt;p&gt;Antes que todo, hay que instalar &lt;strong&gt;git&lt;/strong&gt; (usé git porque&amp;hellip;si)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;yaourt -S git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Después vamos al directorio correspondiente y creamos el repositorio:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd /etc &amp;amp;&amp;amp; git init 
-Initialized empty Git repository in /etc/.git/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Agregamos todos los archivos:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git add --all
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hacemos nuestro primer commit:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git commit -m &amp;quot;Mira mama, estoy usando versionado&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Pueden crear un nuevo brach, como para tener una copia inicial del directorio, solo basta hacer:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git branch inicial
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Para verificar cambios sin commitear, pueden usar:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git status
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;En crontab crear commits diarios, no se, esas cosas las manejan a gusto, prefiero hacerlo manual&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Pueden cambiar de branch con &amp;ldquo;git checkout &amp;ldquo;&amp;hellip;en fin, a partir de ahora los cambios que quieran hacer corren por su cuenta, esta es la configuración basica para que funcione. Mas información de git pueden encontrarla en &lt;a href=&#34;http://schacon.github.com/git/gittutorial.html&#34;&gt;http://schacon.github.com/git/gittutorial.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;Para ver los cambios, puede usar algunas apps como:
-&lt;strong&gt;SmartGit&lt;/strong&gt;
-Bastante cómoda, y eso que está hecho en &lt;a href=&#34;http://gifninja.com/animatedgifs/250429/trollface.gif&#34;&gt;Java&lt;/a&gt;! :P
-Aca les dejo una imagen de como se ve, por si les interesa
-&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-14.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-14-300x197.png&#34; alt=&#34;SmartGit on pacman.conf&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Pero no conozco más herramientas con GUI, si usan alguna en particular bienvenida sea&amp;hellip;
-[quote style=&amp;ldquo;1&amp;rdquo;]Si no te equivocas de vez en cuando, es que no lo intentas.&lt;/p&gt;
-
-&lt;p&gt;_ Woody Allen_&lt;/p&gt;
-
-&lt;p&gt;[/quote]&lt;/p&gt;
 </description>
     </item>
     

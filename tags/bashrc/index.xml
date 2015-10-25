@@ -1,54 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bashrc on Personal Blog</title>
+    <title>Bashrc on xeBuz personal blog</title>
     <link>http://localhost:1313/blog/tags/bashrc/</link>
-    <description>Recent content in Bashrc on Personal Blog</description>
+    <description>Recent content in Bashrc on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Apr 2012 20:58:48 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Sep 2011 21:33:09 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/tags/bashrc/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Solucionar problemas después de actualizar Gnome 3.4.1</title>
-      <link>http://localhost:1313/blog/posts/solucionar-problemas-despues-de-actualizar-gnome-3-4-1/</link>
-      <pubDate>Mon, 23 Apr 2012 20:58:48 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/solucionar-problemas-despues-de-actualizar-gnome-3-4-1/</guid>
-      <description>&lt;p&gt;Hoy, como para que el lunes arranque con todo, actualicé Arch y después no pude ingresar más la sesión de Gnome3. Aparecía la PC con carita triste y me decía que iba a desactivar las extensiones, pero no soluciona nada. Y cómo se actualizaron muchas drivers, el kernel y gnome no sabía bien donde estaba el problema.&lt;/p&gt;
-
-&lt;p&gt;Al parecer la nueva versión de Gnome (3.4.1) tiene como dependencia networkmanager y si no lo encuentra explota por todos lados, pueden verificar el archivo /var/logs/messages.log, deberían tener algo así:
-[spoiler title=&amp;ldquo;messages.log&amp;rdquo; open=&amp;ldquo;0&amp;rdquo; style=&amp;ldquo;1&amp;rdquo;]
-&lt;code&gt;[...]
-Apr 23 17:26:56 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager/Presence interface=org.freedesktop.DBus.Properties method=GetAll
-Apr 23 17:26:56 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager/Presence interface=org.freedesktop.DBus.Properties method=GetAll
-Apr 23 17:26:59 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/freedesktop/DBus interface=org.freedesktop.DBus method=NameOwnerChanged
-Apr 23 17:26:59 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/freedesktop/DBus interface=org.freedesktop.DBus method=NameOwnerChanged
-Apr 23 17:28:24 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager interface=org.gnome.SessionManager method=IsInhibited
-Apr 23 17:28:24 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager interface=org.gnome.SessionManager method=IsInhibited
-Apr 23 17:29:24 localhost dbus[661]: [system] Activating service name=&#39;org.freedesktop.NetworkManager&#39; (using servicehelper)
-Apr 23 17:29:24 localhost dbus[661]: [system] Activated service &#39;org.freedesktop.NetworkManager&#39; failed: Launch helper exited with unknown return code 1
-Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): Searching for 4194307 in 4194307,4194308
-Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): Watch 1 fired, idle time = 600053
-Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): GsmPresence: setting idle: 1
-Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): Using ConsoleKit for session tracking
-Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): Updating ConsoleKit idle status: 1
-Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager interface=org.gnome.SessionManager method=IsInhibited
-Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager interface=org.gnome.SessionManager method=IsInhibited
-[...]&lt;/code&gt;[/spoiler]&lt;/p&gt;
-
-&lt;p&gt;Si quieren verificar si el problema se da por esto, pueden correr el siguiente comando (Control + Alt + F1) e intentar entrar a la sesión (Control + Alt + F7/F8):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo /etc/rc.d/networkmanager start
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Para hacer el cambio permanente, agreguen &lt;strong&gt;networkmanager&lt;/strong&gt; a los DAEMONS del /etc.rc.conf&lt;/p&gt;
-
-&lt;p&gt;Espero que les sirva, a mi me hizo renegar mucho, y es algo bastante simple de solucionar.&lt;/p&gt;
-
-&lt;p&gt;Edit: Según la &lt;a href=&#34;https://wiki.archlinux.org/index.php/NetworkManager#Edit_daemons&#34;&gt;wiki de Arch&lt;/a&gt;, hay que sacar el daemon de network y poner el de networkmanager después de dbus&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>Tips Linuxeros: Alias para Todos</title>
@@ -145,52 +104,6 @@ fi
 &lt;p&gt;[quote style=&amp;ldquo;1&amp;rdquo;] See, you not only have to be a good coder to create a system like Linux, you have to be a sneaky bastard too ;-) [/quote]&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Linus Torvalds&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Tips Linuxeros: Manejo del historial</title>
-      <link>http://localhost:1313/blog/posts/tips-para-linux-manejo-del-historial/</link>
-      <pubDate>Fri, 22 Jul 2011 00:16:16 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/tips-para-linux-manejo-del-historial/</guid>
-      <description>&lt;p&gt;Quizás una de las mejores funcionalidades en la terminal de Linux, o por lo menos una de las más productivas, es la capacidad de generar un historial de lo que ejecutamos.
-Ahora bien, existen varias formas de recorrerlo. La más común y la que seguramente todos usan, es mediante las flechas arriba y abajo, muy util, pero también existen otras formas de hacerlo :)&lt;/p&gt;
-
-&lt;p&gt;Podemos hacer una búsqueda utilizando &lt;strong&gt;Ctrl+R&lt;/strong&gt; y el texto que deseamos. La búsqueda es incremental, en caso de que la primera opción no es la que queremos, sólo basta volver a presionar &lt;strong&gt;Ctrl+R&lt;/strong&gt;. Si queremos hacer la búsqueda en orden inverso, basta utilizar &lt;strong&gt;Ctrl+I&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Otra opción muy interesante es volver a ejecutar el comando anterior con &lt;strong&gt;!!&lt;/strong&gt; (doble signo de admiración). Es genial si nos olvidamos de ejecutar algo con permisos de superuser:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; sudo !!
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;También se puede utilizar el &lt;strong&gt;!foo&lt;/strong&gt; para repetir la última vez que usamos foo, o &lt;strong&gt;!?foo&lt;/strong&gt; para volver a ejecutar el ultimo comando &lt;em&gt;que contenga&lt;/em&gt; foo.&lt;/p&gt;
-
-&lt;p&gt;En caso de que querramos &lt;em&gt;reemplazar&lt;/em&gt; parte del script ejectutado anteriormente, por ejemplo, abrimos un archivo con nano pero ahora queremos abrirlo con vi, podemos correr&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;^nano^vi
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;En caso de que necesitemos mostrar todos los comandos que contengan cierto termino basta con hacer un &lt;strong&gt;grep&lt;/strong&gt; de lo que devuelve el comando history:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; history | grep foo
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;El número de la izquierda es el orden del comando, podemos correr esa linea usando &lt;strong&gt;!numero&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Un detalle&amp;hellip;&lt;/em&gt;
-Es posible que si usan múltipes instancias de la terminal (desde tty, gnome-terminal, guake, yakuke, etc), no se guarde el historial, para esto  basta con editar el archivo &lt;strong&gt;~/.bashrc&lt;/strong&gt; de esta forma:
-[sourcecode language=&amp;ldquo;bash&amp;rdquo;]
- unset HISTFILESIZE
- HISTSIZE=5000 # cantidad de registros que quieran guardar
- PROMPT_COMMAND=&amp;ldquo;history -a&amp;rdquo;
- export HISTSIZE PROMPT_COMMAND
-[/sourcecode]&lt;/p&gt;
-
-&lt;p&gt;Y correr una vez el siguiente comando&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; shopt -s histappend
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

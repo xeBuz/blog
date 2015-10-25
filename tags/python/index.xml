@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python on Personal Blog</title>
+    <title>Python on xeBuz personal blog</title>
     <link>http://localhost:1313/blog/tags/python/</link>
-    <description>Recent content in Python on Personal Blog</description>
+    <description>Recent content in Python on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 21 Oct 2012 20:49:21 +0000</lastBuildDate>
@@ -15,37 +15,33 @@
       <pubDate>Sun, 21 Oct 2012 20:49:21 +0000</pubDate>
       
       <guid>http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/</guid>
-      <description>&lt;p&gt;Hace unos días me puse a &lt;em&gt;portar&lt;/em&gt; la barra de progreso que tiene el sistema de paquetes de &lt;a href=&#34;http://blog.jesusroldan.com/2011/12/28/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/&#34;&gt;&lt;strong&gt;Arch Linux&lt;/strong&gt;&lt;/a&gt; (activando la opción &lt;strong&gt;ILoveCandy&lt;/strong&gt;) a Python &lt;del&gt;3&lt;/del&gt; 3.X y 2.7. De momento está en fase de prueba, pero es dentro de todo funcional, prometo ir actualizándola cuando pueda.&lt;/p&gt;
+      <description>&lt;p&gt;Hace unos días me puse a &lt;em&gt;portar&lt;/em&gt; la barra de progreso que tiene el sistema de paquetes de &lt;a href=&#34;http://blog.jesusroldan.com/2011/12/28/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/&#34;&gt;&lt;strong&gt;Arch Linux&lt;/strong&gt;&lt;/a&gt; (activando la opción &lt;strong&gt;ILoveCandy&lt;/strong&gt;) a Python 3.X y 2.7. De momento está en fase de prueba, pero es dentro de todo funcional, prometo ir actualizándola cuando pueda.&lt;/p&gt;
 
-&lt;p&gt;Para poder instalarlo, pueden bajarse los fuentes &lt;a href=&#34;https://github.com/xeBuz/pacman-progressbar&#34;&gt;desde &lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt; (es licencia Beer-ware, una adaptación de BSD) o mejor aún directamente desde PyPi:&lt;/p&gt;
+&lt;p&gt;Para poder instalarlo, pueden bajarse los fuentes &lt;a href=&#34;https://github.com/xeBuz/pacman-progressbar&#34;&gt;desde &lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt; o directamente desde PyPi:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;sudo pip install pacmanprogressbar
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    sudo pip install pacmanprogressbar
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;La utilización es la siguiente (proximamente voy a hacer que se pueda iterar directamente):&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;#!/usr/bin/env python
-import time
-from pacmanprogressbar import Pacman
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;    #!/usr/bin/env python
+    import time
+    from pacmanprogressbar import Pacman
 
-if __name__ == &amp;quot;__main__&amp;quot;:
-    p = Pacman(end=100)
+    if __name__ == &amp;quot;__main__&amp;quot;:
+        p = Pacman(end=100)
 
-    for x in range(p.len):
-        p.update()
-        time.sleep(.2)
+        for x in range(p.len):
+            p.update()
+            time.sleep(.2)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Una vez instanciada la clase, tiene dos métodos públicos:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;update([value])&lt;/strong&gt;, actualiza el progreso sumándole el valor del parámetro, por defecto suma 1.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;progress(value)&lt;/strong&gt;, en vez de sumarizar, se le pasa directamente el valor del progreso.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Una vez instanciada la clase, tiene dos métodos públicos:
+- &lt;strong&gt;update([value])&lt;/strong&gt;, actualiza el progreso sumándole el valor del parámetro, por defecto suma 1.
+- &lt;strong&gt;progress(value)&lt;/strong&gt;, en vez de sumarizar, se le pasa directamente el valor del progreso.&lt;/p&gt;
 
 &lt;p&gt;La salida en consola sería más o menos como esta:
-&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/10/animacion.gif&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/10/animacion.gif&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;img src=&#34;http://i.imgur.com/klIcQ2u.gif&#34; alt=&#34;a&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -58,69 +54,67 @@ if __name__ == &amp;quot;__main__&amp;quot;:
       <description>&lt;p&gt;Revisando scripts viejos, me encontré con este que quizás a alguno le puede servir. La idea es ir generando dinámicamente la lista de reproducción de un server &lt;a href=&#34;http://mpd.wikia.com/&#34;&gt;MPD&lt;/a&gt; usando la &lt;a href=&#34;http://www.last.fm/api&#34;&gt;API&lt;/a&gt; de &lt;a href=&#34;http://www.last.fm/user/xeBuz&#34;&gt;Last.fm&lt;/a&gt; para encontrar artistas similares en el disco.
 Si bien ya hay clientes que tienen esta funcionalidad, como &lt;a href=&#34;http://mpd.wikia.com/wiki/Client:Ario&#34;&gt;Ario&lt;/a&gt;, suelo conectarme por SSH al server y me resulta cómodo correr el script este cuando no se que escuchar.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-import os
-import random
-from mpd import (MPDClient, CommandError)
-from audioscrobbler import AudioScrobblerQuery
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;    #!/usr/bin/env python
+    # -*- coding: utf-8 -*-
+    import os
+    import random
+    from mpd import (MPDClient, CommandError)
+    from audioscrobbler import AudioScrobblerQuery
 
-&amp;quot;&amp;quot;&amp;quot; MPD &amp;quot;&amp;quot;&amp;quot;
-mpd_host = &#39;localhost&#39;
-mpd_port = &#39;6600&#39;
-mpd_connection = {&#39;host&#39;: mpd_host, &#39;port&#39;: mpd_port}
-client = MPDClient()
+    &amp;quot;&amp;quot;&amp;quot; MPD &amp;quot;&amp;quot;&amp;quot;
+    mpd_host = &#39;localhost&#39;
+    mpd_port = &#39;6600&#39;
+    mpd_connection = {&#39;host&#39;: mpd_host, &#39;port&#39;: mpd_port}
+    client = MPDClient()
 
-COUNT_SONGS = 5
+    COUNT_SONGS = 5
 
-def mpd_connect():
-    try:
-        client.connect(**mpd_connection)
-    except SocketError:
-        return False
-    return True
-
-
-def main():
-    if not mpd_connect():
-        sys.exit(1)
-
-    # Meh, no se si se hace esto, pero bueh
-    recommended_artists = []
-    recommended_songs = []
-
-    # Obtengo la cancion que esta sonando en este momento
-    current = client.currentsong()
-
-    # Saco sólo el artista del diccionario que me devuelve current
-    current_artist = AudioScrobblerQuery(artist=current[&#39;artist&#39;])
-
-    # En base a todos los artistas similares, me fijo cuales tengo en el
-    # server MPD, y los almaceno para usarlos despues.
-    for artist in current_artist.similar():
-        if float(client.count(&amp;quot;artist&amp;quot;, artist.name)[&#39;songs&#39;]) &amp;gt; 0:
-            recommended_artists.append(artist.name)
+    def mpd_connect():
+        try:
+            client.connect(**mpd_connection)
+        except SocketError:
+            return False
+        return True
 
 
-    # Podria hacerlo mas efectivo, pero la idea es hacerlo lo mas random que
-    # pueda, asi que desordeno la lista de similares, que siempre viene ya
-    # ordenada por compatibilidad del current_artist
-    random.shuffle(recommended_artists)
+    def main():
+        if not mpd_connect():
+            sys.exit(1)
 
-    while len(recommended_songs) &amp;lt; COUNT_SONGS:
-        artist = random.choice(recommended_artists)
-        recommended_songs.append(
-                    random.choice(client.search(&#39;artist&#39;, artist)))
+        recommended_artists = []
+        recommended_songs = []
 
-    for song in recommended_songs:
-        print song[&amp;quot;artist&amp;quot;], &amp;quot;-&amp;quot;, song[&amp;quot;title&amp;quot;]
-        client.add(song[&amp;quot;file&amp;quot;])
+        # Obtengo la cancion que esta sonando en este momento
+        current = client.currentsong()
 
-if __name__ == &#39;__main__&#39;:
-    main()
+        # Saco sólo el artista del diccionario que me devuelve current
+        current_artist = AudioScrobblerQuery(artist=current[&#39;artist&#39;])
+
+        # En base a todos los artistas similares, me fijo cuales tengo en el
+        # server MPD, y los almaceno para usarlos despues.
+        for artist in current_artist.similar():
+            if float(client.count(&amp;quot;artist&amp;quot;, artist.name)[&#39;songs&#39;]) &amp;gt; 0:
+                recommended_artists.append(artist.name)
+
+        # Podria hacerlo mas efectivo, pero la idea es hacerlo lo mas random que
+        # pueda, asi que desordeno la lista de similares, que siempre viene ya
+        # ordenada por compatibilidad del current_artist
+        random.shuffle(recommended_artists)
+
+        while len(recommended_songs) &amp;lt; COUNT_SONGS:
+            artist = random.choice(recommended_artists)
+            recommended_songs.append(
+                        random.choice(client.search(&#39;artist&#39;, artist)))
+
+        for song in recommended_songs:
+            print song[&amp;quot;artist&amp;quot;], &amp;quot;-&amp;quot;, song[&amp;quot;title&amp;quot;]
+            client.add(song[&amp;quot;file&amp;quot;])
+
+    if __name__ == &#39;__main__&#39;:
+        main()
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Descarga desde aca: &lt;a href=&#34;https://gist.github.com/1100627&#34;&gt;GIST&lt;/a&gt;, seguramente la iré modificando, la idea es dejarla corriendo como un servicio.&lt;/p&gt;
+&lt;p&gt;Descarga desde aca: &lt;a href=&#34;https://gist.github.com/1100627&#34;&gt;gist&lt;/a&gt;, seguramente la iré modificando, la idea es dejarla corriendo como un servicio.&lt;/p&gt;
 </description>
     </item>
     
@@ -130,45 +124,49 @@ if __name__ == &#39;__main__&#39;:
       <pubDate>Wed, 04 Jul 2012 18:40:32 +0000</pubDate>
       
       <guid>http://localhost:1313/blog/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/</guid>
-      <description>&lt;blockquote&gt;Hace falta un bot que busque los tweets de Foursquare y responda &#34;WHO CARES?!&#34;
+      <description>
 
-— Commander Shepard (@MissFillys) [July 3, 2012](https://twitter.com/MissFillys/status/220272671894671360)&lt;/blockquote&gt;
+&lt;p&gt;&lt;blockquote&gt;Hace falta un bot que busque los tweets de Foursquare y responda &amp;ldquo;WHO CARES?!&amp;rdquo;&lt;/p&gt;
 
-&lt;p&gt;Todo comenzó con ese tweet de @MissFillys y cómo estaba aburrido lo intenté hacer. Ante mi sorpresa fué mas simple de lo que pensaba. Primero deben registrar la aplicación en el &lt;a href=&#34;https://dev.twitter.com/apps&#34;&gt;área de desarrollo de Twitter&lt;/a&gt;, particularmente usé una cuenta nueva, porque seguro lo reportan como spam o algún tipo de violación a las políticas de Twitter y no quería que caiga mi cuenta también. Para interactuar con Twitter desde Python usé &lt;strong&gt;&lt;a href=&#34;https://github.com/tweepy/tweepy&#34;&gt;tweepy&lt;/a&gt;&lt;/strong&gt;, una librería bastante completa, y sobre todo, muy simple de usar&lt;/p&gt;
+&lt;p&gt;&amp;mdash; Commander Shepard (@MissFillys)&lt;/p&gt;
+
+&lt;h2 id=&#34;blockquote:af02b468b7bda56b0f7805cb607ec667&#34;&gt;&lt;/blockquote&gt;&lt;/h2&gt;
+
+&lt;p&gt;Todo comenzó con &lt;a href=&#34;https://twitter.com/MissFillys/status/220272671894671360&#34;&gt;ese&lt;/a&gt; tweet de @MissFillys y cómo estaba aburrido lo intenté hacer. Ante mi sorpresa fué mas simple de lo que pensaba. Primero deben registrar la aplicación en el &lt;a href=&#34;https://dev.twitter.com/apps&#34;&gt;área de desarrollo de Twitter&lt;/a&gt;, particularmente usé una cuenta nueva, porque seguro lo reportan como spam o algún tipo de violación a las políticas de Twitter y no quería que caiga mi cuenta también. Para interactuar con Twitter desde Python usé &lt;strong&gt;&lt;a href=&#34;https://github.com/tweepy/tweepy&#34;&gt;tweepy&lt;/a&gt;&lt;/strong&gt;, una librería bastante completa, y sobre todo, muy simple de usar&lt;/p&gt;
 
 &lt;p&gt;Esto es lo necesario para conectarse, los datos de Costumer_Key y Access_Key los sacan cuando registran la aplicación. Bastante simple, con este código ya podemos interactuar con la API&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;#!/usr/bin/python
-# -*- coding: utf-8 -*-
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;    #!/usr/bin/python
+    # -*- coding: utf-8 -*-
 
-import tweepy
+    import tweepy
 
-#Twitter information
-CONSUMER_KEY = &amp;quot;AsdAsdDsa&amp;quot;
-CONSUMER_SECRET=&amp;quot;QwertrQWEREwtr&amp;quot;
-ACCESS_KEY=&amp;quot;Asdasd-qeq123123123&amp;quot;
-ACCESS_SECRET=&amp;quot;asdasd342-123213123wqeqweqw&amp;quot;
+    #Twitter information
+    CONSUMER_KEY = &amp;quot;AsdAsdDsa&amp;quot;
+    CONSUMER_SECRET=&amp;quot;QwertrQWEREwtr&amp;quot;
+    ACCESS_KEY=&amp;quot;Asdasd-qeq123123123&amp;quot;
+    ACCESS_SECRET=&amp;quot;asdasd342-123213123wqeqweqw&amp;quot;
 
-auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
-auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
-API = tweepy.API(auth)
+    auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+    auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
+    API = tweepy.API(auth)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Para este caso, lo que hago es buscar en la public timeline. Como la librería no tiene implementada la búsqueda por source, no queda otra que traer los 20 resultados y validar si alguno viene desde desde Foursquare. Es un bucle bastante simple, en caso de que exista, se utiliza el método API.update_status() con el username, in_reply_to y algún texto que querramos ponerle.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;...
-public = API.public_timeline()
-for tweet in public:
-    if tweet.source ==&#39;foursquare&#39;:
-    API.update_status( &amp;quot;@&amp;quot;+ tweet.author.screen_name + &amp;quot;WHO CARES?!&amp;quot; , tweet.id)
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;    ...
+    public = API.public_timeline()
+    for tweet in public:
+        if tweet.source ==&#39;foursquare&#39;:
+        API.update_status( &amp;quot;@&amp;quot;+ tweet.author.screen_name + &amp;quot;WHO CARES?!&amp;quot; , tweet.id)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;También pueden usar búsquedas más específicas. Por ejemplo, &lt;em&gt;personas&lt;/em&gt; que hablan de Tinelli. &lt;a href=&#34;https://dev.twitter.com/docs/using-search&#34;&gt;Acá&lt;/a&gt; pueden sacar ayuda sobre cómo realizar búsquedas y &lt;a href=&#34;http://packages.python.org/tweepy/html/api.html&#34;&gt;acá&lt;/a&gt; pueden leer la documentación de la librería&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;...
-assholes = API.search(&#39;Tinelli&#39;)
-for tweet in assholes:
-    API.update_status( &amp;quot;@&amp;quot;+ tweet.author.screen_name + &amp;quot;Se te está pudriendo el cerebro...&amp;quot; , tweet.id)
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;    ...
+    assholes = API.search(&#39;Tinelli&#39;)
+    for tweet in assholes:
+        API.update_status( &amp;quot;@&amp;quot;+ tweet.author.screen_name + &amp;quot;Se te está pudriendo el cerebro...&amp;quot; , tweet.id)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;El código final quedó &lt;a href=&#34;https://gist.github.com/3044158&#34;&gt;más o menos así&lt;/a&gt;, sólo necesitan ponerlo en un loop donde quieran. Quizás les sirva y puedan hacer algo interesante, como por ejemplo @pepperMaido :D&lt;/p&gt;

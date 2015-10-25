@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Twitter on Personal Blog</title>
+    <title>Twitter on xeBuz personal blog</title>
     <link>http://localhost:1313/blog/tags/twitter/</link>
-    <description>Recent content in Twitter on Personal Blog</description>
+    <description>Recent content in Twitter on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 04 Jul 2012 18:40:32 +0000</lastBuildDate>
@@ -57,57 +57,6 @@ for tweet in assholes:
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;El código final quedó &lt;a href=&#34;https://gist.github.com/3044158&#34;&gt;más o menos así&lt;/a&gt;, sólo necesitan ponerlo en un loop donde quieran. Quizás les sirva y puedan hacer algo interesante, como por ejemplo @pepperMaido :D&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Twicca: el mejor cliente de Twitter para Android</title>
-      <link>http://localhost:1313/blog/posts/twicca-el-mejor-cliente-de-twitter-para-android/</link>
-      <pubDate>Wed, 30 Nov 2011 17:14:46 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/twicca-el-mejor-cliente-de-twitter-para-android/</guid>
-      <description>&lt;p&gt;En &lt;strong&gt;Android&lt;/strong&gt; y supongo que tambien para iOS, existen muchos clientes para &lt;strong&gt;Twitter&lt;/strong&gt; (Twitter for Android, Seesmic, Hootsuite,  TweetCaster y otros) pero dudo que alguno tenga tantas funcionalidades como &lt;strong&gt;Twicca&lt;/strong&gt;.
-En un primer momento la interfaz parece demasiado simple, pero es esa simpleza una de las tantas bondades. Por defecto tiene fondo negro con letras blancas, se puede invertir, por el bien de tus ojos no lo hagas.&lt;/p&gt;
-
-&lt;p&gt;Por supuesto que las funciones básicas estan implementadas, reply, retweet, quote, fav&amp;hellip;. Podemos igualmente compartir el tweet, previsualizar las imágenes (en un vistazo rápido, es compatible con más sitios que la web)
-Dentro de las opciones que brinda en cada usuario, podemos ver su timeline y demas datos, saber si lo seguimos y si este nos sigue. Hasta ahora nada que otros clientes no soporten&amp;hellip;
-Permite también el uso de listas, geolocalización, widgets para el escritorio, coloreado de tweets de acuerdo al usuario, &lt;strong&gt;filtros&lt;/strong&gt;, caché&amp;hellip; lo único que no tiene implementado son las multicuentas (de hecho si lo tiene , pero de momento está sólo disponible para los usuarios que hacen donaciones).&lt;/p&gt;
-
-&lt;p&gt;Lo mejor de la aplicación es la cantidad de opciones de configuración que tiene. Aca un detalle por categoría (en inglés los títulos, porque los empecé a poner en español y sonaban horrible&amp;hellip; puristas del idioma abstenerse a decir algo):&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Account settings:&lt;/strong&gt; Es dónde se vincula la cuenta de Twitter por OAuth.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Timeline settings:&lt;/strong&gt; Opciones específicas de como se muestra el timeline, cantidad de tweets, autopaging, si se muestra nombre real, si se muestra el avatar y la calidad del mismo (útil para paquetes de datos limitados), manejo de URLs y funcionalidad de los botones de volúmen y cámara. Esto último es realmente cómodo para desplazarse por el timeline sin tocar la pantalla.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Status update settings:&lt;/strong&gt; Configuración de estilos de RT, tamaño de imágenes, permitir geolocalización, envío con la tecla &lt;em&gt;enter&lt;/em&gt;, autocompletado de usuario con sólo poner @, sufijos.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Search / Trending topics settings:&lt;/strong&gt; Nos permite setear la localización para mostrar los TT y si queremos excluir los RTs en las búsquedas, bastante bueno para no tener repetidos los tweets mas populares.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Notification settings:&lt;/strong&gt; Habilitar las notificaciones en la barra superior, con un tiempo determinado de refresco y que queremos que nos sea notificado. A su vez, también nos ofrece configurar si la notificación se hace con vibración, ringtone y/o led (incluso podemos configurar el color del mismo).&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Color label settings:&lt;/strong&gt; No la mano en el corazón no le encontré motivo a esto, pero podemos ponerle una etiqueta a los colores. En fin&amp;hellip; si alguien lo usa avise.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Appearance settings:&lt;/strong&gt; Definir el tema (el defecto o el claro&amp;hellip; ¡Oh por Thor no!), y también nos ofrece 10 tamaños diferentes de fuentes para el timeline y para las actualizaciones de estado. Muy bueno para topos como uno.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Profile settings:&lt;/strong&gt; Desde acá podemos modificar el perfil: foto, nombre, web y bio.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;GPS/Location settings:&lt;/strong&gt; Establece la geolocalización por GPS o 3G.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Preview settings:&lt;/strong&gt; Servicios a los cuales podemos acceder desde la vista previa. Una lista muy extensa.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Mute settings:&lt;/strong&gt; ¡Te amo Twicca, haceme un pibe! Permite sacar del timeline usuarios, hashtags o fuentes, por ejemplo, Foursquare, Fromspring, Tumblr y todas esas aplicaciones tediosas.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Cache settings:&lt;/strong&gt; Configuramos la localización del caché (memoria interna o sd) y el tiempo que dura el mismo. Bueno para optimizar tráfico.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Plug-ins settings:&lt;/strong&gt; Si con todas estas opciones no les bastó, además permite agregar funcionalidad a través de plug-ins, disponibles desde el Market. Algunos de los que uso me permiten poner automaticaemnte que escucho desde PowerAMP, mandar un link a ReadItLater para leerlo desde la PC cuando pueda, Subir a Flickr&amp;hellip; y la verdad que hay muchos.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Descargar&lt;/strong&gt;
-Es gratis, se puede bajar directamente dede el &lt;a href=&#34;https://market.android.com/details?id=jp.r246.twicca&amp;amp;hl=es&#34;&gt;Android Market&lt;/a&gt;. También está la posibilidad de donar, la aplicación es la misma pero pueden acceder a funciones antes de que sean liberadas. Si te gusta y sos un early adopter puede ser una buena opción ;)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Imágenes&lt;/strong&gt;
-[nggallery id=3]&lt;/p&gt;
 </description>
     </item>
     

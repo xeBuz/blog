@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Html5 on Personal Blog</title>
+    <title>Html5 on xeBuz personal blog</title>
     <link>http://localhost:1313/blog/tags/html5/</link>
-    <description>Recent content in Html5 on Personal Blog</description>
+    <description>Recent content in Html5 on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 26 Feb 2014 15:56:32 +0000</lastBuildDate>
@@ -20,78 +20,78 @@ Selectores/Traversing (que no encontré una traducción buena) en jQuery.&lt;/p&
 
 &lt;p&gt;&lt;strong&gt;Selectores básicos&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;  $(&amp;quot;#idName&amp;quot;)          // Por id
-  $(&amp;quot;.className&amp;quot;)       // Por clase
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;      $(&amp;quot;#idName&amp;quot;)          // Por id
+      $(&amp;quot;.className&amp;quot;)       // Por clase
 
-  $(document)           // DOM (Document Object Model)
-  $(window)             // DOM + imágenes + iframes
+      $(document)           // DOM (Document Object Model)
+      $(window)             // DOM + imágenes + iframes
 
-  $(&amp;quot;*&amp;quot;)                // todos los elementos
-  $(&amp;quot;div.title&amp;quot;)        // &amp;lt;div class=&amp;quot;title&amp;quot;&amp;gt; &amp;lt;/div&amp;gt;
-  $(&amp;quot;div:first&amp;quot;)        // Primer div
+      $(&amp;quot;*&amp;quot;)                // todos los elementos
+      $(&amp;quot;div.title&amp;quot;)        // &amp;lt;div class=&amp;quot;title&amp;quot;&amp;gt; &amp;lt;/div&amp;gt;
+      $(&amp;quot;div:first&amp;quot;)        // Primer div
 
-  $(&amp;quot;article h1&amp;quot;)       // Todos los h1 dentro de article
-  $(&amp;quot;article &amp;gt; h1&amp;quot;)     // Todos los h1 hijos directo de article
+      $(&amp;quot;article h1&amp;quot;)       // Todos los h1 dentro de article
+      $(&amp;quot;article &amp;gt; h1&amp;quot;)     // Todos los h1 hijos directo de article
 
-  $(&amp;quot;[href]&amp;quot;)           // Todos los elementos que tengan href
-  $(&amp;quot;li:nth-child(n)&amp;quot;)  // El elmento n - *cuenta desde 1*
+      $(&amp;quot;[href]&amp;quot;)           // Todos los elementos que tengan href
+      $(&amp;quot;li:nth-child(n)&amp;quot;)  // El elmento n - *cuenta desde 1*
 
-  $(&amp;quot;tr:even&amp;quot;)          // TableRows pares  
-  $(&amp;quot;p:hidden&amp;quot;)         // Todos los &amp;lt;p&amp;gt; ocultos (con .hide())
+      $(&amp;quot;tr:even&amp;quot;)          // TableRows pares
+      $(&amp;quot;p:hidden&amp;quot;)         // Todos los &amp;lt;p&amp;gt; ocultos (con .hide())
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;strong&gt;Selectores &amp;ldquo;avanzados&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;  $(&amp;quot;:input&amp;quot;)           // Todos los inputs
-  $(&amp;quot;:text&amp;quot;)                 // Todos los elementos type=&amp;quot;text&amp;quot;
-  $(&amp;quot;:checked&amp;quot;)              // Todos los elementos chequeados
-  $(&amp;quot;:focus&amp;quot;)                // Todos los elementos que tengan foco
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;      $(&amp;quot;:input&amp;quot;)                   // Todos los inputs
+      $(&amp;quot;:text&amp;quot;)                    // Todos los elementos type=&amp;quot;text&amp;quot;
+      $(&amp;quot;:checked&amp;quot;)                 // Todos los elementos chequeados
+      $(&amp;quot;:focus&amp;quot;)                   // Todos los elementos que tengan foco
 
-  $(&amp;quot;[href=&#39;index.html&#39;]&amp;quot;)   // href que sean igual a index.html
-  $(&amp;quot;[href!=&#39;index.html&#39;]&amp;quot;)  // href que no sean igual a &amp;quot;index.html&amp;quot;
-  $(&amp;quot;[href$=&#39;.html&#39;]&amp;quot;)       // href que terminen en &amp;quot;.html&amp;quot;
-  $(&amp;quot;[href^=&#39;https://&#39;]&amp;quot;)    // href que empiezen en &amp;quot;https://&amp;quot;
-  $(&amp;quot;[href*=&#39;cuenta&#39;]&amp;quot;)      // href que contengan &amp;quot;cuenta&amp;quot;
+      $(&amp;quot;[href=&#39;index.html&#39;]&amp;quot;)      // href que sean igual a index.html
+      $(&amp;quot;[href!=&#39;index.html&#39;]&amp;quot;)     // href que no sean igual a &amp;quot;index.html&amp;quot;
+      $(&amp;quot;[href$=&#39;.html&#39;]&amp;quot;)          // href que terminen en &amp;quot;.html&amp;quot;
+      $(&amp;quot;[href^=&#39;https://&#39;]&amp;quot;)       // href que empiezen en &amp;quot;https://&amp;quot;
+      $(&amp;quot;[href*=&#39;cuenta&#39;]&amp;quot;)         // href que contengan &amp;quot;cuenta&amp;quot;
 
-  $(&amp;quot;#nav ul li:first-child&amp;quot;)   // Primer li dentro de un/los ul que estén dentro de #nav
+      $(&amp;quot;#nav ul li:first-child&amp;quot;)   // Primer li dentro de ul que estén dentro de #nav
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;**Traversing **&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Traversing&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;  $(&amp;quot;#nav ul:first li:eq(2)&amp;quot;)   // 3er li, dentro del 1er ul que esté en #nav *inicia en 0*
-  $(&amp;quot;#nav ul:eq(0) li:eq(-1)&amp;quot;)  // Último li, dentro del 1er ul que esté en #nav
-  $(&amp;quot;#nav ul li:gt(2)&amp;quot;)         // Los li que tengan un index mayor a 2
-  $(&amp;quot;#nav ul li:lt(2)&amp;quot;)         // Los li que tengan un index menor a 2
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;      // 3er li, dentro del 1er ul que esté en #nav *inicia en 0*
+      $(&amp;quot;#nav ul:first li:eq(2)&amp;quot;)
 
-  $(&amp;quot;#post&amp;quot;).not(&amp;quot;p&amp;quot;)           // Todos los elementos que no sean &amp;lt;p&amp;gt;
-  $(&amp;quot;#nav ul li&amp;quot;).not(&amp;quot;:even&amp;quot;)  // Todos los li que no sean pares
-  $(&amp;quot;#nav ul&amp;quot;).children(&amp;quot;:contains(&#39;Simulador&#39;)&amp;quot;)   // .children() busca todos los hijos del elemento, :contains() filtra por texto
-  $(&amp;quot;#nav ul li p&amp;quot;).parent(&amp;quot;.active&amp;quot;) // Selecciona el li que tenga un p activo
+      // Último li, dentro del 1er ul que esté en #nav
+      $(&amp;quot;#nav ul:eq(0) li:eq(-1)&amp;quot;)
 
-  $( &amp;quot;#nav ul li&amp;quot; ).each(function( index ) { 
-      console.log( index + &amp;quot;: &amp;quot; + $( this ).text() );
-  });
+      // Los li que tengan un index mayor a 2
+      $(&amp;quot;#nav ul li:gt(2)&amp;quot;)
 
-  if ( $(&amp;quot;#nav&amp;quot;).is(&amp;quot;div&amp;quot;) ) { ... }    
+      // Los li que tengan un index menor a 2
+      $(&amp;quot;#nav ul li:lt(2)&amp;quot;)
 
-  // Otras opciones:
-  // .end() .find() .first() .last() .has() .next() .nextAll() .prev() .prevAll() ...
-  // https://api.jquery.com/category/traversing/
+      // Todos los elementos que no sean &amp;lt;p&amp;gt;
+      $(&amp;quot;#post&amp;quot;).not(&amp;quot;p&amp;quot;)
+
+      // Todos los li que no sean pares
+      $(&amp;quot;#nav ul li&amp;quot;).not(&amp;quot;:even&amp;quot;)
+
+      // .children() busca todos los hijos del elemento, :contains() filtra por texto
+      $(&amp;quot;#nav ul&amp;quot;).children(&amp;quot;:contains(&#39;Simulador&#39;)&amp;quot;)
+
+      // Selecciona el li que tenga un p activo
+      $(&amp;quot;#nav ul li p&amp;quot;).parent(&amp;quot;.active&amp;quot;)
+
+      $( &amp;quot;#nav ul li&amp;quot; ).each(function( index ) {
+          console.log( index + &amp;quot;: &amp;quot; + $( this ).text() );
+      });
+
+      if ( $(&amp;quot;#nav&amp;quot;).is(&amp;quot;div&amp;quot;) ) { ... }
+
+      // Otras opciones:
+      // .end() .find() .first() .last() .has() .next() .nextAll() .prev() .prevAll()
+      // https://api.jquery.com/category/traversing/
 &lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>[Charla] Introducción al desarrollo web de videojuegos</title>
-      <link>http://localhost:1313/blog/posts/charla-introduccion-al-desarrollo-web-de-videojuegos/</link>
-      <pubDate>Wed, 05 Sep 2012 12:54:41 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/charla-introduccion-al-desarrollo-web-de-videojuegos/</guid>
-      <description>&lt;p&gt;El jueves 6 a las 19hs voy a estar en la UTN de Córdoba para dar una charla sobre desarrollo de videojuegos para navegadores (en HTML5, todos sabemos que Flash es malvado) invitado por la gente de &lt;a href=&#34;http://uni-code-group.blogspot.com.ar/&#34;&gt;&lt;strong&gt;UNI-CODE&lt;/strong&gt;&lt;/a&gt;, un grupo de estudiantes que se encarga de divulgación de tecnología libre de humo.&lt;/p&gt;
-
-&lt;p&gt;La charla es abierta para todos y está de más decir que es gratis, va a ser muy introductoria con algunos conceptos básicos. También se va a mostrar un framework, &lt;a href=&#34;http://craftyjs.com/&#34;&gt;&lt;strong&gt;Crafty&lt;/strong&gt;&lt;/a&gt;, para simplificar el desarrollo. Si bien está pensada para programadores, la idea es juntar gente con ganas, quien sabe, puede surgir algun proyecto entre las personas que asistan. Las ganas de muchos están, falta organizarnos.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/09/Flyer-6-9-12.jpg&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/09/Flyer-6-9-12-353x500.jpg&#34; alt=&#34;Desarrollo de videojuegos&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

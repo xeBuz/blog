@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Progressbar on Personal Blog</title>
+    <title>Progressbar on xeBuz personal blog</title>
     <link>http://localhost:1313/blog/tags/progressbar/</link>
-    <description>Recent content in Progressbar on Personal Blog</description>
+    <description>Recent content in Progressbar on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 21 Oct 2012 20:49:21 +0000</lastBuildDate>
@@ -17,35 +17,31 @@
       <guid>http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/</guid>
       <description>&lt;p&gt;Hace unos días me puse a &lt;em&gt;portar&lt;/em&gt; la barra de progreso que tiene el sistema de paquetes de &lt;a href=&#34;http://blog.jesusroldan.com/2011/12/28/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/&#34;&gt;&lt;strong&gt;Arch Linux&lt;/strong&gt;&lt;/a&gt; (activando la opción &lt;strong&gt;ILoveCandy&lt;/strong&gt;) a Python &lt;del&gt;3&lt;/del&gt; 3.X y 2.7. De momento está en fase de prueba, pero es dentro de todo funcional, prometo ir actualizándola cuando pueda.&lt;/p&gt;
 
-&lt;p&gt;Para poder instalarlo, pueden bajarse los fuentes &lt;a href=&#34;https://github.com/xeBuz/pacman-progressbar&#34;&gt;desde &lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt; (es licencia Beer-ware, una adaptación de BSD) o mejor aún directamente desde PyPi:&lt;/p&gt;
+&lt;p&gt;Para poder instalarlo, pueden bajarse los fuentes &lt;a href=&#34;https://github.com/xeBuz/pacman-progressbar&#34;&gt;desde &lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt; o directamente desde PyPi:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;sudo pip install pacmanprogressbar
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    sudo pip install pacmanprogressbar
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;La utilización es la siguiente (proximamente voy a hacer que se pueda iterar directamente):&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;#!/usr/bin/env python
-import time
-from pacmanprogressbar import Pacman
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;    #!/usr/bin/env python
+    import time
+    from pacmanprogressbar import Pacman
 
-if __name__ == &amp;quot;__main__&amp;quot;:
-    p = Pacman(end=100)
+    if __name__ == &amp;quot;__main__&amp;quot;:
+        p = Pacman(end=100)
 
-    for x in range(p.len):
-        p.update()
-        time.sleep(.2)
+        for x in range(p.len):
+            p.update()
+            time.sleep(.2)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Una vez instanciada la clase, tiene dos métodos públicos:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;update([value])&lt;/strong&gt;, actualiza el progreso sumándole el valor del parámetro, por defecto suma 1.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;progress(value)&lt;/strong&gt;, en vez de sumarizar, se le pasa directamente el valor del progreso.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Una vez instanciada la clase, tiene dos métodos públicos:
+- &lt;strong&gt;update([value])&lt;/strong&gt;, actualiza el progreso sumándole el valor del parámetro, por defecto suma 1.
+- &lt;strong&gt;progress(value)&lt;/strong&gt;, en vez de sumarizar, se le pasa directamente el valor del progreso.&lt;/p&gt;
 
 &lt;p&gt;La salida en consola sería más o menos como esta:
-&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/10/animacion.gif&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/10/animacion.gif&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;img src=&#34;http://i.imgur.com/klIcQ2u.gif&#34; alt=&#34;a&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     

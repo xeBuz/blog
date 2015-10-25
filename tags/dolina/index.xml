@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Dolina on Personal Blog</title>
+    <title>Dolina on xeBuz personal blog</title>
     <link>http://localhost:1313/blog/tags/dolina/</link>
-    <description>Recent content in Dolina on Personal Blog</description>
+    <description>Recent content in Dolina on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 21 Jul 2011 02:31:17 +0000</lastBuildDate>
@@ -22,15 +22,15 @@
 &lt;p&gt;[sourcecode language=&amp;ldquo;bash&amp;rdquo;]
 #!/bin/bash&lt;/p&gt;
 
-&lt;h1 id=&#34;medio-rustico-pero-si-lo-ejecuto-hoy:e7fb311ab5e08ba834ea459d13c1892b&#34;&gt;Medio rustico, pero si lo ejecuto hoy..&lt;/h1&gt;
+&lt;h1 id=&#34;medio-rustico-pero-si-lo-ejecuto-hoy:adf62d5e16a0d38d858093f3fcbb05cb&#34;&gt;Medio rustico, pero si lo ejecuto hoy..&lt;/h1&gt;
 
-&lt;h1 id=&#34;necesito-bajar-el-programa-de-anoche:e7fb311ab5e08ba834ea459d13c1892b&#34;&gt;necesito bajar el programa de anoche&lt;/h1&gt;
+&lt;h1 id=&#34;necesito-bajar-el-programa-de-anoche:adf62d5e16a0d38d858093f3fcbb05cb&#34;&gt;necesito bajar el programa de anoche&lt;/h1&gt;
 
 &lt;p&gt;day=&lt;code&gt;date +%d &#39;--date=-1 day&#39;&lt;/code&gt;
 month=&lt;code&gt;date +%m &#39;--date=-1 day&#39;&lt;/code&gt;
 year=&lt;code&gt;date +%Y &#39;--date=-1 day&#39;&lt;/code&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;directorio-en-donde-se-guarda-el-archivo:e7fb311ab5e08ba834ea459d13c1892b&#34;&gt;Directorio en donde se guarda el archivo&lt;/h1&gt;
+&lt;h1 id=&#34;directorio-en-donde-se-guarda-el-archivo:adf62d5e16a0d38d858093f3fcbb05cb&#34;&gt;Directorio en donde se guarda el archivo&lt;/h1&gt;
 
 &lt;p&gt;folder=&amp;ldquo;$HOME/Dolina/&amp;rdquo;$year&amp;rdquo;/&amp;ldquo;$month&amp;rdquo;/&amp;rdquo;&lt;/p&gt;
 

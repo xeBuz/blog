@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Imagemagick on Personal Blog</title>
+    <title>Imagemagick on xeBuz personal blog</title>
     <link>http://localhost:1313/blog/tags/imagemagick/</link>
-    <description>Recent content in Imagemagick on Personal Blog</description>
+    <description>Recent content in Imagemagick on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 18 Oct 2012 02:03:52 +0000</lastBuildDate>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mpd on Personal Blog</title>
+    <title>Mpd on xeBuz personal blog</title>
     <link>http://localhost:1313/blog/tags/mpd/</link>
-    <description>Recent content in Mpd on Personal Blog</description>
+    <description>Recent content in Mpd on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 10 Aug 2012 13:55:24 +0000</lastBuildDate>
@@ -81,83 +81,6 @@ if __name__ == &#39;__main__&#39;:
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Descarga desde aca: &lt;a href=&#34;https://gist.github.com/1100627&#34;&gt;GIST&lt;/a&gt;, seguramente la iré modificando, la idea es dejarla corriendo como un servicio.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Hacer un radio casera con MPD y con Icecast</title>
-      <link>http://localhost:1313/blog/posts/streaming-con-mpd-y-icecast-en-arch-linux/</link>
-      <pubDate>Tue, 01 Nov 2011 19:09:58 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/streaming-con-mpd-y-icecast-en-arch-linux/</guid>
-      <description>&lt;p&gt;Empecemos&amp;hellip; pero &lt;em&gt;¿Qué e&amp;rsquo; lo que e&amp;rsquo; eso?&lt;/em&gt;
-&lt;strong&gt;MPD&lt;/strong&gt;: Básicamente, es un servidor para escuchar música. Con la particularidad de que es muy configurable y nos permite acceder a traves de la red para controlar la lista de reproducción. &lt;a href=&#34;http://images.wikia.com/mpd/images/6/68/Mpd-overview.png&#34;&gt;Esta&lt;/a&gt; imagen lo explica bien.
-&lt;strong&gt;Clientes MPD&lt;/strong&gt;: El servidor por sí sólo nos gestiona los archivos, los salidas de audio y la lista de reproducción, para acceder a esto necesitamos clientes, que visualmente son similares a las clasicas aplicaciones para escuchar música.
-Algunos a destacar: Sonata, Ario, ncmpcpp, MPDroid y una &lt;a href=&#34;http://mpd.wikia.com/wiki/Clients&#34;&gt;larga lista más&lt;/a&gt;.
-&lt;strong&gt;Icecast&lt;/strong&gt; : Es un proyecto open source para hacer streaming, que aparece como competencia libre de SHOUTcast (también compatible con este).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;1.- Instalar el servidor MPD&lt;/strong&gt;
-La instalación es simple, también esta en los repositorios de las principales distros. La configuración y puesta a punto es lo que va a llevar mas tiempo y pueden surgir tantos problemas como lineas de configuración tenga el archivo /etc/mpd.conf
-Lo importante (a este nivel) es dejar bien la base de datos y los archivos básicos, cualquier tipo de configuración de salida de audio (excepto en el paso 3) o detalles excede lo que tenemos que hacer para que funcione el streaming. TODO lo que necesitan saber está en la &lt;a href=&#34;http://mpd.wikia.com/wiki/Configuration&#34;&gt;wiki oficial&lt;/a&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;music_directory       &amp;quot;/media/music/&amp;quot;
-playlist_directory    &amp;quot;/var/lib/mpd/playlists&amp;quot;
-db_file               &amp;quot;/var/lib/mpd/mpd.db&amp;quot;
-log_file              &amp;quot;/var/log/mpd/mpd.log&amp;quot;
-pid_file              &amp;quot;/var/run/mpd/mpd.pid&amp;quot;
-state_file            &amp;quot;/var/lib/mpd/mpdstate&amp;quot;
-user                  &amp;quot;mpd&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Nota: Es importante que la música esté bien taggeada.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2.- Instalar y configurar Icecast&lt;/strong&gt;
-Supongamos que ya lo instalaron, el archivo de configuración es un XML, está en /etc/icecast.xml. Algunos detalles de configuración:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;!-- Dato de conexion ---&amp;gt;
-&amp;lt;listen-socket&amp;gt;
-    &amp;lt;port&amp;gt;8899&amp;lt;/port&amp;gt;
-    &amp;lt;shoutcast-mount&amp;gt;/stream&amp;lt;/shoutcast-mount&amp;gt; 
-&amp;lt;/listen-socket&amp;gt;
-
-&amp;lt;!-- Para publicar en los directorios ---&amp;gt;
-&amp;lt;directory&amp;gt;
-    &amp;lt;yp-url-timeout&amp;gt;30&amp;lt;/yp-url-timeout&amp;gt;
-    &amp;lt;yp-url&amp;gt;http://dir.xiph.org/cgi-bin/yp-cgi&amp;lt;/yp-url&amp;gt;
-&amp;lt;/directory&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;La configuración escencial se hace en /etc/mpd.conf, ahi agregamos una salida de audio que direccione a nuestro Icecast. Para esto hay que agregrar:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;audio_output {
-    type        &amp;quot;shout&amp;quot;
-    encoding    &amp;quot;ogg&amp;quot;
-    name        &amp;quot;KBBL me va a dar algo estupido&amp;quot;
-    host        &amp;quot;localhost&amp;quot;   # lo sacan de la configuración de Icecast
-    port        &amp;quot;8000&amp;quot;        # lo sacan de la configuración de Icecast
-    mount       &amp;quot;/mpd.ogg&amp;quot;    # Importante para conectarse
-    password    &amp;quot;xxxxx&amp;quot;       # lo sacan de la configuración de Icecast
-    quality     &amp;quot;5.0&amp;quot;
-    bitrate     &amp;quot;192&amp;quot;         # http://en.wikipedia.org/wiki/Bit_rate#Audio     
-    format      &amp;quot;44100:16:2&amp;quot;  # Default 44100:16:1
-    user        &amp;quot;source&amp;quot;
-    description &amp;quot;Descripción mas larga, util para directorios&amp;quot;
-    genre       &amp;quot;powa&amp;quot;
-    public      &amp;quot;yes&amp;quot;          # Para publicación en un directorio
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;3.- Conectarse&lt;/strong&gt;
-Primero, levantan los servicios (primero mpd, despues icecast), si todo va bien, ya pueden entrar con algún cliente MPD para armar la playlist. Si no hay nada reproduciéndose cuando quieran abrir la conexión de streaming va a dar error 404.
-Una forma facil de testear la reproducción es con mplayer de forma local.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;mplayer -playlist http://127.0.0.1:8000/mpd.ogg.m3u
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Casi cualquier reproductor está preparado para streaming, hasta pueden hacerlo desde el celular, en Android uso &amp;ldquo;A Radio Player&amp;rdquo;, anda de 10.
-Si dejan la configuración de arriba van a poder figurar en el &lt;a href=&#34;http://dir.xiph.org/&#34;&gt;Directorio de Icecast&lt;/a&gt;, con un link al streaming por M3U y otro por XSPF.&lt;/p&gt;
-
-&lt;p&gt;Post para @elpibepantalla y @Nestor_Navarro y gracias a @Rhapsody_Girl por ser la tester :P&lt;/p&gt;
 </description>
     </item>
     

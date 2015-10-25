@@ -6,44 +6,254 @@
     <description>Recent content in Tips on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 May 2014 13:34:35 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 May 2012 16:48:07 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/categories/tips/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Close Tab en Firefox 31</title>
-      <link>http://localhost:1313/blog/posts/no-close-tabs-firefox-31/</link>
-      <pubDate>Wed, 14 May 2014 13:34:35 +0000</pubDate>
+      <title>Cron, automatizar scripts como un titán</title>
+      <link>http://localhost:1313/blog/posts/cron-automatizar-scripts-como-un-titan/</link>
+      <pubDate>Tue, 22 May 2012 16:48:07 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/no-close-tabs-firefox-31/</guid>
-      <description>&lt;p&gt;Practicamente desde que uso Mozilla Firefox le quito el ícono de cerrar a las solapas, me ahorra espacio y minimiza el riesgo de cerrar por error alguna.
-En versiones anteriores a Firefox 31, desde &lt;strong&gt;about:config&lt;/strong&gt; se podía editar desde la siguiente opción:
-&lt;code&gt;browser.tabs.closeButtons = 0&lt;/code&gt;&lt;/p&gt;
+      <guid>http://localhost:1313/blog/posts/cron-automatizar-scripts-como-un-titan/</guid>
+      <description>&lt;p&gt;Hace un tiempo escribí sobre [la utilización del comando &lt;strong&gt;at&lt;/strong&gt;], ahora le toca el turno a &lt;strong&gt;cron&lt;/strong&gt;. ¿Tron? No, cron. ¡Troz! (?).
+¿Qué es cron? Es un administrador de procesos que se ejecuta a un interválo de tiempo específico. Si vienen del Dark Side, sería el equivalente a las &lt;em&gt;Tareas Programadas&lt;/em&gt; de W.&lt;/p&gt;
 
-&lt;p&gt;Pero debido a cambios en las tabs, esto deja de tener validez, y a partir de la versión 31 la configuración UI se realiza desde:
-&lt;code&gt;browser.uiCustomization.state&lt;/code&gt;
-y no es un solo campo, sino que nos da un JSON mucho mas complejo
-[spoiler title=&amp;ldquo;Configuración original - JSON&amp;rdquo; style=&amp;ldquo;fancy&amp;rdquo; icon=&amp;ldquo;chevron&amp;rdquo;]&lt;/p&gt;
+&lt;p&gt;La instalación es simple (está en los repos o incluso ya instalada, en toda distribución que se jacte de ser tal), en fín, en Arch podrían hacer:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;{
-    &amp;quot;placements&amp;quot;: {
-        &amp;quot;PanelUI-contents&amp;quot;: [&amp;quot;edit-controls&amp;quot;, &amp;quot;zoom-controls&amp;quot;, &amp;quot;new-window-button&amp;quot;, &amp;quot;privatebrowsing-button&amp;quot;, &amp;quot;save-page-button&amp;quot;, &amp;quot;print-button&amp;quot;, &amp;quot;history-panelmenu&amp;quot;, &amp;quot;fullscreen-button&amp;quot;, &amp;quot;find-button&amp;quot;, &amp;quot;preferences-button&amp;quot;, &amp;quot;add-ons-button&amp;quot;, &amp;quot;ecb-button&amp;quot;, &amp;quot;abp-toolbarbutton&amp;quot;, &amp;quot;tb-venkman-open&amp;quot;, &amp;quot;measureit_toolbar_button&amp;quot;, &amp;quot;sessionmanager-undo&amp;quot;, &amp;quot;sessionmanager-toolbar&amp;quot;],
-        &amp;quot;GiT-addon-bar&amp;quot;: [&amp;quot;GiT-addon-bar-toggle-button&amp;quot;, &amp;quot;epubreader-catalog-button&amp;quot;, &amp;quot;useragentswitcher-button&amp;quot;, &amp;quot;colorzilla-navbar-button&amp;quot;, &amp;quot;awesome-screenshot-toolbarbutton&amp;quot;, &amp;quot;RIL_toolbar_button&amp;quot;, &amp;quot;feed-button&amp;quot;, &amp;quot;customizableui-special-spring51&amp;quot;, &amp;quot;widget:jid1-n85lxPv1NAWVTQ@jetpack-freeMemory&amp;quot;, &amp;quot;FoxyScrobblerToolbarButton&amp;quot;, &amp;quot;GiT-status-bar-container&amp;quot;],
-        &amp;quot;web-developer-toolbar&amp;quot;: [&amp;quot;web-developer-disable-toolbar&amp;quot;, &amp;quot;web-developer-cookies-toolbar&amp;quot;, &amp;quot;web-developer-css-toolbar&amp;quot;, &amp;quot;web-developer-forms-toolbar&amp;quot;, &amp;quot;web-developer-images-toolbar&amp;quot;, &amp;quot;web-developer-information-toolbar&amp;quot;, &amp;quot;web-developer-miscellaneous-toolbar&amp;quot;, &amp;quot;web-developer-outline-toolbar&amp;quot;, &amp;quot;web-developer-resize-toolbar&amp;quot;, &amp;quot;web-developer-tools-toolbar&amp;quot;, &amp;quot;web-developer-view-source-toolbar&amp;quot;, &amp;quot;web-developer-options-toolbar&amp;quot;, &amp;quot;customizableui-special-spring1&amp;quot;, &amp;quot;web-developer-render-mode-statusbar&amp;quot;, &amp;quot;web-developer-css-statusbar&amp;quot;, &amp;quot;web-developer-javascript-statusbar&amp;quot;],
-        &amp;quot;addon-bar&amp;quot;: [&amp;quot;addonbar-closebutton&amp;quot;, &amp;quot;status-bar&amp;quot;],
-        &amp;quot;PersonalToolbar&amp;quot;: [&amp;quot;personal-bookmarks&amp;quot;],
-        &amp;quot;nav-bar&amp;quot;: [&amp;quot;urlbar-container&amp;quot;, &amp;quot;search-container&amp;quot;, &amp;quot;webrtc-status-button&amp;quot;, &amp;quot;downloads-button&amp;quot;, &amp;quot;igc-toolbar-button&amp;quot;, &amp;quot;social-share-button&amp;quot;, &amp;quot;developer-button&amp;quot;, &amp;quot;widget:jid1-4P0kohSJxU1qGg@jetpack-browserAction0&amp;quot;],
-        &amp;quot;TabsToolbar&amp;quot;: [&amp;quot;tabbrowser-tabs&amp;quot;, &amp;quot;new-tab-button&amp;quot;, &amp;quot;tabview-button&amp;quot;, &amp;quot;alltabs-button&amp;quot;, &amp;quot;tabs-closebutton&amp;quot;],
-        &amp;quot;toolbar-menubar&amp;quot;: [&amp;quot;menubar-items&amp;quot;]
-    },
-    &amp;quot;seen&amp;quot;: [&amp;quot;abp-toolbarbutton&amp;quot;, &amp;quot;GiT-special-spring&amp;quot;, &amp;quot;GiT-special-spacer&amp;quot;, &amp;quot;GiT-special-separator&amp;quot;],
-    &amp;quot;dirtyAreaCache&amp;quot;: [&amp;quot;PersonalToolbar&amp;quot;, &amp;quot;nav-bar&amp;quot;, &amp;quot;TabsToolbar&amp;quot;, &amp;quot;toolbar-menubar&amp;quot;, &amp;quot;PanelUI-contents&amp;quot;, &amp;quot;web-developer-toolbar&amp;quot;, &amp;quot;addon-bar&amp;quot;, &amp;quot;GiT-addon-bar&amp;quot;],
-    &amp;quot;newElementCount&amp;quot;: 59
-}
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    pacman -S --needed cronie
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;[/spoiler]&lt;/p&gt;
+&lt;p&gt;Al principio puede resultar extraña la configuracion de crontab, pero con el tiempo termina siendo más simple de lo que aparenta y se puede lograr cosas muy buenas de una forma muy sencilla.&lt;/p&gt;
 
-&lt;p&gt;Para dejar de tener el botón, hay que quitar &lt;strong&gt;&amp;ldquo;tabs-closebutton&amp;rdquo;&lt;/strong&gt;, se aplican los cambios sin reiniciar.&lt;/p&gt;
+&lt;p&gt;Primero, tenemos 5 espacios para colocar los tiempos, que se dividen en minutos, horas, días del mes, meses y días de la semana; si alguno de estos datos no se rellena, se debe colocar un asterísco, que significa &amp;ldquo;todos&amp;rdquo; (para que sea entendible y hasta leíble). Después de eso se coloca la ruta completa del script que quieren que se ejecute en ese determinado lapso de tiempo.&lt;/p&gt;
+
+&lt;p&gt;En cualquier campo, asumiendo que ya entendimos los rangos de cada uno, podemos colocar tanto un valor específico, varios valores separados por coma o un rango separado por un guión. Por ejemplo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#Se ejecuta a las 5 de la mañana, en punto
+0 5 * * * * /home/jesus/Scripts/tomar_cafe.sh
+
+#Se ejecuta a las 5 y a las 17 horas, en punto
+0 5,17 * * * /home/jesus/Scripts/loquesea.sh
+
+#Se ejecuta *desde* las 5, cada hora &amp;quot;en punto&amp;quot; *hasta* las 17hs.
+0 5-17 * * * /home/jesus/Scripts/latigo.sh
+
+#Similar al anterior, pero ejecuta cada minuto entre las 5 y las 17
+#miren el primer valor, le estan dicieno &amp;quot;todos&amp;quot;
+* 5,17 * * * echo &amp;quot;trabajen mas duro&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;¿Cómo ver las tareas pendientes en cron?
+&lt;strong&gt;crontab -l&lt;/strong&gt; lista las del usuario activo, para ver las de otro usuario, deben ejecutar crontab -u user -l&lt;/p&gt;
+
+&lt;p&gt;¿Cómo se modifican las tareas?
+Con &lt;strong&gt;crontab -e&lt;/strong&gt; se nos abre el archivo para modificar, con el editor que tengamos por defecto. Para cambiarlo debemos cambiar: &lt;em&gt;export EDITOR=&amp;ldquo;/usr/bin/nano&amp;rdquo;&lt;/em&gt;. Como por defecto se abre con vi, por favor no toquen el teclado si no saben como funciona y llamen a un mayor responsable a cargo.
+También pueden editar los archivos de otros usuarios, con **contab -u user -e **.&lt;/p&gt;
+
+&lt;p&gt;Ahora bien, aquí viene lo bueno jóven, algunos ejemplos:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#Corre cada minuto, siempre.
+* * * * * /home/xebuz/script/cada_minuto.sh
+
+#Cada 5 minutos
+*/5 * * * * /home/xebuz/script/cada_cinco_minutos.sh
+
+#Cada hora, de 8 a 18, de lunes a viernes
+00 08-18 * * 1-5 /home/xebuz/script/laboral.sh
+
+#Una vez cada mes y medio
+* * */15 */1 * /home/xebuz/goldequilmes.sh
+
+#Cada 4 años
+* * * */48 * /home/xebuz/script/mundial.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;¿Muy engorroso para escribir? ¿Sos un lazy-sysadmin? Existen también algunos alias, para agilizar la administración, són cómodos y reemplazan a todos los campos de tiempo, es decir, sólo deben poner el alias y despues el script.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#Tiempos específicos
+@hourly
+@daily
+@weekly
+@monthly
+#Este se ejecuta (como lo indica el nombre), cuando se resetea el equipo
+@reboot
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tips Linuxeros: Alias para Todos</title>
+      <link>http://localhost:1313/blog/posts/tips-para-linux-alias-para-todos/</link>
+      <pubDate>Fri, 02 Sep 2011 21:33:09 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/tips-para-linux-alias-para-todos/</guid>
+      <description>&lt;p&gt;Los alias en Linux son shortcuts o &lt;em&gt;sinónimos&lt;/em&gt; que podemos emplear para ejecutar comandos en la terminal.
+Son muy útiles para correr comandos largos o simplemente crear nombres mas amigables, para algún comando que nos resulte deficil de recordar o a los que usemos mas seguido.
+Para crearlos debemos escribir en el archivo &lt;strong&gt;~.bashrc&lt;/strong&gt; para dejarlos disponibles al usuario, o en /etc/bash.bashrc para dejarlos disponibles en todo el sistema.&lt;/p&gt;
+
+&lt;p&gt;Las sintaxis es muy sencilla: &lt;em&gt;alias nombre=&amp;lsquo;comando&amp;rsquo;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Algunos ejemplos&amp;hellip;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    #Gestión rapida de paquetería
+    alias instalar=&#39;sudo apt-get install&#39;
+    alias clearcache=&#39;yaourt -Scc&#39;
+    alias update=&#39;emerge --update --deep&#39;
+
+    #Vaciado de archivos
+    alias empty=&#39;:&amp;gt; $1&#39;
+
+    #Copiado con barra de progreso, velocidad y estadísticas
+    alias copy=&#39;rsync -avz --stats --progress&#39;
+
+    #Compartir la carpeta, via HTTP (http://127.0.0.1:8000)
+    alias sharehttp=&#39;python -m SimpleHTTPServer&#39;
+
+    #Mostrar unidades montadas, en columnas
+    alias mountt=&#39;mount | column -t&#39;
+
+    #Mostrar top 10 deprocesos que consuman mas memoria
+    alias pstop=&#39;ps aux | sort -nk +4 | tail&#39;
+
+    #Buscar proceso
+    alias psx=&#39;ps aux | grep &#39;
+
+    #Me olvide de poner sudo en el comando anterior
+    alias grrrrrrr=&#39;sudo !!&#39;
+
+    #Listar los puertos abiertos
+    alias openports=&#39;netstat --all --numeric --programs --inet&#39;
+
+    # Tambien podemos modificar el prompt o la terminal
+    # Agregandole la hora
+    alias hora=&#39;export PS1=&amp;quot;${PS1%\$*}&amp;quot;&#39; t $ &#39;
+    # o mejor aun, poniendola en la parte superior
+    alias horasuperior=&#39;while sleep 1;do tput sc;tput cup 0 $(($(tput cols)-29));date;tput rc;done &amp;amp;&#39;
+
+    #Alias con parametros (en realidad es una funcion)
+    #Crear un directorio y posicionarnos sobre el mismo
+    MKdir() { mkdir $1 &amp;amp;&amp;amp; cd $1 }
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Hacer los comandos &amp;ldquo;human-readeable&amp;rdquo; por defecto&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    alias ls=&#39;ls -h&#39;
+    alias du=&#39;du -h&#39;
+    alias df=-df -h&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Simplificar los parámetros&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    alias ls=&#39;ls -hF --color=always&#39;
+    alias lr=&#39;ls -hR&#39;                    # recursive ls
+    alias ll=&#39;ls -hl&#39;
+    alias la=&#39;ll -hA&#39;
+    alias lx=&#39;ll -hBX&#39;                   # sort by extension
+    alias lz=&#39;ll -hrS&#39;                   # sort by size
+    alias lt=&#39;ll -rt&#39;                    # sort by date
+    alias lm=&#39;la | more&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;También podemos crear alias que solo funcionen para usuarios con privilegios de root&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;```bash
+    if [ $UID -ne 0 ]; then
+        alias scat=&amp;lsquo;sudo cat&amp;rsquo;
+        alias svim=&amp;lsquo;sudo vim&amp;rsquo;
+        alias root=&amp;lsquo;sudo su&amp;rsquo;
+        alias reboot=&amp;lsquo;sudo reboot&amp;rsquo;
+        alias halt=&amp;lsquo;sudo halt&amp;rsquo;
+        alias netcfg=&amp;lsquo;sudo netcfg2&amp;rsquo;
+    fi&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Si queren saber cuales son los comandos que más se utilizan en el sistema, como para ver si pueden agilizar creando alias mas cortos, pueden correr esto:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; history | awk &#39;{print $2}&#39; | awk &#39;BEGIN {FS=&amp;quot;|&amp;quot;}{print $1}&#39; | sort | uniq -c | sort -n | tail -n 20 | sort -nr
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;[quote style=&amp;ldquo;1&amp;rdquo;] See, you not only have to be a good coder to create a system like Linux, you have to be a sneaky bastard too ;-) [/quote]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Linus Torvalds&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>VirtualBoxes.org - Descarga de máquinas virtuales</title>
+      <link>http://localhost:1313/blog/posts/virtualboxes-org-descarga-de-maquinas-virtuales/</link>
+      <pubDate>Wed, 31 Aug 2011 20:43:42 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/virtualboxes-org-descarga-de-maquinas-virtuales/</guid>
+      <description>&lt;p&gt;¿Les gusta probar diferentes Sistemas Operativos?&lt;/p&gt;
+
+&lt;p&gt;¿Te aburre instalarlos?&lt;/p&gt;
+
+&lt;p&gt;¿Virtualizas?&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Entonces &lt;a href=&#34;http://virtualboxes.org/&#34;&gt;&lt;strong&gt;VirtualBoxes.org&lt;/strong&gt;&lt;/a&gt; es eso que no sabías que necesitabas. Al momento de escribir el texto, el sitio tiene 42 Sistemas Operativos diferentes, algunos con varias versiones del mismo.&lt;/p&gt;
+
+&lt;p&gt;El sitio se encarga de subir los archivos &lt;a href=&#34;http://filext.com/file-extension/VDI&#34;&gt;.vdi&lt;/a&gt; para importar en VirtualBox. Las descargas son directas, compresiones en 7zip hosteadas en Sourceforge.&lt;/p&gt;
+
+&lt;p&gt;Tiene imágenes de sistemas:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;GNU/Linux&lt;/strong&gt;: Desde los más comunes como Fedora, Ubuntu o Debian hasta algunas menos populares como DeLi, gNewSense (la recomienda RMS), Moblin (orientada a netbooks) entre muchas otras.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Solaris&lt;/strong&gt;: OpenSolaris, MilaX, Nexenta&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FreeBSD/BSD&lt;/strong&gt;: Debian GNU/kFreeBSD, FreeBSD&lt;/li&gt;
+&lt;li&gt;y algunos mas como MINIX, Haiku (basado en BeOS), ReactOS, Android, FreeDOS y algunos más&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;En donde están los links, tambien se encuentran los datos de login&lt;/em&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tips Linuxeros: Manejo del historial</title>
+      <link>http://localhost:1313/blog/posts/tips-para-linux-manejo-del-historial/</link>
+      <pubDate>Fri, 22 Jul 2011 00:16:16 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/tips-para-linux-manejo-del-historial/</guid>
+      <description>&lt;p&gt;Quizás una de las mejores funcionalidades en la terminal de Linux, o por lo menos una de las más productivas, es la capacidad de generar un historial de lo que ejecutamos.
+Ahora bien, existen varias formas de recorrerlo. La más común y la que seguramente todos usan, es mediante las flechas arriba y abajo, muy util, pero también existen otras formas de hacerlo :)&lt;/p&gt;
+
+&lt;p&gt;Podemos hacer una búsqueda utilizando &lt;strong&gt;Ctrl+R&lt;/strong&gt; y el texto que deseamos. La búsqueda es incremental, en caso de que la primera opción no es la que queremos, sólo basta volver a presionar &lt;strong&gt;Ctrl+R&lt;/strong&gt;. Si queremos hacer la búsqueda en orden inverso, basta utilizar &lt;strong&gt;Ctrl+I&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Otra opción muy interesante es volver a ejecutar el comando anterior con &lt;strong&gt;!!&lt;/strong&gt; (doble signo de admiración). Es genial si nos olvidamos de ejecutar algo con permisos de superuser:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;     sudo !!
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;También se puede utilizar el &lt;strong&gt;!foo&lt;/strong&gt; para repetir la última vez que usamos foo, o &lt;strong&gt;!?foo&lt;/strong&gt; para volver a ejecutar el ultimo comando &lt;em&gt;que contenga&lt;/em&gt; foo.&lt;/p&gt;
+
+&lt;p&gt;En caso de que querramos &lt;em&gt;reemplazar&lt;/em&gt; parte del script ejectutado anteriormente, por ejemplo, abrimos un archivo con nano pero ahora queremos abrirlo con vi, podemos correr&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    ^nano^vi
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;En caso de que necesitemos mostrar todos los comandos que contengan cierto termino basta con hacer un &lt;strong&gt;grep&lt;/strong&gt; de lo que devuelve el comando history:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;     history | grep foo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;El número de la izquierda es el orden del comando, podemos correr esa linea usando &lt;strong&gt;!numero&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Un detalle&amp;hellip;&lt;/em&gt;
+Es posible que si usan múltipes instancias de la terminal (desde tty, gnome-terminal, guake, yakuke, etc), no se guarde el historial, para esto  basta con editar el archivo &lt;strong&gt;~/.bashrc&lt;/strong&gt; de esta forma:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt; unset HISTFILESIZE
+ HISTSIZE=5000 # cantidad de registros que quieran guardar
+ PROMPT_COMMAND=&amp;quot;history -a&amp;quot;
+ export HISTSIZE PROMPT_COMMAND
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Y correr una vez el siguiente comando&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;     shopt -s histappend
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
