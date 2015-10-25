@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tips on Personal Blog</title>
-    <link>http://xebuz.github.io/blog/tags/tips/</link>
-    <description>Recent content in Tips on Personal Blog</description>
+    <title>Tips on xeBuz personal blog</title>
+    <link>http://localhost:1313/blog/tags/tips/</link>
+    <description>Recent content in Tips on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 14 May 2014 13:34:35 +0000</lastBuildDate>
-    <atom:link href="http://xebuz.github.io/blog/tags/tips/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/tags/tips/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Close Tab en Firefox 31</title>
-      <link>http://xebuz.github.io/blog/posts/no-close-tabs-firefox-31/</link>
+      <link>http://localhost:1313/blog/posts/no-close-tabs-firefox-31/</link>
       <pubDate>Wed, 14 May 2014 13:34:35 +0000</pubDate>
       
-      <guid>http://xebuz.github.io/blog/posts/no-close-tabs-firefox-31/</guid>
+      <guid>http://localhost:1313/blog/posts/no-close-tabs-firefox-31/</guid>
       <description>&lt;p&gt;Practicamente desde que uso Mozilla Firefox le quito el ícono de cerrar a las solapas, me ahorra espacio y minimiza el riesgo de cerrar por error alguna.
 En versiones anteriores a Firefox 31, desde &lt;strong&gt;about:config&lt;/strong&gt; se podía editar desde la siguiente opción:
 &lt;code&gt;browser.tabs.closeButtons = 0&lt;/code&gt;&lt;/p&gt;

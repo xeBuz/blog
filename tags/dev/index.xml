@@ -1,140 +1,144 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Dev on Personal Blog</title>
-    <link>http://localhost:1313/blog/tags/dev/</link>
-    <description>Recent content in Dev on Personal Blog</description>
+    <title>Dev on xeBuz personal blog</title>
+    <link>http://xebuz.github.io/blog/tags/dev/</link>
+    <description>Recent content in Dev on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 05 Mar 2014 15:04:21 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/tags/dev/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://xebuz.github.io/blog/tags/dev/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Crazy little thing called Perl: Introducción al lenguaje</title>
-      <link>http://localhost:1313/blog/posts/crazy-little-thing-called-perl/</link>
+      <link>http://xebuz.github.io/blog/posts/crazy-little-thing-called-perl/</link>
       <pubDate>Wed, 05 Mar 2014 15:04:21 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/crazy-little-thing-called-perl/</guid>
+      <guid>http://xebuz.github.io/blog/posts/crazy-little-thing-called-perl/</guid>
       <description>&lt;p&gt;Perl está disponible para múltimples plataformas, pueden descargarlo desde &lt;a href=&#34;http://www.perl.org/get.html&#34;&gt;acá&lt;/a&gt; o desde el sistema de paquetes que utilicen. Para verificar si tienen instalado perl, en la terminal escriban &lt;em&gt;perl -v&lt;/em&gt;, si hay salida ya lo tienen instalado.&lt;/p&gt;
 
 &lt;p&gt;Para la instalación de librerías se utiliza &lt;a href=&#34;http://www.cpan.org/&#34;&gt;&lt;strong&gt;CPAN&lt;/strong&gt;&lt;/a&gt;, que es una colección de módulos libres para Perl. Pueden descargar este script o sino instalarlo desde los repositorios, por ejemplo, en un Linux basado en Debian basta correr:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;aptitude install cpanminus
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    aptitude install cpanminus
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Una vez instalado, para instalar módulos deben correr desde la consola el siguiente comando (teniendo en cuenta que el nombre del módulo es case-sensitive):&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;cpan install Modulo
+&lt;pre&gt;&lt;code&gt;    cpan install Modulo
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://www.tiraecol.net/modules/comic/cache/images/tiraecol-15.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Variables&lt;/strong&gt;
-Perl maneja tres tipos de variables:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Variables&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Perl maneja tres tipos de variables:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Scalar&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Array&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Hash&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Scalar&lt;/li&gt;
+&lt;li&gt;Array&lt;/li&gt;
+&lt;li&gt;Hash&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Scalar&lt;/strong&gt;
-Las variables escalares representan un valor simple. Los valores escalares pueden ser cadenas, enteros o números de coma flotante y se definen anteponiendo el signo &lt;strong&gt;$&lt;/strong&gt; al nombre de la variable.
-No hay necesidad de pre-declarar sus tipos de variables , Perl los convertirá automáticamente entre ellos según sea necesario.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Scalar&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;my $animal = &amp;quot;tortuga&amp;quot;;
-my $answer = 42;
+&lt;p&gt;Las variables escalares representan un valor simple. Los valores escalares pueden ser cadenas, enteros o números de coma flotante y se definen anteponiendo el signo &lt;strong&gt;$&lt;/strong&gt; al nombre de la variable.
+No hay necesidad de pre-declarar sus tipos de variables, Perl los convertirá automáticamente entre ellos según sea necesario.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    my $animal = &amp;quot;turtle&amp;quot;;
+    my $answer = 42;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;Array&lt;/strong&gt;
-Las variables de tipo Array representan una lista de valores. Se declaran anteponiendo el signo &lt;strong&gt;@&lt;/strong&gt; al nombre de la variable&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Array&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;my @animals = (&amp;quot;turtle&amp;quot;, &amp;quot;llama&amp;quot;, &amp;quot;cat&amp;quot;);
-my @numbers = (23, 42, 69);
-my @mixed   = (&amp;quot;whale&amp;quot;, 666, 1.23);
+&lt;p&gt;Las variables de tipo Array representan una lista de valores. Se declaran anteponiendo el signo &lt;strong&gt;@&lt;/strong&gt; al nombre de la variable&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    my @animals = (&amp;quot;turtle&amp;quot;, &amp;quot;llama&amp;quot;, &amp;quot;cat&amp;quot;);
+    my @numbers = (23, 42, 69);
+    my @mixed   = (&amp;quot;whale&amp;quot;, 666, 1.23);
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Los Arrays son indexados a cero. Se puede acceder a los valores de la siguiente manera:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;print $animals[0];              # imprime &amp;quot;turtle&amp;quot;. Se utiliza $ porque es un valor scalar
-print $animals[1];              # imprime &amp;quot;llama&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    print $animals[0];              # imprime &amp;quot;turtle&amp;quot;. Se utiliza $ porque es un valor scalar
+    print $animals[1];              # imprime &amp;quot;llama&amp;quot;
+``
 
-&lt;p&gt;La variable especial $#nombrearray nos indica el índice del último elemento.&lt;/p&gt;
+La variable especial $#nombrearray nos indica el índice del último elemento.
 
-&lt;pre&gt;&lt;code&gt;print $#mixed;                # imprime 2
-print $mixed[$#mixed];        # último elemento, imprime 1.23
+```perl
+    print $#mixed;                # imprime 2
+    print $mixed[$#mixed];        # último elemento, imprime 1.23
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Si utilizamos @mixed en contexto escalar, obtendremos el tamaño de nuestro Array:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$arrayLength = @mixed;
-print $arraylength;            #imprime 3
+&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    $arrayLength = @mixed;
+    print $arraylength;            #imprime 3
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Para obtener múltiples valores de nuestro Array:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;@animals[0,1];           # Devuelve (&amp;quot;turtle&amp;quot;, &amp;quot;llama&amp;quot;), @ porque devuelve un array;
-@animals[0..2];          # Devuelve (&amp;quot;turtle&amp;quot;, &amp;quot;llama&amp;quot;, &amp;quot;cat&amp;quot;);
-@animals[1..$#animals];  # Devuelve todo excepto el primer elemento
+&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    @animals[0,1];           # Devuelve (&amp;quot;turtle&amp;quot;, &amp;quot;llama&amp;quot;), @ porque devuelve un array;
+    @animals[0..2];          # Devuelve (&amp;quot;turtle&amp;quot;, &amp;quot;llama&amp;quot;, &amp;quot;cat&amp;quot;);
+    @animals[1..$#animals];  # Devuelve todo excepto el primer elemento
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;Hash&lt;/strong&gt;
-Un hash representa un conjunto de pares clave / valor. En realidad hash son tipo de Arrays, con la excepción de que el índice puede ser un número o una cadena. Están precedidos por el signo &lt;strong&gt;%&lt;/strong&gt; de la siguiente manera:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hash&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;my %fruta_color = (&amp;quot;manzana&amp;quot;, &amp;quot;rojo&amp;quot;, &amp;quot;banana&amp;quot;, &amp;quot;amarillo&amp;quot;);
+&lt;p&gt;Un hash representa un conjunto de pares clave / valor. En realidad hash son tipo de Arrays, con la excepción de que el índice puede ser un número o una cadena. Están precedidos por el signo &lt;strong&gt;%&lt;/strong&gt; de la siguiente manera:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    my %fruta_color = (&amp;quot;manzana&amp;quot;, &amp;quot;rojo&amp;quot;, &amp;quot;banana&amp;quot;, &amp;quot;amarillo&amp;quot;);
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Se pueden utilizar los espacios en blanco y el operador =&amp;gt; para dejarlo mas claro:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;my %fruta_color = (
-    manzana =&amp;gt; &amp;quot;red&amp;quot;,
-    banana =&amp;gt; &amp;quot;amarillo&amp;quot;,
-);
+&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    my %fruta_color = (
+        manzana =&amp;gt; &amp;quot;red&amp;quot;,
+        banana =&amp;gt; &amp;quot;amarillo&amp;quot;,
+    );
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Para obtener un elemento del hash:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$fruta_color{&amp;quot;manzana&amp;quot;}       # Devuelve &amp;quot;rojo&amp;quot;
+&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    $fruta_color{&amp;quot;manzana&amp;quot;}       # Devuelve &amp;quot;rojo&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Podemos obtener una lista con las claves o valores con las funciones predefinidas keys() y values():&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;my @frutas = keys(%fruta_color);
-my colores = values(%fruta_color);
+&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    my @frutas = keys(%fruta_color);
+    my colores = values(%fruta_color);
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;strong&gt;Alcance de las variables&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;En la sección anterior declaramos:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;my $animal = &amp;quot;tortuga&amp;quot;;
+&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    my $animal = &amp;quot;tortuga&amp;quot;;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;El modificador my no es necesario, también se puede usar:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$animal = &amp;quot;tortuga&amp;quot;;
+&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    $animal = &amp;quot;tortuga&amp;quot;;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Sin embargo, el uso anterior creará variables globales a través de su programa, que es mala práctica de programación. my crea variables con ámbito local. Las variables locales están disponibles en el ámbito del bloque (es decir, un grupo de estados rodeadas de llaves) en el que están definidos.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;my $x = &amp;quot;foo&amp;quot;;
-my $condicion = 1;
-if ($condicion) {
-    my $y = &amp;quot;bar&amp;quot;;
-    print $x;           # imprime &amp;quot;foo&amp;quot;
-    print $y;           # imprime &amp;quot;bar&amp;quot;
-}
-print $x;               # imprime &amp;quot;foo&amp;quot;
-print $y;               # no imprime nada ; $y no está en ese scope
+&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    my $x = &amp;quot;foo&amp;quot;;
+    my $condicion = 1;
+    if ($condicion) {
+        my $y = &amp;quot;bar&amp;quot;;
+        print $x;           # imprime &amp;quot;foo&amp;quot;
+        print $y;           # imprime &amp;quot;bar&amp;quot;
+    }
+    print $x;               # imprime &amp;quot;foo&amp;quot;
+    print $y;               # no imprime nada ; $y no está en ese scope
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;Tabla de conversiones de tipos&lt;/strong&gt;
-        &lt;table &gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tabla de conversiones de tipos&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;            &amp;lt;tr &amp;gt;
+&lt;pre&gt;&lt;code&gt;    &amp;lt;table &amp;gt;
+
+            &amp;lt;tr &amp;gt;
                  (1,2,3) [1,2,3] {a=&amp;gt;x} (a=&amp;gt;1) &amp;quot;pepe&amp;quot;
             &amp;lt;/tr&amp;gt; 
 
