@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Perl on title</title>
+    <link>jesusroldan.com/categories/perl/</link>
+    <description>Recent content in Perl on title</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 05 Mar 2014 15:04:21 +0000</lastBuildDate>
+    <atom:link href="jesusroldan.com/categories/perl/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Crazy little thing called Perl: Introducción al lenguaje</title>
+      <link>/jesusroldan.com/posts/crazy-little-thing-called-perl/</link>
+      <pubDate>Wed, 05 Mar 2014 15:04:21 +0000</pubDate>
+      
+      <guid>/jesusroldan.com/posts/crazy-little-thing-called-perl/</guid>
+      <description>&lt;p&gt;Perl está disponible para múltimples plataformas, pueden descargarlo desde &lt;a href=&#34;http://www.perl.org/get.html&#34;&gt;acá&lt;/a&gt; o desde el sistema de paquetes que utilicen. Para verificar si tienen instalado perl, en la terminal escriban &lt;em&gt;perl -v&lt;/em&gt;, si hay salida ya lo tienen instalado.&lt;/p&gt;
+
+&lt;p&gt;Para la instalación de librerías se utiliza &lt;a href=&#34;http://www.cpan.org/&#34;&gt;&lt;strong&gt;CPAN&lt;/strong&gt;&lt;/a&gt;, que es una colección de módulos libres para Perl. Pueden descargar este script o sino instalarlo desde los repositorios, por ejemplo, en un Linux basado en Debian basta correr:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;aptitude install cpanminus
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Una vez instalado, para instalar módulos deben correr desde la consola el siguiente comando (teniendo en cuenta que el nombre del módulo es case-sensitive):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cpan install Modulo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.tiraecol.net/modules/comic/cache/images/tiraecol-15.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Variables&lt;/strong&gt;
+Perl maneja tres tipos de variables:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Scalar&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Array&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Hash&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Scalar&lt;/strong&gt;
+Las variables escalares representan un valor simple. Los valores escalares pueden ser cadenas, enteros o números de coma flotante y se definen anteponiendo el signo &lt;strong&gt;$&lt;/strong&gt; al nombre de la variable.
+No hay necesidad de pre-declarar sus tipos de variables , Perl los convertirá automáticamente entre ellos según sea necesario.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;my $animal = &amp;quot;tortuga&amp;quot;;
+my $answer = 42;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Array&lt;/strong&gt;
+Las variables de tipo Array representan una lista de valores. Se declaran anteponiendo el signo &lt;strong&gt;@&lt;/strong&gt; al nombre de la variable&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;my @animals = (&amp;quot;turtle&amp;quot;, &amp;quot;llama&amp;quot;, &amp;quot;cat&amp;quot;);
+my @numbers = (23, 42, 69);
+my @mixed   = (&amp;quot;whale&amp;quot;, 666, 1.23);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Los Arrays son indexados a cero. Se puede acceder a los valores de la siguiente manera:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;print $animals[0];              # imprime &amp;quot;turtle&amp;quot;. Se utiliza $ porque es un valor scalar
+print $animals[1];              # imprime &amp;quot;llama&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;La variable especial $#nombrearray nos indica el índice del último elemento.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;print $#mixed;                # imprime 2
+print $mixed[$#mixed];        # último elemento, imprime 1.23
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Si utilizamos @mixed en contexto escalar, obtendremos el tamaño de nuestro Array:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$arrayLength = @mixed;
+print $arraylength;            #imprime 3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Para obtener múltiples valores de nuestro Array:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@animals[0,1];           # Devuelve (&amp;quot;turtle&amp;quot;, &amp;quot;llama&amp;quot;), @ porque devuelve un array;
+@animals[0..2];          # Devuelve (&amp;quot;turtle&amp;quot;, &amp;quot;llama&amp;quot;, &amp;quot;cat&amp;quot;);
+@animals[1..$#animals];  # Devuelve todo excepto el primer elemento
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Hash&lt;/strong&gt;
+Un hash representa un conjunto de pares clave / valor. En realidad hash son tipo de Arrays, con la excepción de que el índice puede ser un número o una cadena. Están precedidos por el signo &lt;strong&gt;%&lt;/strong&gt; de la siguiente manera:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;my %fruta_color = (&amp;quot;manzana&amp;quot;, &amp;quot;rojo&amp;quot;, &amp;quot;banana&amp;quot;, &amp;quot;amarillo&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Se pueden utilizar los espacios en blanco y el operador =&amp;gt; para dejarlo mas claro:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;my %fruta_color = (
+    manzana =&amp;gt; &amp;quot;red&amp;quot;,
+    banana =&amp;gt; &amp;quot;amarillo&amp;quot;,
+);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Para obtener un elemento del hash:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$fruta_color{&amp;quot;manzana&amp;quot;}       # Devuelve &amp;quot;rojo&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Podemos obtener una lista con las claves o valores con las funciones predefinidas keys() y values():&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;my @frutas = keys(%fruta_color);
+my colores = values(%fruta_color);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Alcance de las variables&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;En la sección anterior declaramos:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;my $animal = &amp;quot;tortuga&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;El modificador my no es necesario, también se puede usar:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$animal = &amp;quot;tortuga&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sin embargo, el uso anterior creará variables globales a través de su programa, que es mala práctica de programación. my crea variables con ámbito local. Las variables locales están disponibles en el ámbito del bloque (es decir, un grupo de estados rodeadas de llaves) en el que están definidos.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;my $x = &amp;quot;foo&amp;quot;;
+my $condicion = 1;
+if ($condicion) {
+    my $y = &amp;quot;bar&amp;quot;;
+    print $x;           # imprime &amp;quot;foo&amp;quot;
+    print $y;           # imprime &amp;quot;bar&amp;quot;
+}
+print $x;               # imprime &amp;quot;foo&amp;quot;
+print $y;               # no imprime nada ; $y no está en ese scope
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Tabla de conversiones de tipos&lt;/strong&gt;
+        &lt;table &gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;            &amp;lt;tr &amp;gt;
+                 (1,2,3) [1,2,3] {a=&amp;gt;x} (a=&amp;gt;1) &amp;quot;pepe&amp;quot;
+            &amp;lt;/tr&amp;gt; 
+
+         &amp;lt;tbody &amp;gt;
+            &amp;lt;tr &amp;gt;
+                Arity
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;td &gt;Lista
+&lt;/td&gt;
+&lt;td &gt;Scalar
+&lt;/td&gt;
+&lt;td &gt;Hash Ref.
+&lt;/td&gt;
+&lt;td &gt;Hash
+&lt;/td&gt;
+&lt;td &gt;Scalar
+&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr &gt;
+                    Elemento
+&lt;td &gt;$x[0]
+&lt;/td&gt;
+&lt;td &gt;$x-&amp;gt;[1]
+&lt;/td&gt;
+&lt;td &gt;$x-&amp;gt;{a}
+&lt;/td&gt;
+&lt;td &gt;$x{a}
+&lt;/td&gt;
+&lt;td &gt;$x
+&lt;/td&gt;&lt;br /&gt;
+                &lt;/tr&gt;
+                &lt;tr &gt;
+                    Lista
+&lt;td &gt;@x
+&lt;/td&gt;
+&lt;td &gt;@{$x}
+&lt;/td&gt;
+&lt;td &gt;%{$x}
+&lt;/td&gt;
+&lt;td &gt;%x
+&lt;/td&gt;
+&lt;td &gt;($x)
+&lt;/td&gt;
+                &lt;/tr&gt;&lt;br /&gt;
+                &lt;tr &gt;
+                    Hash
+&lt;td &gt;-
+&lt;/td&gt;
+&lt;td &gt;-
+&lt;/td&gt;
+&lt;td &gt;%{$x}
+&lt;/td&gt;
+&lt;td &gt;%x
+&lt;/td&gt;
+&lt;td &gt;{e=&amp;gt; $x}
+&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr &gt;
+                    Ref.
+&lt;td &gt;\@x
+&lt;/td&gt;
+&lt;td &gt;$x
+&lt;/td&gt;
+&lt;td &gt;$x
+&lt;/td&gt;
+&lt;td &gt;\%x
+&lt;/td&gt;
+&lt;td &gt;\$x
+&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr &gt;
+                    Ref. Copia
+&lt;td &gt;[@x]
+&lt;/td&gt;
+&lt;td &gt;[@{$x}]
+&lt;/td&gt;
+&lt;td &gt;{%{$x}}
+&lt;/td&gt;
+&lt;td &gt;{%x}
+&lt;/td&gt;
+&lt;td &gt;[$x]
+&lt;/td&gt;
+                &lt;/tr&gt;
+             &lt;/tbody&gt;
+        &lt;/table&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sintaxis básica&lt;/strong&gt;
+&lt;strong&gt;if, elsif, else, unless&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# La sintaxis es muy similar a otros lenguajes
+if ($var == 3) {
+  do_magic();
+}
+
+# unless se usa para un if negativo
+if (!$var) {
+  do_magic();
+}
+unless ($var) {
+  do_magic();
+}
+
+# Por supuesto también existe else
+if ($var) {
+    do_magic();
+} else {
+   do_another_magic();
+}
+# y se pueden anidar
+if ($var) {
+   do_magic();
+} elsif ($another_var) {
+   do_another_magic();
+} else {
+   do_something_else();
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;while, do while, until&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;my $counter = 10;
+
+while ($counter &amp;gt; 0) {
+   say $counter;
+   $counter -= 1;
+}
+
+do {
+  say $counter;
+  $counter += 1;
+} while ($counter &amp;lt; 10);
+
+
+until( $counter &amp;gt; 20 ){
+   say &amp;quot;$counter&amp;quot;;
+   $counter += 1;
+}
+
+say &#39;tadaaa&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;for, for each&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# for ( init; condition; increment )
+for( $i = 1; $i &amp;lt; 20; $i = $i + 1 ){
+    print &amp;quot;value: $i\n&amp;quot;;
+}
+
+my @list = (1, 20, 33, 45, 59);
+foreach $i (@list){
+    say &#39;$i&#39;;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Funciones&lt;/strong&gt;
+En realidad las funciones son subrutinas, quizás sea porque el lenguaje es viejo :P &amp;hellip; la sintáxis es también bastante común.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sub name{
+   # blablabla
+   return $x;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Para pasar parámetros se hace de esta forma&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sub TestScalar{
+   my $x = @_;      #parámetro scalar 
+   # blabla
+}
+sub TestArray{
+   my @list = @_;   #parámetro array
+   # blabla
+}
+sub TestHash {
+   my (%hash) = @_; #parámetro hash
+   # blabla
+}
+
+# Si esperamos varios parámetros, se pueden acceder desde la variable @_ como un array
+sub TestScalar{
+   my $x = @_[0]; 
+   my $y = @_[1]; 
+   # blabla
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;**Variables privadas **&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sub TestPrivateVars{
+   my $var; # inaccesible fuera de TestPrivateVars()
+   $varx;   # accesible fuera de TestPrivateVars(), no hacerlo
+
+   my ($another, @my_array, %my_hash); # declaración múltiple privada
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;TDD con Perl&lt;/strong&gt;
+&lt;img src=&#34;http://www.aaroncohen.me/wp-content/uploads/2013/04/2011-04-28.tdd_-700x299.png&#34; alt=&#34;TDD&#34; /&gt;
+Para hacer TDD en necesario bajar un paquete de CPAN, Test::More.
+Acá un ejemplo de como correr un test, sobre una función específica.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# En esta línea declaramos el uso de Test::More
+# y le decimos que solo se corre una vez
+use Test::More test =&amp;gt; 1;
+
+# is() es la función que ejecuta el test, consta de 3 parámetros
+# 1ro función a ejecutar con sus respectivos parámetros
+# 2do resultado esperado
+# 3ro nombre descriptivo
+is(replace(&amp;quot;hola&amp;quot;), &amp;quot;chau&amp;quot;, &amp;quot;Reemplazo de nombres&amp;quot;);
+is(replace(&amp;quot;chay&amp;quot;), &amp;quot;chau&amp;quot;, &amp;quot;Reemplazo de nombres&amp;quot;);
+
+# Esta es la función que se ejecuta
+sub replace( my ($text) = @_;
+    $text =~ s/\bhola\b/chau/gi;
+    return $text;
+}
+
+#Con esta función declaramos el fin del testing
+done_testing()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;Próximo post: Expresiones regulares en Perl. O sea: Perl.&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

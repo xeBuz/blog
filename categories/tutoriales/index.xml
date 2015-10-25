@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutoriales on title</title>
+    <link>jesusroldan.com/categories/tutoriales/</link>
+    <description>Recent content in Tutoriales on title</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 05 Sep 2012 12:54:41 +0000</lastBuildDate>
+    <atom:link href="jesusroldan.com/categories/tutoriales/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>[Charla] Introducción al desarrollo web de videojuegos</title>
+      <link>/jesusroldan.com/posts/charla-introduccion-al-desarrollo-web-de-videojuegos/</link>
+      <pubDate>Wed, 05 Sep 2012 12:54:41 +0000</pubDate>
+      
+      <guid>/jesusroldan.com/posts/charla-introduccion-al-desarrollo-web-de-videojuegos/</guid>
+      <description>&lt;p&gt;El jueves 6 a las 19hs voy a estar en la UTN de Córdoba para dar una charla sobre desarrollo de videojuegos para navegadores (en HTML5, todos sabemos que Flash es malvado) invitado por la gente de &lt;a href=&#34;http://uni-code-group.blogspot.com.ar/&#34;&gt;&lt;strong&gt;UNI-CODE&lt;/strong&gt;&lt;/a&gt;, un grupo de estudiantes que se encarga de divulgación de tecnología libre de humo.&lt;/p&gt;
+
+&lt;p&gt;La charla es abierta para todos y está de más decir que es gratis, va a ser muy introductoria con algunos conceptos básicos. También se va a mostrar un framework, &lt;a href=&#34;http://craftyjs.com/&#34;&gt;&lt;strong&gt;Crafty&lt;/strong&gt;&lt;/a&gt;, para simplificar el desarrollo. Si bien está pensada para programadores, la idea es juntar gente con ganas, quien sabe, puede surgir algun proyecto entre las personas que asistan. Las ganas de muchos están, falta organizarnos.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/09/Flyer-6-9-12.jpg&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/09/Flyer-6-9-12-353x500.jpg&#34; alt=&#34;Desarrollo de videojuegos&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hacer un radio casera con MPD y con Icecast</title>
+      <link>/jesusroldan.com/posts/streaming-con-mpd-y-icecast-en-arch-linux/</link>
+      <pubDate>Tue, 01 Nov 2011 19:09:58 +0000</pubDate>
+      
+      <guid>/jesusroldan.com/posts/streaming-con-mpd-y-icecast-en-arch-linux/</guid>
+      <description>&lt;p&gt;Empecemos&amp;hellip; pero &lt;em&gt;¿Qué e&amp;rsquo; lo que e&amp;rsquo; eso?&lt;/em&gt;
+&lt;strong&gt;MPD&lt;/strong&gt;: Básicamente, es un servidor para escuchar música. Con la particularidad de que es muy configurable y nos permite acceder a traves de la red para controlar la lista de reproducción. &lt;a href=&#34;http://images.wikia.com/mpd/images/6/68/Mpd-overview.png&#34;&gt;Esta&lt;/a&gt; imagen lo explica bien.
+&lt;strong&gt;Clientes MPD&lt;/strong&gt;: El servidor por sí sólo nos gestiona los archivos, los salidas de audio y la lista de reproducción, para acceder a esto necesitamos clientes, que visualmente son similares a las clasicas aplicaciones para escuchar música.
+Algunos a destacar: Sonata, Ario, ncmpcpp, MPDroid y una &lt;a href=&#34;http://mpd.wikia.com/wiki/Clients&#34;&gt;larga lista más&lt;/a&gt;.
+&lt;strong&gt;Icecast&lt;/strong&gt; : Es un proyecto open source para hacer streaming, que aparece como competencia libre de SHOUTcast (también compatible con este).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1.- Instalar el servidor MPD&lt;/strong&gt;
+La instalación es simple, también esta en los repositorios de las principales distros. La configuración y puesta a punto es lo que va a llevar mas tiempo y pueden surgir tantos problemas como lineas de configuración tenga el archivo /etc/mpd.conf
+Lo importante (a este nivel) es dejar bien la base de datos y los archivos básicos, cualquier tipo de configuración de salida de audio (excepto en el paso 3) o detalles excede lo que tenemos que hacer para que funcione el streaming. TODO lo que necesitan saber está en la &lt;a href=&#34;http://mpd.wikia.com/wiki/Configuration&#34;&gt;wiki oficial&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;music_directory       &amp;quot;/media/music/&amp;quot;
+playlist_directory    &amp;quot;/var/lib/mpd/playlists&amp;quot;
+db_file               &amp;quot;/var/lib/mpd/mpd.db&amp;quot;
+log_file              &amp;quot;/var/log/mpd/mpd.log&amp;quot;
+pid_file              &amp;quot;/var/run/mpd/mpd.pid&amp;quot;
+state_file            &amp;quot;/var/lib/mpd/mpdstate&amp;quot;
+user                  &amp;quot;mpd&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nota: Es importante que la música esté bien taggeada.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2.- Instalar y configurar Icecast&lt;/strong&gt;
+Supongamos que ya lo instalaron, el archivo de configuración es un XML, está en /etc/icecast.xml. Algunos detalles de configuración:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!-- Dato de conexion ---&amp;gt;
+&amp;lt;listen-socket&amp;gt;
+    &amp;lt;port&amp;gt;8899&amp;lt;/port&amp;gt;
+    &amp;lt;shoutcast-mount&amp;gt;/stream&amp;lt;/shoutcast-mount&amp;gt; 
+&amp;lt;/listen-socket&amp;gt;
+
+&amp;lt;!-- Para publicar en los directorios ---&amp;gt;
+&amp;lt;directory&amp;gt;
+    &amp;lt;yp-url-timeout&amp;gt;30&amp;lt;/yp-url-timeout&amp;gt;
+    &amp;lt;yp-url&amp;gt;http://dir.xiph.org/cgi-bin/yp-cgi&amp;lt;/yp-url&amp;gt;
+&amp;lt;/directory&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;La configuración escencial se hace en /etc/mpd.conf, ahi agregamos una salida de audio que direccione a nuestro Icecast. Para esto hay que agregrar:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;audio_output {
+    type        &amp;quot;shout&amp;quot;
+    encoding    &amp;quot;ogg&amp;quot;
+    name        &amp;quot;KBBL me va a dar algo estupido&amp;quot;
+    host        &amp;quot;localhost&amp;quot;   # lo sacan de la configuración de Icecast
+    port        &amp;quot;8000&amp;quot;        # lo sacan de la configuración de Icecast
+    mount       &amp;quot;/mpd.ogg&amp;quot;    # Importante para conectarse
+    password    &amp;quot;xxxxx&amp;quot;       # lo sacan de la configuración de Icecast
+    quality     &amp;quot;5.0&amp;quot;
+    bitrate     &amp;quot;192&amp;quot;         # http://en.wikipedia.org/wiki/Bit_rate#Audio     
+    format      &amp;quot;44100:16:2&amp;quot;  # Default 44100:16:1
+    user        &amp;quot;source&amp;quot;
+    description &amp;quot;Descripción mas larga, util para directorios&amp;quot;
+    genre       &amp;quot;powa&amp;quot;
+    public      &amp;quot;yes&amp;quot;          # Para publicación en un directorio
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;3.- Conectarse&lt;/strong&gt;
+Primero, levantan los servicios (primero mpd, despues icecast), si todo va bien, ya pueden entrar con algún cliente MPD para armar la playlist. Si no hay nada reproduciéndose cuando quieran abrir la conexión de streaming va a dar error 404.
+Una forma facil de testear la reproducción es con mplayer de forma local.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mplayer -playlist http://127.0.0.1:8000/mpd.ogg.m3u
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Casi cualquier reproductor está preparado para streaming, hasta pueden hacerlo desde el celular, en Android uso &amp;ldquo;A Radio Player&amp;rdquo;, anda de 10.
+Si dejan la configuración de arriba van a poder figurar en el &lt;a href=&#34;http://dir.xiph.org/&#34;&gt;Directorio de Icecast&lt;/a&gt;, con un link al streaming por M3U y otro por XSPF.&lt;/p&gt;
+
+&lt;p&gt;Post para @elpibepantalla y @Nestor_Navarro y gracias a @Rhapsody_Girl por ser la tester :P&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Z Bash, o zsh, una shell con Z de &#34;ZOMG que buena shell&#34;</title>
+      <link>/jesusroldan.com/posts/zsh/</link>
+      <pubDate>Thu, 20 Oct 2011 18:26:48 +0000</pubDate>
+      
+      <guid>/jesusroldan.com/posts/zsh/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Z Bash&lt;/strong&gt;, o mejor &lt;strong&gt;zsh&lt;/strong&gt;, es un interprete de comándos (&lt;em&gt;shell&lt;/em&gt;), excelente alternativa al Bash que viene por defecto (&lt;em&gt;Bourne-again Shell&lt;/em&gt;). Como mejoras, se destaca:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Mejorado en el autocompletado.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Muy customizable.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Corrección de tipeo.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Mejor manejo de funciones.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Es una shell mas hipster (?)._ (En realidad no, tiene mas de 20 años, y se usa bastante&amp;hellip;pero no viene por defecto)_&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;La instalación es simple, son unos poco kilobytes y seguro esta disponible en la distro que usen. En mi caso basta con:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pacman -S zsh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Una vez instalada, debería figurar en el archivo /etc/shells, para setearla como shell por defecto tenemos que correr:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;chsh -s $(which zsh)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;La primera vez que ingresan, la shell les sugiere que ejecuten &lt;strong&gt;zsh-newuser-install&lt;/strong&gt;, lo cual es recomendable, da una pequeña pero útil instroducción, con asistentes de configuración.&lt;/p&gt;
+
+&lt;p&gt;Ahora sí, veamos algunas cosas que tiene para ofrecernos&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Autocompletado de parametros&lt;/strong&gt;
+Antes pensaba que bash era buena con el autocompletado, claro que viniendo del cmd de Windows cualquier cosa es mejor; zsh vino a abrir una nueva puerta a la comodidad en la línea de comandos.
+Es rápidisimo y funciona con todos* los comandos, sólo pongan el - y para que liste las opciones.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Historial de bash, compatible con zsh&lt;/strong&gt;
+Una de las primeras cosas que necesité migrando de shell fue el historial. Pueden copiar &lt;em&gt;~/.bash_history _a _~/.histfile&lt;/em&gt; y van a tener lo mismo que bash, imprescindible si usan &lt;strong&gt;Control + R&lt;/strong&gt;.
+Tambien es compatible el archivo &lt;em&gt;~/.bashrc _con el _~/.zshrc&lt;/em&gt; y el_ ~/.bash&lt;em&gt;profile&lt;/em&gt; con &lt;em&gt;~/.zprofile&lt;/em&gt;, pero en mi caso preferí hacer copias a mano de lo que necesitaba. Sólo cuestión de gustos.
+Además, permite compartir el historial entre sesiones, muy comodo si entramos desde ssh y localmente a una PC.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;zsh-yaourt&lt;/strong&gt;
+Este paquete está en el AUR, y si, adivinaron, agrega autocompletado de paquetes a yaourt, es increiblemente útil, a lo _apt-get _si quieren una comparación, es muy bueno y rápido.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Paginador &amp;lsquo;inteligente&amp;rsquo;&lt;/strong&gt;
+No se si Paginador es la palabra apropiada, tampoco se si inteligente sería el adjetivo indicador. Todos somos unos vagos, por eso usamos la terminal, que mejor que escribir cat LEAME, cat LEAME | less, si, escribir solo LEAME, bueno, zsh nos entiende, así que funciona así.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Diferentes &amp;ldquo;key bindings&amp;rdquo;&lt;/strong&gt;
+En este caso, zsh los meneja de otra forma, y es frustrante mover las fechas de dirección y no obtener lo que pretendemos. No me resultó cómodo (porque no le dí tiempo a ver como funcionaba, ya estoy viejo para algunas cosas). Para dejarlo funcionando &amp;ldquo;a lo Bash&amp;rdquo;, tienen que editar el archivo &lt;em&gt;~/.zshrc&lt;/em&gt;
+[spoiler title=&amp;ldquo;Agregar estas líneas&amp;rdquo;]&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;bindkey &amp;quot;e[1~&amp;quot; beginning-of-line # Home
+bindkey &amp;quot;e[4~&amp;quot; end-of-line # End
+bindkey &amp;quot;e[5~&amp;quot; beginning-of-history # PageUp
+bindkey &amp;quot;e[6~&amp;quot; end-of-history # PageDown
+bindkey &amp;quot;e[2~&amp;quot; quoted-insert # Ins
+bindkey &amp;quot;e[3~&amp;quot; delete-char # Del
+bindkey &amp;quot;e[5C&amp;quot; forward-word
+bindkey &amp;quot;eOc&amp;quot; emacs-forward-word
+bindkey &amp;quot;e[5D&amp;quot; backward-word
+bindkey &amp;quot;eOd&amp;quot; emacs-backward-word
+bindkey &amp;quot;ee[C&amp;quot; forward-word
+bindkey &amp;quot;ee[D&amp;quot; backward-word
+bindkey &amp;quot;e[Z&amp;quot; reverse-menu-complete # Shift+Tab
+# for rxvt
+bindkey &amp;quot;e[7~&amp;quot; beginning-of-line # Home
+bindkey &amp;quot;e[8~&amp;quot; end-of-line # End
+# for non RH/Debian xterm, can&#39;t hurt for RH/Debian xterm
+bindkey &amp;quot;eOH&amp;quot; beginning-of-line
+bindkey &amp;quot;eOF&amp;quot; end-of-line
+# for freebsd console
+bindkey &amp;quot;e[H&amp;quot; beginning-of-line
+bindkey &amp;quot;e[F&amp;quot; end-of-line
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;[/spoiler]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Correccion de typos&lt;/strong&gt;
+Para los dislexicos como uno, esto es muy bueno, nos autocorrige directorios, comandos, archivos&amp;hellip; probandolo es muy bueno, no perfecto, pero ayuda a la hora de escribir rapido.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Links recomendados y fuentes para el post&lt;/strong&gt;
+&lt;a href=&#34;http://zsh.sourceforge.net/Guide/zshguide.html&#34;&gt;Guía oficial (en inglés)&lt;/a&gt;
+&lt;a href=&#34;https://wiki.archlinux.org/index.php/Zsh&#34;&gt;Wiki de Zsh, para Arch&lt;/a&gt;
+&lt;a href=&#34;http://pwet.fr/man/linux/commandes/zsh_lovers&#34;&gt;zhs-lovers&lt;/a&gt;
+&lt;a href=&#34;http://zshwiki.org/home/start&#34;&gt;Una wiki muy completa&lt;/a&gt;
+&lt;a href=&#34;http://fausto23.wordpress.com/2010/01/31/zsh-esa-shell/&#34;&gt;Buena info para el .zshrc, en español&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;*Quizas no todos&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Versionar el directorio /etc con Git</title>
+      <link>/jesusroldan.com/posts/versionar-el-directorio-etc-con-git/</link>
+      <pubDate>Mon, 26 Sep 2011 17:23:59 +0000</pubDate>
+      
+      <guid>/jesusroldan.com/posts/versionar-el-directorio-etc-con-git/</guid>
+      <description>&lt;p&gt;Una buena práctica, sobre todo si les gusta modificar los archivos de configuración para probar cosas o instalar aplicaciones constantemnte, es versionar el directorio /etc, para el caso en el que nos &lt;del&gt;mandemos alguna cagada&lt;/del&gt; equivoquemos en alguna configuración, el problema sea facilmente remediable.
+La instalación y configuración es muy sencilla, en este caso es todo manual, si quieren saltearse todo e instalar directamente &lt;strong&gt;&lt;a href=&#34;http://kitenet.net/~joey/code/etckeeper/&#34;&gt;etckeeper&lt;/a&gt;&lt;/strong&gt; es válido igual ;)&lt;/p&gt;
+
+&lt;p&gt;Antes que todo, hay que instalar &lt;strong&gt;git&lt;/strong&gt; (usé git porque&amp;hellip;si)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;yaourt -S git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Después vamos al directorio correspondiente y creamos el repositorio:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /etc &amp;amp;&amp;amp; git init 
+Initialized empty Git repository in /etc/.git/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Agregamos todos los archivos:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git add --all
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hacemos nuestro primer commit:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git commit -m &amp;quot;Mira mama, estoy usando versionado&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pueden crear un nuevo brach, como para tener una copia inicial del directorio, solo basta hacer:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git branch inicial
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Para verificar cambios sin commitear, pueden usar:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git status
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;En crontab crear commits diarios, no se, esas cosas las manejan a gusto, prefiero hacerlo manual&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Pueden cambiar de branch con &amp;ldquo;git checkout &amp;ldquo;&amp;hellip;en fin, a partir de ahora los cambios que quieran hacer corren por su cuenta, esta es la configuración basica para que funcione. Mas información de git pueden encontrarla en &lt;a href=&#34;http://schacon.github.com/git/gittutorial.html&#34;&gt;http://schacon.github.com/git/gittutorial.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Para ver los cambios, puede usar algunas apps como:
+&lt;strong&gt;SmartGit&lt;/strong&gt;
+Bastante cómoda, y eso que está hecho en &lt;a href=&#34;http://gifninja.com/animatedgifs/250429/trollface.gif&#34;&gt;Java&lt;/a&gt;! :P
+Aca les dejo una imagen de como se ve, por si les interesa
+&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-14.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-14-300x197.png&#34; alt=&#34;SmartGit on pacman.conf&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Pero no conozco más herramientas con GUI, si usan alguna en particular bienvenida sea&amp;hellip;
+[quote style=&amp;ldquo;1&amp;rdquo;]Si no te equivocas de vez en cuando, es que no lo intentas.&lt;/p&gt;
+
+&lt;p&gt;_ Woody Allen_&lt;/p&gt;
+
+&lt;p&gt;[/quote]&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cambios en Grub con el nuevo Kernel</title>
+      <link>/jesusroldan.com/posts/cambios-en-grub-con-el-nuevo-kernel/</link>
+      <pubDate>Sun, 07 Aug 2011 19:52:28 +0000</pubDate>
+      
+      <guid>/jesusroldan.com/posts/cambios-en-grub-con-el-nuevo-kernel/</guid>
+      <description>
+
+&lt;p&gt;Quizás si instalan la ultima version de grub (0.97-19) y del kernel (3.0.1-1 y para posteriores actualizaciones tambien es válido) y reinicien les pase como a mi que no arrancaba el sistema, debido a unos cambios de nombre en los archivos&lt;/p&gt;
+
+&lt;p&gt;La corrección es fácil, pueden crear un enlance al archivo correcto, o en su defecto lo que me parecio mas simple, editar el archivo /boot/grub/menu.lst de la siguiente forma:
+`&lt;/p&gt;
+
+&lt;h1 id=&#34;0-arch-linux:2ee0c8ccdc60d57df2c7d857b1704e19&#34;&gt;(0) Arch Linux&lt;/h1&gt;
+
+&lt;p&gt;title  Arch Linux
+root   (hd0,0)
+kernel /&lt;strong&gt;vmlinuz-linux&lt;/strong&gt; root=/dev/disk/by-uuid/d45327e7-5965-4aa7-b3b3-d57d1eecad0a ro
+initrd /&lt;strong&gt;initramfs-linux.img&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;1-arch-linux:2ee0c8ccdc60d57df2c7d857b1704e19&#34;&gt;(1) Arch Linux&lt;/h1&gt;
+
+&lt;p&gt;title  Arch Linux Fallback
+root   (hd0,0)
+kernel /&lt;strong&gt;vmlinuz-linu&lt;/strong&gt;x root=/dev/disk/by-uuid/d45327e7-5965-4aa7-b3b3-d57d1eecad0a ro
+initrd /&lt;strong&gt;initramfs-linux-fallback.img&lt;/strong&gt;`&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Si no cambiaron el archivo antes de reiniciar y no inicia, después de putear, entren  en el menu de grub, para editar la linea presionan la &lt;strong&gt;e&lt;/strong&gt; y despues inician con &lt;strong&gt;b&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Agregar aplicaciones al inicio de Gnome3</title>
+      <link>/jesusroldan.com/posts/agregar-aplicaciones-al-inicio-de-gnome3/</link>
+      <pubDate>Mon, 25 Jul 2011 22:32:56 +0000</pubDate>
+      
+      <guid>/jesusroldan.com/posts/agregar-aplicaciones-al-inicio-de-gnome3/</guid>
+      <description>&lt;p&gt;Este procedimiento es bastante &amp;lsquo;rustico&amp;rsquo;, pero funciona. Es una de las cosas (de muchas, lo sé) en las que falla Gnome3: no hay una forma de gestionar que aplicaciones se lanzan al inicio de sesión o por lo menos no encontré forma de hacerlo.&lt;/p&gt;
+
+&lt;p&gt;Para esto, deben crear un archivo (por cada aplicacion) en &lt;strong&gt;~/.config/autostart/&lt;/strong&gt; con extension .desktop.
+Como ejemplo voy a usar &lt;a href=&#34;http://guake.org/&#34;&gt;Guake&lt;/a&gt; de la siguiente forma:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; cat ~/.config/autostart/guake.desktop
+
+[Desktop Entry]
+  Type=Application
+  Exec=/usr/bin/guake
+  Hidden=false
+  X-GNOME-Autostart-enabled=true
+  Name=guake
+  Comment=Guake
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Pueden leer un poco mas al respecto &lt;a href=&#34;http://developer.gnome.org/autostart-spec/&#34;&gt; aca &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Posiblemente ya exista alguna aplicación que haga eso, pero no la encontré&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -2,24 +2,274 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://spencerlyon2.github.io/</loc>
-    <lastmod>2014-03-29T00:00:00+00:00</lastmod>
+    <loc>/jesusroldan.com/</loc>
+    <lastmod>2014-05-14T13:34:35+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://spencerlyon2.github.io/posts/newest</loc>
+    <loc>/jesusroldan.com/posts/no-close-tabs-firefox-31/</loc>
+    <lastmod>2014-05-14T13:34:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/newest/</loc>
     <lastmod>2014-03-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://spencerlyon2.github.io/posts/middle</loc>
+    <loc>/jesusroldan.com/posts/middle/</loc>
     <lastmod>2014-03-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://spencerlyon2.github.io/posts/oldest</loc>
+    <loc>/jesusroldan.com/posts/oldest/</loc>
     <lastmod>2014-03-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/crazy-little-thing-called-perl/</loc>
+    <lastmod>2014-03-05T15:04:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/bundles-de-juegos-varias-opciones-disponibles/</loc>
+    <lastmod>2014-02-27T16:30:20+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/jquery-selectores-y-traversing/</loc>
+    <lastmod>2014-02-26T15:56:32+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/jquery-doge-such-plugin/</loc>
+    <lastmod>2013-12-23T14:31:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/licencia-para-ir-al-cine/</loc>
+    <lastmod>2013-07-01T20:00:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/barra-de-progreso-de-arch-linux-para-python/</loc>
+    <lastmod>2012-10-21T20:49:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/script-para-grabar-la-consola-en-un-gif-animado/</loc>
+    <lastmod>2012-10-18T02:03:52+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</loc>
+    <lastmod>2012-09-07T14:33:06+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/charla-introduccion-al-desarrollo-web-de-videojuegos/</loc>
+    <lastmod>2012-09-05T12:54:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/cadena-de-memes-libros/</loc>
+    <lastmod>2012-08-11T16:22:52+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/script-para-generar-playlists-dinamicas-en-mpd/</loc>
+    <lastmod>2012-08-10T13:55:24+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/heavysaurios-metal-para-chicos-y-no-tan-chicos/</loc>
+    <lastmod>2012-07-16T18:47:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/</loc>
+    <lastmod>2012-07-04T18:40:32+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/gnulinux-para-amas-de-casa-barcamp/</loc>
+    <lastmod>2012-06-19T17:47:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/cron-automatizar-scripts-como-un-titan/</loc>
+    <lastmod>2012-05-22T16:48:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/plan-b-una-gran-opcion-una-vez-que-perdiste-el-celular/</loc>
+    <lastmod>2012-05-03T16:48:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/cuentos-de-terror-narrados-por-alberto-laiseca/</loc>
+    <lastmod>2012-04-24T15:54:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/solucionar-problemas-despues-de-actualizar-gnome-3-4-1/</loc>
+    <lastmod>2012-04-23T20:58:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/la-saga-de-los-confines-de-liliana-bodoc/</loc>
+    <lastmod>2012-04-23T17:44:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/ciudad-de-clifford-simak/</loc>
+    <lastmod>2012-04-08T21:15:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/nuevo-en-android-estas-aplicaciones-te-pueden-servir-parte-ii/</loc>
+    <lastmod>2012-02-08T17:21:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/nuevo-en-android-estas-aplicaciones-te-pueden-servir-parte-i/</loc>
+    <lastmod>2012-02-06T21:25:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/agenda-de-febrero-del-cineclub-municipal-hugo-del-carril/</loc>
+    <lastmod>2012-01-25T20:18:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/comando-at-automatizar-scripts-sin-usar-crontab/</loc>
+    <lastmod>2012-01-23T16:34:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/comprar-en-el-exterior-con-envios-gratuitos-a-la-argentina-dealextreme-focalprice-dinodirect/</loc>
+    <lastmod>2012-01-03T14:04:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/</loc>
+    <lastmod>2011-12-28T18:19:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/manejar-procesos-en-linux-like-a-sir/</loc>
+    <lastmod>2011-12-14T18:24:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/twicca-el-mejor-cliente-de-twitter-para-android/</loc>
+    <lastmod>2011-11-30T17:14:46+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/de-como-llegue-a-arch-linux-y-porque-no-lo-cambio/</loc>
+    <lastmod>2011-11-21T21:27:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/optimizar-espacio-en-google-reader/</loc>
+    <lastmod>2011-11-09T21:02:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/actividades-de-noviembre-del-cineclub-municipal-hugo-del-carril-en-google-calendar/</loc>
+    <lastmod>2011-11-04T01:51:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/streaming-con-mpd-y-icecast-en-arch-linux/</loc>
+    <lastmod>2011-11-01T19:09:58+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/zsh/</loc>
+    <lastmod>2011-10-20T18:26:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/tips-linuxeros-moverse-entre-directorios-como-un-ninja/</loc>
+    <lastmod>2011-09-28T14:28:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/versionar-el-directorio-etc-con-git/</loc>
+    <lastmod>2011-09-26T17:23:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/big-brother-is-watching-you-monitorear-usuarios-en-linux/</loc>
+    <lastmod>2011-09-25T16:18:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/gnome2-en-archlinux/</loc>
+    <lastmod>2011-09-14T04:41:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/lentitud-en-la-instalacion-de-paquetes-con-pacman/</loc>
+    <lastmod>2011-09-06T14:12:54+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/tips-para-linux-alias-para-todos/</loc>
+    <lastmod>2011-09-02T21:33:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/actividades-del-cineclub-municipal-hugo-del-carril-en-google-calendar/</loc>
+    <lastmod>2011-09-01T12:43:24+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/virtualboxes-org-descarga-de-maquinas-virtuales/</loc>
+    <lastmod>2011-08-31T20:43:42+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/los-dragones-douglas-niles-dragonlance/</loc>
+    <lastmod>2011-08-24T18:52:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/descargar-desde-la-consola-en-linux-megupload-rapidshare-cuevana-wupload-fileserve-hotfile/</loc>
+    <lastmod>2011-08-19T01:24:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/cambios-en-grub-con-el-nuevo-kernel/</loc>
+    <lastmod>2011-08-07T19:52:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/borrar-con-delete-en-nautilus-con-gnome3/</loc>
+    <lastmod>2011-08-02T15:13:02+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/%C2%BFde-donde-proviene-el-nombre-de-arch-linux/</loc>
+    <lastmod>2011-07-27T18:49:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/agregar-aplicaciones-al-inicio-de-gnome3/</loc>
+    <lastmod>2011-07-25T22:32:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/tips-para-linux-manejo-del-historial/</loc>
+    <lastmod>2011-07-22T00:16:16+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jesusroldan.com/posts/descargar-la-venganza-sera-terrible-via-bash/</loc>
+    <lastmod>2011-07-21T02:31:17+00:00</lastmod>
   </url>
   
 </urlset>
