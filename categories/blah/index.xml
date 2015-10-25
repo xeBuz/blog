@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blah on title</title>
-    <link>jesusroldan.com/categories/blah/</link>
-    <description>Recent content in Blah on title</description>
+    <title>Blah on Personal Blog</title>
+    <link>http://xebuz.github.io/blog/categories/blah/</link>
+    <description>Recent content in Blah on Personal Blog</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
     <lastBuildDate>Thu, 27 Mar 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="jesusroldan.com/categories/blah/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://xebuz.github.io/blog/categories/blah/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>First Post</title>
-      <link>/jesusroldan.com/posts/oldest/</link>
+      <link>http://xebuz.github.io/blog/posts/oldest/</link>
       <pubDate>Thu, 27 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/oldest/</guid>
+      <guid>http://xebuz.github.io/blog/posts/oldest/</guid>
       <description>
 
 &lt;h2 id=&#34;sample-post-1:5be75e971689338db5c820fd71089689&#34;&gt;Sample Post 1&lt;/h2&gt;

@@ -1,0 +1,206 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="xeBuz">
+		<meta name="description" content="Personal Website">
+		<meta name="generator" content="Hugo 0.14" />
+		<title>Versionar el directorio /etc con Git &middot; Personal Blog</title>
+		<link rel="shortcut icon" href="http://localhost:1313/blog/images/favicon.ico">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/style.css">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/highlight.css">
+		<link href="http://localhost:1313/blog/index.xml" rel="alternate" type="application/rss+xml" title="Personal Blog" />
+	</head>
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='http://localhost:1313/blog/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+		<a href='http://localhost:1313/blog/about'>About</a>
+	
+
+	
+	<a class="cta" href="http://localhost:1313/blog/index.xml">Subscribe</a>
+	
+</nav>
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>Versionar el directorio /etc con Git</h1>
+                    <h2 class="headline">September 26, 2011</h2>
+                </header>
+                <section id="post-body">
+                    <p>Una buena práctica, sobre todo si les gusta modificar los archivos de configuración para probar cosas o instalar aplicaciones constantemnte, es versionar el directorio /etc, para el caso en el que nos <del>mandemos alguna cagada</del> equivoquemos en alguna configuración, el problema sea facilmente remediable.
+La instalación y configuración es muy sencilla, en este caso es todo manual, si quieren saltearse todo e instalar directamente <strong><a href="http://kitenet.net/~joey/code/etckeeper/">etckeeper</a></strong> es válido igual ;)</p>
+
+<p>Antes que todo, hay que instalar <strong>git</strong> (usé git porque&hellip;si)</p>
+
+<pre><code>yaourt -S git
+</code></pre>
+
+<p>Después vamos al directorio correspondiente y creamos el repositorio:</p>
+
+<pre><code>cd /etc &amp;&amp; git init 
+Initialized empty Git repository in /etc/.git/
+</code></pre>
+
+<p>Agregamos todos los archivos:</p>
+
+<pre><code>git add --all
+</code></pre>
+
+<p>Hacemos nuestro primer commit:</p>
+
+<pre><code>git commit -m &quot;Mira mama, estoy usando versionado&quot;
+</code></pre>
+
+<p>Pueden crear un nuevo brach, como para tener una copia inicial del directorio, solo basta hacer:</p>
+
+<pre><code>git branch inicial
+</code></pre>
+
+<p>Para verificar cambios sin commitear, pueden usar:</p>
+
+<pre><code>git status
+</code></pre>
+
+<p>En crontab crear commits diarios, no se, esas cosas las manejan a gusto, prefiero hacerlo manual&hellip;</p>
+
+<p>Pueden cambiar de branch con &ldquo;git checkout &ldquo;&hellip;en fin, a partir de ahora los cambios que quieran hacer corren por su cuenta, esta es la configuración basica para que funcione. Mas información de git pueden encontrarla en <a href="http://schacon.github.com/git/gittutorial.html">http://schacon.github.com/git/gittutorial.html</a></p>
+
+<!-- more -->
+
+<p>Para ver los cambios, puede usar algunas apps como:
+<strong>SmartGit</strong>
+Bastante cómoda, y eso que está hecho en <a href="http://gifninja.com/animatedgifs/250429/trollface.gif">Java</a>! :P
+Aca les dejo una imagen de como se ve, por si les interesa
+<a href="http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-14.png"><img src="http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-14-300x197.png" alt="SmartGit on pacman.conf" /></a></p>
+
+<p>Pero no conozco más herramientas con GUI, si usan alguna en particular bienvenida sea&hellip;
+[quote style=&ldquo;1&rdquo;]Si no te equivocas de vez en cuando, es que no lo intentas.</p>
+
+<p>_ Woody Allen_</p>
+
+<p>[/quote]</p>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/xeBuz">
+                        <img class="avatar" src="http://localhost:1313/blog/images/avatar.png">
+                        <div>
+                            <span class="dark">xeBuz</span>
+                            <span>I&#39;m an enthusiastic gopher.</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2flocalhost%3a1313%2fblog%2fposts%2fversionar-el-directorio-etc-con-git%2f - Versionar%20el%20directorio%20%2fetc%20con%20Git by @xeBuz"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/no-close-tabs-firefox-31/">Close Tab en Firefox 31<aside class="dates">May 14</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/newest/">Just another sample post<aside class="dates">Mar 29</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/middle/">Second Post<aside class="dates">Mar 28</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/oldest/">First Post<aside class="dates">Mar 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/crazy-little-thing-called-perl/">Crazy little thing called Perl: Introducción al lenguaje<aside class="dates">Mar 5</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/bundles-de-juegos-varias-opciones-disponibles/">Bundles de juegos, varias opciones disponibles<aside class="dates">Feb 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-selectores-y-traversing/">jQuery: Selectores y Traversing<aside class="dates">Feb 26</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-doge-such-plugin/">jQuery Doge - such plugin<aside class="dates">Dec 23</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/licencia-para-ir-al-cine/">Licencia para ir al cine<aside class="dates">Jul 1</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/">Barra de progreso de Arch Linux para Python<aside class="dates">Oct 21</aside></a>
+        </li>
+        
+   
+</ul>
+            <footer id="footer">
+    <p class="small">
+        © Copyright 2015 xeBuz
+    </p>
+</footer>
+        </section>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://localhost:1313/blog/js/main.js"></script>
+<script src="http://localhost:1313/blog/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+    </body>
+</html>

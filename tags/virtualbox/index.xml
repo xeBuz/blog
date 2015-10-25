@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Virtualbox on Personal Blog</title>
+    <link>http://localhost:1313/blog/tags/virtualbox/</link>
+    <description>Recent content in Virtualbox on Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 31 Aug 2011 20:43:42 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/virtualbox/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>VirtualBoxes.org - Descarga de máquinas virtuales</title>
+      <link>http://localhost:1313/blog/posts/virtualboxes-org-descarga-de-maquinas-virtuales/</link>
+      <pubDate>Wed, 31 Aug 2011 20:43:42 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/virtualboxes-org-descarga-de-maquinas-virtuales/</guid>
+      <description>&lt;p&gt;¿Les gusta probar diferentes Sistemas Operativos?
+¿Te da &lt;del&gt;paja&lt;/del&gt; pereza instalarlos?
+¿Virtualizas?
+Entonces &lt;a href=&#34;http://virtualboxes.org/&#34;&gt;&lt;strong&gt;VirtualBoxes.org&lt;/strong&gt;&lt;/a&gt; es eso que no sabías que necesitabas. Al momento de escribir el texto, el sitio tiene 42 Sistemas Operativos diferentes, algunos con varias versiones del mismo.
+El sitio se encarga de subir los archivos &lt;a href=&#34;http://filext.com/file-extension/VDI&#34;&gt;.vdi&lt;/a&gt; para importar en VirtualBox. Las descargas son directas, compresiones en 7zip hosteadas en Sourceforge.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Tiene imágenes de sistemas:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;GNU/Linux&lt;/strong&gt;: Desde los más comunes como Fedora, Ubuntu o Debian hasta algunas menos populares como DeLi, gNewSense (la recomienda RMS), Moblin (orientada a netbooks) entre muchas otras.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Solaris&lt;/strong&gt;: OpenSolaris, MilaX, Nexenta&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;FreeBSD/BSD&lt;/strong&gt;: Debian GNU/kFreeBSD, FreeBSD&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;y algunos mas como MINIX, Haiku (basado en BeOS), ReactOS, Android, FreeDOS y algunos más&amp;hellip;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;En donde están los links, tambien se encuentran los datos de login&lt;/em&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

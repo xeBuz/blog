@@ -1,0 +1,243 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="xeBuz">
+		<meta name="description" content="Personal Website">
+		<meta name="generator" content="Hugo 0.14" />
+		<title>Tips Linuxeros: Alias para Todos &middot; Personal Blog</title>
+		<link rel="shortcut icon" href="http://localhost:1313/blog/images/favicon.ico">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/style.css">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/highlight.css">
+		<link href="http://localhost:1313/blog/index.xml" rel="alternate" type="application/rss+xml" title="Personal Blog" />
+	</head>
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='http://localhost:1313/blog/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+		<a href='http://localhost:1313/blog/about'>About</a>
+	
+
+	
+	<a class="cta" href="http://localhost:1313/blog/index.xml">Subscribe</a>
+	
+</nav>
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>Tips Linuxeros: Alias para Todos</h1>
+                    <h2 class="headline">September 2, 2011</h2>
+                </header>
+                <section id="post-body">
+                    <p>Los alias en Linux son shortcuts o <em>sinónimos</em> que podemos emplear para ejecutar comandos en la terminal.
+Son muy útiles para correr comandos largos o simplemente crear nombres mas amigables, para algún comando que nos resulte deficil de recordar o a los que usemos mas seguido.
+Para crearlos debemos escribir en el archivo <strong>~.bashrc</strong> para dejarlos disponibles al usuario, o en /etc/bash.bashrc para dejarlos disponibles en todo el sistema.</p>
+
+<p>Las sintaxis es muy sencilla: <em>alias nombre=&lsquo;comando&rsquo;</em>.</p>
+
+<p><strong>Algunos ejemplos&hellip;</strong></p>
+
+<pre><code>#Gestión rapida de paquetería
+alias instalar='sudo apt-get install'
+alias clearcache='yaourt -Scc'
+alias update='emerge --update --deep'
+
+#Vaciado de archivos
+alias empty=':&gt; $1'
+
+#Copiado con barra de progreso, velocidad y estadísticas
+alias copy='rsync -avz --stats --progress'
+
+#Compartir la carpeta, via HTTP (http://127.0.0.1:8000)
+alias sharehttp='python -m SimpleHTTPServer'
+
+#Mostrar unidades montadas, en columnas
+alias mountt='mount | column -t'
+
+#Mostrar top 10 deprocesos que consuman mas memoria
+alias pstop='ps aux | sort -nk +4 | tail'
+
+#Buscar proceso
+alias psx='ps aux | grep '
+
+#Me olvide de poner sudo en el comando anterior
+alias grrrrrrr='sudo !!'
+
+#Listar los puertos abiertos
+alias openports='netstat --all --numeric --programs --inet'
+
+# Tambien podemos modificar el prompt o la terminal
+# Agregandole la hora
+alias hora='export PS1=&quot;${PS1%\$*}&quot;' t $ '
+# o mejor aun, poniendola en la parte superior
+alias horasuperior='while sleep 1;do tput sc;tput cup 0 $(($(tput cols)-29));date;tput rc;done &amp;'
+
+#Alias con parametros (en realidad es una funcion)
+#Crear un directorio y posicionarnos sobre el mismo
+MKdir() { mkdir $1 &amp;&amp; cd $1 }
+</code></pre>
+
+<p><strong>Hacer los comandos &ldquo;human-readeable&rdquo; por defecto</strong></p>
+
+<pre><code>alias ls='ls -h'
+alias du='du -h'
+alias df=-df -h'
+</code></pre>
+
+<p><strong>Simplificar los parámetros</strong></p>
+
+<pre><code>alias ls='ls -hF --color=always'
+alias lr='ls -hR'                    # recursive ls
+alias ll='ls -hl'
+alias la='ll -hA'
+alias lx='ll -hBX'                   # sort by extension
+alias lz='ll -hrS'                   # sort by size
+alias lt='ll -rt'                    # sort by date
+alias lm='la | more'
+</code></pre>
+
+<p><strong>También podemos crear alias que solo funcionen para usuarios con privilegios de root</strong></p>
+
+<pre><code>if [ $UID -ne 0 ]; then
+    alias scat='sudo cat'
+    alias svim='sudo vim'
+    alias root='sudo su'
+    alias reboot='sudo reboot'
+    alias halt='sudo halt'
+    alias netcfg='sudo netcfg2'
+fi
+</code></pre>
+
+<!-- more -->
+
+<p>Si queren saber cuales son los comandos que más se utilizan en el sistema, como para ver si pueden agilizar creando alias mas cortos, pueden correr esto:</p>
+
+<pre><code> history | awk '{print $2}' | awk 'BEGIN {FS=&quot;|&quot;}{print $1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr
+</code></pre>
+
+<p>[quote style=&ldquo;1&rdquo;] See, you not only have to be a good coder to create a system like Linux, you have to be a sneaky bastard too ;-) [/quote]</p>
+
+<p><strong><em>Linus Torvalds</em></strong></p>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/xeBuz">
+                        <img class="avatar" src="http://localhost:1313/blog/images/avatar.png">
+                        <div>
+                            <span class="dark">xeBuz</span>
+                            <span>I&#39;m an enthusiastic gopher.</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2flocalhost%3a1313%2fblog%2fposts%2ftips-para-linux-alias-para-todos%2f - Tips%20Linuxeros%3a%20Alias%20para%20Todos by @xeBuz"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/no-close-tabs-firefox-31/">Close Tab en Firefox 31<aside class="dates">May 14</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/newest/">Just another sample post<aside class="dates">Mar 29</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/middle/">Second Post<aside class="dates">Mar 28</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/oldest/">First Post<aside class="dates">Mar 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/crazy-little-thing-called-perl/">Crazy little thing called Perl: Introducción al lenguaje<aside class="dates">Mar 5</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/bundles-de-juegos-varias-opciones-disponibles/">Bundles de juegos, varias opciones disponibles<aside class="dates">Feb 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-selectores-y-traversing/">jQuery: Selectores y Traversing<aside class="dates">Feb 26</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-doge-such-plugin/">jQuery Doge - such plugin<aside class="dates">Dec 23</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/licencia-para-ir-al-cine/">Licencia para ir al cine<aside class="dates">Jul 1</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/">Barra de progreso de Arch Linux para Python<aside class="dates">Oct 21</aside></a>
+        </li>
+        
+   
+</ul>
+            <footer id="footer">
+    <p class="small">
+        © Copyright 2015 xeBuz
+    </p>
+</footer>
+        </section>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://localhost:1313/blog/js/main.js"></script>
+<script src="http://localhost:1313/blog/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+    </body>
+</html>

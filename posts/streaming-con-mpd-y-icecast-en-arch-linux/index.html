@@ -1,0 +1,222 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="xeBuz">
+		<meta name="description" content="Personal Website">
+		<meta name="generator" content="Hugo 0.14" />
+		<title>Hacer un radio casera con MPD y con Icecast &middot; Personal Blog</title>
+		<link rel="shortcut icon" href="http://localhost:1313/blog/images/favicon.ico">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/style.css">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/highlight.css">
+		<link href="http://localhost:1313/blog/index.xml" rel="alternate" type="application/rss+xml" title="Personal Blog" />
+	</head>
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='http://localhost:1313/blog/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+		<a href='http://localhost:1313/blog/about'>About</a>
+	
+
+	
+	<a class="cta" href="http://localhost:1313/blog/index.xml">Subscribe</a>
+	
+</nav>
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>Hacer un radio casera con MPD y con Icecast</h1>
+                    <h2 class="headline">November 1, 2011</h2>
+                </header>
+                <section id="post-body">
+                    <p>Empecemos&hellip; pero <em>¿Qué e&rsquo; lo que e&rsquo; eso?</em>
+<strong>MPD</strong>: Básicamente, es un servidor para escuchar música. Con la particularidad de que es muy configurable y nos permite acceder a traves de la red para controlar la lista de reproducción. <a href="http://images.wikia.com/mpd/images/6/68/Mpd-overview.png">Esta</a> imagen lo explica bien.
+<strong>Clientes MPD</strong>: El servidor por sí sólo nos gestiona los archivos, los salidas de audio y la lista de reproducción, para acceder a esto necesitamos clientes, que visualmente son similares a las clasicas aplicaciones para escuchar música.
+Algunos a destacar: Sonata, Ario, ncmpcpp, MPDroid y una <a href="http://mpd.wikia.com/wiki/Clients">larga lista más</a>.
+<strong>Icecast</strong> : Es un proyecto open source para hacer streaming, que aparece como competencia libre de SHOUTcast (también compatible con este).</p>
+
+<p><strong>1.- Instalar el servidor MPD</strong>
+La instalación es simple, también esta en los repositorios de las principales distros. La configuración y puesta a punto es lo que va a llevar mas tiempo y pueden surgir tantos problemas como lineas de configuración tenga el archivo /etc/mpd.conf
+Lo importante (a este nivel) es dejar bien la base de datos y los archivos básicos, cualquier tipo de configuración de salida de audio (excepto en el paso 3) o detalles excede lo que tenemos que hacer para que funcione el streaming. TODO lo que necesitan saber está en la <a href="http://mpd.wikia.com/wiki/Configuration">wiki oficial</a>.</p>
+
+<pre><code>music_directory       &quot;/media/music/&quot;
+playlist_directory    &quot;/var/lib/mpd/playlists&quot;
+db_file               &quot;/var/lib/mpd/mpd.db&quot;
+log_file              &quot;/var/log/mpd/mpd.log&quot;
+pid_file              &quot;/var/run/mpd/mpd.pid&quot;
+state_file            &quot;/var/lib/mpd/mpdstate&quot;
+user                  &quot;mpd&quot;
+</code></pre>
+
+<p>Nota: Es importante que la música esté bien taggeada.</p>
+
+<p><strong>2.- Instalar y configurar Icecast</strong>
+Supongamos que ya lo instalaron, el archivo de configuración es un XML, está en /etc/icecast.xml. Algunos detalles de configuración:</p>
+
+<pre><code>&lt;!-- Dato de conexion ---&gt;
+&lt;listen-socket&gt;
+    &lt;port&gt;8899&lt;/port&gt;
+    &lt;shoutcast-mount&gt;/stream&lt;/shoutcast-mount&gt; 
+&lt;/listen-socket&gt;
+
+&lt;!-- Para publicar en los directorios ---&gt;
+&lt;directory&gt;
+    &lt;yp-url-timeout&gt;30&lt;/yp-url-timeout&gt;
+    &lt;yp-url&gt;http://dir.xiph.org/cgi-bin/yp-cgi&lt;/yp-url&gt;
+&lt;/directory&gt;
+</code></pre>
+
+<p>La configuración escencial se hace en /etc/mpd.conf, ahi agregamos una salida de audio que direccione a nuestro Icecast. Para esto hay que agregrar:</p>
+
+<pre><code>audio_output {
+    type        &quot;shout&quot;
+    encoding    &quot;ogg&quot;
+    name        &quot;KBBL me va a dar algo estupido&quot;
+    host        &quot;localhost&quot;   # lo sacan de la configuración de Icecast
+    port        &quot;8000&quot;        # lo sacan de la configuración de Icecast
+    mount       &quot;/mpd.ogg&quot;    # Importante para conectarse
+    password    &quot;xxxxx&quot;       # lo sacan de la configuración de Icecast
+    quality     &quot;5.0&quot;
+    bitrate     &quot;192&quot;         # http://en.wikipedia.org/wiki/Bit_rate#Audio     
+    format      &quot;44100:16:2&quot;  # Default 44100:16:1
+    user        &quot;source&quot;
+    description &quot;Descripción mas larga, util para directorios&quot;
+    genre       &quot;powa&quot;
+    public      &quot;yes&quot;          # Para publicación en un directorio
+}
+</code></pre>
+
+<p><strong>3.- Conectarse</strong>
+Primero, levantan los servicios (primero mpd, despues icecast), si todo va bien, ya pueden entrar con algún cliente MPD para armar la playlist. Si no hay nada reproduciéndose cuando quieran abrir la conexión de streaming va a dar error 404.
+Una forma facil de testear la reproducción es con mplayer de forma local.</p>
+
+<pre><code>mplayer -playlist http://127.0.0.1:8000/mpd.ogg.m3u
+</code></pre>
+
+<p>Casi cualquier reproductor está preparado para streaming, hasta pueden hacerlo desde el celular, en Android uso &ldquo;A Radio Player&rdquo;, anda de 10.
+Si dejan la configuración de arriba van a poder figurar en el <a href="http://dir.xiph.org/">Directorio de Icecast</a>, con un link al streaming por M3U y otro por XSPF.</p>
+
+<p>Post para @elpibepantalla y @Nestor_Navarro y gracias a @Rhapsody_Girl por ser la tester :P</p>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/xeBuz">
+                        <img class="avatar" src="http://localhost:1313/blog/images/avatar.png">
+                        <div>
+                            <span class="dark">xeBuz</span>
+                            <span>I&#39;m an enthusiastic gopher.</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2flocalhost%3a1313%2fblog%2fposts%2fstreaming-con-mpd-y-icecast-en-arch-linux%2f - Hacer%20un%20radio%20casera%20con%20MPD%20y%20con%20Icecast by @xeBuz"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/no-close-tabs-firefox-31/">Close Tab en Firefox 31<aside class="dates">May 14</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/newest/">Just another sample post<aside class="dates">Mar 29</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/middle/">Second Post<aside class="dates">Mar 28</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/oldest/">First Post<aside class="dates">Mar 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/crazy-little-thing-called-perl/">Crazy little thing called Perl: Introducción al lenguaje<aside class="dates">Mar 5</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/bundles-de-juegos-varias-opciones-disponibles/">Bundles de juegos, varias opciones disponibles<aside class="dates">Feb 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-selectores-y-traversing/">jQuery: Selectores y Traversing<aside class="dates">Feb 26</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-doge-such-plugin/">jQuery Doge - such plugin<aside class="dates">Dec 23</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/licencia-para-ir-al-cine/">Licencia para ir al cine<aside class="dates">Jul 1</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/">Barra de progreso de Arch Linux para Python<aside class="dates">Oct 21</aside></a>
+        </li>
+        
+   
+</ul>
+            <footer id="footer">
+    <p class="small">
+        © Copyright 2015 xeBuz
+    </p>
+</footer>
+        </section>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://localhost:1313/blog/js/main.js"></script>
+<script src="http://localhost:1313/blog/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Agenda on Personal Blog</title>
+    <link>http://localhost:1313/blog/tags/agenda/</link>
+    <description>Recent content in Agenda on Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Jan 2012 20:18:15 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/agenda/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Agenda de Febrero del Cineclub Municipal Hugo del Carril</title>
+      <link>http://localhost:1313/blog/posts/agenda-de-febrero-del-cineclub-municipal-hugo-del-carril/</link>
+      <pubDate>Wed, 25 Jan 2012 20:18:15 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/agenda-de-febrero-del-cineclub-municipal-hugo-del-carril/</guid>
+      <description>&lt;p&gt;En el 2012 el Cineclub arranca con clásicos todo Febrero. Les dejo la agenda completa (es básicamente la información del &lt;a href=&#34;http://www.cineclubmunicipal.org.ar/contenidos/2012_02/sec_ciclo_01.php?sec=cine&#34;&gt;sitio&lt;/a&gt;) subida a Google Calendar, ordenada y con un link a IMDb.
+Se pueden suscribir desde la parte inferior, el calendario es de acceso público.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

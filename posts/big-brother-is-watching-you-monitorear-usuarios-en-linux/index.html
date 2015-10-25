@@ -1,0 +1,184 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="xeBuz">
+		<meta name="description" content="Personal Website">
+		<meta name="generator" content="Hugo 0.14" />
+		<title>Big Brother is watching you. Monitorear usuarios en Linux. &middot; Personal Blog</title>
+		<link rel="shortcut icon" href="http://localhost:1313/blog/images/favicon.ico">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/style.css">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/highlight.css">
+		<link href="http://localhost:1313/blog/index.xml" rel="alternate" type="application/rss+xml" title="Personal Blog" />
+	</head>
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='http://localhost:1313/blog/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+		<a href='http://localhost:1313/blog/about'>About</a>
+	
+
+	
+	<a class="cta" href="http://localhost:1313/blog/index.xml">Subscribe</a>
+	
+</nav>
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>Big Brother is watching you. Monitorear usuarios en Linux.</h1>
+                    <h2 class="headline">September 25, 2011</h2>
+                </header>
+                <section id="post-body">
+                    <p>Mantener un sistema estable a veces requiere observar que estan haciendo los usuarios.
+No significa que tengamos que ponernos la gorra del Partido y salir a perseguir a Emmanuel Goldstein, sino sólo controlar un poco los recursos, evitando picos altos que puedan provocarnos inestabilidad.
+Acá les dejo un par de comandos o de aplicaciones que tienen este propósito, espero que alguna les sirva</p>
+
+<p><strong>who</strong>
+El más simple, devuelve una lista de usuarios loggeados, y la tty donde están.</p>
+
+<p><strong>w</strong>
+Similar a who, pero en este caso da un poco mas de información (no demasiada). Lista usuario, tty, tiempo loggeado, carga del sistema general y del usuario y que esta haciendo en ese momento. Un comando rápido, fácil y útil.</p>
+
+<p><strong>whowatch</strong>
+Una aplicación bastante útil, crea un árbol con los usuarios loggeados, y
+Con_ control + k_ mandamos un SIGKILL, con c switcheamos entre &ldquo;comando/nombre de aplicacion&rdquo;, la <em>o</em> nos muestra el owner.
+Pueden bajarla desde aca <a href="http://wizard.ae.krakow.pl/~mike/">http://wizard.ae.krakow.pl/~mike/</a> aunque segurmente esté el los repositorios de la distro que usen.</p>
+
+<p><strong>last</strong> y <strong>lastlog</strong>
+Muestra el ultimo acceso de los usuarios, el segundo es el mas simple y cómodo para leer, lista los usuarios, tty, desde donde y fecha y hora del acceso.</p>
+
+<p><strong>psacct</strong>
+Este es un conjunto de aplicaciones, muy utiles (informacion detallada <a href="http://generationip.com/documentation/system-documentation/113-howto-on-psacct-for-a-complete-monitoring-of-processus-and-users-activities-on-your-system">aca</a>), dentro de las cuales se encuentra:</p>
+
+<ul>
+<li><p><em>ac</em>: Muestra informacion acerca de cuanto tiempo estuvo loggeado el usuario.</p></li>
+
+<li><p><em>lastcomm</em>: Información sobre el ultimo comando ejecutado.</p></li>
+
+<li><p><em>sa</em>: Informacion sumarizada con los datos del comando anterior.</p></li>
+
+<li><p><em>last y lastb</em>: Funciona muy similar al comando nombrado anteriormente, pero el segundo muestra tambien accesos fallidos.</p></li>
+</ul>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/xeBuz">
+                        <img class="avatar" src="http://localhost:1313/blog/images/avatar.png">
+                        <div>
+                            <span class="dark">xeBuz</span>
+                            <span>I&#39;m an enthusiastic gopher.</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2flocalhost%3a1313%2fblog%2fposts%2fbig-brother-is-watching-you-monitorear-usuarios-en-linux%2f - Big%20Brother%20is%20watching%20you.%20Monitorear%20usuarios%20en%20Linux. by @xeBuz"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/no-close-tabs-firefox-31/">Close Tab en Firefox 31<aside class="dates">May 14</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/newest/">Just another sample post<aside class="dates">Mar 29</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/middle/">Second Post<aside class="dates">Mar 28</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/oldest/">First Post<aside class="dates">Mar 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/crazy-little-thing-called-perl/">Crazy little thing called Perl: Introducción al lenguaje<aside class="dates">Mar 5</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/bundles-de-juegos-varias-opciones-disponibles/">Bundles de juegos, varias opciones disponibles<aside class="dates">Feb 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-selectores-y-traversing/">jQuery: Selectores y Traversing<aside class="dates">Feb 26</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-doge-such-plugin/">jQuery Doge - such plugin<aside class="dates">Dec 23</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/licencia-para-ir-al-cine/">Licencia para ir al cine<aside class="dates">Jul 1</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/">Barra de progreso de Arch Linux para Python<aside class="dates">Oct 21</aside></a>
+        </li>
+        
+   
+</ul>
+            <footer id="footer">
+    <p class="small">
+        © Copyright 2015 xeBuz
+    </p>
+</footer>
+        </section>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://localhost:1313/blog/js/main.js"></script>
+<script src="http://localhost:1313/blog/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+    </body>
+</html>

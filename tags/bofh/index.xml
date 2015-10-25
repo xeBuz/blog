@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bofh on Personal Blog</title>
+    <link>http://localhost:1313/blog/tags/bofh/</link>
+    <description>Recent content in Bofh on Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 18 Oct 2012 02:03:52 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/bofh/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Script para grabar la consola en un .gif animado</title>
+      <link>http://localhost:1313/blog/posts/script-para-grabar-la-consola-en-un-gif-animado/</link>
+      <pubDate>Thu, 18 Oct 2012 02:03:52 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/script-para-grabar-la-consola-en-un-gif-animado/</guid>
+      <description>&lt;p&gt;Hoy me surgió una necesidad, que me pareció bastante simple pero no encontré herramientas simples que me lo solucionaran. Les dejo este script, que graba un gif de la consola durante X segundos (idea de @shinax y @rootmyword). Ese valor se lo pasamos por parámetro (no lo valido ni tiene default, porque la vida es demasiado corta para controlarlo) . Hay que correr el script con un &amp;amp; al final de la línea, asi pasa a correr en background y podemos usar la consola.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#!/bin/bash
+clear
+mkdir temp_gif
+
+segs=`expr $1 \* 5`
+
+for (( i = 1; i &amp;lt;= $segs ; i++ ));
+do
+    printf -v number &amp;quot;%06d&amp;quot; $i
+    import -window $WINDOWID temp_gif/$number.gif 
+    sleep 0.2
+done
+
+convert -delay 20 -loop 0 temp_gif/*.gif animacion.gif
+
+rm -R temp_gif
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;El código terminó siendo más simple de lo que pensaba, toda la magia la hace &lt;strong&gt;ImageMagick&lt;/strong&gt;. Explico por línea, porque la idea siempre es aprender como funciona:
+Línea 5. Toma el primer parámetro que le demos, lo multiplica por 5 porque cada imagen la saco cada 0.2 segundos ;)
+Línea 9. El &lt;strong&gt;printf&lt;/strong&gt; lo utilizo para formatear &amp;i;, neceito hacer un zero-padding, o sea, rellenar con ceros a la izquierda, para que después el conversor me tome el orden correcto. El parámetro -v indica que no lo imprima, sino que lo almacene en una variable.
+Línea 10. ImageMagick se encarga de guardar la imágen de la ventana que le digo, para $WINDOWSID creo que es necesario &lt;strong&gt;xorg-xwininfo&lt;/strong&gt;, ya lo tenía instalado.
+Línea 13. Toma todas las imágenes de la carpeta, las concatena con un delay de 0.2 segundos y hace un loop infinito.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Solucionar problemas después de actualizar Gnome 3.4.1</title>
+      <link>http://localhost:1313/blog/posts/solucionar-problemas-despues-de-actualizar-gnome-3-4-1/</link>
+      <pubDate>Mon, 23 Apr 2012 20:58:48 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/solucionar-problemas-despues-de-actualizar-gnome-3-4-1/</guid>
+      <description>&lt;p&gt;Hoy, como para que el lunes arranque con todo, actualicé Arch y después no pude ingresar más la sesión de Gnome3. Aparecía la PC con carita triste y me decía que iba a desactivar las extensiones, pero no soluciona nada. Y cómo se actualizaron muchas drivers, el kernel y gnome no sabía bien donde estaba el problema.&lt;/p&gt;
+
+&lt;p&gt;Al parecer la nueva versión de Gnome (3.4.1) tiene como dependencia networkmanager y si no lo encuentra explota por todos lados, pueden verificar el archivo /var/logs/messages.log, deberían tener algo así:
+[spoiler title=&amp;ldquo;messages.log&amp;rdquo; open=&amp;ldquo;0&amp;rdquo; style=&amp;ldquo;1&amp;rdquo;]
+&lt;code&gt;[...]
+Apr 23 17:26:56 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager/Presence interface=org.freedesktop.DBus.Properties method=GetAll
+Apr 23 17:26:56 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager/Presence interface=org.freedesktop.DBus.Properties method=GetAll
+Apr 23 17:26:59 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/freedesktop/DBus interface=org.freedesktop.DBus method=NameOwnerChanged
+Apr 23 17:26:59 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/freedesktop/DBus interface=org.freedesktop.DBus method=NameOwnerChanged
+Apr 23 17:28:24 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager interface=org.gnome.SessionManager method=IsInhibited
+Apr 23 17:28:24 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager interface=org.gnome.SessionManager method=IsInhibited
+Apr 23 17:29:24 localhost dbus[661]: [system] Activating service name=&#39;org.freedesktop.NetworkManager&#39; (using servicehelper)
+Apr 23 17:29:24 localhost dbus[661]: [system] Activated service &#39;org.freedesktop.NetworkManager&#39; failed: Launch helper exited with unknown return code 1
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): Searching for 4194307 in 4194307,4194308
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): Watch 1 fired, idle time = 600053
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): GsmPresence: setting idle: 1
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): Using ConsoleKit for session tracking
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): Updating ConsoleKit idle status: 1
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager interface=org.gnome.SessionManager method=IsInhibited
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager interface=org.gnome.SessionManager method=IsInhibited
+[...]&lt;/code&gt;[/spoiler]&lt;/p&gt;
+
+&lt;p&gt;Si quieren verificar si el problema se da por esto, pueden correr el siguiente comando (Control + Alt + F1) e intentar entrar a la sesión (Control + Alt + F7/F8):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo /etc/rc.d/networkmanager start
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Para hacer el cambio permanente, agreguen &lt;strong&gt;networkmanager&lt;/strong&gt; a los DAEMONS del /etc.rc.conf&lt;/p&gt;
+
+&lt;p&gt;Espero que les sirva, a mi me hizo renegar mucho, y es algo bastante simple de solucionar.&lt;/p&gt;
+
+&lt;p&gt;Edit: Según la &lt;a href=&#34;https://wiki.archlinux.org/index.php/NetworkManager#Edit_daemons&#34;&gt;wiki de Arch&lt;/a&gt;, hay que sacar el daemon de network y poner el de networkmanager después de dbus&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Comando at, automatizar scripts sin usar crontab</title>
+      <link>http://localhost:1313/blog/posts/comando-at-automatizar-scripts-sin-usar-crontab/</link>
+      <pubDate>Mon, 23 Jan 2012 16:34:56 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/comando-at-automatizar-scripts-sin-usar-crontab/</guid>
+      <description>&lt;p&gt;A diferencia de &lt;strong&gt;cron&lt;/strong&gt;, &lt;strong&gt;at&lt;/strong&gt; permite programar un comando/script para que sea ejecutado sólo una vez y no periodicamente.&lt;/p&gt;
+
+&lt;p&gt;Antes que nada deben instalarlo, no suele venir en las distribuciones por defecto. Usen pacman, aptitude, yum o lo que sea, tiene que estar en los repositorios.
+Una vez instalado, deben correr el servicio y por que no agregarlo en el /etc/rc.conf para que arranque solo. Si no hacen esto no van a correrse los scripts.&lt;/p&gt;
+
+&lt;p&gt;Para utilizarlo tenemos varias alternativas, la primera es &lt;em&gt;especificarle la fecha y hora&lt;/em&gt;, luego escribir el script (es importante que una vez que terminemos, presionemos Control+D):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;at 10:31am Jan 23 
+warning: commands will be executed using /bin/sh
+at&amp;gt; yaourt -Syu      
+at&amp;gt; (Control +D) &amp;lt;eot&amp;gt;
+job 5 at Mon Jan 23 10:31:00 2012
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;También acepta otros &lt;em&gt;formatos&lt;/em&gt; de fechas, por ejemplo, para ejecutar algo mañana a esta misma hora, sería&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;at now tomorrow
+at&amp;gt; blah blah
+at&amp;gt; meh
+at&amp;gt; (Control +D) &amp;lt;eot&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Para mostrar los comandos que están en cola de ejecución, basta con hacer &lt;strong&gt;at -l&lt;/strong&gt; o &lt;strong&gt;atq&lt;/strong&gt;, esto nos traerá un id, la fecha/hora en la que se ejecuta y el usuario que lo creó.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;at -l
+6   Mon Jan 23 11:41:00 2012 a xebuz
+7   Wed Jan 25 00:01:00 2012 a xebuz
+5   Mon Jan 23 10:31:00 2012 a xebuz
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Para cancelar o eliminar una tarea pendiente, se utiliza &lt;strong&gt;atrm&lt;/strong&gt; o &lt;strong&gt;at -r&lt;/strong&gt; o &lt;strong&gt;at -d&lt;/strong&gt; :P, seguida del id de la tarea (obtenida desde el comando anterior).
+Por último, si quieren ver todo el contenido del script, con &lt;strong&gt;at -c &lt;em&gt;id&lt;/em&gt;&lt;/strong&gt; lo obtienen completo.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Manejar procesos en Linux, Like a Sir</title>
+      <link>http://localhost:1313/blog/posts/manejar-procesos-en-linux-like-a-sir/</link>
+      <pubDate>Wed, 14 Dec 2011 18:24:08 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/manejar-procesos-en-linux-like-a-sir/</guid>
+      <description>&lt;p&gt;Particularmente me gusta tener alguna de las aplicaciones listo corriendo en la tty1 y cuando algo falla, porque siempre algo puede malir sal, control + alt +F1 viene como piña para ver el problema rápido.
+Me pasó de tener problemas en ambientes Windows, y es una de las cosas que mas se extrañan; el administrador de tareas no hace todo lo que debería (como el de Gnome o KDE, si algo falla en el X o te quedás sin recursos no los vas a poder usar)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ps y kill&lt;/strong&gt;
+Estos comandos son los clásicos, por excelencia.
+El uso estandar, cavernícola y mas difundido es &lt;em&gt;ps aux&lt;/em&gt;, tambien &lt;em&gt;ps aux | grep &lt;app&gt;&lt;/em&gt; para filtrar, y después un &lt;em&gt;kill -9 UID&lt;/em&gt; obtenido con el comando anterior, pero eso no es lo que un Sir haría.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;pgrep y pkill&lt;/strong&gt;
+Tenemos pgrep funcionaría como pidof, pero con mejor parametrización e información; mientras que pkill sirve para mandar señales, si, como kill, pero permite expersiones regulares y algunos filtros muy interesantes.
+Algunos ejemplos: &lt;em&gt;pgrep -u firebird -l&lt;/em&gt; mostraría todos los nombres de los procesos que esta usando el usuario firebird, &lt;em&gt;pkill -9 firefox&lt;/em&gt; es mucho más cómodo que el ps y después el kill.. dirán &amp;ldquo;¡Dejate de joder! ¡es igual que killall!&amp;rdquo; pero no, pueden potenciarlo más, digamos, matar la tty0 o mejor aún una sesión ssh basta correr con &lt;em&gt;pkill -9 -t pts/5&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;top&lt;/strong&gt;
+Visualizador de procesos. Si llegaste hasta acá imagino que ya lo usaste y sabés lo básico, les tengo fe. Sólo para el registro, me gusta activar las opciones B, 1 y z.
+De nuevo, es lo más usado, lo mas enseñado y lo mas clásico. Siempre hay mejores opciones.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;htop&lt;/strong&gt;
+Es como top, pero con esteroides. Mejores shortcuts, colores, permite usar el mouse, mejor navegabilidad, filtros, ordenación, threads y otras chucherías.
+Las funcionalidades mas uso: &amp;lt; para ordenar, F9 para matar apps, F3 para buscat, t para treeview,
+Ya que estamos, la H es de Hisham, el nombre del desarrollador.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;atop&lt;/strong&gt;
+Es una de esas aplicaciones que está buena para abrirlas cuando alguien no-linuxero se acerca a tu PC, así piensa que te conectas a la Matrix desde el teclado y le vas pasando órdenes por ósmosis.
+Sería una versión mas detallada de las dos aplicaciones anteriores, pero menos interactiva. Les daría algun tip, pero lo uso de poser nada más :P
+&amp;lt;!&amp;ndash; more &amp;ndash;&amp;gt;
+Aca una imágen comparativa, a la izquierda top, a la dercha htop, abajo atop.&lt;/p&gt;
+
+&lt;p&gt;[caption id=&amp;ldquo;attachment_541&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;695&amp;rdquo; caption=&amp;ldquo;Comparativa entre Top, Htop y Atop&amp;rdquo;]&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/12/top.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/12/top-1024x538.png&#34; alt=&#34;Comparativa entre Top, Htop y Atop&#34; /&gt;&lt;/a&gt;[/caption]&lt;/p&gt;
+
+&lt;p&gt;Espero que les sirva, dígale no al ps blah grep blah kill blah. Iba a escribir también sobre prioridades y estados, pero lo hago otro día, post largo y denso = post que no se lee.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Z Bash, o zsh, una shell con Z de &#34;ZOMG que buena shell&#34;</title>
+      <link>http://localhost:1313/blog/posts/zsh/</link>
+      <pubDate>Thu, 20 Oct 2011 18:26:48 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/zsh/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Z Bash&lt;/strong&gt;, o mejor &lt;strong&gt;zsh&lt;/strong&gt;, es un interprete de comándos (&lt;em&gt;shell&lt;/em&gt;), excelente alternativa al Bash que viene por defecto (&lt;em&gt;Bourne-again Shell&lt;/em&gt;). Como mejoras, se destaca:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Mejorado en el autocompletado.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Muy customizable.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Corrección de tipeo.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Mejor manejo de funciones.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Es una shell mas hipster (?)._ (En realidad no, tiene mas de 20 años, y se usa bastante&amp;hellip;pero no viene por defecto)_&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;La instalación es simple, son unos poco kilobytes y seguro esta disponible en la distro que usen. En mi caso basta con:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pacman -S zsh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Una vez instalada, debería figurar en el archivo /etc/shells, para setearla como shell por defecto tenemos que correr:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;chsh -s $(which zsh)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;La primera vez que ingresan, la shell les sugiere que ejecuten &lt;strong&gt;zsh-newuser-install&lt;/strong&gt;, lo cual es recomendable, da una pequeña pero útil instroducción, con asistentes de configuración.&lt;/p&gt;
+
+&lt;p&gt;Ahora sí, veamos algunas cosas que tiene para ofrecernos&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Autocompletado de parametros&lt;/strong&gt;
+Antes pensaba que bash era buena con el autocompletado, claro que viniendo del cmd de Windows cualquier cosa es mejor; zsh vino a abrir una nueva puerta a la comodidad en la línea de comandos.
+Es rápidisimo y funciona con todos* los comandos, sólo pongan el - y para que liste las opciones.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Historial de bash, compatible con zsh&lt;/strong&gt;
+Una de las primeras cosas que necesité migrando de shell fue el historial. Pueden copiar &lt;em&gt;~/.bash_history _a _~/.histfile&lt;/em&gt; y van a tener lo mismo que bash, imprescindible si usan &lt;strong&gt;Control + R&lt;/strong&gt;.
+Tambien es compatible el archivo &lt;em&gt;~/.bashrc _con el _~/.zshrc&lt;/em&gt; y el_ ~/.bash&lt;em&gt;profile&lt;/em&gt; con &lt;em&gt;~/.zprofile&lt;/em&gt;, pero en mi caso preferí hacer copias a mano de lo que necesitaba. Sólo cuestión de gustos.
+Además, permite compartir el historial entre sesiones, muy comodo si entramos desde ssh y localmente a una PC.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;zsh-yaourt&lt;/strong&gt;
+Este paquete está en el AUR, y si, adivinaron, agrega autocompletado de paquetes a yaourt, es increiblemente útil, a lo _apt-get _si quieren una comparación, es muy bueno y rápido.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Paginador &amp;lsquo;inteligente&amp;rsquo;&lt;/strong&gt;
+No se si Paginador es la palabra apropiada, tampoco se si inteligente sería el adjetivo indicador. Todos somos unos vagos, por eso usamos la terminal, que mejor que escribir cat LEAME, cat LEAME | less, si, escribir solo LEAME, bueno, zsh nos entiende, así que funciona así.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Diferentes &amp;ldquo;key bindings&amp;rdquo;&lt;/strong&gt;
+En este caso, zsh los meneja de otra forma, y es frustrante mover las fechas de dirección y no obtener lo que pretendemos. No me resultó cómodo (porque no le dí tiempo a ver como funcionaba, ya estoy viejo para algunas cosas). Para dejarlo funcionando &amp;ldquo;a lo Bash&amp;rdquo;, tienen que editar el archivo &lt;em&gt;~/.zshrc&lt;/em&gt;
+[spoiler title=&amp;ldquo;Agregar estas líneas&amp;rdquo;]&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;bindkey &amp;quot;e[1~&amp;quot; beginning-of-line # Home
+bindkey &amp;quot;e[4~&amp;quot; end-of-line # End
+bindkey &amp;quot;e[5~&amp;quot; beginning-of-history # PageUp
+bindkey &amp;quot;e[6~&amp;quot; end-of-history # PageDown
+bindkey &amp;quot;e[2~&amp;quot; quoted-insert # Ins
+bindkey &amp;quot;e[3~&amp;quot; delete-char # Del
+bindkey &amp;quot;e[5C&amp;quot; forward-word
+bindkey &amp;quot;eOc&amp;quot; emacs-forward-word
+bindkey &amp;quot;e[5D&amp;quot; backward-word
+bindkey &amp;quot;eOd&amp;quot; emacs-backward-word
+bindkey &amp;quot;ee[C&amp;quot; forward-word
+bindkey &amp;quot;ee[D&amp;quot; backward-word
+bindkey &amp;quot;e[Z&amp;quot; reverse-menu-complete # Shift+Tab
+# for rxvt
+bindkey &amp;quot;e[7~&amp;quot; beginning-of-line # Home
+bindkey &amp;quot;e[8~&amp;quot; end-of-line # End
+# for non RH/Debian xterm, can&#39;t hurt for RH/Debian xterm
+bindkey &amp;quot;eOH&amp;quot; beginning-of-line
+bindkey &amp;quot;eOF&amp;quot; end-of-line
+# for freebsd console
+bindkey &amp;quot;e[H&amp;quot; beginning-of-line
+bindkey &amp;quot;e[F&amp;quot; end-of-line
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;[/spoiler]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Correccion de typos&lt;/strong&gt;
+Para los dislexicos como uno, esto es muy bueno, nos autocorrige directorios, comandos, archivos&amp;hellip; probandolo es muy bueno, no perfecto, pero ayuda a la hora de escribir rapido.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Links recomendados y fuentes para el post&lt;/strong&gt;
+&lt;a href=&#34;http://zsh.sourceforge.net/Guide/zshguide.html&#34;&gt;Guía oficial (en inglés)&lt;/a&gt;
+&lt;a href=&#34;https://wiki.archlinux.org/index.php/Zsh&#34;&gt;Wiki de Zsh, para Arch&lt;/a&gt;
+&lt;a href=&#34;http://pwet.fr/man/linux/commandes/zsh_lovers&#34;&gt;zhs-lovers&lt;/a&gt;
+&lt;a href=&#34;http://zshwiki.org/home/start&#34;&gt;Una wiki muy completa&lt;/a&gt;
+&lt;a href=&#34;http://fausto23.wordpress.com/2010/01/31/zsh-esa-shell/&#34;&gt;Buena info para el .zshrc, en español&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;*Quizas no todos&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Versionar el directorio /etc con Git</title>
+      <link>http://localhost:1313/blog/posts/versionar-el-directorio-etc-con-git/</link>
+      <pubDate>Mon, 26 Sep 2011 17:23:59 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/versionar-el-directorio-etc-con-git/</guid>
+      <description>&lt;p&gt;Una buena práctica, sobre todo si les gusta modificar los archivos de configuración para probar cosas o instalar aplicaciones constantemnte, es versionar el directorio /etc, para el caso en el que nos &lt;del&gt;mandemos alguna cagada&lt;/del&gt; equivoquemos en alguna configuración, el problema sea facilmente remediable.
+La instalación y configuración es muy sencilla, en este caso es todo manual, si quieren saltearse todo e instalar directamente &lt;strong&gt;&lt;a href=&#34;http://kitenet.net/~joey/code/etckeeper/&#34;&gt;etckeeper&lt;/a&gt;&lt;/strong&gt; es válido igual ;)&lt;/p&gt;
+
+&lt;p&gt;Antes que todo, hay que instalar &lt;strong&gt;git&lt;/strong&gt; (usé git porque&amp;hellip;si)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;yaourt -S git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Después vamos al directorio correspondiente y creamos el repositorio:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /etc &amp;amp;&amp;amp; git init 
+Initialized empty Git repository in /etc/.git/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Agregamos todos los archivos:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git add --all
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hacemos nuestro primer commit:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git commit -m &amp;quot;Mira mama, estoy usando versionado&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pueden crear un nuevo brach, como para tener una copia inicial del directorio, solo basta hacer:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git branch inicial
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Para verificar cambios sin commitear, pueden usar:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git status
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;En crontab crear commits diarios, no se, esas cosas las manejan a gusto, prefiero hacerlo manual&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Pueden cambiar de branch con &amp;ldquo;git checkout &amp;ldquo;&amp;hellip;en fin, a partir de ahora los cambios que quieran hacer corren por su cuenta, esta es la configuración basica para que funcione. Mas información de git pueden encontrarla en &lt;a href=&#34;http://schacon.github.com/git/gittutorial.html&#34;&gt;http://schacon.github.com/git/gittutorial.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Para ver los cambios, puede usar algunas apps como:
+&lt;strong&gt;SmartGit&lt;/strong&gt;
+Bastante cómoda, y eso que está hecho en &lt;a href=&#34;http://gifninja.com/animatedgifs/250429/trollface.gif&#34;&gt;Java&lt;/a&gt;! :P
+Aca les dejo una imagen de como se ve, por si les interesa
+&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-14.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-14-300x197.png&#34; alt=&#34;SmartGit on pacman.conf&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Pero no conozco más herramientas con GUI, si usan alguna en particular bienvenida sea&amp;hellip;
+[quote style=&amp;ldquo;1&amp;rdquo;]Si no te equivocas de vez en cuando, es que no lo intentas.&lt;/p&gt;
+
+&lt;p&gt;_ Woody Allen_&lt;/p&gt;
+
+&lt;p&gt;[/quote]&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Big Brother is watching you. Monitorear usuarios en Linux.</title>
+      <link>http://localhost:1313/blog/posts/big-brother-is-watching-you-monitorear-usuarios-en-linux/</link>
+      <pubDate>Sun, 25 Sep 2011 16:18:50 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/big-brother-is-watching-you-monitorear-usuarios-en-linux/</guid>
+      <description>&lt;p&gt;Mantener un sistema estable a veces requiere observar que estan haciendo los usuarios.
+No significa que tengamos que ponernos la gorra del Partido y salir a perseguir a Emmanuel Goldstein, sino sólo controlar un poco los recursos, evitando picos altos que puedan provocarnos inestabilidad.
+Acá les dejo un par de comandos o de aplicaciones que tienen este propósito, espero que alguna les sirva&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;who&lt;/strong&gt;
+El más simple, devuelve una lista de usuarios loggeados, y la tty donde están.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;w&lt;/strong&gt;
+Similar a who, pero en este caso da un poco mas de información (no demasiada). Lista usuario, tty, tiempo loggeado, carga del sistema general y del usuario y que esta haciendo en ese momento. Un comando rápido, fácil y útil.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;whowatch&lt;/strong&gt;
+Una aplicación bastante útil, crea un árbol con los usuarios loggeados, y
+Con_ control + k_ mandamos un SIGKILL, con c switcheamos entre &amp;ldquo;comando/nombre de aplicacion&amp;rdquo;, la &lt;em&gt;o&lt;/em&gt; nos muestra el owner.
+Pueden bajarla desde aca &lt;a href=&#34;http://wizard.ae.krakow.pl/~mike/&#34;&gt;http://wizard.ae.krakow.pl/~mike/&lt;/a&gt; aunque segurmente esté el los repositorios de la distro que usen.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;last&lt;/strong&gt; y &lt;strong&gt;lastlog&lt;/strong&gt;
+Muestra el ultimo acceso de los usuarios, el segundo es el mas simple y cómodo para leer, lista los usuarios, tty, desde donde y fecha y hora del acceso.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;psacct&lt;/strong&gt;
+Este es un conjunto de aplicaciones, muy utiles (informacion detallada &lt;a href=&#34;http://generationip.com/documentation/system-documentation/113-howto-on-psacct-for-a-complete-monitoring-of-processus-and-users-activities-on-your-system&#34;&gt;aca&lt;/a&gt;), dentro de las cuales se encuentra:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;ac&lt;/em&gt;: Muestra informacion acerca de cuanto tiempo estuvo loggeado el usuario.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;lastcomm&lt;/em&gt;: Información sobre el ultimo comando ejecutado.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;sa&lt;/em&gt;: Informacion sumarizada con los datos del comando anterior.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;last y lastb&lt;/em&gt;: Funciona muy similar al comando nombrado anteriormente, pero el segundo muestra tambien accesos fallidos.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>VirtualBoxes.org - Descarga de máquinas virtuales</title>
+      <link>http://localhost:1313/blog/posts/virtualboxes-org-descarga-de-maquinas-virtuales/</link>
+      <pubDate>Wed, 31 Aug 2011 20:43:42 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/virtualboxes-org-descarga-de-maquinas-virtuales/</guid>
+      <description>&lt;p&gt;¿Les gusta probar diferentes Sistemas Operativos?
+¿Te da &lt;del&gt;paja&lt;/del&gt; pereza instalarlos?
+¿Virtualizas?
+Entonces &lt;a href=&#34;http://virtualboxes.org/&#34;&gt;&lt;strong&gt;VirtualBoxes.org&lt;/strong&gt;&lt;/a&gt; es eso que no sabías que necesitabas. Al momento de escribir el texto, el sitio tiene 42 Sistemas Operativos diferentes, algunos con varias versiones del mismo.
+El sitio se encarga de subir los archivos &lt;a href=&#34;http://filext.com/file-extension/VDI&#34;&gt;.vdi&lt;/a&gt; para importar en VirtualBox. Las descargas son directas, compresiones en 7zip hosteadas en Sourceforge.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Tiene imágenes de sistemas:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;GNU/Linux&lt;/strong&gt;: Desde los más comunes como Fedora, Ubuntu o Debian hasta algunas menos populares como DeLi, gNewSense (la recomienda RMS), Moblin (orientada a netbooks) entre muchas otras.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Solaris&lt;/strong&gt;: OpenSolaris, MilaX, Nexenta&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;FreeBSD/BSD&lt;/strong&gt;: Debian GNU/kFreeBSD, FreeBSD&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;y algunos mas como MINIX, Haiku (basado en BeOS), ReactOS, Android, FreeDOS y algunos más&amp;hellip;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;En donde están los links, tambien se encuentran los datos de login&lt;/em&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

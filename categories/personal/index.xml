@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Personal on title</title>
-    <link>jesusroldan.com/categories/personal/</link>
-    <description>Recent content in Personal on title</description>
+    <title>Personal on Personal Blog</title>
+    <link>http://localhost:1313/blog/categories/personal/</link>
+    <description>Recent content in Personal on Personal Blog</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
     <lastBuildDate>Mon, 01 Jul 2013 20:00:30 +0000</lastBuildDate>
-    <atom:link href="jesusroldan.com/categories/personal/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/categories/personal/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Licencia para ir al cine</title>
-      <link>/jesusroldan.com/posts/licencia-para-ir-al-cine/</link>
+      <link>http://localhost:1313/blog/posts/licencia-para-ir-al-cine/</link>
       <pubDate>Mon, 01 Jul 2013 20:00:30 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/licencia-para-ir-al-cine/</guid>
+      <guid>http://localhost:1313/blog/posts/licencia-para-ir-al-cine/</guid>
       <description>&lt;p&gt;Así como existe una licencia para conducir que te permite manejar un vehículo debería existir un carnet que te habilite la entrada a los cines. La deberías sacar con un exámen previo con normas de convivencia y reglas básicas.
 Este carnet se renovaría, podrías sacar entradas con un ID único y asi llevar un registro.&lt;/p&gt;
 
@@ -43,10 +44,10 @@ Este carnet se renovaría, podrías sacar entradas con un ID único y asi llevar
     
     <item>
       <title>[Charla] Introducción al desarrollo web de videojuegos</title>
-      <link>/jesusroldan.com/posts/charla-introduccion-al-desarrollo-web-de-videojuegos/</link>
+      <link>http://localhost:1313/blog/posts/charla-introduccion-al-desarrollo-web-de-videojuegos/</link>
       <pubDate>Wed, 05 Sep 2012 12:54:41 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/charla-introduccion-al-desarrollo-web-de-videojuegos/</guid>
+      <guid>http://localhost:1313/blog/posts/charla-introduccion-al-desarrollo-web-de-videojuegos/</guid>
       <description>&lt;p&gt;El jueves 6 a las 19hs voy a estar en la UTN de Córdoba para dar una charla sobre desarrollo de videojuegos para navegadores (en HTML5, todos sabemos que Flash es malvado) invitado por la gente de &lt;a href=&#34;http://uni-code-group.blogspot.com.ar/&#34;&gt;&lt;strong&gt;UNI-CODE&lt;/strong&gt;&lt;/a&gt;, un grupo de estudiantes que se encarga de divulgación de tecnología libre de humo.&lt;/p&gt;
 
 &lt;p&gt;La charla es abierta para todos y está de más decir que es gratis, va a ser muy introductoria con algunos conceptos básicos. También se va a mostrar un framework, &lt;a href=&#34;http://craftyjs.com/&#34;&gt;&lt;strong&gt;Crafty&lt;/strong&gt;&lt;/a&gt;, para simplificar el desarrollo. Si bien está pensada para programadores, la idea es juntar gente con ganas, quien sabe, puede surgir algun proyecto entre las personas que asistan. Las ganas de muchos están, falta organizarnos.&lt;/p&gt;
@@ -57,10 +58,10 @@ Este carnet se renovaría, podrías sacar entradas con un ID único y asi llevar
     
     <item>
       <title>HeavySaurios, metal para chicos (y no tan chicos)</title>
-      <link>/jesusroldan.com/posts/heavysaurios-metal-para-chicos-y-no-tan-chicos/</link>
+      <link>http://localhost:1313/blog/posts/heavysaurios-metal-para-chicos-y-no-tan-chicos/</link>
       <pubDate>Mon, 16 Jul 2012 18:47:44 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/heavysaurios-metal-para-chicos-y-no-tan-chicos/</guid>
+      <guid>http://localhost:1313/blog/posts/heavysaurios-metal-para-chicos-y-no-tan-chicos/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/07/heavy_0.jpg&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/07/heavy_0.jpg&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Si bien al inicio estuve en contra de la banda porque era una copia de &lt;a href=&#34;http://www.hevisaurus.com/&#34;&gt;Hevisaurus&lt;/a&gt;, una banda finlandesa, con el tiempo terminé aceptando que la idea llevada al español era muy buena.
@@ -80,10 +81,10 @@ Con sólo mirarlos se destacan, &lt;strong&gt;es una fucking banda de dinosaurio
     
     <item>
       <title>GNU/Linux para amas de casa. #BarCampCBA</title>
-      <link>/jesusroldan.com/posts/gnulinux-para-amas-de-casa-barcamp/</link>
+      <link>http://localhost:1313/blog/posts/gnulinux-para-amas-de-casa-barcamp/</link>
       <pubDate>Tue, 19 Jun 2012 17:47:45 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/gnulinux-para-amas-de-casa-barcamp/</guid>
+      <guid>http://localhost:1313/blog/posts/gnulinux-para-amas-de-casa-barcamp/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/06/gnu_linux.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/06/gnu_linux.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;El sábado pasado fue el &lt;a href=&#34;http://barcampcordoba.org/&#34;&gt;BarCampCBA&lt;/a&gt; en Córdoba, que dicho sea de paso salió excelente.&lt;/p&gt;
@@ -100,10 +101,10 @@ Con sólo mirarlos se destacan, &lt;strong&gt;es una fucking banda de dinosaurio
     
     <item>
       <title>Comprar en el exterior, con envíos gratuitos a la Argentina [DealExtreme, FocalPrice, DinoDirect]</title>
-      <link>/jesusroldan.com/posts/comprar-en-el-exterior-con-envios-gratuitos-a-la-argentina-dealextreme-focalprice-dinodirect/</link>
+      <link>http://localhost:1313/blog/posts/comprar-en-el-exterior-con-envios-gratuitos-a-la-argentina-dealextreme-focalprice-dinodirect/</link>
       <pubDate>Tue, 03 Jan 2012 14:04:56 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/comprar-en-el-exterior-con-envios-gratuitos-a-la-argentina-dealextreme-focalprice-dinodirect/</guid>
+      <guid>http://localhost:1313/blog/posts/comprar-en-el-exterior-con-envios-gratuitos-a-la-argentina-dealextreme-focalprice-dinodirect/</guid>
       <description>&lt;p&gt;Voy a contarles un poco la experiencia que tuve en compras a sitios asiáticos de envío gratuito o &amp;ldquo;free shipping&amp;rdquo;.
 En los últimos años hice varias compras, muchas en realidad, todas idioteces&amp;hellip;&lt;/p&gt;
 
@@ -211,10 +212,10 @@ Algunas ultimas recomendaciones, más allá del monto que compren y el tamaño d
     
     <item>
       <title>De cómo llegué a ArchLinux y por qué no lo cambio...</title>
-      <link>/jesusroldan.com/posts/de-como-llegue-a-arch-linux-y-porque-no-lo-cambio/</link>
+      <link>http://localhost:1313/blog/posts/de-como-llegue-a-arch-linux-y-porque-no-lo-cambio/</link>
       <pubDate>Mon, 21 Nov 2011 21:27:23 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/de-como-llegue-a-arch-linux-y-porque-no-lo-cambio/</guid>
+      <guid>http://localhost:1313/blog/posts/de-como-llegue-a-arch-linux-y-porque-no-lo-cambio/</guid>
       <description>&lt;p&gt;Hace unos cuantos años que uso GNU/Linux, no muchos, pero los suficientes como para ir probando diferentes distros hasta llegar al lugar en donde más cómodo me sentí: &lt;strong&gt;Arch Linux&lt;/strong&gt;
 El primer contacto que tuve con GNU/Linux fue, como muchos, desde un LiveCD&amp;hellip; &lt;strong&gt;Knoppix&lt;/strong&gt; en este caso. recuerdo que me había gustado hasta visualmente (eso que era KDE, pobre de mi), pero mucho uso no le podía dar; nunca pude levantar el cablemodem por USB.
 En ese momento, compartía la PC con mi familia y tenía un disco de 4Gb, ergo, era imposible hacer una instalación con doble booteo, mucho menos con mis conocimientos de infranewbie.&lt;/p&gt;

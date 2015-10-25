@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yaourt on Personal Blog</title>
+    <link>http://localhost:1313/blog/tags/yaourt/</link>
+    <description>Recent content in Yaourt on Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Dec 2011 18:19:48 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/yaourt/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tips Linuxeros: Optimizar pacman y la instalación de aplicaciones en Arch Linux</title>
+      <link>http://localhost:1313/blog/posts/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/</link>
+      <pubDate>Wed, 28 Dec 2011 18:19:48 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/</guid>
+      <description>&lt;p&gt;La idea del post es hacer un compilado de tips y aplicaciones que puedan llegar a servir para mejorar &lt;a href=&#34;https://wiki.archlinux.org/index.php/Pacman&#34;&gt;pacman&lt;/a&gt; y la instalación de aplicaciones en Arch Linux. Si, escribí lo mismo que en el título pero con más palabras.
+Para el usuario que venga de otras distros, como Ubuntu, le puede resultar díficil no tener esa &amp;lsquo;cosa&amp;rsquo; llamada Centro de Software, pero con un poco de maña se puede potenciar muchisimo la instalación (además no van a escuchar nunca más de los PPA).&lt;/p&gt;
+
+&lt;p&gt;Vamos suponiendo que saben como usar &lt;strong&gt;pacman&lt;/strong&gt;. Básicamente tenemos:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;pacman -Ss wally&lt;/em&gt; para buscar aplicaciones&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;_pacman -S chucknorri_s para instalar&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;pacman -Syu&lt;/em&gt; para actualizar&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;pacman -Rnd cristina&lt;/em&gt; para eliminar algo&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[note color=&amp;ldquo;#cfcfcf&amp;rdquo;]Antes de empezar, la configuración está en &lt;strong&gt;/etc/pacman.conf **&amp;hellip; y lo primero que tienen que agregar es una línea que diga **ILoveCandy&lt;/strong&gt;.
+Si ya la agregaron, pueden seguir con el post, si no lo hacen no merecen usar Arch Linux.[/note]&lt;/p&gt;
+
+&lt;p&gt;Optimizar el cache y la base de datos, tienen que correr &lt;strong&gt;sudo pacman -Sc &amp;amp;&amp;amp; sudo pacman-optimize&lt;/strong&gt;, pueden ponerlo en cron, es más fácil que acordarselo; &lt;strong&gt;yapos&lt;/strong&gt; también suele ser una buena opción para esto.
+Instalen &lt;strong&gt;pacman-color&lt;/strong&gt;, es eye-candy nunca viene mal. Eso si, deberían crear una &lt;a href=&#34;http://blog.jesusroldan.com/2011/09/02/tips-para-linux-alias-para-todos/&#34;&gt;alias&lt;/a&gt; pacman=&amp;lsquo;pacman-color&amp;rsquo; sino creanme que nunca lo van a usar.
+&lt;strong&gt;&lt;a href=&#34;https://wiki.archlinux.org/index.php/Reflector&#34;&gt;Reflector&lt;/a&gt;&lt;/strong&gt; me lo recomendaron en un &lt;a href=&#34;http://blog.jesusroldan.com/2011/09/06/lentitud-en-la-instalacion-de-paquetes-con-pacman/&#34;&gt;post&lt;/a&gt; y está muy bueno, mantiene actualizado el mirrorlist
+Se puede optimizar un poco el tamaño de los paquetes a descargar con &lt;strong&gt;xdelta3&lt;/strong&gt; (y activando UseDelta en la configuración de pacman), no es una locura, pero algo se logra.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Ni hablar de que tienen que instalar &lt;strong&gt;yaourt&lt;/strong&gt;, es básico en cualquier Arch Linux, la forma más fácil es agregar el repositorio, actualizar e instalarlo con pacman.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[archlinuxfr]
+Server = http://repo.archlinux.fr/$arch
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;¿Qué hace? Funciona igual que pacman, pero también permite instalar paquetes del &lt;a href=&#34;https://aur.archlinux.org/&#34;&gt;AUR&lt;/a&gt;, que es basicamente la fucking gloria.&lt;/p&gt;
+
+&lt;p&gt;Si se sienten como princesas del bosque de las hadas, también pueden probar algun GUI, de los que usé, creo que &lt;strong&gt;Wakka&lt;/strong&gt; - I see what you did there! - es el mejor (sin entrar en la categoría KDE que no la probé). Rápido y simple. Lo que además tiene de bueno es que las acciones que hacemos muestran el comando, entonces, con el tiempo, podemos ir perdiendo el miedo a la consola&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Z Bash, o zsh, una shell con Z de &#34;ZOMG que buena shell&#34;</title>
+      <link>http://localhost:1313/blog/posts/zsh/</link>
+      <pubDate>Thu, 20 Oct 2011 18:26:48 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/zsh/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Z Bash&lt;/strong&gt;, o mejor &lt;strong&gt;zsh&lt;/strong&gt;, es un interprete de comándos (&lt;em&gt;shell&lt;/em&gt;), excelente alternativa al Bash que viene por defecto (&lt;em&gt;Bourne-again Shell&lt;/em&gt;). Como mejoras, se destaca:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Mejorado en el autocompletado.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Muy customizable.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Corrección de tipeo.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Mejor manejo de funciones.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Es una shell mas hipster (?)._ (En realidad no, tiene mas de 20 años, y se usa bastante&amp;hellip;pero no viene por defecto)_&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;La instalación es simple, son unos poco kilobytes y seguro esta disponible en la distro que usen. En mi caso basta con:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pacman -S zsh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Una vez instalada, debería figurar en el archivo /etc/shells, para setearla como shell por defecto tenemos que correr:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;chsh -s $(which zsh)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;La primera vez que ingresan, la shell les sugiere que ejecuten &lt;strong&gt;zsh-newuser-install&lt;/strong&gt;, lo cual es recomendable, da una pequeña pero útil instroducción, con asistentes de configuración.&lt;/p&gt;
+
+&lt;p&gt;Ahora sí, veamos algunas cosas que tiene para ofrecernos&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Autocompletado de parametros&lt;/strong&gt;
+Antes pensaba que bash era buena con el autocompletado, claro que viniendo del cmd de Windows cualquier cosa es mejor; zsh vino a abrir una nueva puerta a la comodidad en la línea de comandos.
+Es rápidisimo y funciona con todos* los comandos, sólo pongan el - y para que liste las opciones.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Historial de bash, compatible con zsh&lt;/strong&gt;
+Una de las primeras cosas que necesité migrando de shell fue el historial. Pueden copiar &lt;em&gt;~/.bash_history _a _~/.histfile&lt;/em&gt; y van a tener lo mismo que bash, imprescindible si usan &lt;strong&gt;Control + R&lt;/strong&gt;.
+Tambien es compatible el archivo &lt;em&gt;~/.bashrc _con el _~/.zshrc&lt;/em&gt; y el_ ~/.bash&lt;em&gt;profile&lt;/em&gt; con &lt;em&gt;~/.zprofile&lt;/em&gt;, pero en mi caso preferí hacer copias a mano de lo que necesitaba. Sólo cuestión de gustos.
+Además, permite compartir el historial entre sesiones, muy comodo si entramos desde ssh y localmente a una PC.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;zsh-yaourt&lt;/strong&gt;
+Este paquete está en el AUR, y si, adivinaron, agrega autocompletado de paquetes a yaourt, es increiblemente útil, a lo _apt-get _si quieren una comparación, es muy bueno y rápido.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Paginador &amp;lsquo;inteligente&amp;rsquo;&lt;/strong&gt;
+No se si Paginador es la palabra apropiada, tampoco se si inteligente sería el adjetivo indicador. Todos somos unos vagos, por eso usamos la terminal, que mejor que escribir cat LEAME, cat LEAME | less, si, escribir solo LEAME, bueno, zsh nos entiende, así que funciona así.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Diferentes &amp;ldquo;key bindings&amp;rdquo;&lt;/strong&gt;
+En este caso, zsh los meneja de otra forma, y es frustrante mover las fechas de dirección y no obtener lo que pretendemos. No me resultó cómodo (porque no le dí tiempo a ver como funcionaba, ya estoy viejo para algunas cosas). Para dejarlo funcionando &amp;ldquo;a lo Bash&amp;rdquo;, tienen que editar el archivo &lt;em&gt;~/.zshrc&lt;/em&gt;
+[spoiler title=&amp;ldquo;Agregar estas líneas&amp;rdquo;]&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;bindkey &amp;quot;e[1~&amp;quot; beginning-of-line # Home
+bindkey &amp;quot;e[4~&amp;quot; end-of-line # End
+bindkey &amp;quot;e[5~&amp;quot; beginning-of-history # PageUp
+bindkey &amp;quot;e[6~&amp;quot; end-of-history # PageDown
+bindkey &amp;quot;e[2~&amp;quot; quoted-insert # Ins
+bindkey &amp;quot;e[3~&amp;quot; delete-char # Del
+bindkey &amp;quot;e[5C&amp;quot; forward-word
+bindkey &amp;quot;eOc&amp;quot; emacs-forward-word
+bindkey &amp;quot;e[5D&amp;quot; backward-word
+bindkey &amp;quot;eOd&amp;quot; emacs-backward-word
+bindkey &amp;quot;ee[C&amp;quot; forward-word
+bindkey &amp;quot;ee[D&amp;quot; backward-word
+bindkey &amp;quot;e[Z&amp;quot; reverse-menu-complete # Shift+Tab
+# for rxvt
+bindkey &amp;quot;e[7~&amp;quot; beginning-of-line # Home
+bindkey &amp;quot;e[8~&amp;quot; end-of-line # End
+# for non RH/Debian xterm, can&#39;t hurt for RH/Debian xterm
+bindkey &amp;quot;eOH&amp;quot; beginning-of-line
+bindkey &amp;quot;eOF&amp;quot; end-of-line
+# for freebsd console
+bindkey &amp;quot;e[H&amp;quot; beginning-of-line
+bindkey &amp;quot;e[F&amp;quot; end-of-line
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;[/spoiler]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Correccion de typos&lt;/strong&gt;
+Para los dislexicos como uno, esto es muy bueno, nos autocorrige directorios, comandos, archivos&amp;hellip; probandolo es muy bueno, no perfecto, pero ayuda a la hora de escribir rapido.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Links recomendados y fuentes para el post&lt;/strong&gt;
+&lt;a href=&#34;http://zsh.sourceforge.net/Guide/zshguide.html&#34;&gt;Guía oficial (en inglés)&lt;/a&gt;
+&lt;a href=&#34;https://wiki.archlinux.org/index.php/Zsh&#34;&gt;Wiki de Zsh, para Arch&lt;/a&gt;
+&lt;a href=&#34;http://pwet.fr/man/linux/commandes/zsh_lovers&#34;&gt;zhs-lovers&lt;/a&gt;
+&lt;a href=&#34;http://zshwiki.org/home/start&#34;&gt;Una wiki muy completa&lt;/a&gt;
+&lt;a href=&#34;http://fausto23.wordpress.com/2010/01/31/zsh-esa-shell/&#34;&gt;Buena info para el .zshrc, en español&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;*Quizas no todos&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lentitud en la instalacion de paquetes con pacman</title>
+      <link>http://localhost:1313/blog/posts/lentitud-en-la-instalacion-de-paquetes-con-pacman/</link>
+      <pubDate>Tue, 06 Sep 2011 14:12:54 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/lentitud-en-la-instalacion-de-paquetes-con-pacman/</guid>
+      <description>&lt;p&gt;Desde hace unos días noto que al actualizar o instalar nuevos paquetes con pacman o yaourt se toma una eternidad en actualizar.
+En un primer momento pensé que era problema de la conexión, pero me pasaba en casa y en el laburo, con dos ISP diferentes, entonces el problema pasaba por otro lado.&lt;/p&gt;
+
+&lt;p&gt;Buscando en el foro encontré a alguien que le pasaba algo similar, la solución surgió corriendo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; url=$(pacman -Sp linux | tee /dev/stderr) &amp;amp;&amp;amp; curl --verbose &amp;quot;${url}&amp;quot; -o /dev/null
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Se puede ver que trata de conectarse a mirror.kernel.org, que esta caído: &lt;a href=&#34;http://www.archlinux.org/mirrors/status/&#34;&gt;http://www.archlinux.org/mirrors/status/&lt;/a&gt;. Basta con editar el archivo /etc/pacman.d/mirrorlist&lt;/p&gt;
+
+&lt;p&gt;Después deben correr pacman -Syy para actualizar los repositorios.&lt;/p&gt;
+
+&lt;p&gt;En caso de que deseen ver los más rápidos, pueden seguir los pasos de la wiki, correr rankmirror la verdad que ayuda mucho en la velocidad &lt;a href=&#34;https://wiki.archlinux.org/index.php/Mirrors#List_by_speed&#34;&gt;https://wiki.archlinux.org/index.php/Mirrors#List_by_speed&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

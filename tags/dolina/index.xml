@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dolina on Personal Blog</title>
+    <link>http://localhost:1313/blog/tags/dolina/</link>
+    <description>Recent content in Dolina on Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 21 Jul 2011 02:31:17 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/dolina/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Descargar La Venganza Será Terrible, via Bash</title>
+      <link>http://localhost:1313/blog/posts/descargar-la-venganza-sera-terrible-via-bash/</link>
+      <pubDate>Thu, 21 Jul 2011 02:31:17 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/descargar-la-venganza-sera-terrible-via-bash/</guid>
+      <description>
+
+&lt;p&gt;Este es un pequeño script que descarga (via wget) el programa La Venganza Sera Terrible de &lt;a href=&#34;http://www.alejandrodolina.com.ar/&#34;&gt;Alejando Dolina&lt;/a&gt;; utilizando los archivos que genera a diario el sitio &lt;a href=&#34;http://venganzasdelpasado.com.ar/&#34;&gt;Venganzas del Pasado&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[sourcecode language=&amp;ldquo;bash&amp;rdquo;]
+#!/bin/bash&lt;/p&gt;
+
+&lt;h1 id=&#34;medio-rustico-pero-si-lo-ejecuto-hoy:e7fb311ab5e08ba834ea459d13c1892b&#34;&gt;Medio rustico, pero si lo ejecuto hoy..&lt;/h1&gt;
+
+&lt;h1 id=&#34;necesito-bajar-el-programa-de-anoche:e7fb311ab5e08ba834ea459d13c1892b&#34;&gt;necesito bajar el programa de anoche&lt;/h1&gt;
+
+&lt;p&gt;day=&lt;code&gt;date +%d &#39;--date=-1 day&#39;&lt;/code&gt;
+month=&lt;code&gt;date +%m &#39;--date=-1 day&#39;&lt;/code&gt;
+year=&lt;code&gt;date +%Y &#39;--date=-1 day&#39;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;directorio-en-donde-se-guarda-el-archivo:e7fb311ab5e08ba834ea459d13c1892b&#34;&gt;Directorio en donde se guarda el archivo&lt;/h1&gt;
+
+&lt;p&gt;folder=&amp;ldquo;$HOME/Dolina/&amp;rdquo;$year&amp;rdquo;/&amp;ldquo;$month&amp;rdquo;/&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;#Si lo ejecuto un lunes o un domingo, no hay nada para bajar
+if [ &lt;code&gt;date +%u&lt;/code&gt; = 1 ] || [ &lt;code&gt;date +%u&lt;/code&gt; = 7 ]; then
+echo &amp;ldquo;Anoche no hubo programa&amp;rdquo;
+else
+wget -q -w 600 -P $folder &amp;ldquo;&lt;a href=&#34;http://venganzasdelpasado.com.ar/&amp;quot;$year&amp;quot;/lavenganza_&amp;quot;$year&amp;quot;-&amp;quot;$month&amp;quot;-&amp;quot;$day&amp;quot;.mp3&amp;quot;&#34;&gt;http://venganzasdelpasado.com.ar/&amp;quot;$year&amp;quot;/lavenganza_&amp;quot;$year&amp;quot;-&amp;quot;$month&amp;quot;-&amp;quot;$day&amp;quot;.mp3&amp;quot;&lt;/a&gt;
+fi
+[/sourcecode]&lt;/p&gt;
+
+&lt;p&gt;Yo lo tengo corriendo con crontab, a las 5 madrugada, cosa de que al levantarme ya lo haya bajado :)
+Así como esta deberia funcionar solo en Linux, estaba haciendo algo con wxWidgets para jugar un rato con eso, que deberia ser multiplataforma, despues (o sea, cuando funcione) lo subo.&lt;/p&gt;
+
+&lt;p&gt;Disponible en &lt;a href=&#34;https://gist.github.com/1079511&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

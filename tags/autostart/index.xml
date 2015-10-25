@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Autostart on Personal Blog</title>
+    <link>http://localhost:1313/blog/tags/autostart/</link>
+    <description>Recent content in Autostart on Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 25 Jul 2011 22:32:56 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/autostart/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Agregar aplicaciones al inicio de Gnome3</title>
+      <link>http://localhost:1313/blog/posts/agregar-aplicaciones-al-inicio-de-gnome3/</link>
+      <pubDate>Mon, 25 Jul 2011 22:32:56 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/agregar-aplicaciones-al-inicio-de-gnome3/</guid>
+      <description>&lt;p&gt;Este procedimiento es bastante &amp;lsquo;rustico&amp;rsquo;, pero funciona. Es una de las cosas (de muchas, lo sé) en las que falla Gnome3: no hay una forma de gestionar que aplicaciones se lanzan al inicio de sesión o por lo menos no encontré forma de hacerlo.&lt;/p&gt;
+
+&lt;p&gt;Para esto, deben crear un archivo (por cada aplicacion) en &lt;strong&gt;~/.config/autostart/&lt;/strong&gt; con extension .desktop.
+Como ejemplo voy a usar &lt;a href=&#34;http://guake.org/&#34;&gt;Guake&lt;/a&gt; de la siguiente forma:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; cat ~/.config/autostart/guake.desktop
+
+[Desktop Entry]
+  Type=Application
+  Exec=/usr/bin/guake
+  Hidden=false
+  X-GNOME-Autostart-enabled=true
+  Name=guake
+  Comment=Guake
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Pueden leer un poco mas al respecto &lt;a href=&#34;http://developer.gnome.org/autostart-spec/&#34;&gt; aca &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Posiblemente ya exista alguna aplicación que haga eso, pero no la encontré&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

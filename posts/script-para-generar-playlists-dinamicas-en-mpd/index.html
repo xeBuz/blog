@@ -1,0 +1,220 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="xeBuz">
+		<meta name="description" content="Personal Website">
+		<meta name="generator" content="Hugo 0.14" />
+		<title>Script para generar playlists dinámicas en MPD  &middot; Personal Blog</title>
+		<link rel="shortcut icon" href="http://localhost:1313/blog/images/favicon.ico">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/style.css">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/highlight.css">
+		<link href="http://localhost:1313/blog/index.xml" rel="alternate" type="application/rss+xml" title="Personal Blog" />
+	</head>
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='http://localhost:1313/blog/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+		<a href='http://localhost:1313/blog/about'>About</a>
+	
+
+	
+	<a class="cta" href="http://localhost:1313/blog/index.xml">Subscribe</a>
+	
+</nav>
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>Script para generar playlists dinámicas en MPD </h1>
+                    <h2 class="headline">August 10, 2012</h2>
+                </header>
+                <section id="post-body">
+                    <p>Revisando scripts viejos, me encontré con este que quizás a alguno le puede servir. La idea es ir generando dinámicamente la lista de reproducción de un server <a href="http://mpd.wikia.com/">MPD</a> usando la <a href="http://www.last.fm/api">API</a> de <a href="http://www.last.fm/user/xeBuz">Last.fm</a> para encontrar artistas similares en el disco.
+Si bien ya hay clientes que tienen esta funcionalidad, como <a href="http://mpd.wikia.com/wiki/Client:Ario">Ario</a>, suelo conectarme por SSH al server y me resulta cómodo correr el script este cuando no se que escuchar.</p>
+
+<pre><code>#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+import os
+import random
+from mpd import (MPDClient, CommandError)
+from audioscrobbler import AudioScrobblerQuery
+
+&quot;&quot;&quot; MPD &quot;&quot;&quot;
+mpd_host = 'localhost'
+mpd_port = '6600'
+mpd_connection = {'host': mpd_host, 'port': mpd_port}
+client = MPDClient()
+
+COUNT_SONGS = 5
+
+def mpd_connect():
+    try:
+        client.connect(**mpd_connection)
+    except SocketError:
+        return False
+    return True
+
+
+def main():
+    if not mpd_connect():
+        sys.exit(1)
+
+    # Meh, no se si se hace esto, pero bueh
+    recommended_artists = []
+    recommended_songs = []
+
+    # Obtengo la cancion que esta sonando en este momento
+    current = client.currentsong()
+
+    # Saco sólo el artista del diccionario que me devuelve current
+    current_artist = AudioScrobblerQuery(artist=current['artist'])
+
+    # En base a todos los artistas similares, me fijo cuales tengo en el
+    # server MPD, y los almaceno para usarlos despues.
+    for artist in current_artist.similar():
+        if float(client.count(&quot;artist&quot;, artist.name)['songs']) &gt; 0:
+            recommended_artists.append(artist.name)
+
+
+    # Podria hacerlo mas efectivo, pero la idea es hacerlo lo mas random que
+    # pueda, asi que desordeno la lista de similares, que siempre viene ya
+    # ordenada por compatibilidad del current_artist
+    random.shuffle(recommended_artists)
+
+    while len(recommended_songs) &lt; COUNT_SONGS:
+        artist = random.choice(recommended_artists)
+        recommended_songs.append(
+                    random.choice(client.search('artist', artist)))
+
+    for song in recommended_songs:
+        print song[&quot;artist&quot;], &quot;-&quot;, song[&quot;title&quot;]
+        client.add(song[&quot;file&quot;])
+
+if __name__ == '__main__':
+    main()
+</code></pre>
+
+<p>Descarga desde aca: <a href="https://gist.github.com/1100627">GIST</a>, seguramente la iré modificando, la idea es dejarla corriendo como un servicio.</p>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/xeBuz">
+                        <img class="avatar" src="http://localhost:1313/blog/images/avatar.png">
+                        <div>
+                            <span class="dark">xeBuz</span>
+                            <span>I&#39;m an enthusiastic gopher.</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2flocalhost%3a1313%2fblog%2fposts%2fscript-para-generar-playlists-dinamicas-en-mpd%2f - Script%20para%20generar%20playlists%20din%c3%a1micas%20en%20MPD%20 by @xeBuz"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/no-close-tabs-firefox-31/">Close Tab en Firefox 31<aside class="dates">May 14</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/newest/">Just another sample post<aside class="dates">Mar 29</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/middle/">Second Post<aside class="dates">Mar 28</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/oldest/">First Post<aside class="dates">Mar 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/crazy-little-thing-called-perl/">Crazy little thing called Perl: Introducción al lenguaje<aside class="dates">Mar 5</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/bundles-de-juegos-varias-opciones-disponibles/">Bundles de juegos, varias opciones disponibles<aside class="dates">Feb 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-selectores-y-traversing/">jQuery: Selectores y Traversing<aside class="dates">Feb 26</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-doge-such-plugin/">jQuery Doge - such plugin<aside class="dates">Dec 23</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/licencia-para-ir-al-cine/">Licencia para ir al cine<aside class="dates">Jul 1</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/">Barra de progreso de Arch Linux para Python<aside class="dates">Oct 21</aside></a>
+        </li>
+        
+   
+</ul>
+            <footer id="footer">
+    <p class="small">
+        © Copyright 2015 xeBuz
+    </p>
+</footer>
+        </section>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://localhost:1313/blog/js/main.js"></script>
+<script src="http://localhost:1313/blog/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+    </body>
+</html>

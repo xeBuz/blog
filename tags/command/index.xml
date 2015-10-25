@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Command on Personal Blog</title>
+    <link>http://localhost:1313/blog/tags/command/</link>
+    <description>Recent content in Command on Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Dec 2011 18:24:08 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/command/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Manejar procesos en Linux, Like a Sir</title>
+      <link>http://localhost:1313/blog/posts/manejar-procesos-en-linux-like-a-sir/</link>
+      <pubDate>Wed, 14 Dec 2011 18:24:08 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/manejar-procesos-en-linux-like-a-sir/</guid>
+      <description>&lt;p&gt;Particularmente me gusta tener alguna de las aplicaciones listo corriendo en la tty1 y cuando algo falla, porque siempre algo puede malir sal, control + alt +F1 viene como piña para ver el problema rápido.
+Me pasó de tener problemas en ambientes Windows, y es una de las cosas que mas se extrañan; el administrador de tareas no hace todo lo que debería (como el de Gnome o KDE, si algo falla en el X o te quedás sin recursos no los vas a poder usar)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ps y kill&lt;/strong&gt;
+Estos comandos son los clásicos, por excelencia.
+El uso estandar, cavernícola y mas difundido es &lt;em&gt;ps aux&lt;/em&gt;, tambien &lt;em&gt;ps aux | grep &lt;app&gt;&lt;/em&gt; para filtrar, y después un &lt;em&gt;kill -9 UID&lt;/em&gt; obtenido con el comando anterior, pero eso no es lo que un Sir haría.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;pgrep y pkill&lt;/strong&gt;
+Tenemos pgrep funcionaría como pidof, pero con mejor parametrización e información; mientras que pkill sirve para mandar señales, si, como kill, pero permite expersiones regulares y algunos filtros muy interesantes.
+Algunos ejemplos: &lt;em&gt;pgrep -u firebird -l&lt;/em&gt; mostraría todos los nombres de los procesos que esta usando el usuario firebird, &lt;em&gt;pkill -9 firefox&lt;/em&gt; es mucho más cómodo que el ps y después el kill.. dirán &amp;ldquo;¡Dejate de joder! ¡es igual que killall!&amp;rdquo; pero no, pueden potenciarlo más, digamos, matar la tty0 o mejor aún una sesión ssh basta correr con &lt;em&gt;pkill -9 -t pts/5&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;top&lt;/strong&gt;
+Visualizador de procesos. Si llegaste hasta acá imagino que ya lo usaste y sabés lo básico, les tengo fe. Sólo para el registro, me gusta activar las opciones B, 1 y z.
+De nuevo, es lo más usado, lo mas enseñado y lo mas clásico. Siempre hay mejores opciones.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;htop&lt;/strong&gt;
+Es como top, pero con esteroides. Mejores shortcuts, colores, permite usar el mouse, mejor navegabilidad, filtros, ordenación, threads y otras chucherías.
+Las funcionalidades mas uso: &amp;lt; para ordenar, F9 para matar apps, F3 para buscat, t para treeview,
+Ya que estamos, la H es de Hisham, el nombre del desarrollador.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;atop&lt;/strong&gt;
+Es una de esas aplicaciones que está buena para abrirlas cuando alguien no-linuxero se acerca a tu PC, así piensa que te conectas a la Matrix desde el teclado y le vas pasando órdenes por ósmosis.
+Sería una versión mas detallada de las dos aplicaciones anteriores, pero menos interactiva. Les daría algun tip, pero lo uso de poser nada más :P
+&amp;lt;!&amp;ndash; more &amp;ndash;&amp;gt;
+Aca una imágen comparativa, a la izquierda top, a la dercha htop, abajo atop.&lt;/p&gt;
+
+&lt;p&gt;[caption id=&amp;ldquo;attachment_541&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;695&amp;rdquo; caption=&amp;ldquo;Comparativa entre Top, Htop y Atop&amp;rdquo;]&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/12/top.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/12/top-1024x538.png&#34; alt=&#34;Comparativa entre Top, Htop y Atop&#34; /&gt;&lt;/a&gt;[/caption]&lt;/p&gt;
+
+&lt;p&gt;Espero que les sirva, dígale no al ps blah grep blah kill blah. Iba a escribir también sobre prioridades y estados, pero lo hago otro día, post largo y denso = post que no se lee.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

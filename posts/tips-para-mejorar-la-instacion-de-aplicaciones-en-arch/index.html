@@ -1,0 +1,188 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="xeBuz">
+		<meta name="description" content="Personal Website">
+		<meta name="generator" content="Hugo 0.14" />
+		<title>Tips Linuxeros: Optimizar pacman y la instalación de aplicaciones en Arch Linux &middot; Personal Blog</title>
+		<link rel="shortcut icon" href="http://localhost:1313/blog/images/favicon.ico">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/style.css">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/highlight.css">
+		<link href="http://localhost:1313/blog/index.xml" rel="alternate" type="application/rss+xml" title="Personal Blog" />
+	</head>
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='http://localhost:1313/blog/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+		<a href='http://localhost:1313/blog/about'>About</a>
+	
+
+	
+	<a class="cta" href="http://localhost:1313/blog/index.xml">Subscribe</a>
+	
+</nav>
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>Tips Linuxeros: Optimizar pacman y la instalación de aplicaciones en Arch Linux</h1>
+                    <h2 class="headline">December 28, 2011</h2>
+                </header>
+                <section id="post-body">
+                    <p>La idea del post es hacer un compilado de tips y aplicaciones que puedan llegar a servir para mejorar <a href="https://wiki.archlinux.org/index.php/Pacman">pacman</a> y la instalación de aplicaciones en Arch Linux. Si, escribí lo mismo que en el título pero con más palabras.
+Para el usuario que venga de otras distros, como Ubuntu, le puede resultar díficil no tener esa &lsquo;cosa&rsquo; llamada Centro de Software, pero con un poco de maña se puede potenciar muchisimo la instalación (además no van a escuchar nunca más de los PPA).</p>
+
+<p>Vamos suponiendo que saben como usar <strong>pacman</strong>. Básicamente tenemos:</p>
+
+<ul>
+<li><p><em>pacman -Ss wally</em> para buscar aplicaciones</p></li>
+
+<li><p>_pacman -S chucknorri_s para instalar</p></li>
+
+<li><p><em>pacman -Syu</em> para actualizar</p></li>
+
+<li><p><em>pacman -Rnd cristina</em> para eliminar algo</p></li>
+</ul>
+
+<p>[note color=&ldquo;#cfcfcf&rdquo;]Antes de empezar, la configuración está en <strong>/etc/pacman.conf **&hellip; y lo primero que tienen que agregar es una línea que diga **ILoveCandy</strong>.
+Si ya la agregaron, pueden seguir con el post, si no lo hacen no merecen usar Arch Linux.[/note]</p>
+
+<p>Optimizar el cache y la base de datos, tienen que correr <strong>sudo pacman -Sc &amp;&amp; sudo pacman-optimize</strong>, pueden ponerlo en cron, es más fácil que acordarselo; <strong>yapos</strong> también suele ser una buena opción para esto.
+Instalen <strong>pacman-color</strong>, es eye-candy nunca viene mal. Eso si, deberían crear una <a href="http://blog.jesusroldan.com/2011/09/02/tips-para-linux-alias-para-todos/">alias</a> pacman=&lsquo;pacman-color&rsquo; sino creanme que nunca lo van a usar.
+<strong><a href="https://wiki.archlinux.org/index.php/Reflector">Reflector</a></strong> me lo recomendaron en un <a href="http://blog.jesusroldan.com/2011/09/06/lentitud-en-la-instalacion-de-paquetes-con-pacman/">post</a> y está muy bueno, mantiene actualizado el mirrorlist
+Se puede optimizar un poco el tamaño de los paquetes a descargar con <strong>xdelta3</strong> (y activando UseDelta en la configuración de pacman), no es una locura, pero algo se logra.</p>
+
+<!-- more -->
+
+<p>Ni hablar de que tienen que instalar <strong>yaourt</strong>, es básico en cualquier Arch Linux, la forma más fácil es agregar el repositorio, actualizar e instalarlo con pacman.</p>
+
+<pre><code>[archlinuxfr]
+Server = http://repo.archlinux.fr/$arch
+</code></pre>
+
+<p>¿Qué hace? Funciona igual que pacman, pero también permite instalar paquetes del <a href="https://aur.archlinux.org/">AUR</a>, que es basicamente la fucking gloria.</p>
+
+<p>Si se sienten como princesas del bosque de las hadas, también pueden probar algun GUI, de los que usé, creo que <strong>Wakka</strong> - I see what you did there! - es el mejor (sin entrar en la categoría KDE que no la probé). Rápido y simple. Lo que además tiene de bueno es que las acciones que hacemos muestran el comando, entonces, con el tiempo, podemos ir perdiendo el miedo a la consola&hellip;</p>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/xeBuz">
+                        <img class="avatar" src="http://localhost:1313/blog/images/avatar.png">
+                        <div>
+                            <span class="dark">xeBuz</span>
+                            <span>I&#39;m an enthusiastic gopher.</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2flocalhost%3a1313%2fblog%2fposts%2ftips-para-mejorar-la-instacion-de-aplicaciones-en-arch%2f - Tips%20Linuxeros%3a%20Optimizar%20pacman%20y%20la%20instalaci%c3%b3n%20de%20aplicaciones%20en%20Arch%20Linux by @xeBuz"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/no-close-tabs-firefox-31/">Close Tab en Firefox 31<aside class="dates">May 14</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/newest/">Just another sample post<aside class="dates">Mar 29</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/middle/">Second Post<aside class="dates">Mar 28</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/oldest/">First Post<aside class="dates">Mar 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/crazy-little-thing-called-perl/">Crazy little thing called Perl: Introducción al lenguaje<aside class="dates">Mar 5</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/bundles-de-juegos-varias-opciones-disponibles/">Bundles de juegos, varias opciones disponibles<aside class="dates">Feb 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-selectores-y-traversing/">jQuery: Selectores y Traversing<aside class="dates">Feb 26</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-doge-such-plugin/">jQuery Doge - such plugin<aside class="dates">Dec 23</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/licencia-para-ir-al-cine/">Licencia para ir al cine<aside class="dates">Jul 1</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/">Barra de progreso de Arch Linux para Python<aside class="dates">Oct 21</aside></a>
+        </li>
+        
+   
+</ul>
+            <footer id="footer">
+    <p class="small">
+        © Copyright 2015 xeBuz
+    </p>
+</footer>
+        </section>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://localhost:1313/blog/js/main.js"></script>
+<script src="http://localhost:1313/blog/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+    </body>
+</html>

@@ -1,0 +1,186 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="xeBuz">
+		<meta name="description" content="Personal Website">
+		<meta name="generator" content="Hugo 0.14" />
+		<title>Comando at, automatizar scripts sin usar crontab &middot; Personal Blog</title>
+		<link rel="shortcut icon" href="http://localhost:1313/blog/images/favicon.ico">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/style.css">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/highlight.css">
+		<link href="http://localhost:1313/blog/index.xml" rel="alternate" type="application/rss+xml" title="Personal Blog" />
+	</head>
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='http://localhost:1313/blog/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+		<a href='http://localhost:1313/blog/about'>About</a>
+	
+
+	
+	<a class="cta" href="http://localhost:1313/blog/index.xml">Subscribe</a>
+	
+</nav>
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>Comando at, automatizar scripts sin usar crontab</h1>
+                    <h2 class="headline">January 23, 2012</h2>
+                </header>
+                <section id="post-body">
+                    <p>A diferencia de <strong>cron</strong>, <strong>at</strong> permite programar un comando/script para que sea ejecutado sólo una vez y no periodicamente.</p>
+
+<p>Antes que nada deben instalarlo, no suele venir en las distribuciones por defecto. Usen pacman, aptitude, yum o lo que sea, tiene que estar en los repositorios.
+Una vez instalado, deben correr el servicio y por que no agregarlo en el /etc/rc.conf para que arranque solo. Si no hacen esto no van a correrse los scripts.</p>
+
+<p>Para utilizarlo tenemos varias alternativas, la primera es <em>especificarle la fecha y hora</em>, luego escribir el script (es importante que una vez que terminemos, presionemos Control+D):</p>
+
+<pre><code>at 10:31am Jan 23 
+warning: commands will be executed using /bin/sh
+at&gt; yaourt -Syu      
+at&gt; (Control +D) &lt;eot&gt;
+job 5 at Mon Jan 23 10:31:00 2012
+</code></pre>
+
+<p>También acepta otros <em>formatos</em> de fechas, por ejemplo, para ejecutar algo mañana a esta misma hora, sería</p>
+
+<pre><code>at now tomorrow
+at&gt; blah blah
+at&gt; meh
+at&gt; (Control +D) &lt;eot&gt;
+</code></pre>
+
+<p>Para mostrar los comandos que están en cola de ejecución, basta con hacer <strong>at -l</strong> o <strong>atq</strong>, esto nos traerá un id, la fecha/hora en la que se ejecuta y el usuario que lo creó.</p>
+
+<pre><code>at -l
+6   Mon Jan 23 11:41:00 2012 a xebuz
+7   Wed Jan 25 00:01:00 2012 a xebuz
+5   Mon Jan 23 10:31:00 2012 a xebuz
+</code></pre>
+
+<p>Para cancelar o eliminar una tarea pendiente, se utiliza <strong>atrm</strong> o <strong>at -r</strong> o <strong>at -d</strong> :P, seguida del id de la tarea (obtenida desde el comando anterior).
+Por último, si quieren ver todo el contenido del script, con <strong>at -c <em>id</em></strong> lo obtienen completo.</p>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/xeBuz">
+                        <img class="avatar" src="http://localhost:1313/blog/images/avatar.png">
+                        <div>
+                            <span class="dark">xeBuz</span>
+                            <span>I&#39;m an enthusiastic gopher.</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2flocalhost%3a1313%2fblog%2fposts%2fcomando-at-automatizar-scripts-sin-usar-crontab%2f - Comando%20at%2c%20automatizar%20scripts%20sin%20usar%20crontab by @xeBuz"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/no-close-tabs-firefox-31/">Close Tab en Firefox 31<aside class="dates">May 14</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/newest/">Just another sample post<aside class="dates">Mar 29</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/middle/">Second Post<aside class="dates">Mar 28</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/oldest/">First Post<aside class="dates">Mar 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/crazy-little-thing-called-perl/">Crazy little thing called Perl: Introducción al lenguaje<aside class="dates">Mar 5</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/bundles-de-juegos-varias-opciones-disponibles/">Bundles de juegos, varias opciones disponibles<aside class="dates">Feb 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-selectores-y-traversing/">jQuery: Selectores y Traversing<aside class="dates">Feb 26</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-doge-such-plugin/">jQuery Doge - such plugin<aside class="dates">Dec 23</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/licencia-para-ir-al-cine/">Licencia para ir al cine<aside class="dates">Jul 1</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/">Barra de progreso de Arch Linux para Python<aside class="dates">Oct 21</aside></a>
+        </li>
+        
+   
+</ul>
+            <footer id="footer">
+    <p class="small">
+        © Copyright 2015 xeBuz
+    </p>
+</footer>
+        </section>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://localhost:1313/blog/js/main.js"></script>
+<script src="http://localhost:1313/blog/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shortcut on Personal Blog</title>
+    <link>http://localhost:1313/blog/tags/shortcut/</link>
+    <description>Recent content in Shortcut on Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Aug 2011 15:13:02 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/shortcut/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Borrar con &#39;Delete&#39; en Nautilus y Gnome3</title>
+      <link>http://localhost:1313/blog/posts/borrar-con-delete-en-nautilus-con-gnome3/</link>
+      <pubDate>Tue, 02 Aug 2011 15:13:02 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/borrar-con-delete-en-nautilus-con-gnome3/</guid>
+      <description>&lt;p&gt;Titulo opcional: &lt;em&gt;Volvé Delete, no te fajo más&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Me es sumamente tedioso borrar archivos con Nautilus en Gnome3, porque por defecto utiliza Ctrl + Delete/Supr, pero por suerte se puede modificar facilmente&lt;/p&gt;
+
+&lt;p&gt;Primero, hay que habilitar una opción en la configuración para permitir editar los shortcuts, se puede hacer desde gconf-editor o desde la terminal con gsettings&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gsettings set org.gnome.desktop.interface can-change-accels true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Después, desde Nautilus, seleccionen un archivo y vayan a menú. Con el cursor &lt;strong&gt;SOBRE&lt;/strong&gt; la acción que desean modificar presionen la/s tecla/s que quieran como nuevo shortcut. (y SOBRE quiere decir &amp;ldquo;No hagan click, madafackas&amp;rdquo;)&lt;/p&gt;
+
+&lt;p&gt;Cuando terminen deben volver la configuración original para evitar modificar accesos por error, solo cambian _true/false _ con gsettings&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

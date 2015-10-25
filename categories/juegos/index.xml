@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Juegos on title</title>
-    <link>jesusroldan.com/categories/juegos/</link>
-    <description>Recent content in Juegos on title</description>
+    <title>Juegos on Personal Blog</title>
+    <link>http://localhost:1313/blog/categories/juegos/</link>
+    <description>Recent content in Juegos on Personal Blog</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
     <lastBuildDate>Thu, 27 Feb 2014 16:30:20 +0000</lastBuildDate>
-    <atom:link href="jesusroldan.com/categories/juegos/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/categories/juegos/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Bundles de juegos, varias opciones disponibles</title>
-      <link>/jesusroldan.com/posts/bundles-de-juegos-varias-opciones-disponibles/</link>
+      <link>http://localhost:1313/blog/posts/bundles-de-juegos-varias-opciones-disponibles/</link>
       <pubDate>Thu, 27 Feb 2014 16:30:20 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/bundles-de-juegos-varias-opciones-disponibles/</guid>
+      <guid>http://localhost:1313/blog/posts/bundles-de-juegos-varias-opciones-disponibles/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://humblebundle.com/&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2014/02/Humble-Bundle-500x123.png&#34; alt=&#34;Humble Bundle&#34; /&gt;&lt;/a&gt;
 &lt;strong&gt;The Humble Bundle&lt;/strong&gt; - &lt;em&gt;&lt;a href=&#34;http://humblebundle.com/&#34;&gt;http://humblebundle.com/&lt;/a&gt;&lt;/em&gt;
 Por lejos el más conocido de todos, no hace falta que explique como funciona :D&lt;/p&gt;

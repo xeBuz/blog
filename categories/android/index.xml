@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Android on title</title>
-    <link>jesusroldan.com/categories/android/</link>
-    <description>Recent content in Android on title</description>
+    <title>Android on Personal Blog</title>
+    <link>http://localhost:1313/blog/categories/android/</link>
+    <description>Recent content in Android on Personal Blog</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
     <lastBuildDate>Thu, 03 May 2012 16:48:44 +0000</lastBuildDate>
-    <atom:link href="jesusroldan.com/categories/android/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/categories/android/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Plan B, una gran opción una vez que perdiste el celular</title>
-      <link>/jesusroldan.com/posts/plan-b-una-gran-opcion-una-vez-que-perdiste-el-celular/</link>
+      <link>http://localhost:1313/blog/posts/plan-b-una-gran-opcion-una-vez-que-perdiste-el-celular/</link>
       <pubDate>Thu, 03 May 2012 16:48:44 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/plan-b-una-gran-opcion-una-vez-que-perdiste-el-celular/</guid>
+      <guid>http://localhost:1313/blog/posts/plan-b-una-gran-opcion-una-vez-que-perdiste-el-celular/</guid>
       <description>&lt;p&gt;Navegando me crucé casi de casualidad con esta aplicación y me pareció interesante tenerla en cuenta para cuando &lt;del&gt;nos roban&lt;/del&gt;perdemos el celular y quisieramos saben dónde está. &lt;em&gt;Aviso: Si lo perdiste abajo de la cama no te lo va a encontrar.&lt;/em&gt;
 Lo más interesante es que funciona una vez que ya no tenés el celular, no como otros que necesitas ser previsor e instalarlo y configurarlo antes.
 Cuando lo instalé via web (que por cierto &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.lookout.labs.planb&#34;&gt;este es el link&lt;/a&gt;) sólo tuve que esperar 2 minutos para recibir el primer correo con un link de Google Maps con una gran precisión. Me llevó directo al edificio en el que estoy. Después de 10 minutos deja de correr automáticamente, pero se puede pedir manualmente mandando un mensaje de texto que diga &amp;ldquo;locate&amp;rdquo;.&lt;/p&gt;
@@ -46,10 +47,10 @@ Cuando lo instalé via web (que por cierto &lt;a href=&#34;https://play.google.c
     
     <item>
       <title>¿Nuevo en Android? Estas aplicaciones te pueden servir – Parte II</title>
-      <link>/jesusroldan.com/posts/nuevo-en-android-estas-aplicaciones-te-pueden-servir-parte-ii/</link>
+      <link>http://localhost:1313/blog/posts/nuevo-en-android-estas-aplicaciones-te-pueden-servir-parte-ii/</link>
       <pubDate>Wed, 08 Feb 2012 17:21:35 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/nuevo-en-android-estas-aplicaciones-te-pueden-servir-parte-ii/</guid>
+      <guid>http://localhost:1313/blog/posts/nuevo-en-android-estas-aplicaciones-te-pueden-servir-parte-ii/</guid>
       <description>&lt;p&gt;El otro día puse &lt;a href=&#34;http://blog.jesusroldan.com/2012/02/06/nuevo-en-android-estas-aplicaciones-te-pueden-servir-parte-i/&#34;&gt;la primera parte &lt;/a&gt;de la serie de post. La idea es seguir con el listado de aplicaciones útiles, sin caer en la obviedad (Facebook, Google Maps, Youtube, &lt;a href=&#34;http://blog.jesusroldan.com/2011/11/30/twicca-el-mejor-cliente-de-twitter-para-android/&#34;&gt;Twitter&lt;/a&gt;) ni tampoco en juegos, que seguramente los pondré otro día y trataré de que sean gratiutos y adictivos.
 Este listado es bastante variado y una aplicación no tiene nada que ver con la otra; ojalá alguna les sirva.
 &lt;table border=&#34;0&#34; &gt;
@@ -178,10 +179,10 @@ También gratiuto desde el [Market](https://market.android.com/details?id=com.re
     
     <item>
       <title>¿Nuevo en Android? Estas aplicaciones te pueden servir - Parte I</title>
-      <link>/jesusroldan.com/posts/nuevo-en-android-estas-aplicaciones-te-pueden-servir-parte-i/</link>
+      <link>http://localhost:1313/blog/posts/nuevo-en-android-estas-aplicaciones-te-pueden-servir-parte-i/</link>
       <pubDate>Mon, 06 Feb 2012 21:25:08 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/nuevo-en-android-estas-aplicaciones-te-pueden-servir-parte-i/</guid>
+      <guid>http://localhost:1313/blog/posts/nuevo-en-android-estas-aplicaciones-te-pueden-servir-parte-i/</guid>
       <description>&lt;p&gt;Siempre que uno arranca usando un teléfono con Android no sabe bien que instalar (cof cof @Marilyn3_14). Uno cuando usa un tiempo el celular se termina acostumbrando a ciertas aplicaciones, asi que aca les dejo las que yo más uso. No necesariamente tienen que ser las mejores, sino simplemente mis favoritas, las que instalo siempre que tengo un teléfono &amp;ldquo;0 km&amp;rdquo;.
 Espero les sirvan algunas, traté de no poner ninguna con un uso demasiado puntual. Si tiene alguna duda sobre aplicaciones que hagan algo puntual, sólo pregunten&amp;hellip;&lt;/p&gt;
 
@@ -286,10 +287,10 @@ Es gratiuto, para la delicia de la dama y el caballero, link al &lt;a href=&#34;
     
     <item>
       <title>Twicca: el mejor cliente de Twitter para Android</title>
-      <link>/jesusroldan.com/posts/twicca-el-mejor-cliente-de-twitter-para-android/</link>
+      <link>http://localhost:1313/blog/posts/twicca-el-mejor-cliente-de-twitter-para-android/</link>
       <pubDate>Wed, 30 Nov 2011 17:14:46 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/twicca-el-mejor-cliente-de-twitter-para-android/</guid>
+      <guid>http://localhost:1313/blog/posts/twicca-el-mejor-cliente-de-twitter-para-android/</guid>
       <description>&lt;p&gt;En &lt;strong&gt;Android&lt;/strong&gt; y supongo que tambien para iOS, existen muchos clientes para &lt;strong&gt;Twitter&lt;/strong&gt; (Twitter for Android, Seesmic, Hootsuite,  TweetCaster y otros) pero dudo que alguno tenga tantas funcionalidades como &lt;strong&gt;Twicca&lt;/strong&gt;.
 En un primer momento la interfaz parece demasiado simple, pero es esa simpleza una de las tantas bondades. Por defecto tiene fondo negro con letras blancas, se puede invertir, por el bien de tus ojos no lo hagas.&lt;/p&gt;
 

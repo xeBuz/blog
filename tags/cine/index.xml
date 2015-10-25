@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cine on Personal Blog</title>
+    <link>http://localhost:1313/blog/tags/cine/</link>
+    <description>Recent content in Cine on Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Jul 2013 20:00:30 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/cine/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Licencia para ir al cine</title>
+      <link>http://localhost:1313/blog/posts/licencia-para-ir-al-cine/</link>
+      <pubDate>Mon, 01 Jul 2013 20:00:30 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/licencia-para-ir-al-cine/</guid>
+      <description>&lt;p&gt;Así como existe una licencia para conducir que te permite manejar un vehículo debería existir un carnet que te habilite la entrada a los cines. La deberías sacar con un exámen previo con normas de convivencia y reglas básicas.
+Este carnet se renovaría, podrías sacar entradas con un ID único y asi llevar un registro.&lt;/p&gt;
+
+&lt;p&gt;Se podría imponer un sistema de puntos, que te descuenten por:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Hablar: 3 puntos&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Hablar por teléfono: 5 puntos.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Spoilear: 10 puntos.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Revolver el pochoclo: 1 punto.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Abrir caramelos: 2 puntos.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Tomar gaseosa cuando ya no hay nada: 2 puntos.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Ir con un bebé: 5 puntos.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Al perder x cantidad de puntos, se te revoca la licencia por unos meses y para renovarla hay que hacer un curso.&lt;/p&gt;
+
+&lt;p&gt;No aseguraríamos que, al ir al cine, no renegaríamos con pelotudos que no saben comportarse :D&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Actividades del Cineclub Municipal Hugo del Carril en Google Calendar</title>
+      <link>http://localhost:1313/blog/posts/actividades-del-cineclub-municipal-hugo-del-carril-en-google-calendar/</link>
+      <pubDate>Thu, 01 Sep 2011 12:43:24 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/actividades-del-cineclub-municipal-hugo-del-carril-en-google-calendar/</guid>
+      <description>&lt;p&gt;Les dejo el cronograma de actividades de septiembre del Cineclub Hugo del Carril cargado en Google Calendar y público para que lo puedan guardar en sus cuentas, solo presionen el +Calendar que aparece al final del cuadro.
+Cada película aparece con el día y horario, título en español, título original, enlance a IMDb, ciclo al que pertenece, país, año y duración.
+El sitio oficial del Cineclub es &lt;a href=&#34;http://www.cineclubmunicipal.org.ar/&#34;&gt;http://www.cineclubmunicipal.org.ar/&lt;/a&gt;, tiene mucha más información de las películas, así como un calendario en la parte inferior. Les recuerdo que las entradas para socios salen 1$, para no socios 10$.&lt;/p&gt;
+
+&lt;p&gt;Lo cargué a mano, si encuentrar algún error avisenme, &lt;em&gt;errare humanum est ;)&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

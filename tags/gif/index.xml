@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gif on Personal Blog</title>
+    <link>http://localhost:1313/blog/tags/gif/</link>
+    <description>Recent content in Gif on Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 18 Oct 2012 02:03:52 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/gif/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Script para grabar la consola en un .gif animado</title>
+      <link>http://localhost:1313/blog/posts/script-para-grabar-la-consola-en-un-gif-animado/</link>
+      <pubDate>Thu, 18 Oct 2012 02:03:52 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/script-para-grabar-la-consola-en-un-gif-animado/</guid>
+      <description>&lt;p&gt;Hoy me surgió una necesidad, que me pareció bastante simple pero no encontré herramientas simples que me lo solucionaran. Les dejo este script, que graba un gif de la consola durante X segundos (idea de @shinax y @rootmyword). Ese valor se lo pasamos por parámetro (no lo valido ni tiene default, porque la vida es demasiado corta para controlarlo) . Hay que correr el script con un &amp;amp; al final de la línea, asi pasa a correr en background y podemos usar la consola.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#!/bin/bash
+clear
+mkdir temp_gif
+
+segs=`expr $1 \* 5`
+
+for (( i = 1; i &amp;lt;= $segs ; i++ ));
+do
+    printf -v number &amp;quot;%06d&amp;quot; $i
+    import -window $WINDOWID temp_gif/$number.gif 
+    sleep 0.2
+done
+
+convert -delay 20 -loop 0 temp_gif/*.gif animacion.gif
+
+rm -R temp_gif
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;El código terminó siendo más simple de lo que pensaba, toda la magia la hace &lt;strong&gt;ImageMagick&lt;/strong&gt;. Explico por línea, porque la idea siempre es aprender como funciona:
+Línea 5. Toma el primer parámetro que le demos, lo multiplica por 5 porque cada imagen la saco cada 0.2 segundos ;)
+Línea 9. El &lt;strong&gt;printf&lt;/strong&gt; lo utilizo para formatear &amp;i;, neceito hacer un zero-padding, o sea, rellenar con ceros a la izquierda, para que después el conversor me tome el orden correcto. El parámetro -v indica que no lo imprima, sino que lo almacene en una variable.
+Línea 10. ImageMagick se encarga de guardar la imágen de la ventana que le digo, para $WINDOWSID creo que es necesario &lt;strong&gt;xorg-xwininfo&lt;/strong&gt;, ya lo tenía instalado.
+Línea 13. Toma todas las imágenes de la carpeta, las concatena con un delay de 0.2 segundos y hace un loop infinito.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

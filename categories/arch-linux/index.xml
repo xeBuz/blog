@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Arch Linux on title</title>
-    <link>jesusroldan.com/categories/arch-linux/</link>
-    <description>Recent content in Arch Linux on title</description>
+    <title>Arch Linux on Personal Blog</title>
+    <link>http://localhost:1313/blog/categories/arch-linux/</link>
+    <description>Recent content in Arch Linux on Personal Blog</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
     <lastBuildDate>Sun, 21 Oct 2012 20:49:21 +0000</lastBuildDate>
-    <atom:link href="jesusroldan.com/categories/arch-linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/categories/arch-linux/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Barra de progreso de Arch Linux para Python</title>
-      <link>/jesusroldan.com/posts/barra-de-progreso-de-arch-linux-para-python/</link>
+      <link>http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/</link>
       <pubDate>Sun, 21 Oct 2012 20:49:21 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/barra-de-progreso-de-arch-linux-para-python/</guid>
+      <guid>http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/</guid>
       <description>&lt;p&gt;Hace unos días me puse a &lt;em&gt;portar&lt;/em&gt; la barra de progreso que tiene el sistema de paquetes de &lt;a href=&#34;http://blog.jesusroldan.com/2011/12/28/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/&#34;&gt;&lt;strong&gt;Arch Linux&lt;/strong&gt;&lt;/a&gt; (activando la opción &lt;strong&gt;ILoveCandy&lt;/strong&gt;) a Python &lt;del&gt;3&lt;/del&gt; 3.X y 2.7. De momento está en fase de prueba, pero es dentro de todo funcional, prometo ir actualizándola cuando pueda.&lt;/p&gt;
 
 &lt;p&gt;Para poder instalarlo, pueden bajarse los fuentes &lt;a href=&#34;https://github.com/xeBuz/pacman-progressbar&#34;&gt;desde &lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt; (es licencia Beer-ware, una adaptación de BSD) o mejor aún directamente desde PyPi:&lt;/p&gt;
@@ -50,10 +51,10 @@ if __name__ == &amp;quot;__main__&amp;quot;:
     
     <item>
       <title>Solucionar problemas después de actualizar Gnome 3.4.1</title>
-      <link>/jesusroldan.com/posts/solucionar-problemas-despues-de-actualizar-gnome-3-4-1/</link>
+      <link>http://localhost:1313/blog/posts/solucionar-problemas-despues-de-actualizar-gnome-3-4-1/</link>
       <pubDate>Mon, 23 Apr 2012 20:58:48 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/solucionar-problemas-despues-de-actualizar-gnome-3-4-1/</guid>
+      <guid>http://localhost:1313/blog/posts/solucionar-problemas-despues-de-actualizar-gnome-3-4-1/</guid>
       <description>&lt;p&gt;Hoy, como para que el lunes arranque con todo, actualicé Arch y después no pude ingresar más la sesión de Gnome3. Aparecía la PC con carita triste y me decía que iba a desactivar las extensiones, pero no soluciona nada. Y cómo se actualizaron muchas drivers, el kernel y gnome no sabía bien donde estaba el problema.&lt;/p&gt;
 
 &lt;p&gt;Al parecer la nueva versión de Gnome (3.4.1) tiene como dependencia networkmanager y si no lo encuentra explota por todos lados, pueden verificar el archivo /var/logs/messages.log, deberían tener algo así:
@@ -91,10 +92,10 @@ Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_pat
     
     <item>
       <title>Tips Linuxeros: Optimizar pacman y la instalación de aplicaciones en Arch Linux</title>
-      <link>/jesusroldan.com/posts/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/</link>
+      <link>http://localhost:1313/blog/posts/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/</link>
       <pubDate>Wed, 28 Dec 2011 18:19:48 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/</guid>
+      <guid>http://localhost:1313/blog/posts/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/</guid>
       <description>&lt;p&gt;La idea del post es hacer un compilado de tips y aplicaciones que puedan llegar a servir para mejorar &lt;a href=&#34;https://wiki.archlinux.org/index.php/Pacman&#34;&gt;pacman&lt;/a&gt; y la instalación de aplicaciones en Arch Linux. Si, escribí lo mismo que en el título pero con más palabras.
 Para el usuario que venga de otras distros, como Ubuntu, le puede resultar díficil no tener esa &amp;lsquo;cosa&amp;rsquo; llamada Centro de Software, pero con un poco de maña se puede potenciar muchisimo la instalación (además no van a escuchar nunca más de los PPA).&lt;/p&gt;
 
@@ -134,10 +135,10 @@ Server = http://repo.archlinux.fr/$arch
     
     <item>
       <title>De cómo llegué a ArchLinux y por qué no lo cambio...</title>
-      <link>/jesusroldan.com/posts/de-como-llegue-a-arch-linux-y-porque-no-lo-cambio/</link>
+      <link>http://localhost:1313/blog/posts/de-como-llegue-a-arch-linux-y-porque-no-lo-cambio/</link>
       <pubDate>Mon, 21 Nov 2011 21:27:23 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/de-como-llegue-a-arch-linux-y-porque-no-lo-cambio/</guid>
+      <guid>http://localhost:1313/blog/posts/de-como-llegue-a-arch-linux-y-porque-no-lo-cambio/</guid>
       <description>&lt;p&gt;Hace unos cuantos años que uso GNU/Linux, no muchos, pero los suficientes como para ir probando diferentes distros hasta llegar al lugar en donde más cómodo me sentí: &lt;strong&gt;Arch Linux&lt;/strong&gt;
 El primer contacto que tuve con GNU/Linux fue, como muchos, desde un LiveCD&amp;hellip; &lt;strong&gt;Knoppix&lt;/strong&gt; en este caso. recuerdo que me había gustado hasta visualmente (eso que era KDE, pobre de mi), pero mucho uso no le podía dar; nunca pude levantar el cablemodem por USB.
 En ese momento, compartía la PC con mi familia y tenía un disco de 4Gb, ergo, era imposible hacer una instalación con doble booteo, mucho menos con mis conocimientos de infranewbie.&lt;/p&gt;
@@ -173,10 +174,10 @@ Cuarta, Arch no sólo tiene gran cantidad de aplicaciones, sino que es de los pr
     
     <item>
       <title>Lentitud en la instalacion de paquetes con pacman</title>
-      <link>/jesusroldan.com/posts/lentitud-en-la-instalacion-de-paquetes-con-pacman/</link>
+      <link>http://localhost:1313/blog/posts/lentitud-en-la-instalacion-de-paquetes-con-pacman/</link>
       <pubDate>Tue, 06 Sep 2011 14:12:54 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/lentitud-en-la-instalacion-de-paquetes-con-pacman/</guid>
+      <guid>http://localhost:1313/blog/posts/lentitud-en-la-instalacion-de-paquetes-con-pacman/</guid>
       <description>&lt;p&gt;Desde hace unos días noto que al actualizar o instalar nuevos paquetes con pacman o yaourt se toma una eternidad en actualizar.
 En un primer momento pensé que era problema de la conexión, pero me pasaba en casa y en el laburo, con dos ISP diferentes, entonces el problema pasaba por otro lado.&lt;/p&gt;
 
@@ -195,10 +196,10 @@ En un primer momento pensé que era problema de la conexión, pero me pasaba en 
     
     <item>
       <title>¿De dónde proviene el nombre de Arch Linux?</title>
-      <link>/jesusroldan.com/posts/%C2%BFde-donde-proviene-el-nombre-de-arch-linux/</link>
+      <link>http://localhost:1313/blog/posts/%C2%BFde-donde-proviene-el-nombre-de-arch-linux/</link>
       <pubDate>Wed, 27 Jul 2011 18:49:00 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/%C2%BFde-donde-proviene-el-nombre-de-arch-linux/</guid>
+      <guid>http://localhost:1313/blog/posts/%C2%BFde-donde-proviene-el-nombre-de-arch-linux/</guid>
       <description>&lt;p&gt;Hace unos cuantos días, @N1colas_ compartío &lt;a href=&#34;http://usemoslinux.blogspot.com/2011/07/de-donde-provienen-los-nombres-de-las.html&#34;&gt;este&lt;/a&gt; enlance, en donde hablaban del origen de los nombres de varias distros de Linux.&lt;/p&gt;
 
 &lt;p&gt;No estaba &lt;strong&gt;Arch&lt;/strong&gt;, y hay varios comentarios al respecto con supuestos bastante buenos.&lt;/p&gt;

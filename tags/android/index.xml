@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on Personal Blog</title>
+    <link>http://localhost:1313/blog/tags/android/</link>
+    <description>Recent content in Android on Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 May 2012 16:48:44 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Plan B, una gran opción una vez que perdiste el celular</title>
+      <link>http://localhost:1313/blog/posts/plan-b-una-gran-opcion-una-vez-que-perdiste-el-celular/</link>
+      <pubDate>Thu, 03 May 2012 16:48:44 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/plan-b-una-gran-opcion-una-vez-que-perdiste-el-celular/</guid>
+      <description>&lt;p&gt;Navegando me crucé casi de casualidad con esta aplicación y me pareció interesante tenerla en cuenta para cuando &lt;del&gt;nos roban&lt;/del&gt;perdemos el celular y quisieramos saben dónde está. &lt;em&gt;Aviso: Si lo perdiste abajo de la cama no te lo va a encontrar.&lt;/em&gt;
+Lo más interesante es que funciona una vez que ya no tenés el celular, no como otros que necesitas ser previsor e instalarlo y configurarlo antes.
+Cuando lo instalé via web (que por cierto &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.lookout.labs.planb&#34;&gt;este es el link&lt;/a&gt;) sólo tuve que esperar 2 minutos para recibir el primer correo con un link de Google Maps con una gran precisión. Me llevó directo al edificio en el que estoy. Después de 10 minutos deja de correr automáticamente, pero se puede pedir manualmente mandando un mensaje de texto que diga &amp;ldquo;locate&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Lo bueno:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Da información muy precisa.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Se puede instalar &lt;strong&gt;después&lt;/strong&gt; que lo perdiste.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Es gratis.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Podés consultar manualmente la locación&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Lo malo:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Activa todo lo necesario (3G, Wifi, GPS).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Cuando lo instalás aparece la notificación, como cualquier app (bueno, esto es una contra de Android Play).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Los e-mails que llegan, en caso de que sincronices el celular, te aparecen en el equipo, &lt;em&gt;aviva giles&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;del&gt;Si lo instalás para probar, lo desisntalás 2 minutos después, porque te llena de notificaciones la casilla de correos&lt;/del&gt;. Con el tiempo deja de enviar notificaciones, pero pueden consultarlo manualmente.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>¿Nuevo en Android? Estas aplicaciones te pueden servir – Parte II</title>
+      <link>http://localhost:1313/blog/posts/nuevo-en-android-estas-aplicaciones-te-pueden-servir-parte-ii/</link>
+      <pubDate>Wed, 08 Feb 2012 17:21:35 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/nuevo-en-android-estas-aplicaciones-te-pueden-servir-parte-ii/</guid>
+      <description>&lt;p&gt;El otro día puse &lt;a href=&#34;http://blog.jesusroldan.com/2012/02/06/nuevo-en-android-estas-aplicaciones-te-pueden-servir-parte-i/&#34;&gt;la primera parte &lt;/a&gt;de la serie de post. La idea es seguir con el listado de aplicaciones útiles, sin caer en la obviedad (Facebook, Google Maps, Youtube, &lt;a href=&#34;http://blog.jesusroldan.com/2011/11/30/twicca-el-mejor-cliente-de-twitter-para-android/&#34;&gt;Twitter&lt;/a&gt;) ni tampoco en juegos, que seguramente los pondré otro día y trataré de que sean gratiutos y adictivos.
+Este listado es bastante variado y una aplicación no tiene nada que ver con la otra; ojalá alguna les sirva.
+&lt;table border=&#34;0&#34; &gt;
+&lt;tbody &gt;
+&lt;tr &gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;td &gt;&lt;strong&gt;A Online Radio&lt;/strong&gt;
+Yep, el nombre es bastante claro y poco original. La idea de la aplicación es hacer de directorio de streamings de SHOUTCast y de &lt;a href=&#34;http://blog.jesusroldan.com/2011/11/01/streaming-con-mpd-y-icecast-en-arch-linux/&#34;&gt;Icecast&lt;/a&gt;
+Dividad en categorías y con un buscador, suele ser una gran opción para aquellos equipos que no tienen receptor de FM o para aquellos que odian lo que pasan las radios.
+Permite ver que radios escuchamos anteriormente y gestionar favoritos, para no perderlas, bastante útil teniendo en cuenta la gran cantidad de radios disponibles.
+&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;td width=&#34;110px&#34; &gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/02/AOnlineRadio.png&#34; alt=&#34;A online radio&#34; /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;&lt;/p&gt;
+
+&lt;p&gt;[nggallery id=11]&lt;/p&gt;
+
+&lt;table border=&#34;0&#34; &gt;
+&lt;tbody &gt;
+&lt;tr &gt;
+
+&lt;td width=&#34;110px&#34; &gt;![Wifi Analyzer](http://blog.jesusroldan.com/wp-content/uploads/2012/02/WifiAnalyzer.jpg)
+&lt;/td&gt;
+
+&lt;td &gt;**Wifi Analyzer**
+La gloria para analizar redes Wi-Fi.
+Permite varios modos, entre ellos: gráfico de canales, con los dBm de cada red; un gráfico de dBm de cada red con el tiempo, útil para ir moviendonos; un rating de canales, para configurar el router en el menos saturado; una lista de Access Points, con canal, Mhz, dBM, MAC y tipo seguridad; y un medidor de la señal de la red seleccionada, también util para medir en diferentes lugares el alcance de la red. Gratis, desde el [Market](https://market.android.com/details?id=com.farproc.wifi.analyzer&amp;feature=search_result#?t=W251bGwsMSwxLDEsImNvbS5mYXJwcm9jLndpZmkuYW5hbHl6ZXIiXQ..), una aplicación obligatoria.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;[nggallery id=12]&lt;/p&gt;
+
+&lt;table border=&#34;0&#34; &gt;
+&lt;tbody &gt;
+&lt;tr &gt;
+
+&lt;td &gt;**GO Weather**
+Esta es mi aplicación favorita para obtener información del clima. En este rubro toooodas las aplicaciones se parecen y dan una información similar. Pueden probar [The Weather Channel](https://market.android.com/details?id=com.weather.Weather) o [AccuWeather](https://market.android.com/details?id=com.accuweather.android) o [WeatherBug](https://market.android.com/details?id=com.aws.android) o cualquier otra aplicación [del clima](https://market.android.com/apps/WEATHER?feature=breadcrumbs). Yo uso GO Weather porque es bonita. Punto *vomita un arcoiris*.
+Bueno, a parte de ese momento minitah, la aplicación tiene todo: multiciudades, actualizaciones customizables, pronóstico por hora y por toda la semana, skins, widgets... Háganse un favor, bajen los skins en HD, son bárbaros. Está disponible en el [Market](https://market.android.com/details?id=com.mediawoz.goweather)
+&lt;/td&gt;
+
+&lt;td width=&#34;110px&#34; &gt;![GoWeather](http://blog.jesusroldan.com/wp-content/uploads/2012/02/GO-Weather.png)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;[nggallery id=13]&lt;/p&gt;
+
+&lt;table border=&#34;0&#34; &gt;
+&lt;tbody &gt;
+&lt;tr &gt;
+
+&lt;td width=&#34;110px&#34; &gt;![Star Chart](http://blog.jesusroldan.com/wp-content/uploads/2012/02/Star-Char.png)
+&lt;/td&gt;
+
+&lt;td &gt;**Star Chart / Mapa Estelar**
+Para los ñoños. Es un mapa de las estrellas, pero no como le de Bart Simpson.
+Primero la aplicación nos pide las coordenadas en donde estamos, que las puede obtener automáticamente. A partir de ahi, genera un mapa del cielo, y nosotros solo tenemos que apuntar con el celular al astro que deseamos para que nos tire información de la entrella, planeta o constelación. Me gusta mucho la forma en la que dibuja las constelaciones, después de un tiempo usandola uno termina mirando las estrellas de otra forma, es muy muy muy recomendable, es quizás mi aplicación favorita de Android.
+Lo malo es que es pago, sale 13,61 AR$, lo tiene en el [Market](https://market.android.com/details?id=com.escapistgames.starchart). Si quieren una alternativa gratiuta, pueden probar [Google Sky Map](https://market.android.com/details?id=com.google.android.stardroid) que es bastante bueno.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;[nggallery id=14]&lt;/p&gt;
+
+&lt;table border=&#34;0&#34; &gt;
+&lt;tbody &gt;
+&lt;tr &gt;
+
+&lt;td &gt;**File Expert**
+La mejor aplicación para compartir archivos desde el celular o para acceder a recursos compartidos de otras PCs o en la red. Permite conectarse a unidades Samba, por FTP o SFTP, WebDAV, Bluetooth, DropBox, KanBox, SinaVDiskm KDrive, Box.net... en fin, una gran cantidad de opciones. También podemos compartir nuestros archivos, directamente via Web, FTP, Bluetooth o por WiFi File Receiver.
+Muy cómoda para hacer backups, incluso permite guardarnos las apk de las aplicaciones. Encima es [gratis](https://market.android.com/details?id=xcxin.filexpert&amp;feature=search_result#?t=W251bGwsMSwxLDEsInhjeGluLmZpbGV4cGVydCJd).
+&lt;/td&gt;
+
+&lt;td width=&#34;110px&#34; &gt;![FileExpert](http://blog.jesusroldan.com/wp-content/uploads/2012/02/FileExplorer.png)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;[nggallery id=15]&lt;/p&gt;
+
+&lt;table border=&#34;0&#34; &gt;
+&lt;tbody &gt;
+&lt;tr &gt;
+
+&lt;td width=&#34;110px&#34; &gt;![BarCode Scanner](http://blog.jesusroldan.com/wp-content/uploads/2012/02/BarCode-Scanner.png)
+&lt;/td&gt;
+
+&lt;td &gt;**BarCode Scanner**
+Permite leer códigos de barra 1D (los clásicos), Data Matrix y los tan populares códigos QR. No tiene mucha cienca, apenas se abre la aplicación empieza a leer lo que puede, ya sea dato limpio, una URL, un contacto, un enlace al Market... lo que sea. Dato, para crear sus propios códigos les recomiendo este [sitio](http://zxing.appspot.com/generator/) o [este](http://qrcode.kaywa.com/) otro.
+Aplicación [gratiuta e indispensable.](https://market.android.com/details?id=com.google.zxing.client.android&amp;feature=search_result#?t=W251bGwsMSwxLDEsImNvbS5nb29nbGUuenhpbmcuY2xpZW50LmFuZHJvaWQiXQ..)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;[nggallery id=16]&lt;/p&gt;
+
+&lt;table border=&#34;0&#34; &gt;
+&lt;tbody &gt;
+&lt;tr &gt;
+
+&lt;td width=&#34;110px&#34; &gt;![Advance Task Killer](http://blog.jesusroldan.com/wp-content/uploads/2012/02/Advance-Task-KIller.png)
+&lt;/td&gt;
+
+&lt;td &gt;**Advance Task Killer**
+Esto puede dar a todo un debate, si Android gestiona de forma inteligente o no las aplicaciones en segundo plano. Pero no importa, yo uso un taskiller, será placebo o no... no me importa. Casi nunca abro el programa en sí, lo mejor es agregar el widget al escritorio y cuando se pueda, un click no le hace mal a nadie.
+Use este porque no me dió nunca problemas, algunos son mas potenentes y bajan servicios de más, este me da el suficiente placebo que necesito.
+También gratiuto desde el [Market](https://market.android.com/details?id=com.rechild.advancedtaskkiller&amp;feature=search_result).
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;[nggallery id=17]&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>¿Nuevo en Android? Estas aplicaciones te pueden servir - Parte I</title>
+      <link>http://localhost:1313/blog/posts/nuevo-en-android-estas-aplicaciones-te-pueden-servir-parte-i/</link>
+      <pubDate>Mon, 06 Feb 2012 21:25:08 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/nuevo-en-android-estas-aplicaciones-te-pueden-servir-parte-i/</guid>
+      <description>&lt;p&gt;Siempre que uno arranca usando un teléfono con Android no sabe bien que instalar (cof cof @Marilyn3_14). Uno cuando usa un tiempo el celular se termina acostumbrando a ciertas aplicaciones, asi que aca les dejo las que yo más uso. No necesariamente tienen que ser las mejores, sino simplemente mis favoritas, las que instalo siempre que tengo un teléfono &amp;ldquo;0 km&amp;rdquo;.
+Espero les sirvan algunas, traté de no poner ninguna con un uso demasiado puntual. Si tiene alguna duda sobre aplicaciones que hagan algo puntual, sólo pregunten&amp;hellip;&lt;/p&gt;
+
+&lt;table border=&#34;0&#34; &gt;
+&lt;tbody &gt;&lt;tr &gt;
+
+&lt;td width=&#34;110px&#34; &gt;![Any.Do](http://blog.jesusroldan.com/wp-content/uploads/2012/02/AnyDo.png)
+&lt;/td&gt;
+
+&lt;td &gt;**Any.DO**
+Simple, rápido y efectivo. Hace las veces de mini agenda o de To Do List. Muy cómodo como ordena las tareas para hoy, mañana, esta semana y despúes. Además, es extremadamente user-friendly, para mover algo de fecha solo basta arrastrarlo, para eliminarlo hay que tacharlo horizontalmente.
+Descarga gratuita, desde el [Android Market](https://market.android.com/details?id=com.anydo&amp;feature=search_result#?t=W251bGwsMSwxLDEsImNvbS5hbnlkbyJd)
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;p&gt;[nggallery id=5]&lt;/p&gt;
+
+&lt;p&gt;&lt;table border=&#34;0&#34; &gt;
+&lt;tbody &gt;&lt;tr &gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;td &gt;&lt;strong&gt;Camera360&lt;/strong&gt;
+La mejor aplicación para sacar fotos &amp;ldquo;con estilos&amp;rdquo;. Muy cómoda, funciona excelente y tiene una GRAN cantidad de opciones y &amp;ldquo;filtros&amp;rdquo;; se puede estar horas jugando con los modos, definitivamente es de mis aplicaciones favoritas. Antes era paga, desde hace un tiempo está gratis en el &lt;a href=&#34;https://market.android.com/details?id=vStudio.Android.Camera360&#34;&gt;Market&lt;/a&gt;
+&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;td width=&#34;110px&#34; &gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/02/Camera360.jpg&#34; alt=&#34;Camera360&#34; /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+[nggallery id=6]&lt;/p&gt;
+
+&lt;p&gt;&lt;table border=&#34;0&#34; &gt;
+&lt;tbody &gt;
+&lt;tr &gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;td width=&#34;110px&#34; &gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/02/Call-Meter-NG.png&#34; alt=&#34;Call Meter NG&#34; /&gt;
+&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;td &gt;
+&lt;strong&gt;Call Meter NG&lt;/strong&gt;
+Es la aplicación que utilizo para medir el consumo de llamadas, SMS y datos. Si bien soy bastante #foreveralone y nunca llego a gastar el crédito es bueno mantenerlo vigilado, uno nunca sabe. Se pueden definir varios planes, o detallar las opciones de cada item. Por ahi tardan en configurarlo, pero lo hacen una sola vez y lo vale. Si sólo quieren monitorear los datos, una gran opción es &lt;a href=&#34;https://market.android.com/details?id=net.rgruet.android.g3watchdog&amp;amp;feature=search_result#?t=W251bGwsMSwxLDEsIm5ldC5yZ3J1ZXQuYW5kcm9pZC5nM3dhdGNoZG9nIl0.&#34;&gt;&lt;strong&gt;3G Watchdog&lt;/strong&gt;&lt;/a&gt;
+No sólo es &lt;a href=&#34;https://market.android.com/details?id=de.ub0r.de.android.callMeterNG&amp;amp;hl=es&#34;&gt;gratiuta&lt;/a&gt;, sino que también tiene licencia GPL&lt;/p&gt;
+
+&lt;p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+[nggallery id=7]&lt;/p&gt;
+
+&lt;p&gt;&lt;table border=&#34;0&#34; &gt;
+&lt;tbody &gt;
+&lt;tr &gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;td &gt;&lt;strong&gt;ScreenShot It&lt;/strong&gt;
+Permite sacar Screenshots o, si son fundamentalistas del lenguaje Capturas de Pantalla. La particularidad de esta aplicación respectos a otras que tienen la misma finalidad, es que no requiere un celular rooteado para que funcione.
+Para sacar los screenshots, podemos hacerlo desde la barra superior, o agitando el celular. Permite guardarla, recotrarla, dibujar sobre la misma o compartirla apenas se realiza. Siempre viene bien.
+&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;td width=&#34;110px&#34; &gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/02/screenshot-it.png&#34; alt=&#34;Screenshot It&#34; /&gt;
+&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;td &gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+[nggallery id=8]&lt;/p&gt;
+
+&lt;p&gt;&lt;table border=&#34;0&#34; &gt;
+&lt;tbody &gt;
+&lt;tr &gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;td width=&#34;110px&#34; &gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/02/poweramp.png&#34; alt=&#34;PowerAMP&#34; /&gt;
+&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;td &gt;&lt;strong&gt;PowerAMP&lt;/strong&gt;
+La mejor app para escuchar música. Simplemente no podría poner en un párrafo todas las opciones que tiene.
+Ecualizador, scrobbling, muchas opciones para reproduccion, opciones para el boton del manoslibres, lyrics, covers, y así&amp;hellip;
+Es paga y quizas un poco cara (22,49 AR$), pero lo vale cada centavo, además tiene actualiaciones constantes, con mejoras, correcciones y nuevas features. Recomendadísima si aceptan pagarla. Tiene un &lt;a href=&#34;https://market.android.com/details?id=com.maxmpz.audioplayer&amp;amp;hl=es&#34;&gt;trial&lt;/a&gt; para probar.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+[nggallery id=9]&lt;/p&gt;
+
+&lt;p&gt;&lt;table border=&#34;0&#34; &gt;
+&lt;tbody &gt;
+&lt;tr &gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;td &gt;&lt;strong&gt;Zedge&lt;/strong&gt;
+Una de las aplicaciones con mejor Look-n-Feel que hay para Android. Permite descargar wallpapers y ringtones.
+Tiene un buscador, podemos navegar por categorías, ver una vista previa de la imagen o incluso escuchar el sonido antes de bajarlo.
+Es gratiuto, para la delicia de la dama y el caballero, link al &lt;a href=&#34;https://market.android.com/details?id=net.zedge.android&amp;amp;feature=search_result&#34;&gt;Market&lt;/a&gt;.
+&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;td width=&#34;110px&#34; &gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/02/Zedge.png&#34; alt=&#34;Zedge&#34; /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+[nggallery id=10]&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Disculpen que lo haya dividido al post en partes, pero sino se hacía demasiado largo.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Twicca: el mejor cliente de Twitter para Android</title>
+      <link>http://localhost:1313/blog/posts/twicca-el-mejor-cliente-de-twitter-para-android/</link>
+      <pubDate>Wed, 30 Nov 2011 17:14:46 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/twicca-el-mejor-cliente-de-twitter-para-android/</guid>
+      <description>&lt;p&gt;En &lt;strong&gt;Android&lt;/strong&gt; y supongo que tambien para iOS, existen muchos clientes para &lt;strong&gt;Twitter&lt;/strong&gt; (Twitter for Android, Seesmic, Hootsuite,  TweetCaster y otros) pero dudo que alguno tenga tantas funcionalidades como &lt;strong&gt;Twicca&lt;/strong&gt;.
+En un primer momento la interfaz parece demasiado simple, pero es esa simpleza una de las tantas bondades. Por defecto tiene fondo negro con letras blancas, se puede invertir, por el bien de tus ojos no lo hagas.&lt;/p&gt;
+
+&lt;p&gt;Por supuesto que las funciones básicas estan implementadas, reply, retweet, quote, fav&amp;hellip;. Podemos igualmente compartir el tweet, previsualizar las imágenes (en un vistazo rápido, es compatible con más sitios que la web)
+Dentro de las opciones que brinda en cada usuario, podemos ver su timeline y demas datos, saber si lo seguimos y si este nos sigue. Hasta ahora nada que otros clientes no soporten&amp;hellip;
+Permite también el uso de listas, geolocalización, widgets para el escritorio, coloreado de tweets de acuerdo al usuario, &lt;strong&gt;filtros&lt;/strong&gt;, caché&amp;hellip; lo único que no tiene implementado son las multicuentas (de hecho si lo tiene , pero de momento está sólo disponible para los usuarios que hacen donaciones).&lt;/p&gt;
+
+&lt;p&gt;Lo mejor de la aplicación es la cantidad de opciones de configuración que tiene. Aca un detalle por categoría (en inglés los títulos, porque los empecé a poner en español y sonaban horrible&amp;hellip; puristas del idioma abstenerse a decir algo):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Account settings:&lt;/strong&gt; Es dónde se vincula la cuenta de Twitter por OAuth.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Timeline settings:&lt;/strong&gt; Opciones específicas de como se muestra el timeline, cantidad de tweets, autopaging, si se muestra nombre real, si se muestra el avatar y la calidad del mismo (útil para paquetes de datos limitados), manejo de URLs y funcionalidad de los botones de volúmen y cámara. Esto último es realmente cómodo para desplazarse por el timeline sin tocar la pantalla.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Status update settings:&lt;/strong&gt; Configuración de estilos de RT, tamaño de imágenes, permitir geolocalización, envío con la tecla &lt;em&gt;enter&lt;/em&gt;, autocompletado de usuario con sólo poner @, sufijos.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Search / Trending topics settings:&lt;/strong&gt; Nos permite setear la localización para mostrar los TT y si queremos excluir los RTs en las búsquedas, bastante bueno para no tener repetidos los tweets mas populares.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Notification settings:&lt;/strong&gt; Habilitar las notificaciones en la barra superior, con un tiempo determinado de refresco y que queremos que nos sea notificado. A su vez, también nos ofrece configurar si la notificación se hace con vibración, ringtone y/o led (incluso podemos configurar el color del mismo).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Color label settings:&lt;/strong&gt; No la mano en el corazón no le encontré motivo a esto, pero podemos ponerle una etiqueta a los colores. En fin&amp;hellip; si alguien lo usa avise.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Appearance settings:&lt;/strong&gt; Definir el tema (el defecto o el claro&amp;hellip; ¡Oh por Thor no!), y también nos ofrece 10 tamaños diferentes de fuentes para el timeline y para las actualizaciones de estado. Muy bueno para topos como uno.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Profile settings:&lt;/strong&gt; Desde acá podemos modificar el perfil: foto, nombre, web y bio.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;GPS/Location settings:&lt;/strong&gt; Establece la geolocalización por GPS o 3G.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Preview settings:&lt;/strong&gt; Servicios a los cuales podemos acceder desde la vista previa. Una lista muy extensa.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Mute settings:&lt;/strong&gt; ¡Te amo Twicca, haceme un pibe! Permite sacar del timeline usuarios, hashtags o fuentes, por ejemplo, Foursquare, Fromspring, Tumblr y todas esas aplicaciones tediosas.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Cache settings:&lt;/strong&gt; Configuramos la localización del caché (memoria interna o sd) y el tiempo que dura el mismo. Bueno para optimizar tráfico.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Plug-ins settings:&lt;/strong&gt; Si con todas estas opciones no les bastó, además permite agregar funcionalidad a través de plug-ins, disponibles desde el Market. Algunos de los que uso me permiten poner automaticaemnte que escucho desde PowerAMP, mandar un link a ReadItLater para leerlo desde la PC cuando pueda, Subir a Flickr&amp;hellip; y la verdad que hay muchos.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Descargar&lt;/strong&gt;
+Es gratis, se puede bajar directamente dede el &lt;a href=&#34;https://market.android.com/details?id=jp.r246.twicca&amp;amp;hl=es&#34;&gt;Android Market&lt;/a&gt;. También está la posibilidad de donar, la aplicación es la misma pero pueden acceder a funciones antes de que sean liberadas. Si te gusta y sos un early adopter puede ser una buena opción ;)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Imágenes&lt;/strong&gt;
+[nggallery id=3]&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

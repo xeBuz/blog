@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Crafty on Personal Blog</title>
+    <link>http://localhost:1313/blog/tags/crafty/</link>
+    <description>Recent content in Crafty on Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 07 Sep 2012 14:33:06 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/crafty/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>[Post-charla] Introducción al desarrollo web de videojuegos</title>
+      <link>http://localhost:1313/blog/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</link>
+      <pubDate>Fri, 07 Sep 2012 14:33:06 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/09/supermeatboy.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/09/supermeatboy.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Antes que nada gracias a todos los que fueron ayer a la &lt;a href=&#34;http://blog.jesusroldan.com/2012/09/05/charla-introduccion-al-desarrollo-web-de-videojuegos/&#34;&gt;charla de desarrollo de videojuegos&lt;/a&gt; y a la gente de &lt;a href=&#34;http://uni-code-group.blogspot.com.ar/&#34;&gt;&lt;strong&gt;UNI-CODE&lt;/strong&gt;&lt;/a&gt; por la invitación. Les dejo algunos links que había prometido o temas que quedaron en el aire. Cualquier cosa avisen.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Los slides están &lt;a href=&#34;http://jesusroldan.com/Charlas/Crafty/crafty.html&#34;&gt;online acá&lt;/a&gt;, es recomendable verlo a pantalla completa (espero que el touchpad no los trollée como a mi).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;El código fuente de &lt;a href=&#34;https://github.com/xeBuz/Charlas/tree/master/Crafty%20-%20Framework%20para%20videojuegos&#34;&gt;los slides está en GitHub&lt;/a&gt;. Usé &lt;a href=&#34;https://github.com/cykod/CoderDeck&#34;&gt;CoderDeck&lt;/a&gt; porque me permitía correr código JS y modificarlo mientras daba la charla.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Esta es la &lt;a href=&#34;http://craftyjs.com/api/&#34;&gt;documentación de Crafty&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Los componente extras de Crafty se pueden ver &lt;a href=&#34;http://craftycomponents.com/&#34;&gt;en este sitio&lt;/a&gt;. Inlcuso ahí está &lt;a href=&#34;http://craftycomponents.com/boilerplate&#34;&gt;Craftyboilerplate&lt;/a&gt; y &lt;a href=&#34;http://flexpi.com/&#34;&gt;Flexpi&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://leo-koppelkamm.de/polyCreator/&#34;&gt;Este sitio tiene el creador de polígonos&lt;/a&gt;, porque hacerlos a mano es muy denso.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;En un momento se comentó de un grupo de gente que se juntaba cada tanto pero nadie tenía demasiados datos, eran de &lt;a href=&#34;http://www.indiegamedev.org/&#34;&gt;IndieGameDev&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Vayan preparándose para la &lt;a href=&#34;http://gamejamcordoba.com/&#34;&gt;GlobalGameJam&lt;/a&gt; ;)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/09/Logo_Uni-Code.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/09/Logo_Uni-Code-150x150.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[Charla] Introducción al desarrollo web de videojuegos</title>
+      <link>http://localhost:1313/blog/posts/charla-introduccion-al-desarrollo-web-de-videojuegos/</link>
+      <pubDate>Wed, 05 Sep 2012 12:54:41 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/charla-introduccion-al-desarrollo-web-de-videojuegos/</guid>
+      <description>&lt;p&gt;El jueves 6 a las 19hs voy a estar en la UTN de Córdoba para dar una charla sobre desarrollo de videojuegos para navegadores (en HTML5, todos sabemos que Flash es malvado) invitado por la gente de &lt;a href=&#34;http://uni-code-group.blogspot.com.ar/&#34;&gt;&lt;strong&gt;UNI-CODE&lt;/strong&gt;&lt;/a&gt;, un grupo de estudiantes que se encarga de divulgación de tecnología libre de humo.&lt;/p&gt;
+
+&lt;p&gt;La charla es abierta para todos y está de más decir que es gratis, va a ser muy introductoria con algunos conceptos básicos. También se va a mostrar un framework, &lt;a href=&#34;http://craftyjs.com/&#34;&gt;&lt;strong&gt;Crafty&lt;/strong&gt;&lt;/a&gt;, para simplificar el desarrollo. Si bien está pensada para programadores, la idea es juntar gente con ganas, quien sabe, puede surgir algun proyecto entre las personas que asistan. Las ganas de muchos están, falta organizarnos.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/09/Flyer-6-9-12.jpg&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/09/Flyer-6-9-12-353x500.jpg&#34; alt=&#34;Desarrollo de videojuegos&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
