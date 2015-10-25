@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Fun on title</title>
-    <link>jesusroldan.com/categories/fun/</link>
-    <description>Recent content in Fun on title</description>
+    <title>Fun on Personal Blog</title>
+    <link>http://xebuz.github.io/blog/categories/fun/</link>
+    <description>Recent content in Fun on Personal Blog</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
     <lastBuildDate>Sat, 29 Mar 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="jesusroldan.com/categories/fun/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://xebuz.github.io/blog/categories/fun/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Just another sample post</title>
-      <link>/jesusroldan.com/posts/newest/</link>
+      <link>http://xebuz.github.io/blog/posts/newest/</link>
       <pubDate>Sat, 29 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/newest/</guid>
+      <guid>http://xebuz.github.io/blog/posts/newest/</guid>
       <description>
 
 &lt;h2 id=&#34;first-heading:912493bb798d2cf24137bef8b4adb6f6&#34;&gt;First Heading&lt;/h2&gt;

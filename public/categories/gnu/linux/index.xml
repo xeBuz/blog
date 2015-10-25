@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Gnu/Linux on title</title>
-    <link>jesusroldan.com/categories/gnu/linux/</link>
-    <description>Recent content in Gnu/Linux on title</description>
+    <title>Gnu/Linux on Personal Blog</title>
+    <link>http://localhost:1313/blog/categories/gnu/linux/</link>
+    <description>Recent content in Gnu/Linux on Personal Blog</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
     <lastBuildDate>Tue, 19 Jun 2012 17:47:45 +0000</lastBuildDate>
-    <atom:link href="jesusroldan.com/categories/gnu/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/categories/gnu/linux/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>GNU/Linux para amas de casa. #BarCampCBA</title>
-      <link>/jesusroldan.com/posts/gnulinux-para-amas-de-casa-barcamp/</link>
+      <link>http://localhost:1313/blog/posts/gnulinux-para-amas-de-casa-barcamp/</link>
       <pubDate>Tue, 19 Jun 2012 17:47:45 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/gnulinux-para-amas-de-casa-barcamp/</guid>
+      <guid>http://localhost:1313/blog/posts/gnulinux-para-amas-de-casa-barcamp/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/06/gnu_linux.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/06/gnu_linux.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;El sábado pasado fue el &lt;a href=&#34;http://barcampcordoba.org/&#34;&gt;BarCampCBA&lt;/a&gt; en Córdoba, que dicho sea de paso salió excelente.&lt;/p&gt;
@@ -30,10 +31,10 @@
     
     <item>
       <title>Cron, automatizar scripts como un titán</title>
-      <link>/jesusroldan.com/posts/cron-automatizar-scripts-como-un-titan/</link>
+      <link>http://localhost:1313/blog/posts/cron-automatizar-scripts-como-un-titan/</link>
       <pubDate>Tue, 22 May 2012 16:48:07 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/cron-automatizar-scripts-como-un-titan/</guid>
+      <guid>http://localhost:1313/blog/posts/cron-automatizar-scripts-como-un-titan/</guid>
       <description>&lt;p&gt;Hace un tiempo escribí sobre &lt;a href=&#34;http://blog.jesusroldan.com/2012/01/23/comando-at-automatizar-scripts-sin-usar-crontab/&#34;&gt;la utilización del comando &lt;strong&gt;at&lt;/strong&gt;&lt;/a&gt;, ahora le toca el turno a &lt;strong&gt;cron&lt;/strong&gt;. ¿Tron? No, cron. ¡Troz! (?).
 ¿Qué es cron? Es un administrador de procesos que se ejecuta a un interválo de tiempo específico. Si vienen del Dark Side, sería el equivalente a las &lt;em&gt;Tareas Programadas&lt;/em&gt; de W.&lt;/p&gt;
 
@@ -107,10 +108,10 @@ También pueden editar los archivos de otros usuarios, con **contab -u user -e *
     
     <item>
       <title>Solucionar problemas después de actualizar Gnome 3.4.1</title>
-      <link>/jesusroldan.com/posts/solucionar-problemas-despues-de-actualizar-gnome-3-4-1/</link>
+      <link>http://localhost:1313/blog/posts/solucionar-problemas-despues-de-actualizar-gnome-3-4-1/</link>
       <pubDate>Mon, 23 Apr 2012 20:58:48 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/solucionar-problemas-despues-de-actualizar-gnome-3-4-1/</guid>
+      <guid>http://localhost:1313/blog/posts/solucionar-problemas-despues-de-actualizar-gnome-3-4-1/</guid>
       <description>&lt;p&gt;Hoy, como para que el lunes arranque con todo, actualicé Arch y después no pude ingresar más la sesión de Gnome3. Aparecía la PC con carita triste y me decía que iba a desactivar las extensiones, pero no soluciona nada. Y cómo se actualizaron muchas drivers, el kernel y gnome no sabía bien donde estaba el problema.&lt;/p&gt;
 
 &lt;p&gt;Al parecer la nueva versión de Gnome (3.4.1) tiene como dependencia networkmanager y si no lo encuentra explota por todos lados, pueden verificar el archivo /var/logs/messages.log, deberían tener algo así:
@@ -148,10 +149,10 @@ Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_pat
     
     <item>
       <title>Comando at, automatizar scripts sin usar crontab</title>
-      <link>/jesusroldan.com/posts/comando-at-automatizar-scripts-sin-usar-crontab/</link>
+      <link>http://localhost:1313/blog/posts/comando-at-automatizar-scripts-sin-usar-crontab/</link>
       <pubDate>Mon, 23 Jan 2012 16:34:56 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/comando-at-automatizar-scripts-sin-usar-crontab/</guid>
+      <guid>http://localhost:1313/blog/posts/comando-at-automatizar-scripts-sin-usar-crontab/</guid>
       <description>&lt;p&gt;A diferencia de &lt;strong&gt;cron&lt;/strong&gt;, &lt;strong&gt;at&lt;/strong&gt; permite programar un comando/script para que sea ejecutado sólo una vez y no periodicamente.&lt;/p&gt;
 
 &lt;p&gt;Antes que nada deben instalarlo, no suele venir en las distribuciones por defecto. Usen pacman, aptitude, yum o lo que sea, tiene que estar en los repositorios.
@@ -189,10 +190,10 @@ Por último, si quieren ver todo el contenido del script, con &lt;strong&gt;at -
     
     <item>
       <title>Tips Linuxeros: Optimizar pacman y la instalación de aplicaciones en Arch Linux</title>
-      <link>/jesusroldan.com/posts/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/</link>
+      <link>http://localhost:1313/blog/posts/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/</link>
       <pubDate>Wed, 28 Dec 2011 18:19:48 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/</guid>
+      <guid>http://localhost:1313/blog/posts/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/</guid>
       <description>&lt;p&gt;La idea del post es hacer un compilado de tips y aplicaciones que puedan llegar a servir para mejorar &lt;a href=&#34;https://wiki.archlinux.org/index.php/Pacman&#34;&gt;pacman&lt;/a&gt; y la instalación de aplicaciones en Arch Linux. Si, escribí lo mismo que en el título pero con más palabras.
 Para el usuario que venga de otras distros, como Ubuntu, le puede resultar díficil no tener esa &amp;lsquo;cosa&amp;rsquo; llamada Centro de Software, pero con un poco de maña se puede potenciar muchisimo la instalación (además no van a escuchar nunca más de los PPA).&lt;/p&gt;
 
@@ -232,10 +233,10 @@ Server = http://repo.archlinux.fr/$arch
     
     <item>
       <title>Manejar procesos en Linux, Like a Sir</title>
-      <link>/jesusroldan.com/posts/manejar-procesos-en-linux-like-a-sir/</link>
+      <link>http://localhost:1313/blog/posts/manejar-procesos-en-linux-like-a-sir/</link>
       <pubDate>Wed, 14 Dec 2011 18:24:08 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/manejar-procesos-en-linux-like-a-sir/</guid>
+      <guid>http://localhost:1313/blog/posts/manejar-procesos-en-linux-like-a-sir/</guid>
       <description>&lt;p&gt;Particularmente me gusta tener alguna de las aplicaciones listo corriendo en la tty1 y cuando algo falla, porque siempre algo puede malir sal, control + alt +F1 viene como piña para ver el problema rápido.
 Me pasó de tener problemas en ambientes Windows, y es una de las cosas que mas se extrañan; el administrador de tareas no hace todo lo que debería (como el de Gnome o KDE, si algo falla en el X o te quedás sin recursos no los vas a poder usar)&lt;/p&gt;
 
@@ -270,10 +271,10 @@ Aca una imágen comparativa, a la izquierda top, a la dercha htop, abajo atop.&l
     
     <item>
       <title>De cómo llegué a ArchLinux y por qué no lo cambio...</title>
-      <link>/jesusroldan.com/posts/de-como-llegue-a-arch-linux-y-porque-no-lo-cambio/</link>
+      <link>http://localhost:1313/blog/posts/de-como-llegue-a-arch-linux-y-porque-no-lo-cambio/</link>
       <pubDate>Mon, 21 Nov 2011 21:27:23 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/de-como-llegue-a-arch-linux-y-porque-no-lo-cambio/</guid>
+      <guid>http://localhost:1313/blog/posts/de-como-llegue-a-arch-linux-y-porque-no-lo-cambio/</guid>
       <description>&lt;p&gt;Hace unos cuantos años que uso GNU/Linux, no muchos, pero los suficientes como para ir probando diferentes distros hasta llegar al lugar en donde más cómodo me sentí: &lt;strong&gt;Arch Linux&lt;/strong&gt;
 El primer contacto que tuve con GNU/Linux fue, como muchos, desde un LiveCD&amp;hellip; &lt;strong&gt;Knoppix&lt;/strong&gt; en este caso. recuerdo que me había gustado hasta visualmente (eso que era KDE, pobre de mi), pero mucho uso no le podía dar; nunca pude levantar el cablemodem por USB.
 En ese momento, compartía la PC con mi familia y tenía un disco de 4Gb, ergo, era imposible hacer una instalación con doble booteo, mucho menos con mis conocimientos de infranewbie.&lt;/p&gt;
@@ -309,10 +310,10 @@ Cuarta, Arch no sólo tiene gran cantidad de aplicaciones, sino que es de los pr
     
     <item>
       <title>Hacer un radio casera con MPD y con Icecast</title>
-      <link>/jesusroldan.com/posts/streaming-con-mpd-y-icecast-en-arch-linux/</link>
+      <link>http://localhost:1313/blog/posts/streaming-con-mpd-y-icecast-en-arch-linux/</link>
       <pubDate>Tue, 01 Nov 2011 19:09:58 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/streaming-con-mpd-y-icecast-en-arch-linux/</guid>
+      <guid>http://localhost:1313/blog/posts/streaming-con-mpd-y-icecast-en-arch-linux/</guid>
       <description>&lt;p&gt;Empecemos&amp;hellip; pero &lt;em&gt;¿Qué e&amp;rsquo; lo que e&amp;rsquo; eso?&lt;/em&gt;
 &lt;strong&gt;MPD&lt;/strong&gt;: Básicamente, es un servidor para escuchar música. Con la particularidad de que es muy configurable y nos permite acceder a traves de la red para controlar la lista de reproducción. &lt;a href=&#34;http://images.wikia.com/mpd/images/6/68/Mpd-overview.png&#34;&gt;Esta&lt;/a&gt; imagen lo explica bien.
 &lt;strong&gt;Clientes MPD&lt;/strong&gt;: El servidor por sí sólo nos gestiona los archivos, los salidas de audio y la lista de reproducción, para acceder a esto necesitamos clientes, que visualmente son similares a las clasicas aplicaciones para escuchar música.
@@ -386,10 +387,10 @@ Si dejan la configuración de arriba van a poder figurar en el &lt;a href=&#34;h
     
     <item>
       <title>Z Bash, o zsh, una shell con Z de &#34;ZOMG que buena shell&#34;</title>
-      <link>/jesusroldan.com/posts/zsh/</link>
+      <link>http://localhost:1313/blog/posts/zsh/</link>
       <pubDate>Thu, 20 Oct 2011 18:26:48 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/zsh/</guid>
+      <guid>http://localhost:1313/blog/posts/zsh/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Z Bash&lt;/strong&gt;, o mejor &lt;strong&gt;zsh&lt;/strong&gt;, es un interprete de comándos (&lt;em&gt;shell&lt;/em&gt;), excelente alternativa al Bash que viene por defecto (&lt;em&gt;Bourne-again Shell&lt;/em&gt;). Como mejoras, se destaca:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -479,10 +480,10 @@ Para los dislexicos como uno, esto es muy bueno, nos autocorrige directorios, co
     
     <item>
       <title>Tips Linuxeros: Moverse entre directorios como un ninja</title>
-      <link>/jesusroldan.com/posts/tips-linuxeros-moverse-entre-directorios-como-un-ninja/</link>
+      <link>http://localhost:1313/blog/posts/tips-linuxeros-moverse-entre-directorios-como-un-ninja/</link>
       <pubDate>Wed, 28 Sep 2011 14:28:14 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/tips-linuxeros-moverse-entre-directorios-como-un-ninja/</guid>
+      <guid>http://localhost:1313/blog/posts/tips-linuxeros-moverse-entre-directorios-como-un-ninja/</guid>
       <description>&lt;p&gt;Seguramente &lt;strong&gt;cd&lt;/strong&gt; es uno de los comandos que más usamos, y también de los primeros que aprendemos a usar (junto con ls, rm, mkdir y esas cosas).
 Es posible que no usen todo el potencial que tiene, tampoco es la locura, pero tiene algunos detalles con los que vamos a poder ahorrarnos tiempo y optimizar la navegación entre directorios, porque desde la consola todo es mejor y mas rápido :P&lt;/p&gt;
 
@@ -505,10 +506,10 @@ Para ir al home de otro usuario, basta con &lt;strong&gt;cd ~marvin&lt;/strong&g
     
     <item>
       <title>Versionar el directorio /etc con Git</title>
-      <link>/jesusroldan.com/posts/versionar-el-directorio-etc-con-git/</link>
+      <link>http://localhost:1313/blog/posts/versionar-el-directorio-etc-con-git/</link>
       <pubDate>Mon, 26 Sep 2011 17:23:59 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/versionar-el-directorio-etc-con-git/</guid>
+      <guid>http://localhost:1313/blog/posts/versionar-el-directorio-etc-con-git/</guid>
       <description>&lt;p&gt;Una buena práctica, sobre todo si les gusta modificar los archivos de configuración para probar cosas o instalar aplicaciones constantemnte, es versionar el directorio /etc, para el caso en el que nos &lt;del&gt;mandemos alguna cagada&lt;/del&gt; equivoquemos en alguna configuración, el problema sea facilmente remediable.
 La instalación y configuración es muy sencilla, en este caso es todo manual, si quieren saltearse todo e instalar directamente &lt;strong&gt;&lt;a href=&#34;http://kitenet.net/~joey/code/etckeeper/&#34;&gt;etckeeper&lt;/a&gt;&lt;/strong&gt; es válido igual ;)&lt;/p&gt;
 
@@ -566,10 +567,10 @@ Aca les dejo una imagen de como se ve, por si les interesa
     
     <item>
       <title>Big Brother is watching you. Monitorear usuarios en Linux.</title>
-      <link>/jesusroldan.com/posts/big-brother-is-watching-you-monitorear-usuarios-en-linux/</link>
+      <link>http://localhost:1313/blog/posts/big-brother-is-watching-you-monitorear-usuarios-en-linux/</link>
       <pubDate>Sun, 25 Sep 2011 16:18:50 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/big-brother-is-watching-you-monitorear-usuarios-en-linux/</guid>
+      <guid>http://localhost:1313/blog/posts/big-brother-is-watching-you-monitorear-usuarios-en-linux/</guid>
       <description>&lt;p&gt;Mantener un sistema estable a veces requiere observar que estan haciendo los usuarios.
 No significa que tengamos que ponernos la gorra del Partido y salir a perseguir a Emmanuel Goldstein, sino sólo controlar un poco los recursos, evitando picos altos que puedan provocarnos inestabilidad.
 Acá les dejo un par de comandos o de aplicaciones que tienen este propósito, espero que alguna les sirva&lt;/p&gt;
@@ -605,10 +606,10 @@ Este es un conjunto de aplicaciones, muy utiles (informacion detallada &lt;a hre
     
     <item>
       <title>Gnome2 en ArchLinux</title>
-      <link>/jesusroldan.com/posts/gnome2-en-archlinux/</link>
+      <link>http://localhost:1313/blog/posts/gnome2-en-archlinux/</link>
       <pubDate>Wed, 14 Sep 2011 04:41:31 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/gnome2-en-archlinux/</guid>
+      <guid>http://localhost:1313/blog/posts/gnome2-en-archlinux/</guid>
       <description>
 
 &lt;p&gt;Como hay mucho usuarios descontentos con el resultado de Gnome 3, incluído Linus Torvals, era evidente que iban a existir formas de volver a la versión anterior, y Arch claro que la permite, y eso que fué de las primeras distros en cambiar :P
@@ -669,10 +670,10 @@ Les debo screenshots de esta prueba, ya borré el snapshot y son muchos megas pa
     
     <item>
       <title>Lentitud en la instalacion de paquetes con pacman</title>
-      <link>/jesusroldan.com/posts/lentitud-en-la-instalacion-de-paquetes-con-pacman/</link>
+      <link>http://localhost:1313/blog/posts/lentitud-en-la-instalacion-de-paquetes-con-pacman/</link>
       <pubDate>Tue, 06 Sep 2011 14:12:54 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/lentitud-en-la-instalacion-de-paquetes-con-pacman/</guid>
+      <guid>http://localhost:1313/blog/posts/lentitud-en-la-instalacion-de-paquetes-con-pacman/</guid>
       <description>&lt;p&gt;Desde hace unos días noto que al actualizar o instalar nuevos paquetes con pacman o yaourt se toma una eternidad en actualizar.
 En un primer momento pensé que era problema de la conexión, pero me pasaba en casa y en el laburo, con dos ISP diferentes, entonces el problema pasaba por otro lado.&lt;/p&gt;
 
@@ -691,10 +692,10 @@ En un primer momento pensé que era problema de la conexión, pero me pasaba en 
     
     <item>
       <title>Tips Linuxeros: Alias para Todos</title>
-      <link>/jesusroldan.com/posts/tips-para-linux-alias-para-todos/</link>
+      <link>http://localhost:1313/blog/posts/tips-para-linux-alias-para-todos/</link>
       <pubDate>Fri, 02 Sep 2011 21:33:09 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/tips-para-linux-alias-para-todos/</guid>
+      <guid>http://localhost:1313/blog/posts/tips-para-linux-alias-para-todos/</guid>
       <description>&lt;p&gt;Los alias en Linux son shortcuts o &lt;em&gt;sinónimos&lt;/em&gt; que podemos emplear para ejecutar comandos en la terminal.
 Son muy útiles para correr comandos largos o simplemente crear nombres mas amigables, para algún comando que nos resulte deficil de recordar o a los que usemos mas seguido.
 Para crearlos debemos escribir en el archivo &lt;strong&gt;~.bashrc&lt;/strong&gt; para dejarlos disponibles al usuario, o en /etc/bash.bashrc para dejarlos disponibles en todo el sistema.&lt;/p&gt;

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Random on Personal Blog</title>
+    <link>http://localhost:1313/blog/tags/random/</link>
+    <description>Recent content in Random on Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Jul 2013 20:00:30 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/random/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Licencia para ir al cine</title>
+      <link>http://localhost:1313/blog/posts/licencia-para-ir-al-cine/</link>
+      <pubDate>Mon, 01 Jul 2013 20:00:30 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/licencia-para-ir-al-cine/</guid>
+      <description>&lt;p&gt;Así como existe una licencia para conducir que te permite manejar un vehículo debería existir un carnet que te habilite la entrada a los cines. La deberías sacar con un exámen previo con normas de convivencia y reglas básicas.
+Este carnet se renovaría, podrías sacar entradas con un ID único y asi llevar un registro.&lt;/p&gt;
+
+&lt;p&gt;Se podría imponer un sistema de puntos, que te descuenten por:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Hablar: 3 puntos&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Hablar por teléfono: 5 puntos.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Spoilear: 10 puntos.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Revolver el pochoclo: 1 punto.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Abrir caramelos: 2 puntos.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Tomar gaseosa cuando ya no hay nada: 2 puntos.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Ir con un bebé: 5 puntos.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Al perder x cantidad de puntos, se te revoca la licencia por unos meses y para renovarla hay que hacer un curso.&lt;/p&gt;
+
+&lt;p&gt;No aseguraríamos que, al ir al cine, no renegaríamos con pelotudos que no saben comportarse :D&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

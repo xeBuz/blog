@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Libros on title</title>
-    <link>jesusroldan.com/categories/libros/</link>
-    <description>Recent content in Libros on title</description>
+    <title>Libros on Personal Blog</title>
+    <link>http://localhost:1313/blog/categories/libros/</link>
+    <description>Recent content in Libros on Personal Blog</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
     <lastBuildDate>Sat, 11 Aug 2012 16:22:52 +0000</lastBuildDate>
-    <atom:link href="jesusroldan.com/categories/libros/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/categories/libros/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Cadena de memes: Libros</title>
-      <link>/jesusroldan.com/posts/cadena-de-memes-libros/</link>
+      <link>http://localhost:1313/blog/posts/cadena-de-memes-libros/</link>
       <pubDate>Sat, 11 Aug 2012 16:22:52 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/cadena-de-memes-libros/</guid>
+      <guid>http://localhost:1313/blog/posts/cadena-de-memes-libros/</guid>
       <description>&lt;p&gt;Si, 2012 y existen las cadenas de memes. Está me pareció muy interesante, la vi en &lt;a href=&#34;http://www.cienciakanija.com/2012/07/21/cadena-de-memes-libros/&#34;&gt;Ciencia Kanija&lt;/a&gt; (hace ya unos días y tuve el post en borrador) y me gustó la idea :D&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Un libro que cambió mi vida&lt;/strong&gt;
@@ -51,10 +52,10 @@ Read all the books! La lista es larguísima&amp;hellip; quisiera tener el tiempo
     
     <item>
       <title>Cuentos de Terror narrados por Alberto Laiseca</title>
-      <link>/jesusroldan.com/posts/cuentos-de-terror-narrados-por-alberto-laiseca/</link>
+      <link>http://localhost:1313/blog/posts/cuentos-de-terror-narrados-por-alberto-laiseca/</link>
       <pubDate>Tue, 24 Apr 2012 15:54:25 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/cuentos-de-terror-narrados-por-alberto-laiseca/</guid>
+      <guid>http://localhost:1313/blog/posts/cuentos-de-terror-narrados-por-alberto-laiseca/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/04/Laiseca2.jpg&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/04/Laiseca2.jpg&#34; alt=&#34;Alberto Laiseca&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -129,10 +130,10 @@ Read all the books! La lista es larguísima&amp;hellip; quisiera tener el tiempo
     
     <item>
       <title>La Saga de los Confines de Liliana Bodoc</title>
-      <link>/jesusroldan.com/posts/la-saga-de-los-confines-de-liliana-bodoc/</link>
+      <link>http://localhost:1313/blog/posts/la-saga-de-los-confines-de-liliana-bodoc/</link>
       <pubDate>Mon, 23 Apr 2012 17:44:22 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/la-saga-de-los-confines-de-liliana-bodoc/</guid>
+      <guid>http://localhost:1313/blog/posts/la-saga-de-los-confines-de-liliana-bodoc/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/04/TapasFinales_3_ok.jpg&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/04/TapasFinales_3_ok-1024x667.jpg&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Épic. Quizás sea un término muy utilizado hoy en día, casi siempre innecesariamente, pero que en este caso encaja a la perfección.
@@ -158,10 +159,10 @@ La escritora argentina Liliana Bodoc en los tres libros de la saga desarrolla un
     
     <item>
       <title>Ciudad de Clifford Simak</title>
-      <link>/jesusroldan.com/posts/ciudad-de-clifford-simak/</link>
+      <link>http://localhost:1313/blog/posts/ciudad-de-clifford-simak/</link>
       <pubDate>Sun, 08 Apr 2012 21:15:44 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/ciudad-de-clifford-simak/</guid>
+      <guid>http://localhost:1313/blog/posts/ciudad-de-clifford-simak/</guid>
       <description>&lt;p&gt;El primer libro de Clifford Simak con el que me cruzo, y cumplió ampliamente mis espectativas.&lt;/p&gt;
 
 &lt;p&gt;[caption id=&amp;ldquo;attachment_1058&amp;rdquo; align=&amp;ldquo;alignright&amp;rdquo; width=&amp;ldquo;171&amp;rdquo; caption=&amp;ldquo;Tapa &amp;ldquo;]&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/04/ciudad.jpg&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/04/ciudad-171x300.jpg&#34; alt=&#34;Ciudad, de Clifford Simak&#34; /&gt;&lt;/a&gt;[/caption]&lt;/p&gt;
@@ -180,10 +181,10 @@ El libro es de 1953, por lo que pueden conseguirlo en muchas librerías (incluso
     
     <item>
       <title>Los Dragones -  Douglas Niles [Dragonlance]</title>
-      <link>/jesusroldan.com/posts/los-dragones-douglas-niles-dragonlance/</link>
+      <link>http://localhost:1313/blog/posts/los-dragones-douglas-niles-dragonlance/</link>
       <pubDate>Wed, 24 Aug 2011 18:52:29 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/los-dragones-douglas-niles-dragonlance/</guid>
+      <guid>http://localhost:1313/blog/posts/los-dragones-douglas-niles-dragonlance/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/08/Dragons-Dragonlance.jpg&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/08/Dragons-Dragonlance.jpg&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;[xrr rating=8.&lt;sup&gt;3&lt;/sup&gt;&amp;frasl;&lt;sub&gt;10&lt;/sub&gt; label=&amp;ldquo;Calificación = Muy Bueno&amp;rdquo;]&lt;/p&gt;

@@ -1,0 +1,494 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="xeBuz">
+		<meta name="description" content="Personal Website">
+		<meta name="generator" content="Hugo 0.14" />
+		<title>Crazy little thing called Perl: Introducción al lenguaje &middot; Personal Blog</title>
+		<link rel="shortcut icon" href="http://localhost:1313/blog/images/favicon.ico">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/style.css">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/highlight.css">
+		<link href="http://localhost:1313/blog/index.xml" rel="alternate" type="application/rss+xml" title="Personal Blog" />
+	</head>
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='http://localhost:1313/blog/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+		<a href='http://localhost:1313/blog/about'>About</a>
+	
+
+	
+	<a class="cta" href="http://localhost:1313/blog/index.xml">Subscribe</a>
+	
+</nav>
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>Crazy little thing called Perl: Introducción al lenguaje</h1>
+                    <h2 class="headline">March 5, 2014</h2>
+                </header>
+                <section id="post-body">
+                    <p>Perl está disponible para múltimples plataformas, pueden descargarlo desde <a href="http://www.perl.org/get.html">acá</a> o desde el sistema de paquetes que utilicen. Para verificar si tienen instalado perl, en la terminal escriban <em>perl -v</em>, si hay salida ya lo tienen instalado.</p>
+
+<p>Para la instalación de librerías se utiliza <a href="http://www.cpan.org/"><strong>CPAN</strong></a>, que es una colección de módulos libres para Perl. Pueden descargar este script o sino instalarlo desde los repositorios, por ejemplo, en un Linux basado en Debian basta correr:</p>
+
+<pre><code>aptitude install cpanminus
+</code></pre>
+
+<p>Una vez instalado, para instalar módulos deben correr desde la consola el siguiente comando (teniendo en cuenta que el nombre del módulo es case-sensitive):</p>
+
+<pre><code>cpan install Modulo
+</code></pre>
+
+<p><img src="http://www.tiraecol.net/modules/comic/cache/images/tiraecol-15.png" alt="" /></p>
+
+<p><strong>Variables</strong>
+Perl maneja tres tipos de variables:</p>
+
+<ul>
+<li><p>Scalar</p></li>
+
+<li><p>Array</p></li>
+
+<li><p>Hash</p></li>
+</ul>
+
+<p><strong>Scalar</strong>
+Las variables escalares representan un valor simple. Los valores escalares pueden ser cadenas, enteros o números de coma flotante y se definen anteponiendo el signo <strong>$</strong> al nombre de la variable.
+No hay necesidad de pre-declarar sus tipos de variables , Perl los convertirá automáticamente entre ellos según sea necesario.</p>
+
+<pre><code>my $animal = &quot;tortuga&quot;;
+my $answer = 42;
+</code></pre>
+
+<p><strong>Array</strong>
+Las variables de tipo Array representan una lista de valores. Se declaran anteponiendo el signo <strong>@</strong> al nombre de la variable</p>
+
+<pre><code>my @animals = (&quot;turtle&quot;, &quot;llama&quot;, &quot;cat&quot;);
+my @numbers = (23, 42, 69);
+my @mixed   = (&quot;whale&quot;, 666, 1.23);
+</code></pre>
+
+<p>Los Arrays son indexados a cero. Se puede acceder a los valores de la siguiente manera:</p>
+
+<pre><code>print $animals[0];              # imprime &quot;turtle&quot;. Se utiliza $ porque es un valor scalar
+print $animals[1];              # imprime &quot;llama&quot;
+</code></pre>
+
+<p>La variable especial $#nombrearray nos indica el índice del último elemento.</p>
+
+<pre><code>print $#mixed;                # imprime 2
+print $mixed[$#mixed];        # último elemento, imprime 1.23
+</code></pre>
+
+<p>Si utilizamos @mixed en contexto escalar, obtendremos el tamaño de nuestro Array:</p>
+
+<pre><code>$arrayLength = @mixed;
+print $arraylength;            #imprime 3
+</code></pre>
+
+<p>Para obtener múltiples valores de nuestro Array:</p>
+
+<pre><code>@animals[0,1];           # Devuelve (&quot;turtle&quot;, &quot;llama&quot;), @ porque devuelve un array;
+@animals[0..2];          # Devuelve (&quot;turtle&quot;, &quot;llama&quot;, &quot;cat&quot;);
+@animals[1..$#animals];  # Devuelve todo excepto el primer elemento
+</code></pre>
+
+<p><strong>Hash</strong>
+Un hash representa un conjunto de pares clave / valor. En realidad hash son tipo de Arrays, con la excepción de que el índice puede ser un número o una cadena. Están precedidos por el signo <strong>%</strong> de la siguiente manera:</p>
+
+<pre><code>my %fruta_color = (&quot;manzana&quot;, &quot;rojo&quot;, &quot;banana&quot;, &quot;amarillo&quot;);
+</code></pre>
+
+<p>Se pueden utilizar los espacios en blanco y el operador =&gt; para dejarlo mas claro:</p>
+
+<pre><code>my %fruta_color = (
+    manzana =&gt; &quot;red&quot;,
+    banana =&gt; &quot;amarillo&quot;,
+);
+</code></pre>
+
+<p>Para obtener un elemento del hash:</p>
+
+<pre><code>$fruta_color{&quot;manzana&quot;}       # Devuelve &quot;rojo&quot;
+</code></pre>
+
+<p>Podemos obtener una lista con las claves o valores con las funciones predefinidas keys() y values():</p>
+
+<pre><code>my @frutas = keys(%fruta_color);
+my colores = values(%fruta_color);
+</code></pre>
+
+<p><strong>Alcance de las variables</strong></p>
+
+<p>En la sección anterior declaramos:</p>
+
+<pre><code>my $animal = &quot;tortuga&quot;;
+</code></pre>
+
+<p>El modificador my no es necesario, también se puede usar:</p>
+
+<pre><code>$animal = &quot;tortuga&quot;;
+</code></pre>
+
+<p>Sin embargo, el uso anterior creará variables globales a través de su programa, que es mala práctica de programación. my crea variables con ámbito local. Las variables locales están disponibles en el ámbito del bloque (es decir, un grupo de estados rodeadas de llaves) en el que están definidos.</p>
+
+<pre><code>my $x = &quot;foo&quot;;
+my $condicion = 1;
+if ($condicion) {
+    my $y = &quot;bar&quot;;
+    print $x;           # imprime &quot;foo&quot;
+    print $y;           # imprime &quot;bar&quot;
+}
+print $x;               # imprime &quot;foo&quot;
+print $y;               # no imprime nada ; $y no está en ese scope
+</code></pre>
+
+<p><strong>Tabla de conversiones de tipos</strong>
+        <table ></p>
+
+<pre><code>            &lt;tr &gt;
+                 (1,2,3) [1,2,3] {a=&gt;x} (a=&gt;1) &quot;pepe&quot;
+            &lt;/tr&gt; 
+
+         &lt;tbody &gt;
+            &lt;tr &gt;
+                Arity
+</code></pre>
+
+<p><td >Lista
+</td>
+<td >Scalar
+</td>
+<td >Hash Ref.
+</td>
+<td >Hash
+</td>
+<td >Scalar
+</td>
+                </tr>
+                <tr >
+                    Elemento
+<td >$x[0]
+</td>
+<td >$x-&gt;[1]
+</td>
+<td >$x-&gt;{a}
+</td>
+<td >$x{a}
+</td>
+<td >$x
+</td><br />
+                </tr>
+                <tr >
+                    Lista
+<td >@x
+</td>
+<td >@{$x}
+</td>
+<td >%{$x}
+</td>
+<td >%x
+</td>
+<td >($x)
+</td>
+                </tr><br />
+                <tr >
+                    Hash
+<td >-
+</td>
+<td >-
+</td>
+<td >%{$x}
+</td>
+<td >%x
+</td>
+<td >{e=&gt; $x}
+</td>
+                </tr>
+                <tr >
+                    Ref.
+<td >\@x
+</td>
+<td >$x
+</td>
+<td >$x
+</td>
+<td >\%x
+</td>
+<td >\$x
+</td>
+                </tr>
+                <tr >
+                    Ref. Copia
+<td >[@x]
+</td>
+<td >[@{$x}]
+</td>
+<td >{%{$x}}
+</td>
+<td >{%x}
+</td>
+<td >[$x]
+</td>
+                </tr>
+             </tbody>
+        </table></p>
+
+<p><strong>Sintaxis básica</strong>
+<strong>if, elsif, else, unless</strong></p>
+
+<pre><code># La sintaxis es muy similar a otros lenguajes
+if ($var == 3) {
+  do_magic();
+}
+
+# unless se usa para un if negativo
+if (!$var) {
+  do_magic();
+}
+unless ($var) {
+  do_magic();
+}
+
+# Por supuesto también existe else
+if ($var) {
+    do_magic();
+} else {
+   do_another_magic();
+}
+# y se pueden anidar
+if ($var) {
+   do_magic();
+} elsif ($another_var) {
+   do_another_magic();
+} else {
+   do_something_else();
+}
+</code></pre>
+
+<p><strong>while, do while, until</strong></p>
+
+<pre><code>my $counter = 10;
+
+while ($counter &gt; 0) {
+   say $counter;
+   $counter -= 1;
+}
+
+do {
+  say $counter;
+  $counter += 1;
+} while ($counter &lt; 10);
+
+
+until( $counter &gt; 20 ){
+   say &quot;$counter&quot;;
+   $counter += 1;
+}
+
+say 'tadaaa';
+</code></pre>
+
+<p><strong>for, for each</strong></p>
+
+<pre><code># for ( init; condition; increment )
+for( $i = 1; $i &lt; 20; $i = $i + 1 ){
+    print &quot;value: $i\n&quot;;
+}
+
+my @list = (1, 20, 33, 45, 59);
+foreach $i (@list){
+    say '$i';
+}
+</code></pre>
+
+<p><strong>Funciones</strong>
+En realidad las funciones son subrutinas, quizás sea porque el lenguaje es viejo :P &hellip; la sintáxis es también bastante común.</p>
+
+<pre><code>sub name{
+   # blablabla
+   return $x;
+}
+</code></pre>
+
+<p>Para pasar parámetros se hace de esta forma</p>
+
+<pre><code>sub TestScalar{
+   my $x = @_;      #parámetro scalar 
+   # blabla
+}
+sub TestArray{
+   my @list = @_;   #parámetro array
+   # blabla
+}
+sub TestHash {
+   my (%hash) = @_; #parámetro hash
+   # blabla
+}
+
+# Si esperamos varios parámetros, se pueden acceder desde la variable @_ como un array
+sub TestScalar{
+   my $x = @_[0]; 
+   my $y = @_[1]; 
+   # blabla
+}
+</code></pre>
+
+<p>**Variables privadas **</p>
+
+<pre><code>sub TestPrivateVars{
+   my $var; # inaccesible fuera de TestPrivateVars()
+   $varx;   # accesible fuera de TestPrivateVars(), no hacerlo
+
+   my ($another, @my_array, %my_hash); # declaración múltiple privada
+}
+</code></pre>
+
+<p><strong>TDD con Perl</strong>
+<img src="http://www.aaroncohen.me/wp-content/uploads/2013/04/2011-04-28.tdd_-700x299.png" alt="TDD" />
+Para hacer TDD en necesario bajar un paquete de CPAN, Test::More.
+Acá un ejemplo de como correr un test, sobre una función específica.</p>
+
+<pre><code># En esta línea declaramos el uso de Test::More
+# y le decimos que solo se corre una vez
+use Test::More test =&gt; 1;
+
+# is() es la función que ejecuta el test, consta de 3 parámetros
+# 1ro función a ejecutar con sus respectivos parámetros
+# 2do resultado esperado
+# 3ro nombre descriptivo
+is(replace(&quot;hola&quot;), &quot;chau&quot;, &quot;Reemplazo de nombres&quot;);
+is(replace(&quot;chay&quot;), &quot;chau&quot;, &quot;Reemplazo de nombres&quot;);
+
+# Esta es la función que se ejecuta
+sub replace( my ($text) = @_;
+    $text =~ s/\bhola\b/chau/gi;
+    return $text;
+}
+
+#Con esta función declaramos el fin del testing
+done_testing()
+</code></pre>
+
+<p><em>Próximo post: Expresiones regulares en Perl. O sea: Perl.</em></p>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/xeBuz">
+                        <img class="avatar" src="http://localhost:1313/blog/images/avatar.png">
+                        <div>
+                            <span class="dark">xeBuz</span>
+                            <span>I&#39;m an enthusiastic gopher.</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2flocalhost%3a1313%2fblog%2fposts%2fcrazy-little-thing-called-perl%2f - Crazy%20little%20thing%20called%20Perl%3a%20Introducci%c3%b3n%20al%20lenguaje by @xeBuz"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/no-close-tabs-firefox-31/">Close Tab en Firefox 31<aside class="dates">May 14</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/newest/">Just another sample post<aside class="dates">Mar 29</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/middle/">Second Post<aside class="dates">Mar 28</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/oldest/">First Post<aside class="dates">Mar 27</aside></a>
+        </li>
+        
+   
+    
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/bundles-de-juegos-varias-opciones-disponibles/">Bundles de juegos, varias opciones disponibles<aside class="dates">Feb 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-selectores-y-traversing/">jQuery: Selectores y Traversing<aside class="dates">Feb 26</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-doge-such-plugin/">jQuery Doge - such plugin<aside class="dates">Dec 23</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/licencia-para-ir-al-cine/">Licencia para ir al cine<aside class="dates">Jul 1</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/">Barra de progreso de Arch Linux para Python<aside class="dates">Oct 21</aside></a>
+        </li>
+        
+   
+</ul>
+            <footer id="footer">
+    <p class="small">
+        © Copyright 2015 xeBuz
+    </p>
+</footer>
+        </section>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://localhost:1313/blog/js/main.js"></script>
+<script src="http://localhost:1313/blog/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+    </body>
+</html>

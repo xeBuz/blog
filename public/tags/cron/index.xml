@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cron on Personal Blog</title>
+    <link>http://localhost:1313/blog/tags/cron/</link>
+    <description>Recent content in Cron on Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 May 2012 16:48:07 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/cron/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cron, automatizar scripts como un titán</title>
+      <link>http://localhost:1313/blog/posts/cron-automatizar-scripts-como-un-titan/</link>
+      <pubDate>Tue, 22 May 2012 16:48:07 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/cron-automatizar-scripts-como-un-titan/</guid>
+      <description>&lt;p&gt;Hace un tiempo escribí sobre &lt;a href=&#34;http://blog.jesusroldan.com/2012/01/23/comando-at-automatizar-scripts-sin-usar-crontab/&#34;&gt;la utilización del comando &lt;strong&gt;at&lt;/strong&gt;&lt;/a&gt;, ahora le toca el turno a &lt;strong&gt;cron&lt;/strong&gt;. ¿Tron? No, cron. ¡Troz! (?).
+¿Qué es cron? Es un administrador de procesos que se ejecuta a un interválo de tiempo específico. Si vienen del Dark Side, sería el equivalente a las &lt;em&gt;Tareas Programadas&lt;/em&gt; de W.&lt;/p&gt;
+
+&lt;p&gt;La instalación es simple (está en los repos o incluso ya instalada, en toda distribución que se jacte de ser tal), en fín, en Arch podrían hacer:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pacman -S --needed cronie
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Al principio puede resultar extraña la configuracion de crontab, pero con el tiempo termina siendo más simple de lo que aparenta y se puede lograr cosas muy buenas de una forma muy sencilla.&lt;/p&gt;
+
+&lt;p&gt;Primero, tenemos 5 espacios para colocar los tiempos, que se dividen en minutos, horas, días del mes, meses y días de la semana; si alguno de estos datos no se rellena, se debe colocar un asterísco, que significa &amp;ldquo;todos&amp;rdquo; (para que sea entendible y hasta leíble). Después de eso se coloca la ruta completa del script que quieren que se ejecute en ese determinado lapso de tiempo.&lt;/p&gt;
+
+&lt;p&gt;En cualquier campo, asumiendo que ya entendimos los rangos de cada uno, podemos colocar tanto un valor específico, varios valores separados por coma o un rango separado por un guión. Por ejemplo:&lt;/p&gt;
+
+&lt;p&gt;[code lang=&amp;ldquo;bash&amp;rdquo;]
+#Se ejecuta a las 5 de la mañana, en punto
+0 5 * * * * /home/jesus/Scripts/tomar_cafe.sh&lt;/p&gt;
+
+&lt;p&gt;#Se ejecuta a las 5 y a las 17 horas, en punto
+0 5,17 * * * /home/jesus/Scripts/loquesea.sh&lt;/p&gt;
+
+&lt;p&gt;#Se ejecuta &lt;em&gt;desde&lt;/em&gt; las 5, cada hora &amp;ldquo;en punto&amp;rdquo; &lt;em&gt;hasta&lt;/em&gt; las 17hs.
+0 5-17 * * * /home/jesus/Scripts/latigo.sh&lt;/p&gt;
+
+&lt;p&gt;#Similar al anterior, pero ejecuta cada minuto entre las 5 y las 17
+#miren el primer valor, le estan dicieno &amp;ldquo;todos&amp;rdquo;
+* 5,17 * * * echo &amp;ldquo;trabajen mas duro&amp;rdquo;
+[/code]&lt;/p&gt;
+
+&lt;p&gt;¿Cómo ver las tareas pendientes en cron?
+&lt;strong&gt;crontab -l&lt;/strong&gt; lista las del usuario activo, para ver las de otro usuario, deben ejecutar crontab -u user -l&lt;/p&gt;
+
+&lt;p&gt;¿Cómo se modifican las tareas?
+Con &lt;strong&gt;crontab -e&lt;/strong&gt; se nos abre el archivo para modificar, con el editor que tengamos por defecto. Para cambiarlo debemos cambiar: &lt;em&gt;export EDITOR=&amp;ldquo;/usr/bin/nano&amp;rdquo;&lt;/em&gt;. Como por defecto se abre con vi, por favor no toquen el teclado si no saben como funciona y llamen a un mayor responsable a cargo.
+También pueden editar los archivos de otros usuarios, con **contab -u user -e **.&lt;/p&gt;
+
+&lt;p&gt;Ahora bien, aquí viene lo bueno jóven, algunos ejemplos:&lt;/p&gt;
+
+&lt;p&gt;[code lang=&amp;ldquo;bash&amp;rdquo;]
+#Corre cada minuto, siempre.
+* * * * * /home/xebuz/script/cada_minuto.sh&lt;/p&gt;
+
+&lt;p&gt;#Cada 5 minutos
+*/5 * * * * /home/xebuz/script/cada_cinco_minutos.sh&lt;/p&gt;
+
+&lt;p&gt;#Cada hora, de 8 a 18, de lunes a viernes
+00 08-18 * * 1-5 /home/xebuz/script/laboral.sh&lt;/p&gt;
+
+&lt;p&gt;#Una vez cada mes y medio
+* * */15 */1 * /home/xebuz/goldequilmes.sh&lt;/p&gt;
+
+&lt;p&gt;#Cada 4 años
+* * * */48 * /home/xebuz/script/mundial.sh
+[/code]&lt;/p&gt;
+
+&lt;p&gt;¿Muy engorroso para escribir? ¿Sos un lazy-sysadmin? Existen también algunos (llamémosle) &lt;a href=&#34;http://blog.jesusroldan.com/2011/09/02/tips-para-linux-alias-para-todos/&#34;&gt;alias&lt;/a&gt;, para agilizar la administración, són cómodos y reemplazan a todos los campos de tiempo, es decir, sólo deben poner el alias y despues el script.&lt;/p&gt;
+
+&lt;p&gt;[code lang=&amp;ldquo;bash&amp;rdquo;]
+#Tiempos específicos
+@hourly
+@daily
+@weekly
+@monthly
+#Este se ejecuta (como lo indica el nombre), cuando se resetea el equipo
+@reboot
+[/code]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Gracias, vuelva prontos.&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Comando at, automatizar scripts sin usar crontab</title>
+      <link>http://localhost:1313/blog/posts/comando-at-automatizar-scripts-sin-usar-crontab/</link>
+      <pubDate>Mon, 23 Jan 2012 16:34:56 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/comando-at-automatizar-scripts-sin-usar-crontab/</guid>
+      <description>&lt;p&gt;A diferencia de &lt;strong&gt;cron&lt;/strong&gt;, &lt;strong&gt;at&lt;/strong&gt; permite programar un comando/script para que sea ejecutado sólo una vez y no periodicamente.&lt;/p&gt;
+
+&lt;p&gt;Antes que nada deben instalarlo, no suele venir en las distribuciones por defecto. Usen pacman, aptitude, yum o lo que sea, tiene que estar en los repositorios.
+Una vez instalado, deben correr el servicio y por que no agregarlo en el /etc/rc.conf para que arranque solo. Si no hacen esto no van a correrse los scripts.&lt;/p&gt;
+
+&lt;p&gt;Para utilizarlo tenemos varias alternativas, la primera es &lt;em&gt;especificarle la fecha y hora&lt;/em&gt;, luego escribir el script (es importante que una vez que terminemos, presionemos Control+D):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;at 10:31am Jan 23 
+warning: commands will be executed using /bin/sh
+at&amp;gt; yaourt -Syu      
+at&amp;gt; (Control +D) &amp;lt;eot&amp;gt;
+job 5 at Mon Jan 23 10:31:00 2012
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;También acepta otros &lt;em&gt;formatos&lt;/em&gt; de fechas, por ejemplo, para ejecutar algo mañana a esta misma hora, sería&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;at now tomorrow
+at&amp;gt; blah blah
+at&amp;gt; meh
+at&amp;gt; (Control +D) &amp;lt;eot&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Para mostrar los comandos que están en cola de ejecución, basta con hacer &lt;strong&gt;at -l&lt;/strong&gt; o &lt;strong&gt;atq&lt;/strong&gt;, esto nos traerá un id, la fecha/hora en la que se ejecuta y el usuario que lo creó.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;at -l
+6   Mon Jan 23 11:41:00 2012 a xebuz
+7   Wed Jan 25 00:01:00 2012 a xebuz
+5   Mon Jan 23 10:31:00 2012 a xebuz
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Para cancelar o eliminar una tarea pendiente, se utiliza &lt;strong&gt;atrm&lt;/strong&gt; o &lt;strong&gt;at -r&lt;/strong&gt; o &lt;strong&gt;at -d&lt;/strong&gt; :P, seguida del id de la tarea (obtenida desde el comando anterior).
+Por último, si quieren ver todo el contenido del script, con &lt;strong&gt;at -c &lt;em&gt;id&lt;/em&gt;&lt;/strong&gt; lo obtienen completo.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Descargar La Venganza Será Terrible, via Bash</title>
+      <link>http://localhost:1313/blog/posts/descargar-la-venganza-sera-terrible-via-bash/</link>
+      <pubDate>Thu, 21 Jul 2011 02:31:17 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/descargar-la-venganza-sera-terrible-via-bash/</guid>
+      <description>
+
+&lt;p&gt;Este es un pequeño script que descarga (via wget) el programa La Venganza Sera Terrible de &lt;a href=&#34;http://www.alejandrodolina.com.ar/&#34;&gt;Alejando Dolina&lt;/a&gt;; utilizando los archivos que genera a diario el sitio &lt;a href=&#34;http://venganzasdelpasado.com.ar/&#34;&gt;Venganzas del Pasado&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[sourcecode language=&amp;ldquo;bash&amp;rdquo;]
+#!/bin/bash&lt;/p&gt;
+
+&lt;h1 id=&#34;medio-rustico-pero-si-lo-ejecuto-hoy:e7fb311ab5e08ba834ea459d13c1892b&#34;&gt;Medio rustico, pero si lo ejecuto hoy..&lt;/h1&gt;
+
+&lt;h1 id=&#34;necesito-bajar-el-programa-de-anoche:e7fb311ab5e08ba834ea459d13c1892b&#34;&gt;necesito bajar el programa de anoche&lt;/h1&gt;
+
+&lt;p&gt;day=&lt;code&gt;date +%d &#39;--date=-1 day&#39;&lt;/code&gt;
+month=&lt;code&gt;date +%m &#39;--date=-1 day&#39;&lt;/code&gt;
+year=&lt;code&gt;date +%Y &#39;--date=-1 day&#39;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;directorio-en-donde-se-guarda-el-archivo:e7fb311ab5e08ba834ea459d13c1892b&#34;&gt;Directorio en donde se guarda el archivo&lt;/h1&gt;
+
+&lt;p&gt;folder=&amp;ldquo;$HOME/Dolina/&amp;rdquo;$year&amp;rdquo;/&amp;ldquo;$month&amp;rdquo;/&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;#Si lo ejecuto un lunes o un domingo, no hay nada para bajar
+if [ &lt;code&gt;date +%u&lt;/code&gt; = 1 ] || [ &lt;code&gt;date +%u&lt;/code&gt; = 7 ]; then
+echo &amp;ldquo;Anoche no hubo programa&amp;rdquo;
+else
+wget -q -w 600 -P $folder &amp;ldquo;&lt;a href=&#34;http://venganzasdelpasado.com.ar/&amp;quot;$year&amp;quot;/lavenganza_&amp;quot;$year&amp;quot;-&amp;quot;$month&amp;quot;-&amp;quot;$day&amp;quot;.mp3&amp;quot;&#34;&gt;http://venganzasdelpasado.com.ar/&amp;quot;$year&amp;quot;/lavenganza_&amp;quot;$year&amp;quot;-&amp;quot;$month&amp;quot;-&amp;quot;$day&amp;quot;.mp3&amp;quot;&lt;/a&gt;
+fi
+[/sourcecode]&lt;/p&gt;
+
+&lt;p&gt;Yo lo tengo corriendo con crontab, a las 5 madrugada, cosa de que al levantarme ya lo haya bajado :)
+Así como esta deberia funcionar solo en Linux, estaba haciendo algo con wxWidgets para jugar un rato con eso, que deberia ser multiplataforma, despues (o sea, cuando funcione) lo subo.&lt;/p&gt;
+
+&lt;p&gt;Disponible en &lt;a href=&#34;https://gist.github.com/1079511&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

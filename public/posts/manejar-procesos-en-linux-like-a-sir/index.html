@@ -1,0 +1,183 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="xeBuz">
+		<meta name="description" content="Personal Website">
+		<meta name="generator" content="Hugo 0.14" />
+		<title>Manejar procesos en Linux, Like a Sir &middot; Personal Blog</title>
+		<link rel="shortcut icon" href="http://localhost:1313/blog/images/favicon.ico">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/style.css">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/highlight.css">
+		<link href="http://localhost:1313/blog/index.xml" rel="alternate" type="application/rss+xml" title="Personal Blog" />
+	</head>
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='http://localhost:1313/blog/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+		<a href='http://localhost:1313/blog/about'>About</a>
+	
+
+	
+	<a class="cta" href="http://localhost:1313/blog/index.xml">Subscribe</a>
+	
+</nav>
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>Manejar procesos en Linux, Like a Sir</h1>
+                    <h2 class="headline">December 14, 2011</h2>
+                </header>
+                <section id="post-body">
+                    <p>Particularmente me gusta tener alguna de las aplicaciones listo corriendo en la tty1 y cuando algo falla, porque siempre algo puede malir sal, control + alt +F1 viene como piña para ver el problema rápido.
+Me pasó de tener problemas en ambientes Windows, y es una de las cosas que mas se extrañan; el administrador de tareas no hace todo lo que debería (como el de Gnome o KDE, si algo falla en el X o te quedás sin recursos no los vas a poder usar)</p>
+
+<p><strong>ps y kill</strong>
+Estos comandos son los clásicos, por excelencia.
+El uso estandar, cavernícola y mas difundido es <em>ps aux</em>, tambien <em>ps aux | grep <app></em> para filtrar, y después un <em>kill -9 UID</em> obtenido con el comando anterior, pero eso no es lo que un Sir haría.</p>
+
+<p><strong>pgrep y pkill</strong>
+Tenemos pgrep funcionaría como pidof, pero con mejor parametrización e información; mientras que pkill sirve para mandar señales, si, como kill, pero permite expersiones regulares y algunos filtros muy interesantes.
+Algunos ejemplos: <em>pgrep -u firebird -l</em> mostraría todos los nombres de los procesos que esta usando el usuario firebird, <em>pkill -9 firefox</em> es mucho más cómodo que el ps y después el kill.. dirán &ldquo;¡Dejate de joder! ¡es igual que killall!&rdquo; pero no, pueden potenciarlo más, digamos, matar la tty0 o mejor aún una sesión ssh basta correr con <em>pkill -9 -t pts/5</em>.</p>
+
+<p><strong>top</strong>
+Visualizador de procesos. Si llegaste hasta acá imagino que ya lo usaste y sabés lo básico, les tengo fe. Sólo para el registro, me gusta activar las opciones B, 1 y z.
+De nuevo, es lo más usado, lo mas enseñado y lo mas clásico. Siempre hay mejores opciones.</p>
+
+<p><strong>htop</strong>
+Es como top, pero con esteroides. Mejores shortcuts, colores, permite usar el mouse, mejor navegabilidad, filtros, ordenación, threads y otras chucherías.
+Las funcionalidades mas uso: &lt; para ordenar, F9 para matar apps, F3 para buscat, t para treeview,
+Ya que estamos, la H es de Hisham, el nombre del desarrollador.</p>
+
+<p><strong>atop</strong>
+Es una de esas aplicaciones que está buena para abrirlas cuando alguien no-linuxero se acerca a tu PC, así piensa que te conectas a la Matrix desde el teclado y le vas pasando órdenes por ósmosis.
+Sería una versión mas detallada de las dos aplicaciones anteriores, pero menos interactiva. Les daría algun tip, pero lo uso de poser nada más :P
+&lt;!&ndash; more &ndash;&gt;
+Aca una imágen comparativa, a la izquierda top, a la dercha htop, abajo atop.</p>
+
+<p>[caption id=&ldquo;attachment_541&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;695&rdquo; caption=&ldquo;Comparativa entre Top, Htop y Atop&rdquo;]<a href="http://blog.jesusroldan.com/wp-content/uploads/2011/12/top.png"><img src="http://blog.jesusroldan.com/wp-content/uploads/2011/12/top-1024x538.png" alt="Comparativa entre Top, Htop y Atop" /></a>[/caption]</p>
+
+<p>Espero que les sirva, dígale no al ps blah grep blah kill blah. Iba a escribir también sobre prioridades y estados, pero lo hago otro día, post largo y denso = post que no se lee.</p>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/xeBuz">
+                        <img class="avatar" src="http://localhost:1313/blog/images/avatar.png">
+                        <div>
+                            <span class="dark">xeBuz</span>
+                            <span>I&#39;m an enthusiastic gopher.</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2flocalhost%3a1313%2fblog%2fposts%2fmanejar-procesos-en-linux-like-a-sir%2f - Manejar%20procesos%20en%20Linux%2c%20Like%20a%20Sir by @xeBuz"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/no-close-tabs-firefox-31/">Close Tab en Firefox 31<aside class="dates">May 14</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/newest/">Just another sample post<aside class="dates">Mar 29</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/middle/">Second Post<aside class="dates">Mar 28</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/oldest/">First Post<aside class="dates">Mar 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/crazy-little-thing-called-perl/">Crazy little thing called Perl: Introducción al lenguaje<aside class="dates">Mar 5</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/bundles-de-juegos-varias-opciones-disponibles/">Bundles de juegos, varias opciones disponibles<aside class="dates">Feb 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-selectores-y-traversing/">jQuery: Selectores y Traversing<aside class="dates">Feb 26</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-doge-such-plugin/">jQuery Doge - such plugin<aside class="dates">Dec 23</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/licencia-para-ir-al-cine/">Licencia para ir al cine<aside class="dates">Jul 1</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/">Barra de progreso de Arch Linux para Python<aside class="dates">Oct 21</aside></a>
+        </li>
+        
+   
+</ul>
+            <footer id="footer">
+    <p class="small">
+        © Copyright 2015 xeBuz
+    </p>
+</footer>
+        </section>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://localhost:1313/blog/js/main.js"></script>
+<script src="http://localhost:1313/blog/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+    </body>
+</html>

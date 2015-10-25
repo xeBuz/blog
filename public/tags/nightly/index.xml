@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nightly on Personal Blog</title>
+    <link>http://xebuz.github.io/blog/tags/nightly/</link>
+    <description>Recent content in Nightly on Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 May 2014 13:34:35 +0000</lastBuildDate>
+    <atom:link href="http://xebuz.github.io/blog/tags/nightly/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Close Tab en Firefox 31</title>
+      <link>http://xebuz.github.io/blog/posts/no-close-tabs-firefox-31/</link>
+      <pubDate>Wed, 14 May 2014 13:34:35 +0000</pubDate>
+      
+      <guid>http://xebuz.github.io/blog/posts/no-close-tabs-firefox-31/</guid>
+      <description>&lt;p&gt;Practicamente desde que uso Mozilla Firefox le quito el ícono de cerrar a las solapas, me ahorra espacio y minimiza el riesgo de cerrar por error alguna.
+En versiones anteriores a Firefox 31, desde &lt;strong&gt;about:config&lt;/strong&gt; se podía editar desde la siguiente opción:
+&lt;code&gt;browser.tabs.closeButtons = 0&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Pero debido a cambios en las tabs, esto deja de tener validez, y a partir de la versión 31 la configuración UI se realiza desde:
+&lt;code&gt;browser.uiCustomization.state&lt;/code&gt;
+y no es un solo campo, sino que nos da un JSON mucho mas complejo
+[spoiler title=&amp;ldquo;Configuración original - JSON&amp;rdquo; style=&amp;ldquo;fancy&amp;rdquo; icon=&amp;ldquo;chevron&amp;rdquo;]&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    &amp;quot;placements&amp;quot;: {
+        &amp;quot;PanelUI-contents&amp;quot;: [&amp;quot;edit-controls&amp;quot;, &amp;quot;zoom-controls&amp;quot;, &amp;quot;new-window-button&amp;quot;, &amp;quot;privatebrowsing-button&amp;quot;, &amp;quot;save-page-button&amp;quot;, &amp;quot;print-button&amp;quot;, &amp;quot;history-panelmenu&amp;quot;, &amp;quot;fullscreen-button&amp;quot;, &amp;quot;find-button&amp;quot;, &amp;quot;preferences-button&amp;quot;, &amp;quot;add-ons-button&amp;quot;, &amp;quot;ecb-button&amp;quot;, &amp;quot;abp-toolbarbutton&amp;quot;, &amp;quot;tb-venkman-open&amp;quot;, &amp;quot;measureit_toolbar_button&amp;quot;, &amp;quot;sessionmanager-undo&amp;quot;, &amp;quot;sessionmanager-toolbar&amp;quot;],
+        &amp;quot;GiT-addon-bar&amp;quot;: [&amp;quot;GiT-addon-bar-toggle-button&amp;quot;, &amp;quot;epubreader-catalog-button&amp;quot;, &amp;quot;useragentswitcher-button&amp;quot;, &amp;quot;colorzilla-navbar-button&amp;quot;, &amp;quot;awesome-screenshot-toolbarbutton&amp;quot;, &amp;quot;RIL_toolbar_button&amp;quot;, &amp;quot;feed-button&amp;quot;, &amp;quot;customizableui-special-spring51&amp;quot;, &amp;quot;widget:jid1-n85lxPv1NAWVTQ@jetpack-freeMemory&amp;quot;, &amp;quot;FoxyScrobblerToolbarButton&amp;quot;, &amp;quot;GiT-status-bar-container&amp;quot;],
+        &amp;quot;web-developer-toolbar&amp;quot;: [&amp;quot;web-developer-disable-toolbar&amp;quot;, &amp;quot;web-developer-cookies-toolbar&amp;quot;, &amp;quot;web-developer-css-toolbar&amp;quot;, &amp;quot;web-developer-forms-toolbar&amp;quot;, &amp;quot;web-developer-images-toolbar&amp;quot;, &amp;quot;web-developer-information-toolbar&amp;quot;, &amp;quot;web-developer-miscellaneous-toolbar&amp;quot;, &amp;quot;web-developer-outline-toolbar&amp;quot;, &amp;quot;web-developer-resize-toolbar&amp;quot;, &amp;quot;web-developer-tools-toolbar&amp;quot;, &amp;quot;web-developer-view-source-toolbar&amp;quot;, &amp;quot;web-developer-options-toolbar&amp;quot;, &amp;quot;customizableui-special-spring1&amp;quot;, &amp;quot;web-developer-render-mode-statusbar&amp;quot;, &amp;quot;web-developer-css-statusbar&amp;quot;, &amp;quot;web-developer-javascript-statusbar&amp;quot;],
+        &amp;quot;addon-bar&amp;quot;: [&amp;quot;addonbar-closebutton&amp;quot;, &amp;quot;status-bar&amp;quot;],
+        &amp;quot;PersonalToolbar&amp;quot;: [&amp;quot;personal-bookmarks&amp;quot;],
+        &amp;quot;nav-bar&amp;quot;: [&amp;quot;urlbar-container&amp;quot;, &amp;quot;search-container&amp;quot;, &amp;quot;webrtc-status-button&amp;quot;, &amp;quot;downloads-button&amp;quot;, &amp;quot;igc-toolbar-button&amp;quot;, &amp;quot;social-share-button&amp;quot;, &amp;quot;developer-button&amp;quot;, &amp;quot;widget:jid1-4P0kohSJxU1qGg@jetpack-browserAction0&amp;quot;],
+        &amp;quot;TabsToolbar&amp;quot;: [&amp;quot;tabbrowser-tabs&amp;quot;, &amp;quot;new-tab-button&amp;quot;, &amp;quot;tabview-button&amp;quot;, &amp;quot;alltabs-button&amp;quot;, &amp;quot;tabs-closebutton&amp;quot;],
+        &amp;quot;toolbar-menubar&amp;quot;: [&amp;quot;menubar-items&amp;quot;]
+    },
+    &amp;quot;seen&amp;quot;: [&amp;quot;abp-toolbarbutton&amp;quot;, &amp;quot;GiT-special-spring&amp;quot;, &amp;quot;GiT-special-spacer&amp;quot;, &amp;quot;GiT-special-separator&amp;quot;],
+    &amp;quot;dirtyAreaCache&amp;quot;: [&amp;quot;PersonalToolbar&amp;quot;, &amp;quot;nav-bar&amp;quot;, &amp;quot;TabsToolbar&amp;quot;, &amp;quot;toolbar-menubar&amp;quot;, &amp;quot;PanelUI-contents&amp;quot;, &amp;quot;web-developer-toolbar&amp;quot;, &amp;quot;addon-bar&amp;quot;, &amp;quot;GiT-addon-bar&amp;quot;],
+    &amp;quot;newElementCount&amp;quot;: 59
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;[/spoiler]&lt;/p&gt;
+
+&lt;p&gt;Para dejar de tener el botón, hay que quitar &lt;strong&gt;&amp;ldquo;tabs-closebutton&amp;rdquo;&lt;/strong&gt;, se aplican los cambios sin reiniciar.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

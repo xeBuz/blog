@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Audiolibro on title</title>
-    <link>jesusroldan.com/categories/audiolibro/</link>
-    <description>Recent content in Audiolibro on title</description>
+    <title>Audiolibro on Personal Blog</title>
+    <link>http://localhost:1313/blog/categories/audiolibro/</link>
+    <description>Recent content in Audiolibro on Personal Blog</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
     <lastBuildDate>Tue, 24 Apr 2012 15:54:25 +0000</lastBuildDate>
-    <atom:link href="jesusroldan.com/categories/audiolibro/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/categories/audiolibro/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Cuentos de Terror narrados por Alberto Laiseca</title>
-      <link>/jesusroldan.com/posts/cuentos-de-terror-narrados-por-alberto-laiseca/</link>
+      <link>http://localhost:1313/blog/posts/cuentos-de-terror-narrados-por-alberto-laiseca/</link>
       <pubDate>Tue, 24 Apr 2012 15:54:25 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/cuentos-de-terror-narrados-por-alberto-laiseca/</guid>
+      <guid>http://localhost:1313/blog/posts/cuentos-de-terror-narrados-por-alberto-laiseca/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/04/Laiseca2.jpg&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/04/Laiseca2.jpg&#34; alt=&#34;Alberto Laiseca&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -88,10 +89,10 @@
     
     <item>
       <title>Gnome2 en ArchLinux</title>
-      <link>/jesusroldan.com/posts/gnome2-en-archlinux/</link>
+      <link>http://localhost:1313/blog/posts/gnome2-en-archlinux/</link>
       <pubDate>Wed, 14 Sep 2011 04:41:31 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/gnome2-en-archlinux/</guid>
+      <guid>http://localhost:1313/blog/posts/gnome2-en-archlinux/</guid>
       <description>
 
 &lt;p&gt;Como hay mucho usuarios descontentos con el resultado de Gnome 3, incluído Linus Torvals, era evidente que iban a existir formas de volver a la versión anterior, y Arch claro que la permite, y eso que fué de las primeras distros en cambiar :P

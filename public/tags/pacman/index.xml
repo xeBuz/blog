@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pacman on Personal Blog</title>
+    <link>http://localhost:1313/blog/tags/pacman/</link>
+    <description>Recent content in Pacman on Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 21 Oct 2012 20:49:21 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/pacman/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Barra de progreso de Arch Linux para Python</title>
+      <link>http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/</link>
+      <pubDate>Sun, 21 Oct 2012 20:49:21 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/</guid>
+      <description>&lt;p&gt;Hace unos días me puse a &lt;em&gt;portar&lt;/em&gt; la barra de progreso que tiene el sistema de paquetes de &lt;a href=&#34;http://blog.jesusroldan.com/2011/12/28/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/&#34;&gt;&lt;strong&gt;Arch Linux&lt;/strong&gt;&lt;/a&gt; (activando la opción &lt;strong&gt;ILoveCandy&lt;/strong&gt;) a Python &lt;del&gt;3&lt;/del&gt; 3.X y 2.7. De momento está en fase de prueba, pero es dentro de todo funcional, prometo ir actualizándola cuando pueda.&lt;/p&gt;
+
+&lt;p&gt;Para poder instalarlo, pueden bajarse los fuentes &lt;a href=&#34;https://github.com/xeBuz/pacman-progressbar&#34;&gt;desde &lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt; (es licencia Beer-ware, una adaptación de BSD) o mejor aún directamente desde PyPi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo pip install pacmanprogressbar
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;La utilización es la siguiente (proximamente voy a hacer que se pueda iterar directamente):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#!/usr/bin/env python
+import time
+from pacmanprogressbar import Pacman
+
+if __name__ == &amp;quot;__main__&amp;quot;:
+    p = Pacman(end=100)
+
+    for x in range(p.len):
+        p.update()
+        time.sleep(.2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Una vez instanciada la clase, tiene dos métodos públicos:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;update([value])&lt;/strong&gt;, actualiza el progreso sumándole el valor del parámetro, por defecto suma 1.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;progress(value)&lt;/strong&gt;, en vez de sumarizar, se le pasa directamente el valor del progreso.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;La salida en consola sería más o menos como esta:
+&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/10/animacion.gif&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/10/animacion.gif&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tips Linuxeros: Optimizar pacman y la instalación de aplicaciones en Arch Linux</title>
+      <link>http://localhost:1313/blog/posts/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/</link>
+      <pubDate>Wed, 28 Dec 2011 18:19:48 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/</guid>
+      <description>&lt;p&gt;La idea del post es hacer un compilado de tips y aplicaciones que puedan llegar a servir para mejorar &lt;a href=&#34;https://wiki.archlinux.org/index.php/Pacman&#34;&gt;pacman&lt;/a&gt; y la instalación de aplicaciones en Arch Linux. Si, escribí lo mismo que en el título pero con más palabras.
+Para el usuario que venga de otras distros, como Ubuntu, le puede resultar díficil no tener esa &amp;lsquo;cosa&amp;rsquo; llamada Centro de Software, pero con un poco de maña se puede potenciar muchisimo la instalación (además no van a escuchar nunca más de los PPA).&lt;/p&gt;
+
+&lt;p&gt;Vamos suponiendo que saben como usar &lt;strong&gt;pacman&lt;/strong&gt;. Básicamente tenemos:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;pacman -Ss wally&lt;/em&gt; para buscar aplicaciones&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;_pacman -S chucknorri_s para instalar&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;pacman -Syu&lt;/em&gt; para actualizar&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;pacman -Rnd cristina&lt;/em&gt; para eliminar algo&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[note color=&amp;ldquo;#cfcfcf&amp;rdquo;]Antes de empezar, la configuración está en &lt;strong&gt;/etc/pacman.conf **&amp;hellip; y lo primero que tienen que agregar es una línea que diga **ILoveCandy&lt;/strong&gt;.
+Si ya la agregaron, pueden seguir con el post, si no lo hacen no merecen usar Arch Linux.[/note]&lt;/p&gt;
+
+&lt;p&gt;Optimizar el cache y la base de datos, tienen que correr &lt;strong&gt;sudo pacman -Sc &amp;amp;&amp;amp; sudo pacman-optimize&lt;/strong&gt;, pueden ponerlo en cron, es más fácil que acordarselo; &lt;strong&gt;yapos&lt;/strong&gt; también suele ser una buena opción para esto.
+Instalen &lt;strong&gt;pacman-color&lt;/strong&gt;, es eye-candy nunca viene mal. Eso si, deberían crear una &lt;a href=&#34;http://blog.jesusroldan.com/2011/09/02/tips-para-linux-alias-para-todos/&#34;&gt;alias&lt;/a&gt; pacman=&amp;lsquo;pacman-color&amp;rsquo; sino creanme que nunca lo van a usar.
+&lt;strong&gt;&lt;a href=&#34;https://wiki.archlinux.org/index.php/Reflector&#34;&gt;Reflector&lt;/a&gt;&lt;/strong&gt; me lo recomendaron en un &lt;a href=&#34;http://blog.jesusroldan.com/2011/09/06/lentitud-en-la-instalacion-de-paquetes-con-pacman/&#34;&gt;post&lt;/a&gt; y está muy bueno, mantiene actualizado el mirrorlist
+Se puede optimizar un poco el tamaño de los paquetes a descargar con &lt;strong&gt;xdelta3&lt;/strong&gt; (y activando UseDelta en la configuración de pacman), no es una locura, pero algo se logra.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Ni hablar de que tienen que instalar &lt;strong&gt;yaourt&lt;/strong&gt;, es básico en cualquier Arch Linux, la forma más fácil es agregar el repositorio, actualizar e instalarlo con pacman.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[archlinuxfr]
+Server = http://repo.archlinux.fr/$arch
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;¿Qué hace? Funciona igual que pacman, pero también permite instalar paquetes del &lt;a href=&#34;https://aur.archlinux.org/&#34;&gt;AUR&lt;/a&gt;, que es basicamente la fucking gloria.&lt;/p&gt;
+
+&lt;p&gt;Si se sienten como princesas del bosque de las hadas, también pueden probar algun GUI, de los que usé, creo que &lt;strong&gt;Wakka&lt;/strong&gt; - I see what you did there! - es el mejor (sin entrar en la categoría KDE que no la probé). Rápido y simple. Lo que además tiene de bueno es que las acciones que hacemos muestran el comando, entonces, con el tiempo, podemos ir perdiendo el miedo a la consola&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Gnome2 en ArchLinux</title>
+      <link>http://localhost:1313/blog/posts/gnome2-en-archlinux/</link>
+      <pubDate>Wed, 14 Sep 2011 04:41:31 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/gnome2-en-archlinux/</guid>
+      <description>
+
+&lt;p&gt;Como hay mucho usuarios descontentos con el resultado de Gnome 3, incluído Linus Torvals, era evidente que iban a existir formas de volver a la versión anterior, y Arch claro que la permite, y eso que fué de las primeras distros en cambiar :P
+Buscando encontré dos, la primera es un fork, la segunda un downgrade directo; me quedo con la primera. Si no se pudieron acostumbrar al cambio, si gnome-shell ya les dió una úlcera y no pueden esperar la versión 3.2, quizás alguna de estas opciones les sea útil.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Utilizar un fork: Mate&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Primero, tiene que editar el archivo &lt;strong&gt;/etc/pacman.conf&lt;/strong&gt;, agregando estas lineas al principio de la lista de repositorios
+[code]
+[mate]&lt;/p&gt;
+
+&lt;h1 id=&#34;contains-official-mate-desktop-packages-gnome2-fork:833a75177de8e75cddde15e0b36cb15f&#34;&gt;Contains official mate desktop packages (gnome2 fork)&lt;/h1&gt;
+
+&lt;p&gt;Server = &lt;a href=&#34;http://germ.winpe.com/archlinux/mate/$arch&#34;&gt;http://germ.winpe.com/archlinux/mate/$arch&lt;/a&gt;
+[/code]&lt;/p&gt;
+
+&lt;p&gt;Para instalar Mate, tiene que correr:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; pacman -Syyu &amp;amp;&amp;amp; pacman -Sf mate-desktop-environment
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;En mi caso aparecieron varios conflictos, ponga si a todo, no tuve problemas con ninguno&lt;/p&gt;
+
+&lt;p&gt;Despues de eso, tiene varios paquetes mas para instalar, todos opcionales pero suman: mate-extract mate-applets mate-terminal mate-image-viewer mate-themes. Así mismo, deberían instalar temas o cualquier eyecandy que necesiten para Gnome 2 que no sea necesario en el 3.&lt;/p&gt;
+
+&lt;p&gt;[caption id=&amp;ldquo;attachment_318&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo; caption=&amp;ldquo;Gnome 3.0.2, antes del update&amp;rdquo;]&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-300x225.png&#34; alt=&#34;Gnome 3&#34; /&gt;&lt;/a&gt;[/caption] [caption id=&amp;ldquo;attachment_320&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo; caption=&amp;ldquo;Una vez instalado Mate&amp;rdquo;]&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-1.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-1-300x225.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;[/caption] [caption id=&amp;ldquo;attachment_322&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo; caption=&amp;ldquo;Mate, despúes de instalar themes y modificar la apariencia.&amp;rdquo;]&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-2.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-2-300x225.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;[/caption]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Utilizar una versión antigua de paquetes&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;En este caso, lo que vamos a hacer es cambiar el repositorio en donde se encuentra Gnome, utilizar uno que no haya sido actualizado a Gnome3.x e instalar en cambio Gnome2.32.1, supongo que es la última versión estable antes del cambio.&lt;/p&gt;
+
+&lt;p&gt;También tenemos que editar el archivo &lt;strong&gt;/etc/pacman.conf&lt;/strong&gt;, pero en lugar de agregar un repositorio cambiamos el extra
+[code]
+[extra]&lt;/p&gt;
+
+&lt;h1 id=&#34;incluir-etc-pacman-d-mirrorlist:833a75177de8e75cddde15e0b36cb15f&#34;&gt;Incluir = / etc / pacman.d / mirrorlist&lt;/h1&gt;
+
+&lt;p&gt;Server = &lt;a href=&#34;http://arm.konnichi.com/2011/04/30/extra/os/$arch&#34;&gt;http://arm.konnichi.com/2011/04/30/extra/os/$arch&lt;/a&gt;
+[/code]&lt;/p&gt;
+
+&lt;p&gt;Después corren esta aberración:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; pacman -Syyfuu -nodep
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Cuando terminen (básicamente lo que hace es actualizar los repositorios, forzar el update, y en caso de que sea necesario realizar un downgrade de lo que haya, va a instalar todos los paquetes de Gnome que encuentre, son varios megas), en /etc/pacman.conf dejen el repositorio extra como corresponde y además coloquen esto para que no actualice gnome ni gnome-extra (asi no lo pisa con la versión 3)
+[code]
+IgnoreGroup = gnome gnome-extra
+[/code]
+Les debo screenshots de esta prueba, ya borré el snapshot y son muchos megas para descargar como para hacerlo de nuevo sólo para las imágenes :(&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Ambas pruebas fueron realizadas con una &lt;a href=&#34;http://blog.jesusroldan.com/2011/08/31/virtualboxes-org-descarga-de-maquinas-virtuales/&#34;&gt;máquina virtual&lt;/a&gt;  con una instalación estandar, con gnome y gnome-extra instalado por defecto, es decir, en ambos casos hice un downgrade de Gnome 3, que me pareció el caso en el que podía detectar mas problemas.
+&lt;strong&gt;De las dos opciones, les recomiendo la primera, la segunda da bastantes dolores de cabeza.&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lentitud en la instalacion de paquetes con pacman</title>
+      <link>http://localhost:1313/blog/posts/lentitud-en-la-instalacion-de-paquetes-con-pacman/</link>
+      <pubDate>Tue, 06 Sep 2011 14:12:54 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/lentitud-en-la-instalacion-de-paquetes-con-pacman/</guid>
+      <description>&lt;p&gt;Desde hace unos días noto que al actualizar o instalar nuevos paquetes con pacman o yaourt se toma una eternidad en actualizar.
+En un primer momento pensé que era problema de la conexión, pero me pasaba en casa y en el laburo, con dos ISP diferentes, entonces el problema pasaba por otro lado.&lt;/p&gt;
+
+&lt;p&gt;Buscando en el foro encontré a alguien que le pasaba algo similar, la solución surgió corriendo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; url=$(pacman -Sp linux | tee /dev/stderr) &amp;amp;&amp;amp; curl --verbose &amp;quot;${url}&amp;quot; -o /dev/null
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Se puede ver que trata de conectarse a mirror.kernel.org, que esta caído: &lt;a href=&#34;http://www.archlinux.org/mirrors/status/&#34;&gt;http://www.archlinux.org/mirrors/status/&lt;/a&gt;. Basta con editar el archivo /etc/pacman.d/mirrorlist&lt;/p&gt;
+
+&lt;p&gt;Después deben correr pacman -Syy para actualizar los repositorios.&lt;/p&gt;
+
+&lt;p&gt;En caso de que deseen ver los más rápidos, pueden seguir los pasos de la wiki, correr rankmirror la verdad que ayuda mucho en la velocidad &lt;a href=&#34;https://wiki.archlinux.org/index.php/Mirrors#List_by_speed&#34;&gt;https://wiki.archlinux.org/index.php/Mirrors#List_by_speed&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

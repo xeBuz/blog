@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gnome on Personal Blog</title>
+    <link>http://localhost:1313/blog/tags/gnome/</link>
+    <description>Recent content in Gnome on Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Apr 2012 20:58:48 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/gnome/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Solucionar problemas después de actualizar Gnome 3.4.1</title>
+      <link>http://localhost:1313/blog/posts/solucionar-problemas-despues-de-actualizar-gnome-3-4-1/</link>
+      <pubDate>Mon, 23 Apr 2012 20:58:48 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/solucionar-problemas-despues-de-actualizar-gnome-3-4-1/</guid>
+      <description>&lt;p&gt;Hoy, como para que el lunes arranque con todo, actualicé Arch y después no pude ingresar más la sesión de Gnome3. Aparecía la PC con carita triste y me decía que iba a desactivar las extensiones, pero no soluciona nada. Y cómo se actualizaron muchas drivers, el kernel y gnome no sabía bien donde estaba el problema.&lt;/p&gt;
+
+&lt;p&gt;Al parecer la nueva versión de Gnome (3.4.1) tiene como dependencia networkmanager y si no lo encuentra explota por todos lados, pueden verificar el archivo /var/logs/messages.log, deberían tener algo así:
+[spoiler title=&amp;ldquo;messages.log&amp;rdquo; open=&amp;ldquo;0&amp;rdquo; style=&amp;ldquo;1&amp;rdquo;]
+&lt;code&gt;[...]
+Apr 23 17:26:56 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager/Presence interface=org.freedesktop.DBus.Properties method=GetAll
+Apr 23 17:26:56 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager/Presence interface=org.freedesktop.DBus.Properties method=GetAll
+Apr 23 17:26:59 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/freedesktop/DBus interface=org.freedesktop.DBus method=NameOwnerChanged
+Apr 23 17:26:59 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/freedesktop/DBus interface=org.freedesktop.DBus method=NameOwnerChanged
+Apr 23 17:28:24 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager interface=org.gnome.SessionManager method=IsInhibited
+Apr 23 17:28:24 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager interface=org.gnome.SessionManager method=IsInhibited
+Apr 23 17:29:24 localhost dbus[661]: [system] Activating service name=&#39;org.freedesktop.NetworkManager&#39; (using servicehelper)
+Apr 23 17:29:24 localhost dbus[661]: [system] Activated service &#39;org.freedesktop.NetworkManager&#39; failed: Launch helper exited with unknown return code 1
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): Searching for 4194307 in 4194307,4194308
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): Watch 1 fired, idle time = 600053
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): GsmPresence: setting idle: 1
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): Using ConsoleKit for session tracking
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): Updating ConsoleKit idle status: 1
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager interface=org.gnome.SessionManager method=IsInhibited
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager interface=org.gnome.SessionManager method=IsInhibited
+[...]&lt;/code&gt;[/spoiler]&lt;/p&gt;
+
+&lt;p&gt;Si quieren verificar si el problema se da por esto, pueden correr el siguiente comando (Control + Alt + F1) e intentar entrar a la sesión (Control + Alt + F7/F8):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo /etc/rc.d/networkmanager start
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Para hacer el cambio permanente, agreguen &lt;strong&gt;networkmanager&lt;/strong&gt; a los DAEMONS del /etc.rc.conf&lt;/p&gt;
+
+&lt;p&gt;Espero que les sirva, a mi me hizo renegar mucho, y es algo bastante simple de solucionar.&lt;/p&gt;
+
+&lt;p&gt;Edit: Según la &lt;a href=&#34;https://wiki.archlinux.org/index.php/NetworkManager#Edit_daemons&#34;&gt;wiki de Arch&lt;/a&gt;, hay que sacar el daemon de network y poner el de networkmanager después de dbus&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Gnome2 en ArchLinux</title>
+      <link>http://localhost:1313/blog/posts/gnome2-en-archlinux/</link>
+      <pubDate>Wed, 14 Sep 2011 04:41:31 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/gnome2-en-archlinux/</guid>
+      <description>
+
+&lt;p&gt;Como hay mucho usuarios descontentos con el resultado de Gnome 3, incluído Linus Torvals, era evidente que iban a existir formas de volver a la versión anterior, y Arch claro que la permite, y eso que fué de las primeras distros en cambiar :P
+Buscando encontré dos, la primera es un fork, la segunda un downgrade directo; me quedo con la primera. Si no se pudieron acostumbrar al cambio, si gnome-shell ya les dió una úlcera y no pueden esperar la versión 3.2, quizás alguna de estas opciones les sea útil.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Utilizar un fork: Mate&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Primero, tiene que editar el archivo &lt;strong&gt;/etc/pacman.conf&lt;/strong&gt;, agregando estas lineas al principio de la lista de repositorios
+[code]
+[mate]&lt;/p&gt;
+
+&lt;h1 id=&#34;contains-official-mate-desktop-packages-gnome2-fork:833a75177de8e75cddde15e0b36cb15f&#34;&gt;Contains official mate desktop packages (gnome2 fork)&lt;/h1&gt;
+
+&lt;p&gt;Server = &lt;a href=&#34;http://germ.winpe.com/archlinux/mate/$arch&#34;&gt;http://germ.winpe.com/archlinux/mate/$arch&lt;/a&gt;
+[/code]&lt;/p&gt;
+
+&lt;p&gt;Para instalar Mate, tiene que correr:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; pacman -Syyu &amp;amp;&amp;amp; pacman -Sf mate-desktop-environment
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;En mi caso aparecieron varios conflictos, ponga si a todo, no tuve problemas con ninguno&lt;/p&gt;
+
+&lt;p&gt;Despues de eso, tiene varios paquetes mas para instalar, todos opcionales pero suman: mate-extract mate-applets mate-terminal mate-image-viewer mate-themes. Así mismo, deberían instalar temas o cualquier eyecandy que necesiten para Gnome 2 que no sea necesario en el 3.&lt;/p&gt;
+
+&lt;p&gt;[caption id=&amp;ldquo;attachment_318&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo; caption=&amp;ldquo;Gnome 3.0.2, antes del update&amp;rdquo;]&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-300x225.png&#34; alt=&#34;Gnome 3&#34; /&gt;&lt;/a&gt;[/caption] [caption id=&amp;ldquo;attachment_320&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo; caption=&amp;ldquo;Una vez instalado Mate&amp;rdquo;]&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-1.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-1-300x225.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;[/caption] [caption id=&amp;ldquo;attachment_322&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo; caption=&amp;ldquo;Mate, despúes de instalar themes y modificar la apariencia.&amp;rdquo;]&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-2.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-2-300x225.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;[/caption]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Utilizar una versión antigua de paquetes&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;En este caso, lo que vamos a hacer es cambiar el repositorio en donde se encuentra Gnome, utilizar uno que no haya sido actualizado a Gnome3.x e instalar en cambio Gnome2.32.1, supongo que es la última versión estable antes del cambio.&lt;/p&gt;
+
+&lt;p&gt;También tenemos que editar el archivo &lt;strong&gt;/etc/pacman.conf&lt;/strong&gt;, pero en lugar de agregar un repositorio cambiamos el extra
+[code]
+[extra]&lt;/p&gt;
+
+&lt;h1 id=&#34;incluir-etc-pacman-d-mirrorlist:833a75177de8e75cddde15e0b36cb15f&#34;&gt;Incluir = / etc / pacman.d / mirrorlist&lt;/h1&gt;
+
+&lt;p&gt;Server = &lt;a href=&#34;http://arm.konnichi.com/2011/04/30/extra/os/$arch&#34;&gt;http://arm.konnichi.com/2011/04/30/extra/os/$arch&lt;/a&gt;
+[/code]&lt;/p&gt;
+
+&lt;p&gt;Después corren esta aberración:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; pacman -Syyfuu -nodep
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Cuando terminen (básicamente lo que hace es actualizar los repositorios, forzar el update, y en caso de que sea necesario realizar un downgrade de lo que haya, va a instalar todos los paquetes de Gnome que encuentre, son varios megas), en /etc/pacman.conf dejen el repositorio extra como corresponde y además coloquen esto para que no actualice gnome ni gnome-extra (asi no lo pisa con la versión 3)
+[code]
+IgnoreGroup = gnome gnome-extra
+[/code]
+Les debo screenshots de esta prueba, ya borré el snapshot y son muchos megas para descargar como para hacerlo de nuevo sólo para las imágenes :(&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Ambas pruebas fueron realizadas con una &lt;a href=&#34;http://blog.jesusroldan.com/2011/08/31/virtualboxes-org-descarga-de-maquinas-virtuales/&#34;&gt;máquina virtual&lt;/a&gt;  con una instalación estandar, con gnome y gnome-extra instalado por defecto, es decir, en ambos casos hice un downgrade de Gnome 3, que me pareció el caso en el que podía detectar mas problemas.
+&lt;strong&gt;De las dos opciones, les recomiendo la primera, la segunda da bastantes dolores de cabeza.&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Borrar con &#39;Delete&#39; en Nautilus y Gnome3</title>
+      <link>http://localhost:1313/blog/posts/borrar-con-delete-en-nautilus-con-gnome3/</link>
+      <pubDate>Tue, 02 Aug 2011 15:13:02 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/borrar-con-delete-en-nautilus-con-gnome3/</guid>
+      <description>&lt;p&gt;Titulo opcional: &lt;em&gt;Volvé Delete, no te fajo más&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Me es sumamente tedioso borrar archivos con Nautilus en Gnome3, porque por defecto utiliza Ctrl + Delete/Supr, pero por suerte se puede modificar facilmente&lt;/p&gt;
+
+&lt;p&gt;Primero, hay que habilitar una opción en la configuración para permitir editar los shortcuts, se puede hacer desde gconf-editor o desde la terminal con gsettings&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gsettings set org.gnome.desktop.interface can-change-accels true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Después, desde Nautilus, seleccionen un archivo y vayan a menú. Con el cursor &lt;strong&gt;SOBRE&lt;/strong&gt; la acción que desean modificar presionen la/s tecla/s que quieran como nuevo shortcut. (y SOBRE quiere decir &amp;ldquo;No hagan click, madafackas&amp;rdquo;)&lt;/p&gt;
+
+&lt;p&gt;Cuando terminen deben volver la configuración original para evitar modificar accesos por error, solo cambian _true/false _ con gsettings&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Agregar aplicaciones al inicio de Gnome3</title>
+      <link>http://localhost:1313/blog/posts/agregar-aplicaciones-al-inicio-de-gnome3/</link>
+      <pubDate>Mon, 25 Jul 2011 22:32:56 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/agregar-aplicaciones-al-inicio-de-gnome3/</guid>
+      <description>&lt;p&gt;Este procedimiento es bastante &amp;lsquo;rustico&amp;rsquo;, pero funciona. Es una de las cosas (de muchas, lo sé) en las que falla Gnome3: no hay una forma de gestionar que aplicaciones se lanzan al inicio de sesión o por lo menos no encontré forma de hacerlo.&lt;/p&gt;
+
+&lt;p&gt;Para esto, deben crear un archivo (por cada aplicacion) en &lt;strong&gt;~/.config/autostart/&lt;/strong&gt; con extension .desktop.
+Como ejemplo voy a usar &lt;a href=&#34;http://guake.org/&#34;&gt;Guake&lt;/a&gt; de la siguiente forma:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; cat ~/.config/autostart/guake.desktop
+
+[Desktop Entry]
+  Type=Application
+  Exec=/usr/bin/guake
+  Hidden=false
+  X-GNOME-Autostart-enabled=true
+  Name=guake
+  Comment=Guake
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Pueden leer un poco mas al respecto &lt;a href=&#34;http://developer.gnome.org/autostart-spec/&#34;&gt; aca &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Posiblemente ya exista alguna aplicación que haga eso, pero no la encontré&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

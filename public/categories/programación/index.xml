@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Programación on title</title>
-    <link>jesusroldan.com/categories/programaci%C3%B3n/</link>
-    <description>Recent content in Programación on title</description>
+    <title>Programación on Personal Blog</title>
+    <link>http://localhost:1313/blog/categories/programaci%C3%B3n/</link>
+    <description>Recent content in Programación on Personal Blog</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
     <lastBuildDate>Wed, 05 Mar 2014 15:04:21 +0000</lastBuildDate>
-    <atom:link href="jesusroldan.com/categories/programaci%C3%B3n/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/categories/programaci%C3%B3n/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Crazy little thing called Perl: Introducción al lenguaje</title>
-      <link>/jesusroldan.com/posts/crazy-little-thing-called-perl/</link>
+      <link>http://localhost:1313/blog/posts/crazy-little-thing-called-perl/</link>
       <pubDate>Wed, 05 Mar 2014 15:04:21 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/crazy-little-thing-called-perl/</guid>
+      <guid>http://localhost:1313/blog/posts/crazy-little-thing-called-perl/</guid>
       <description>&lt;p&gt;Perl está disponible para múltimples plataformas, pueden descargarlo desde &lt;a href=&#34;http://www.perl.org/get.html&#34;&gt;acá&lt;/a&gt; o desde el sistema de paquetes que utilicen. Para verificar si tienen instalado perl, en la terminal escriban &lt;em&gt;perl -v&lt;/em&gt;, si hay salida ya lo tienen instalado.&lt;/p&gt;
 
 &lt;p&gt;Para la instalación de librerías se utiliza &lt;a href=&#34;http://www.cpan.org/&#34;&gt;&lt;strong&gt;CPAN&lt;/strong&gt;&lt;/a&gt;, que es una colección de módulos libres para Perl. Pueden descargar este script o sino instalarlo desde los repositorios, por ejemplo, en un Linux basado en Debian basta correr:&lt;/p&gt;
@@ -363,10 +364,10 @@ done_testing()
     
     <item>
       <title>jQuery: Selectores y Traversing</title>
-      <link>/jesusroldan.com/posts/jquery-selectores-y-traversing/</link>
+      <link>http://localhost:1313/blog/posts/jquery-selectores-y-traversing/</link>
       <pubDate>Wed, 26 Feb 2014 15:56:32 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/jquery-selectores-y-traversing/</guid>
+      <guid>http://localhost:1313/blog/posts/jquery-selectores-y-traversing/</guid>
       <description>&lt;p&gt;Voy a poner esto acá, haciendo las veces de ayudamemoria. Además para el que no sepa, siempre viene bien tener un listado e investigarlos.
 Selectores/Traversing (que no encontré una traducción buena) en jQuery.&lt;/p&gt;
 
@@ -435,10 +436,10 @@ Selectores/Traversing (que no encontré una traducción buena) en jQuery.&lt;/p&
     
     <item>
       <title>jQuery Doge - such plugin</title>
-      <link>/jesusroldan.com/posts/jquery-doge-such-plugin/</link>
+      <link>http://localhost:1313/blog/posts/jquery-doge-such-plugin/</link>
       <pubDate>Mon, 23 Dec 2013 14:31:40 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/jquery-doge-such-plugin/</guid>
+      <guid>http://localhost:1313/blog/posts/jquery-doge-such-plugin/</guid>
       <description>&lt;p&gt;Hace unos días había liberado un plugin de jQuery bastante tonto, y ahora hice un update del mismo con unos cuantos bugs corregidos y además ahora pemite parametrizarlo, así pasa a estar un poco mas usable de lo que estaba antes.
 Es mi primer plugin así que quizás no está tan optimizado&amp;hellip; aunque considero que no es tan inestable como pensé que podía quedar :)&lt;/p&gt;
 
@@ -474,10 +475,10 @@ Es mi primer plugin así que quizás no está tan optimizado&amp;hellip; aunque 
     
     <item>
       <title>Barra de progreso de Arch Linux para Python</title>
-      <link>/jesusroldan.com/posts/barra-de-progreso-de-arch-linux-para-python/</link>
+      <link>http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/</link>
       <pubDate>Sun, 21 Oct 2012 20:49:21 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/barra-de-progreso-de-arch-linux-para-python/</guid>
+      <guid>http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/</guid>
       <description>&lt;p&gt;Hace unos días me puse a &lt;em&gt;portar&lt;/em&gt; la barra de progreso que tiene el sistema de paquetes de &lt;a href=&#34;http://blog.jesusroldan.com/2011/12/28/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/&#34;&gt;&lt;strong&gt;Arch Linux&lt;/strong&gt;&lt;/a&gt; (activando la opción &lt;strong&gt;ILoveCandy&lt;/strong&gt;) a Python &lt;del&gt;3&lt;/del&gt; 3.X y 2.7. De momento está en fase de prueba, pero es dentro de todo funcional, prometo ir actualizándola cuando pueda.&lt;/p&gt;
 
 &lt;p&gt;Para poder instalarlo, pueden bajarse los fuentes &lt;a href=&#34;https://github.com/xeBuz/pacman-progressbar&#34;&gt;desde &lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt; (es licencia Beer-ware, una adaptación de BSD) o mejor aún directamente desde PyPi:&lt;/p&gt;
@@ -514,10 +515,10 @@ if __name__ == &amp;quot;__main__&amp;quot;:
     
     <item>
       <title>Script para grabar la consola en un .gif animado</title>
-      <link>/jesusroldan.com/posts/script-para-grabar-la-consola-en-un-gif-animado/</link>
+      <link>http://localhost:1313/blog/posts/script-para-grabar-la-consola-en-un-gif-animado/</link>
       <pubDate>Thu, 18 Oct 2012 02:03:52 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/script-para-grabar-la-consola-en-un-gif-animado/</guid>
+      <guid>http://localhost:1313/blog/posts/script-para-grabar-la-consola-en-un-gif-animado/</guid>
       <description>&lt;p&gt;Hoy me surgió una necesidad, que me pareció bastante simple pero no encontré herramientas simples que me lo solucionaran. Les dejo este script, que graba un gif de la consola durante X segundos (idea de @shinax y @rootmyword). Ese valor se lo pasamos por parámetro (no lo valido ni tiene default, porque la vida es demasiado corta para controlarlo) . Hay que correr el script con un &amp;amp; al final de la línea, asi pasa a correr en background y podemos usar la consola.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;#!/bin/bash
@@ -548,10 +549,10 @@ Línea 13. Toma todas las imágenes de la carpeta, las concatena con un delay de
     
     <item>
       <title>[Post-charla] Introducción al desarrollo web de videojuegos</title>
-      <link>/jesusroldan.com/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</link>
+      <link>http://localhost:1313/blog/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</link>
       <pubDate>Fri, 07 Sep 2012 14:33:06 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</guid>
+      <guid>http://localhost:1313/blog/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/09/supermeatboy.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/09/supermeatboy.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Antes que nada gracias a todos los que fueron ayer a la &lt;a href=&#34;http://blog.jesusroldan.com/2012/09/05/charla-introduccion-al-desarrollo-web-de-videojuegos/&#34;&gt;charla de desarrollo de videojuegos&lt;/a&gt; y a la gente de &lt;a href=&#34;http://uni-code-group.blogspot.com.ar/&#34;&gt;&lt;strong&gt;UNI-CODE&lt;/strong&gt;&lt;/a&gt; por la invitación. Les dejo algunos links que había prometido o temas que quedaron en el aire. Cualquier cosa avisen.&lt;/p&gt;
@@ -578,10 +579,10 @@ Línea 13. Toma todas las imágenes de la carpeta, las concatena con un delay de
     
     <item>
       <title>[Charla] Introducción al desarrollo web de videojuegos</title>
-      <link>/jesusroldan.com/posts/charla-introduccion-al-desarrollo-web-de-videojuegos/</link>
+      <link>http://localhost:1313/blog/posts/charla-introduccion-al-desarrollo-web-de-videojuegos/</link>
       <pubDate>Wed, 05 Sep 2012 12:54:41 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/charla-introduccion-al-desarrollo-web-de-videojuegos/</guid>
+      <guid>http://localhost:1313/blog/posts/charla-introduccion-al-desarrollo-web-de-videojuegos/</guid>
       <description>&lt;p&gt;El jueves 6 a las 19hs voy a estar en la UTN de Córdoba para dar una charla sobre desarrollo de videojuegos para navegadores (en HTML5, todos sabemos que Flash es malvado) invitado por la gente de &lt;a href=&#34;http://uni-code-group.blogspot.com.ar/&#34;&gt;&lt;strong&gt;UNI-CODE&lt;/strong&gt;&lt;/a&gt;, un grupo de estudiantes que se encarga de divulgación de tecnología libre de humo.&lt;/p&gt;
 
 &lt;p&gt;La charla es abierta para todos y está de más decir que es gratis, va a ser muy introductoria con algunos conceptos básicos. También se va a mostrar un framework, &lt;a href=&#34;http://craftyjs.com/&#34;&gt;&lt;strong&gt;Crafty&lt;/strong&gt;&lt;/a&gt;, para simplificar el desarrollo. Si bien está pensada para programadores, la idea es juntar gente con ganas, quien sabe, puede surgir algun proyecto entre las personas que asistan. Las ganas de muchos están, falta organizarnos.&lt;/p&gt;
@@ -592,10 +593,10 @@ Línea 13. Toma todas las imágenes de la carpeta, las concatena con un delay de
     
     <item>
       <title>Script para generar playlists dinámicas en MPD </title>
-      <link>/jesusroldan.com/posts/script-para-generar-playlists-dinamicas-en-mpd/</link>
+      <link>http://localhost:1313/blog/posts/script-para-generar-playlists-dinamicas-en-mpd/</link>
       <pubDate>Fri, 10 Aug 2012 13:55:24 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/script-para-generar-playlists-dinamicas-en-mpd/</guid>
+      <guid>http://localhost:1313/blog/posts/script-para-generar-playlists-dinamicas-en-mpd/</guid>
       <description>&lt;p&gt;Revisando scripts viejos, me encontré con este que quizás a alguno le puede servir. La idea es ir generando dinámicamente la lista de reproducción de un server &lt;a href=&#34;http://mpd.wikia.com/&#34;&gt;MPD&lt;/a&gt; usando la &lt;a href=&#34;http://www.last.fm/api&#34;&gt;API&lt;/a&gt; de &lt;a href=&#34;http://www.last.fm/user/xeBuz&#34;&gt;Last.fm&lt;/a&gt; para encontrar artistas similares en el disco.
 Si bien ya hay clientes que tienen esta funcionalidad, como &lt;a href=&#34;http://mpd.wikia.com/wiki/Client:Ario&#34;&gt;Ario&lt;/a&gt;, suelo conectarme por SSH al server y me resulta cómodo correr el script este cuando no se que escuchar.&lt;/p&gt;
 
@@ -667,10 +668,10 @@ if __name__ == &#39;__main__&#39;:
     
     <item>
       <title>Un &#34;bot&#34; de Twitter, con Python en un par de minutos</title>
-      <link>/jesusroldan.com/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/</link>
+      <link>http://localhost:1313/blog/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/</link>
       <pubDate>Wed, 04 Jul 2012 18:40:32 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/</guid>
+      <guid>http://localhost:1313/blog/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/</guid>
       <description>&lt;blockquote&gt;Hace falta un bot que busque los tweets de Foursquare y responda &#34;WHO CARES?!&#34;
 
 — Commander Shepard (@MissFillys) [July 3, 2012](https://twitter.com/MissFillys/status/220272671894671360)&lt;/blockquote&gt;
@@ -718,10 +719,10 @@ for tweet in assholes:
     
     <item>
       <title>Descargar La Venganza Será Terrible, via Bash</title>
-      <link>/jesusroldan.com/posts/descargar-la-venganza-sera-terrible-via-bash/</link>
+      <link>http://localhost:1313/blog/posts/descargar-la-venganza-sera-terrible-via-bash/</link>
       <pubDate>Thu, 21 Jul 2011 02:31:17 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/descargar-la-venganza-sera-terrible-via-bash/</guid>
+      <guid>http://localhost:1313/blog/posts/descargar-la-venganza-sera-terrible-via-bash/</guid>
       <description>
 
 &lt;p&gt;Este es un pequeño script que descarga (via wget) el programa La Venganza Sera Terrible de &lt;a href=&#34;http://www.alejandrodolina.com.ar/&#34;&gt;Alejando Dolina&lt;/a&gt;; utilizando los archivos que genera a diario el sitio &lt;a href=&#34;http://venganzasdelpasado.com.ar/&#34;&gt;Venganzas del Pasado&lt;/a&gt;&lt;/p&gt;

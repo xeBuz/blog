@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tutoriales on title</title>
-    <link>jesusroldan.com/categories/tutoriales/</link>
-    <description>Recent content in Tutoriales on title</description>
+    <title>Tutoriales on Personal Blog</title>
+    <link>http://localhost:1313/blog/categories/tutoriales/</link>
+    <description>Recent content in Tutoriales on Personal Blog</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
     <lastBuildDate>Wed, 05 Sep 2012 12:54:41 +0000</lastBuildDate>
-    <atom:link href="jesusroldan.com/categories/tutoriales/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/categories/tutoriales/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>[Charla] Introducción al desarrollo web de videojuegos</title>
-      <link>/jesusroldan.com/posts/charla-introduccion-al-desarrollo-web-de-videojuegos/</link>
+      <link>http://localhost:1313/blog/posts/charla-introduccion-al-desarrollo-web-de-videojuegos/</link>
       <pubDate>Wed, 05 Sep 2012 12:54:41 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/charla-introduccion-al-desarrollo-web-de-videojuegos/</guid>
+      <guid>http://localhost:1313/blog/posts/charla-introduccion-al-desarrollo-web-de-videojuegos/</guid>
       <description>&lt;p&gt;El jueves 6 a las 19hs voy a estar en la UTN de Córdoba para dar una charla sobre desarrollo de videojuegos para navegadores (en HTML5, todos sabemos que Flash es malvado) invitado por la gente de &lt;a href=&#34;http://uni-code-group.blogspot.com.ar/&#34;&gt;&lt;strong&gt;UNI-CODE&lt;/strong&gt;&lt;/a&gt;, un grupo de estudiantes que se encarga de divulgación de tecnología libre de humo.&lt;/p&gt;
 
 &lt;p&gt;La charla es abierta para todos y está de más decir que es gratis, va a ser muy introductoria con algunos conceptos básicos. También se va a mostrar un framework, &lt;a href=&#34;http://craftyjs.com/&#34;&gt;&lt;strong&gt;Crafty&lt;/strong&gt;&lt;/a&gt;, para simplificar el desarrollo. Si bien está pensada para programadores, la idea es juntar gente con ganas, quien sabe, puede surgir algun proyecto entre las personas que asistan. Las ganas de muchos están, falta organizarnos.&lt;/p&gt;
@@ -24,10 +25,10 @@
     
     <item>
       <title>Hacer un radio casera con MPD y con Icecast</title>
-      <link>/jesusroldan.com/posts/streaming-con-mpd-y-icecast-en-arch-linux/</link>
+      <link>http://localhost:1313/blog/posts/streaming-con-mpd-y-icecast-en-arch-linux/</link>
       <pubDate>Tue, 01 Nov 2011 19:09:58 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/streaming-con-mpd-y-icecast-en-arch-linux/</guid>
+      <guid>http://localhost:1313/blog/posts/streaming-con-mpd-y-icecast-en-arch-linux/</guid>
       <description>&lt;p&gt;Empecemos&amp;hellip; pero &lt;em&gt;¿Qué e&amp;rsquo; lo que e&amp;rsquo; eso?&lt;/em&gt;
 &lt;strong&gt;MPD&lt;/strong&gt;: Básicamente, es un servidor para escuchar música. Con la particularidad de que es muy configurable y nos permite acceder a traves de la red para controlar la lista de reproducción. &lt;a href=&#34;http://images.wikia.com/mpd/images/6/68/Mpd-overview.png&#34;&gt;Esta&lt;/a&gt; imagen lo explica bien.
 &lt;strong&gt;Clientes MPD&lt;/strong&gt;: El servidor por sí sólo nos gestiona los archivos, los salidas de audio y la lista de reproducción, para acceder a esto necesitamos clientes, que visualmente son similares a las clasicas aplicaciones para escuchar música.
@@ -101,10 +102,10 @@ Si dejan la configuración de arriba van a poder figurar en el &lt;a href=&#34;h
     
     <item>
       <title>Z Bash, o zsh, una shell con Z de &#34;ZOMG que buena shell&#34;</title>
-      <link>/jesusroldan.com/posts/zsh/</link>
+      <link>http://localhost:1313/blog/posts/zsh/</link>
       <pubDate>Thu, 20 Oct 2011 18:26:48 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/zsh/</guid>
+      <guid>http://localhost:1313/blog/posts/zsh/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Z Bash&lt;/strong&gt;, o mejor &lt;strong&gt;zsh&lt;/strong&gt;, es un interprete de comándos (&lt;em&gt;shell&lt;/em&gt;), excelente alternativa al Bash que viene por defecto (&lt;em&gt;Bourne-again Shell&lt;/em&gt;). Como mejoras, se destaca:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -194,10 +195,10 @@ Para los dislexicos como uno, esto es muy bueno, nos autocorrige directorios, co
     
     <item>
       <title>Versionar el directorio /etc con Git</title>
-      <link>/jesusroldan.com/posts/versionar-el-directorio-etc-con-git/</link>
+      <link>http://localhost:1313/blog/posts/versionar-el-directorio-etc-con-git/</link>
       <pubDate>Mon, 26 Sep 2011 17:23:59 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/versionar-el-directorio-etc-con-git/</guid>
+      <guid>http://localhost:1313/blog/posts/versionar-el-directorio-etc-con-git/</guid>
       <description>&lt;p&gt;Una buena práctica, sobre todo si les gusta modificar los archivos de configuración para probar cosas o instalar aplicaciones constantemnte, es versionar el directorio /etc, para el caso en el que nos &lt;del&gt;mandemos alguna cagada&lt;/del&gt; equivoquemos en alguna configuración, el problema sea facilmente remediable.
 La instalación y configuración es muy sencilla, en este caso es todo manual, si quieren saltearse todo e instalar directamente &lt;strong&gt;&lt;a href=&#34;http://kitenet.net/~joey/code/etckeeper/&#34;&gt;etckeeper&lt;/a&gt;&lt;/strong&gt; es válido igual ;)&lt;/p&gt;
 
@@ -255,10 +256,10 @@ Aca les dejo una imagen de como se ve, por si les interesa
     
     <item>
       <title>Cambios en Grub con el nuevo Kernel</title>
-      <link>/jesusroldan.com/posts/cambios-en-grub-con-el-nuevo-kernel/</link>
+      <link>http://localhost:1313/blog/posts/cambios-en-grub-con-el-nuevo-kernel/</link>
       <pubDate>Sun, 07 Aug 2011 19:52:28 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/cambios-en-grub-con-el-nuevo-kernel/</guid>
+      <guid>http://localhost:1313/blog/posts/cambios-en-grub-con-el-nuevo-kernel/</guid>
       <description>
 
 &lt;p&gt;Quizás si instalan la ultima version de grub (0.97-19) y del kernel (3.0.1-1 y para posteriores actualizaciones tambien es válido) y reinicien les pase como a mi que no arrancaba el sistema, debido a unos cambios de nombre en los archivos&lt;/p&gt;
@@ -288,10 +289,10 @@ initrd /&lt;strong&gt;initramfs-linux-fallback.img&lt;/strong&gt;`&lt;/p&gt;
     
     <item>
       <title>Agregar aplicaciones al inicio de Gnome3</title>
-      <link>/jesusroldan.com/posts/agregar-aplicaciones-al-inicio-de-gnome3/</link>
+      <link>http://localhost:1313/blog/posts/agregar-aplicaciones-al-inicio-de-gnome3/</link>
       <pubDate>Mon, 25 Jul 2011 22:32:56 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/agregar-aplicaciones-al-inicio-de-gnome3/</guid>
+      <guid>http://localhost:1313/blog/posts/agregar-aplicaciones-al-inicio-de-gnome3/</guid>
       <description>&lt;p&gt;Este procedimiento es bastante &amp;lsquo;rustico&amp;rsquo;, pero funciona. Es una de las cosas (de muchas, lo sé) en las que falla Gnome3: no hay una forma de gestionar que aplicaciones se lanzan al inicio de sesión o por lo menos no encontré forma de hacerlo.&lt;/p&gt;
 
 &lt;p&gt;Para esto, deben crear un archivo (por cada aplicacion) en &lt;strong&gt;~/.config/autostart/&lt;/strong&gt; con extension .desktop.

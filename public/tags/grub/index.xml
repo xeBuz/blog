@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grub on Personal Blog</title>
+    <link>http://localhost:1313/blog/tags/grub/</link>
+    <description>Recent content in Grub on Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Aug 2011 19:52:28 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/grub/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cambios en Grub con el nuevo Kernel</title>
+      <link>http://localhost:1313/blog/posts/cambios-en-grub-con-el-nuevo-kernel/</link>
+      <pubDate>Sun, 07 Aug 2011 19:52:28 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/cambios-en-grub-con-el-nuevo-kernel/</guid>
+      <description>
+
+&lt;p&gt;Quizás si instalan la ultima version de grub (0.97-19) y del kernel (3.0.1-1 y para posteriores actualizaciones tambien es válido) y reinicien les pase como a mi que no arrancaba el sistema, debido a unos cambios de nombre en los archivos&lt;/p&gt;
+
+&lt;p&gt;La corrección es fácil, pueden crear un enlance al archivo correcto, o en su defecto lo que me parecio mas simple, editar el archivo /boot/grub/menu.lst de la siguiente forma:
+`&lt;/p&gt;
+
+&lt;h1 id=&#34;0-arch-linux:2ee0c8ccdc60d57df2c7d857b1704e19&#34;&gt;(0) Arch Linux&lt;/h1&gt;
+
+&lt;p&gt;title  Arch Linux
+root   (hd0,0)
+kernel /&lt;strong&gt;vmlinuz-linux&lt;/strong&gt; root=/dev/disk/by-uuid/d45327e7-5965-4aa7-b3b3-d57d1eecad0a ro
+initrd /&lt;strong&gt;initramfs-linux.img&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;1-arch-linux:2ee0c8ccdc60d57df2c7d857b1704e19&#34;&gt;(1) Arch Linux&lt;/h1&gt;
+
+&lt;p&gt;title  Arch Linux Fallback
+root   (hd0,0)
+kernel /&lt;strong&gt;vmlinuz-linu&lt;/strong&gt;x root=/dev/disk/by-uuid/d45327e7-5965-4aa7-b3b3-d57d1eecad0a ro
+initrd /&lt;strong&gt;initramfs-linux-fallback.img&lt;/strong&gt;`&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Si no cambiaron el archivo antes de reiniciar y no inicia, después de putear, entren  en el menu de grub, para editar la linea presionan la &lt;strong&gt;e&lt;/strong&gt; y despues inician con &lt;strong&gt;b&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

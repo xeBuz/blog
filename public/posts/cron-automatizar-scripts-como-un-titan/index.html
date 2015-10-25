@@ -1,0 +1,222 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="xeBuz">
+		<meta name="description" content="Personal Website">
+		<meta name="generator" content="Hugo 0.14" />
+		<title>Cron, automatizar scripts como un titán &middot; Personal Blog</title>
+		<link rel="shortcut icon" href="http://localhost:1313/blog/images/favicon.ico">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/style.css">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/highlight.css">
+		<link href="http://localhost:1313/blog/index.xml" rel="alternate" type="application/rss+xml" title="Personal Blog" />
+	</head>
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='http://localhost:1313/blog/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+		<a href='http://localhost:1313/blog/about'>About</a>
+	
+
+	
+	<a class="cta" href="http://localhost:1313/blog/index.xml">Subscribe</a>
+	
+</nav>
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>Cron, automatizar scripts como un titán</h1>
+                    <h2 class="headline">May 22, 2012</h2>
+                </header>
+                <section id="post-body">
+                    <p>Hace un tiempo escribí sobre <a href="http://blog.jesusroldan.com/2012/01/23/comando-at-automatizar-scripts-sin-usar-crontab/">la utilización del comando <strong>at</strong></a>, ahora le toca el turno a <strong>cron</strong>. ¿Tron? No, cron. ¡Troz! (?).
+¿Qué es cron? Es un administrador de procesos que se ejecuta a un interválo de tiempo específico. Si vienen del Dark Side, sería el equivalente a las <em>Tareas Programadas</em> de W.</p>
+
+<p>La instalación es simple (está en los repos o incluso ya instalada, en toda distribución que se jacte de ser tal), en fín, en Arch podrían hacer:</p>
+
+<pre><code>pacman -S --needed cronie
+</code></pre>
+
+<p>Al principio puede resultar extraña la configuracion de crontab, pero con el tiempo termina siendo más simple de lo que aparenta y se puede lograr cosas muy buenas de una forma muy sencilla.</p>
+
+<p>Primero, tenemos 5 espacios para colocar los tiempos, que se dividen en minutos, horas, días del mes, meses y días de la semana; si alguno de estos datos no se rellena, se debe colocar un asterísco, que significa &ldquo;todos&rdquo; (para que sea entendible y hasta leíble). Después de eso se coloca la ruta completa del script que quieren que se ejecute en ese determinado lapso de tiempo.</p>
+
+<p>En cualquier campo, asumiendo que ya entendimos los rangos de cada uno, podemos colocar tanto un valor específico, varios valores separados por coma o un rango separado por un guión. Por ejemplo:</p>
+
+<p>[code lang=&ldquo;bash&rdquo;]
+#Se ejecuta a las 5 de la mañana, en punto
+0 5 * * * * /home/jesus/Scripts/tomar_cafe.sh</p>
+
+<p>#Se ejecuta a las 5 y a las 17 horas, en punto
+0 5,17 * * * /home/jesus/Scripts/loquesea.sh</p>
+
+<p>#Se ejecuta <em>desde</em> las 5, cada hora &ldquo;en punto&rdquo; <em>hasta</em> las 17hs.
+0 5-17 * * * /home/jesus/Scripts/latigo.sh</p>
+
+<p>#Similar al anterior, pero ejecuta cada minuto entre las 5 y las 17
+#miren el primer valor, le estan dicieno &ldquo;todos&rdquo;
+* 5,17 * * * echo &ldquo;trabajen mas duro&rdquo;
+[/code]</p>
+
+<p>¿Cómo ver las tareas pendientes en cron?
+<strong>crontab -l</strong> lista las del usuario activo, para ver las de otro usuario, deben ejecutar crontab -u user -l</p>
+
+<p>¿Cómo se modifican las tareas?
+Con <strong>crontab -e</strong> se nos abre el archivo para modificar, con el editor que tengamos por defecto. Para cambiarlo debemos cambiar: <em>export EDITOR=&ldquo;/usr/bin/nano&rdquo;</em>. Como por defecto se abre con vi, por favor no toquen el teclado si no saben como funciona y llamen a un mayor responsable a cargo.
+También pueden editar los archivos de otros usuarios, con **contab -u user -e **.</p>
+
+<p>Ahora bien, aquí viene lo bueno jóven, algunos ejemplos:</p>
+
+<p>[code lang=&ldquo;bash&rdquo;]
+#Corre cada minuto, siempre.
+* * * * * /home/xebuz/script/cada_minuto.sh</p>
+
+<p>#Cada 5 minutos
+*/5 * * * * /home/xebuz/script/cada_cinco_minutos.sh</p>
+
+<p>#Cada hora, de 8 a 18, de lunes a viernes
+00 08-18 * * 1-5 /home/xebuz/script/laboral.sh</p>
+
+<p>#Una vez cada mes y medio
+* * */15 */1 * /home/xebuz/goldequilmes.sh</p>
+
+<p>#Cada 4 años
+* * * */48 * /home/xebuz/script/mundial.sh
+[/code]</p>
+
+<p>¿Muy engorroso para escribir? ¿Sos un lazy-sysadmin? Existen también algunos (llamémosle) <a href="http://blog.jesusroldan.com/2011/09/02/tips-para-linux-alias-para-todos/">alias</a>, para agilizar la administración, són cómodos y reemplazan a todos los campos de tiempo, es decir, sólo deben poner el alias y despues el script.</p>
+
+<p>[code lang=&ldquo;bash&rdquo;]
+#Tiempos específicos
+@hourly
+@daily
+@weekly
+@monthly
+#Este se ejecuta (como lo indica el nombre), cuando se resetea el equipo
+@reboot
+[/code]</p>
+
+<p><em>Gracias, vuelva prontos.</em></p>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/xeBuz">
+                        <img class="avatar" src="http://localhost:1313/blog/images/avatar.png">
+                        <div>
+                            <span class="dark">xeBuz</span>
+                            <span>I&#39;m an enthusiastic gopher.</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2flocalhost%3a1313%2fblog%2fposts%2fcron-automatizar-scripts-como-un-titan%2f - Cron%2c%20automatizar%20scripts%20como%20un%20tit%c3%a1n by @xeBuz"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/no-close-tabs-firefox-31/">Close Tab en Firefox 31<aside class="dates">May 14</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/newest/">Just another sample post<aside class="dates">Mar 29</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/middle/">Second Post<aside class="dates">Mar 28</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/oldest/">First Post<aside class="dates">Mar 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/crazy-little-thing-called-perl/">Crazy little thing called Perl: Introducción al lenguaje<aside class="dates">Mar 5</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/bundles-de-juegos-varias-opciones-disponibles/">Bundles de juegos, varias opciones disponibles<aside class="dates">Feb 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-selectores-y-traversing/">jQuery: Selectores y Traversing<aside class="dates">Feb 26</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-doge-such-plugin/">jQuery Doge - such plugin<aside class="dates">Dec 23</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/licencia-para-ir-al-cine/">Licencia para ir al cine<aside class="dates">Jul 1</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/">Barra de progreso de Arch Linux para Python<aside class="dates">Oct 21</aside></a>
+        </li>
+        
+   
+</ul>
+            <footer id="footer">
+    <p class="small">
+        © Copyright 2015 xeBuz
+    </p>
+</footer>
+        </section>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://localhost:1313/blog/js/main.js"></script>
+<script src="http://localhost:1313/blog/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+    </body>
+</html>

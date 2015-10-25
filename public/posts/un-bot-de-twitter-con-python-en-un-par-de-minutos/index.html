@@ -1,0 +1,196 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="xeBuz">
+		<meta name="description" content="Personal Website">
+		<meta name="generator" content="Hugo 0.14" />
+		<title>Un &#34;bot&#34; de Twitter, con Python en un par de minutos &middot; Personal Blog</title>
+		<link rel="shortcut icon" href="http://localhost:1313/blog/images/favicon.ico">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/style.css">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/highlight.css">
+		<link href="http://localhost:1313/blog/index.xml" rel="alternate" type="application/rss+xml" title="Personal Blog" />
+	</head>
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='http://localhost:1313/blog/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+		<a href='http://localhost:1313/blog/about'>About</a>
+	
+
+	
+	<a class="cta" href="http://localhost:1313/blog/index.xml">Subscribe</a>
+	
+</nav>
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>Un &#34;bot&#34; de Twitter, con Python en un par de minutos</h1>
+                    <h2 class="headline">July 4, 2012</h2>
+                </header>
+                <section id="post-body">
+                    <blockquote>Hace falta un bot que busque los tweets de Foursquare y responda "WHO CARES?!"
+
+— Commander Shepard (@MissFillys) [July 3, 2012](https://twitter.com/MissFillys/status/220272671894671360)</blockquote>
+
+<p>Todo comenzó con ese tweet de @MissFillys y cómo estaba aburrido lo intenté hacer. Ante mi sorpresa fué mas simple de lo que pensaba. Primero deben registrar la aplicación en el <a href="https://dev.twitter.com/apps">área de desarrollo de Twitter</a>, particularmente usé una cuenta nueva, porque seguro lo reportan como spam o algún tipo de violación a las políticas de Twitter y no quería que caiga mi cuenta también. Para interactuar con Twitter desde Python usé <strong><a href="https://github.com/tweepy/tweepy">tweepy</a></strong>, una librería bastante completa, y sobre todo, muy simple de usar</p>
+
+<p>Esto es lo necesario para conectarse, los datos de Costumer_Key y Access_Key los sacan cuando registran la aplicación. Bastante simple, con este código ya podemos interactuar con la API</p>
+
+<pre><code>#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+import tweepy
+
+#Twitter information
+CONSUMER_KEY = &quot;AsdAsdDsa&quot;
+CONSUMER_SECRET=&quot;QwertrQWEREwtr&quot;
+ACCESS_KEY=&quot;Asdasd-qeq123123123&quot;
+ACCESS_SECRET=&quot;asdasd342-123213123wqeqweqw&quot;
+
+auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
+API = tweepy.API(auth)
+</code></pre>
+
+<p>Para este caso, lo que hago es buscar en la public timeline. Como la librería no tiene implementada la búsqueda por source, no queda otra que traer los 20 resultados y validar si alguno viene desde desde Foursquare. Es un bucle bastante simple, en caso de que exista, se utiliza el método API.update_status() con el username, in_reply_to y algún texto que querramos ponerle.</p>
+
+<pre><code>...
+public = API.public_timeline()
+for tweet in public:
+    if tweet.source =='foursquare':
+    API.update_status( &quot;@&quot;+ tweet.author.screen_name + &quot;WHO CARES?!&quot; , tweet.id)
+</code></pre>
+
+<p>También pueden usar búsquedas más específicas. Por ejemplo, <em>personas</em> que hablan de Tinelli. <a href="https://dev.twitter.com/docs/using-search">Acá</a> pueden sacar ayuda sobre cómo realizar búsquedas y <a href="http://packages.python.org/tweepy/html/api.html">acá</a> pueden leer la documentación de la librería</p>
+
+<pre><code>...
+assholes = API.search('Tinelli')
+for tweet in assholes:
+    API.update_status( &quot;@&quot;+ tweet.author.screen_name + &quot;Se te está pudriendo el cerebro...&quot; , tweet.id)
+</code></pre>
+
+<p>El código final quedó <a href="https://gist.github.com/3044158">más o menos así</a>, sólo necesitan ponerlo en un loop donde quieran. Quizás les sirva y puedan hacer algo interesante, como por ejemplo @pepperMaido :D</p>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/xeBuz">
+                        <img class="avatar" src="http://localhost:1313/blog/images/avatar.png">
+                        <div>
+                            <span class="dark">xeBuz</span>
+                            <span>I&#39;m an enthusiastic gopher.</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2flocalhost%3a1313%2fblog%2fposts%2fun-bot-de-twitter-con-python-en-un-par-de-minutos%2f - Un%20%22bot%22%20de%20Twitter%2c%20con%20Python%20en%20un%20par%20de%20minutos by @xeBuz"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/no-close-tabs-firefox-31/">Close Tab en Firefox 31<aside class="dates">May 14</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/newest/">Just another sample post<aside class="dates">Mar 29</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/middle/">Second Post<aside class="dates">Mar 28</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/oldest/">First Post<aside class="dates">Mar 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/crazy-little-thing-called-perl/">Crazy little thing called Perl: Introducción al lenguaje<aside class="dates">Mar 5</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/bundles-de-juegos-varias-opciones-disponibles/">Bundles de juegos, varias opciones disponibles<aside class="dates">Feb 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-selectores-y-traversing/">jQuery: Selectores y Traversing<aside class="dates">Feb 26</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-doge-such-plugin/">jQuery Doge - such plugin<aside class="dates">Dec 23</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/licencia-para-ir-al-cine/">Licencia para ir al cine<aside class="dates">Jul 1</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/">Barra de progreso de Arch Linux para Python<aside class="dates">Oct 21</aside></a>
+        </li>
+        
+   
+</ul>
+            <footer id="footer">
+    <p class="small">
+        © Copyright 2015 xeBuz
+    </p>
+</footer>
+        </section>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://localhost:1313/blog/js/main.js"></script>
+<script src="http://localhost:1313/blog/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+    </body>
+</html>

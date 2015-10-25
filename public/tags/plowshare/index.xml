@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Plowshare on Personal Blog</title>
+    <link>http://localhost:1313/blog/tags/plowshare/</link>
+    <description>Recent content in Plowshare on Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 19 Aug 2011 01:24:47 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/plowshare/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Descargar desde la consola</title>
+      <link>http://localhost:1313/blog/posts/descargar-desde-la-consola-en-linux-megupload-rapidshare-cuevana-wupload-fileserve-hotfile/</link>
+      <pubDate>Fri, 19 Aug 2011 01:24:47 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/descargar-desde-la-consola-en-linux-megupload-rapidshare-cuevana-wupload-fileserve-hotfile/</guid>
+      <description>&lt;nav&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#plowshare-http-code-google-com-p-plowshare:8d7172eff3e4dab9627e32bde8594950&#34;&gt;&lt;strong&gt;&lt;a href=&#34;http://code.google.com/p/plowshare/&#34;&gt;plowshare&lt;/a&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#megaupload-dl-http-mundogeek-net-megaupload-dl-y-rapidshare-dl-http-mundogeek-net-rapidshare-dl:8d7172eff3e4dab9627e32bde8594950&#34;&gt;&lt;strong&gt;&lt;a href=&#34;http://mundogeek.net/megaupload-dl/&#34;&gt;megaupload-dl&lt;/a&gt;&lt;/strong&gt; y &lt;strong&gt;&lt;a href=&#34;http://mundogeek.net/rapidshare-dl/&#34;&gt;rapidshare-dl&lt;/a&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#slimrat-http-code-google-com-p-slimrat:8d7172eff3e4dab9627e32bde8594950&#34;&gt;&lt;strong&gt;&lt;a href=&#34;http://code.google.com/p/slimrat/&#34;&gt;slimrat&lt;/a&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#cuevanalinks-http-packages-python-org-cuevanalinks:8d7172eff3e4dab9627e32bde8594950&#34;&gt;&lt;strong&gt;&lt;a href=&#34;http://packages.python.org/CuevanaLinks/&#34;&gt;CuevanaLinks&lt;/a&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;p&gt;Existen varias opciones para bajar desde Megaupload, Rapidshare, MediaFire, Hotfile, Wupload y otro servicios gratuitos de hosting de archivos&amp;hellip; Dentro de las principales opciones tenemos:&lt;/p&gt;
+
+&lt;h6 id=&#34;plowshare-http-code-google-com-p-plowshare:8d7172eff3e4dab9627e32bde8594950&#34;&gt;&lt;strong&gt;&lt;a href=&#34;http://code.google.com/p/plowshare/&#34;&gt;plowshare&lt;/a&gt;&lt;/strong&gt;&lt;/h6&gt;
+
+&lt;p&gt;Una vez instalada, nos da 4 comandos: &lt;em&gt;plowdel, plowdown, plowlist, plowup&lt;/em&gt; pero la verdad es que termiamos usando sólo uno: plowdown, quizas 2, con plowup (uno descarga otro sube, si!)
+Uso básico, para no hacerlo muy extenso::&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;-r&lt;/strong&gt; limita la velocidad, pongan el valor con k, m o g (&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;-c&lt;/strong&gt; verifica que los links esten activos (no descarga nada)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;-m&lt;/strong&gt; &lt;em&gt;file.txt&lt;/em&gt; va comentando en el archivo los links que descarga&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Tienen el &amp;ldquo;man plowdown&amp;rdquo; mucho más detallado y con buenos ejemplos.&lt;/p&gt;
+
+&lt;h6 id=&#34;megaupload-dl-http-mundogeek-net-megaupload-dl-y-rapidshare-dl-http-mundogeek-net-rapidshare-dl:8d7172eff3e4dab9627e32bde8594950&#34;&gt;&lt;strong&gt;&lt;a href=&#34;http://mundogeek.net/megaupload-dl/&#34;&gt;megaupload-dl&lt;/a&gt;&lt;/strong&gt; y &lt;strong&gt;&lt;a href=&#34;http://mundogeek.net/rapidshare-dl/&#34;&gt;rapidshare-dl&lt;/a&gt;&lt;/strong&gt;&lt;/h6&gt;
+
+&lt;p&gt;El uso es bastante simple, con parametros faciles: podemos ponerle el link o los links con espacio de por medio, un archivo de texto, o -c para pasarle lo que tengamos en el portapeles.&lt;/p&gt;
+
+&lt;h6 id=&#34;slimrat-http-code-google-com-p-slimrat:8d7172eff3e4dab9627e32bde8594950&#34;&gt;&lt;strong&gt;&lt;a href=&#34;http://code.google.com/p/slimrat/&#34;&gt;slimrat&lt;/a&gt;&lt;/strong&gt;&lt;/h6&gt;
+
+&lt;p&gt;Bastante similar a las anteriores, escrita en Perl, de uso muy simple, le pueden pasar como parametro un link, o con -l una lista en un archivo de texto.
+Se le puede pasar como parametro un . Particularmente me falló bastante, uso plowshare, pero es una opción más a tener en cuenta.
+Una dependencia importante, a mi no me la pidió solo la sugirió, es &lt;em&gt;aview&lt;/em&gt;. Tambien está disponible la versión con GUI.&lt;/p&gt;
+
+&lt;p&gt;Opciones con GUI: &lt;strong&gt;&lt;a href=&#34;http://pyload.org/&#34;&gt;pyLoad&lt;/a&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;a href=&#34;http://jdownloader.org/download&#34;&gt;jDownloader&lt;/a&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;a href=&#34;http://www.tucaneando.com/&#34;&gt;Tucan&lt;/a&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;a href=&#34;http://fatrat.dolezel.info/&#34;&gt;FatRat&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h6 id=&#34;cuevanalinks-http-packages-python-org-cuevanalinks:8d7172eff3e4dab9627e32bde8594950&#34;&gt;&lt;strong&gt;&lt;a href=&#34;http://packages.python.org/CuevanaLinks/&#34;&gt;CuevanaLinks&lt;/a&gt;&lt;/strong&gt;&lt;/h6&gt;
+
+&lt;p&gt;Si! Cuevana! Para aquellos que prefieren bajar la peli antes que esperar a las 10 de la noche a que entren todos para intentar ver algo, que se caiga y putear ;)
+Uso:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cuevanalinks [parametros] &amp;quot;nombre&amp;quot; [temporada x capitulos]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;-d&lt;/strong&gt; Descarga el archivo&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;-s&lt;/strong&gt; Descarga subtitulos. con -l pueden descargar en otro idioma&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;-m&lt;/strong&gt; &lt;em&gt;file.txt&lt;/em&gt; va comentando en el archivo los links que descarga&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;-r X&lt;/strong&gt; Limita la descarga a X Kilobytes&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Es muy practico para las series, pueden bajar toda la temporada con un solo comando, por ejemplo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cuevanalinks -s -d &amp;quot;The Office&amp;quot; S01
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;En el &lt;a href=&#34;http://nqnwebs.com/blog/article/cuevanalinks-ahora-para-seres&#34;&gt;blog del autor&lt;/a&gt; pueden ver que tambien existen una versión QUI basada en QT&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;&lt;em&gt;Imagino que todos o la gran mayoría deben estar disponibles desde los repositorios de la distro que usen&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

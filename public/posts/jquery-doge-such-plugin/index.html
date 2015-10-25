@@ -1,0 +1,180 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="xeBuz">
+		<meta name="description" content="Personal Website">
+		<meta name="generator" content="Hugo 0.14" />
+		<title>jQuery Doge - such plugin &middot; Personal Blog</title>
+		<link rel="shortcut icon" href="http://localhost:1313/blog/images/favicon.ico">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/style.css">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/highlight.css">
+		<link href="http://localhost:1313/blog/index.xml" rel="alternate" type="application/rss+xml" title="Personal Blog" />
+	</head>
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='http://localhost:1313/blog/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+		<a href='http://localhost:1313/blog/about'>About</a>
+	
+
+	
+	<a class="cta" href="http://localhost:1313/blog/index.xml">Subscribe</a>
+	
+</nav>
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>jQuery Doge - such plugin</h1>
+                    <h2 class="headline">December 23, 2013</h2>
+                </header>
+                <section id="post-body">
+                    <p>Hace unos días había liberado un plugin de jQuery bastante tonto, y ahora hice un update del mismo con unos cuantos bugs corregidos y además ahora pemite parametrizarlo, así pasa a estar un poco mas usable de lo que estaba antes.
+Es mi primer plugin así que quizás no está tan optimizado&hellip; aunque considero que no es tan inestable como pensé que podía quedar :)</p>
+
+<p>Pueden descargarlo <a href="https://github.com/xeBuz/jquery-doge">desde GitHub</a> o ver un ejemplo del funcionamiento <a href="http://jesusroldan.com/doge/demo.html">desde esta demo</a></p>
+
+<p>El uso básico es el siguiente, solo deben pasarle un listado de palabras a mostrar, ya incluye algunas por defecto (wow, so doge y asi):</p>
+
+<pre><code>$(document).ready( function() {
+   // Create an array with some words
+   $('body').doge({ 
+       wordList : [&quot;such page&quot;, &quot;lorem impsum&quot;, &quot;so cool&quot;, &quot;much jquery&quot;, &quot;kitten&quot;, &quot;such demo&quot;, &quot;Kitten Ipsum&quot;]
+   });
+});
+</code></pre>
+
+<p>También se puede parametrizar un poco, con estas opciones:</p>
+
+<pre><code>$(document).ready( function() {
+   $('body').doge({ 
+       wordList : [&quot;such page&quot;, &quot;lorem impsum&quot;, &quot;so cool&quot;, &quot;much jquery&quot;, &quot;text&quot;, &quot;such demo&quot;, &quot;Kitten Ipsum&quot;],
+       showDoge : true,
+       fontSize : &quot;2em&quot;,
+       fontBorder: true,
+       dogeImage : &quot;doge.png&quot;,
+       colours : [&quot;red&quot;, &quot;green&quot;, &quot;orange&quot;, &quot;violet&quot;, &quot;aqua&quot;, &quot;yellow&quot;, &quot;slateblue&quot;, &quot;purple&quot;, &quot;pink&quot;, &quot;lime&quot;, &quot;fuchsia&quot;, &quot;gold&quot;, &quot;indigo&quot;],
+       textDuration: 1200,
+       textRespawn: 1000,       
+   });
+});
+</code></pre>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/xeBuz">
+                        <img class="avatar" src="http://localhost:1313/blog/images/avatar.png">
+                        <div>
+                            <span class="dark">xeBuz</span>
+                            <span>I&#39;m an enthusiastic gopher.</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2flocalhost%3a1313%2fblog%2fposts%2fjquery-doge-such-plugin%2f - jQuery%20Doge%20-%20such%20plugin by @xeBuz"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/no-close-tabs-firefox-31/">Close Tab en Firefox 31<aside class="dates">May 14</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/newest/">Just another sample post<aside class="dates">Mar 29</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/middle/">Second Post<aside class="dates">Mar 28</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/oldest/">First Post<aside class="dates">Mar 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/crazy-little-thing-called-perl/">Crazy little thing called Perl: Introducción al lenguaje<aside class="dates">Mar 5</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/bundles-de-juegos-varias-opciones-disponibles/">Bundles de juegos, varias opciones disponibles<aside class="dates">Feb 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-selectores-y-traversing/">jQuery: Selectores y Traversing<aside class="dates">Feb 26</aside></a>
+        </li>
+        
+   
+    
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/licencia-para-ir-al-cine/">Licencia para ir al cine<aside class="dates">Jul 1</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/">Barra de progreso de Arch Linux para Python<aside class="dates">Oct 21</aside></a>
+        </li>
+        
+   
+</ul>
+            <footer id="footer">
+    <p class="small">
+        © Copyright 2015 xeBuz
+    </p>
+</footer>
+        </section>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://localhost:1313/blog/js/main.js"></script>
+<script src="http://localhost:1313/blog/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+    </body>
+</html>

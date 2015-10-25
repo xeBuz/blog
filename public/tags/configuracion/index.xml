@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Configuracion on Personal Blog</title>
+    <link>http://localhost:1313/blog/tags/configuracion/</link>
+    <description>Recent content in Configuracion on Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Nov 2011 21:02:57 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/configuracion/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Optimizar espacio en Google Reader</title>
+      <link>http://localhost:1313/blog/posts/optimizar-espacio-en-google-reader/</link>
+      <pubDate>Wed, 09 Nov 2011 21:02:57 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/optimizar-espacio-en-google-reader/</guid>
+      <description>&lt;p&gt;Como ya todos los usuarios de Google Reader se habrán dado cuenta, Google arruinó un gran servicio.
+No voy a hablar de lo que ya me quejé mucho en Google+ y Twitter ;)&lt;/p&gt;
+
+&lt;p&gt;Estuve buscando alternativas, ninguna satisfació mis necesidades. Por suerte existen algunas modificaciones que podemos hacer para optimizar un poco el espacio, que tanto saca esa fucking barra superior de 0.1% de usabilidad.&lt;/p&gt;
+
+&lt;p&gt;Primer hay que instalar &lt;a href=&#34;https://addons.mozilla.org/es-es/firefox/addon/greasemonkey/&#34;&gt;GraseMonkey&lt;/a&gt; (addon en Firefox, supongo que está en otros navegadores), que permite via Javascript modificar funcionalidades de las páginas.
+El Script que más me gustó es &lt;a href=&#34;http://userscripts.org/scripts/show/116957&#34;&gt;Google Reader Compact Minimal For Small Screen &lt;/a&gt; pero hay muchos mas (muchos usuarios salieron furiosos a hacerlos). Sólo basta apretar &amp;ldquo;Install&amp;rdquo; con la extensión ya activada.&lt;/p&gt;
+
+&lt;p&gt;Así quedaría una vez instalado. Como verán saqué el screenshot en una ventana chica y se ve bastante espacio util. Una pena que la funcionalidad de compartir no pueda ser habilitada tan fácilmente.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/11/Screenshot-at-2011-11-09-175524.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/11/Screenshot-at-2011-11-09-175524-300x125.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Versionar el directorio /etc con Git</title>
+      <link>http://localhost:1313/blog/posts/versionar-el-directorio-etc-con-git/</link>
+      <pubDate>Mon, 26 Sep 2011 17:23:59 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/versionar-el-directorio-etc-con-git/</guid>
+      <description>&lt;p&gt;Una buena práctica, sobre todo si les gusta modificar los archivos de configuración para probar cosas o instalar aplicaciones constantemnte, es versionar el directorio /etc, para el caso en el que nos &lt;del&gt;mandemos alguna cagada&lt;/del&gt; equivoquemos en alguna configuración, el problema sea facilmente remediable.
+La instalación y configuración es muy sencilla, en este caso es todo manual, si quieren saltearse todo e instalar directamente &lt;strong&gt;&lt;a href=&#34;http://kitenet.net/~joey/code/etckeeper/&#34;&gt;etckeeper&lt;/a&gt;&lt;/strong&gt; es válido igual ;)&lt;/p&gt;
+
+&lt;p&gt;Antes que todo, hay que instalar &lt;strong&gt;git&lt;/strong&gt; (usé git porque&amp;hellip;si)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;yaourt -S git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Después vamos al directorio correspondiente y creamos el repositorio:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /etc &amp;amp;&amp;amp; git init 
+Initialized empty Git repository in /etc/.git/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Agregamos todos los archivos:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git add --all
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hacemos nuestro primer commit:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git commit -m &amp;quot;Mira mama, estoy usando versionado&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pueden crear un nuevo brach, como para tener una copia inicial del directorio, solo basta hacer:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git branch inicial
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Para verificar cambios sin commitear, pueden usar:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git status
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;En crontab crear commits diarios, no se, esas cosas las manejan a gusto, prefiero hacerlo manual&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Pueden cambiar de branch con &amp;ldquo;git checkout &amp;ldquo;&amp;hellip;en fin, a partir de ahora los cambios que quieran hacer corren por su cuenta, esta es la configuración basica para que funcione. Mas información de git pueden encontrarla en &lt;a href=&#34;http://schacon.github.com/git/gittutorial.html&#34;&gt;http://schacon.github.com/git/gittutorial.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Para ver los cambios, puede usar algunas apps como:
+&lt;strong&gt;SmartGit&lt;/strong&gt;
+Bastante cómoda, y eso que está hecho en &lt;a href=&#34;http://gifninja.com/animatedgifs/250429/trollface.gif&#34;&gt;Java&lt;/a&gt;! :P
+Aca les dejo una imagen de como se ve, por si les interesa
+&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-14.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-14-300x197.png&#34; alt=&#34;SmartGit on pacman.conf&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Pero no conozco más herramientas con GUI, si usan alguna en particular bienvenida sea&amp;hellip;
+[quote style=&amp;ldquo;1&amp;rdquo;]Si no te equivocas de vez en cuando, es que no lo intentas.&lt;/p&gt;
+
+&lt;p&gt;_ Woody Allen_&lt;/p&gt;
+
+&lt;p&gt;[/quote]&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Borrar con &#39;Delete&#39; en Nautilus y Gnome3</title>
+      <link>http://localhost:1313/blog/posts/borrar-con-delete-en-nautilus-con-gnome3/</link>
+      <pubDate>Tue, 02 Aug 2011 15:13:02 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/borrar-con-delete-en-nautilus-con-gnome3/</guid>
+      <description>&lt;p&gt;Titulo opcional: &lt;em&gt;Volvé Delete, no te fajo más&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Me es sumamente tedioso borrar archivos con Nautilus en Gnome3, porque por defecto utiliza Ctrl + Delete/Supr, pero por suerte se puede modificar facilmente&lt;/p&gt;
+
+&lt;p&gt;Primero, hay que habilitar una opción en la configuración para permitir editar los shortcuts, se puede hacer desde gconf-editor o desde la terminal con gsettings&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gsettings set org.gnome.desktop.interface can-change-accels true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Después, desde Nautilus, seleccionen un archivo y vayan a menú. Con el cursor &lt;strong&gt;SOBRE&lt;/strong&gt; la acción que desean modificar presionen la/s tecla/s que quieran como nuevo shortcut. (y SOBRE quiere decir &amp;ldquo;No hagan click, madafackas&amp;rdquo;)&lt;/p&gt;
+
+&lt;p&gt;Cuando terminen deben volver la configuración original para evitar modificar accesos por error, solo cambian _true/false _ con gsettings&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

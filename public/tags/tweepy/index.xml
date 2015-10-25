@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tweepy on Personal Blog</title>
+    <link>http://localhost:1313/blog/tags/tweepy/</link>
+    <description>Recent content in Tweepy on Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 Jul 2012 18:40:32 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/tweepy/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Un &#34;bot&#34; de Twitter, con Python en un par de minutos</title>
+      <link>http://localhost:1313/blog/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/</link>
+      <pubDate>Wed, 04 Jul 2012 18:40:32 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/</guid>
+      <description>&lt;blockquote&gt;Hace falta un bot que busque los tweets de Foursquare y responda &#34;WHO CARES?!&#34;
+
+— Commander Shepard (@MissFillys) [July 3, 2012](https://twitter.com/MissFillys/status/220272671894671360)&lt;/blockquote&gt;
+
+&lt;p&gt;Todo comenzó con ese tweet de @MissFillys y cómo estaba aburrido lo intenté hacer. Ante mi sorpresa fué mas simple de lo que pensaba. Primero deben registrar la aplicación en el &lt;a href=&#34;https://dev.twitter.com/apps&#34;&gt;área de desarrollo de Twitter&lt;/a&gt;, particularmente usé una cuenta nueva, porque seguro lo reportan como spam o algún tipo de violación a las políticas de Twitter y no quería que caiga mi cuenta también. Para interactuar con Twitter desde Python usé &lt;strong&gt;&lt;a href=&#34;https://github.com/tweepy/tweepy&#34;&gt;tweepy&lt;/a&gt;&lt;/strong&gt;, una librería bastante completa, y sobre todo, muy simple de usar&lt;/p&gt;
+
+&lt;p&gt;Esto es lo necesario para conectarse, los datos de Costumer_Key y Access_Key los sacan cuando registran la aplicación. Bastante simple, con este código ya podemos interactuar con la API&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+import tweepy
+
+#Twitter information
+CONSUMER_KEY = &amp;quot;AsdAsdDsa&amp;quot;
+CONSUMER_SECRET=&amp;quot;QwertrQWEREwtr&amp;quot;
+ACCESS_KEY=&amp;quot;Asdasd-qeq123123123&amp;quot;
+ACCESS_SECRET=&amp;quot;asdasd342-123213123wqeqweqw&amp;quot;
+
+auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
+API = tweepy.API(auth)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Para este caso, lo que hago es buscar en la public timeline. Como la librería no tiene implementada la búsqueda por source, no queda otra que traer los 20 resultados y validar si alguno viene desde desde Foursquare. Es un bucle bastante simple, en caso de que exista, se utiliza el método API.update_status() con el username, in_reply_to y algún texto que querramos ponerle.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;...
+public = API.public_timeline()
+for tweet in public:
+    if tweet.source ==&#39;foursquare&#39;:
+    API.update_status( &amp;quot;@&amp;quot;+ tweet.author.screen_name + &amp;quot;WHO CARES?!&amp;quot; , tweet.id)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;También pueden usar búsquedas más específicas. Por ejemplo, &lt;em&gt;personas&lt;/em&gt; que hablan de Tinelli. &lt;a href=&#34;https://dev.twitter.com/docs/using-search&#34;&gt;Acá&lt;/a&gt; pueden sacar ayuda sobre cómo realizar búsquedas y &lt;a href=&#34;http://packages.python.org/tweepy/html/api.html&#34;&gt;acá&lt;/a&gt; pueden leer la documentación de la librería&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;...
+assholes = API.search(&#39;Tinelli&#39;)
+for tweet in assholes:
+    API.update_status( &amp;quot;@&amp;quot;+ tweet.author.screen_name + &amp;quot;Se te está pudriendo el cerebro...&amp;quot; , tweet.id)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;El código final quedó &lt;a href=&#34;https://gist.github.com/3044158&#34;&gt;más o menos así&lt;/a&gt;, sólo necesitan ponerlo en un loop donde quieran. Quizás les sirva y puedan hacer algo interesante, como por ejemplo @pepperMaido :D&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

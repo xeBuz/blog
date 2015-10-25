@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cd on Personal Blog</title>
+    <link>http://localhost:1313/blog/tags/cd/</link>
+    <description>Recent content in Cd on Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Sep 2011 14:28:14 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/cd/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tips Linuxeros: Moverse entre directorios como un ninja</title>
+      <link>http://localhost:1313/blog/posts/tips-linuxeros-moverse-entre-directorios-como-un-ninja/</link>
+      <pubDate>Wed, 28 Sep 2011 14:28:14 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/tips-linuxeros-moverse-entre-directorios-como-un-ninja/</guid>
+      <description>&lt;p&gt;Seguramente &lt;strong&gt;cd&lt;/strong&gt; es uno de los comandos que más usamos, y también de los primeros que aprendemos a usar (junto con ls, rm, mkdir y esas cosas).
+Es posible que no usen todo el potencial que tiene, tampoco es la locura, pero tiene algunos detalles con los que vamos a poder ahorrarnos tiempo y optimizar la navegación entre directorios, porque desde la consola todo es mejor y mas rápido :P&lt;/p&gt;
+
+&lt;p&gt;El uso estandar sería: **cd directorio/ **&lt;/p&gt;
+
+&lt;p&gt;Para ir al home del usuario, podemos hacer &lt;strong&gt;cd $HOME&lt;/strong&gt; o &lt;strong&gt;cd ~&lt;/strong&gt; o mucho mejor (porque ese símbolo nunca me sale) &lt;strong&gt;cd&lt;/strong&gt;, sin espacio.
+Para ir al home de otro usuario, basta con &lt;strong&gt;cd ~marvin&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Podemos volver posiciones hacia atrás e incluso seguir navegando a partir de esa posicion, por ejemplo, aca volvemos 2 niveles atras y etramos a otrodir: &lt;strong&gt;cd ../../otrodir/&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Para volver al directorio previo (al directorio donde nos encontrabamos antes, no a un nivel anterior) hay que usar &lt;strong&gt;cd -&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Para crear un directorio y movernos al mismo: &lt;strong&gt;mkdir test &amp;amp;&amp;amp; cd $_&lt;/strong&gt; (pueden ponerlo en un &lt;a href=&#34;http://blog.jesusroldan.com/2011/09/02/tips-para-linux-alias-para-todos/&#34;&gt;alias&lt;/a&gt;, sería mas comódo)&lt;/p&gt;
+
+&lt;p&gt;También existe una solución a la dislexia, los teclados duros, o la utilización de la consola apenas nos levantamos. Si corremos &lt;strong&gt;shopt -s cdspell&lt;/strong&gt; (o mejor aún. si lo agregamos al ~bashrc) nos corrige errores de tipeo, por ejemplo, si hacemos cd /hom/xebuz nos lleva a /home/xebuz, muy útil.&lt;/p&gt;
+
+&lt;p&gt;Bueno, eso.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

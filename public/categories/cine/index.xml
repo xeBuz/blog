@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cine on title</title>
-    <link>jesusroldan.com/categories/cine/</link>
-    <description>Recent content in Cine on title</description>
+    <title>Cine on Personal Blog</title>
+    <link>http://localhost:1313/blog/categories/cine/</link>
+    <description>Recent content in Cine on Personal Blog</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
     <lastBuildDate>Wed, 25 Jan 2012 20:18:15 +0000</lastBuildDate>
-    <atom:link href="jesusroldan.com/categories/cine/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/categories/cine/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Agenda de Febrero del Cineclub Municipal Hugo del Carril</title>
-      <link>/jesusroldan.com/posts/agenda-de-febrero-del-cineclub-municipal-hugo-del-carril/</link>
+      <link>http://localhost:1313/blog/posts/agenda-de-febrero-del-cineclub-municipal-hugo-del-carril/</link>
       <pubDate>Wed, 25 Jan 2012 20:18:15 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/agenda-de-febrero-del-cineclub-municipal-hugo-del-carril/</guid>
+      <guid>http://localhost:1313/blog/posts/agenda-de-febrero-del-cineclub-municipal-hugo-del-carril/</guid>
       <description>&lt;p&gt;En el 2012 el Cineclub arranca con clásicos todo Febrero. Les dejo la agenda completa (es básicamente la información del &lt;a href=&#34;http://www.cineclubmunicipal.org.ar/contenidos/2012_02/sec_ciclo_01.php?sec=cine&#34;&gt;sitio&lt;/a&gt;) subida a Google Calendar, ordenada y con un link a IMDb.
 Se pueden suscribir desde la parte inferior, el calendario es de acceso público.&lt;/p&gt;
 </description>
@@ -21,10 +22,10 @@ Se pueden suscribir desde la parte inferior, el calendario es de acceso público
     
     <item>
       <title>Actividades  de Noviembre del Cineclub Municipal Hugo del Carril en Google Calendar</title>
-      <link>/jesusroldan.com/posts/actividades-de-noviembre-del-cineclub-municipal-hugo-del-carril-en-google-calendar/</link>
+      <link>http://localhost:1313/blog/posts/actividades-de-noviembre-del-cineclub-municipal-hugo-del-carril-en-google-calendar/</link>
       <pubDate>Fri, 04 Nov 2011 01:51:31 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/actividades-de-noviembre-del-cineclub-municipal-hugo-del-carril-en-google-calendar/</guid>
+      <guid>http://localhost:1313/blog/posts/actividades-de-noviembre-del-cineclub-municipal-hugo-del-carril-en-google-calendar/</guid>
       <description>&lt;p&gt;Les dejo el cronograma de actividades de noviembre del Cineclub Hugo del Carril cargado en Google Calendar y público para que lo puedan guardar en sus cuentas, solo presionen el +Calendar que aparece al final del cuadro. El mes pasado no lo hice y me olvide bocha de pelis.
 Cada película aparece con el día y horario, título en español, título original, enlance a IMDb, ciclo al que pertenece, país, año y duración.&lt;/p&gt;
 
@@ -34,10 +35,10 @@ Cada película aparece con el día y horario, título en español, título origi
     
     <item>
       <title>Actividades del Cineclub Municipal Hugo del Carril en Google Calendar</title>
-      <link>/jesusroldan.com/posts/actividades-del-cineclub-municipal-hugo-del-carril-en-google-calendar/</link>
+      <link>http://localhost:1313/blog/posts/actividades-del-cineclub-municipal-hugo-del-carril-en-google-calendar/</link>
       <pubDate>Thu, 01 Sep 2011 12:43:24 +0000</pubDate>
       
-      <guid>/jesusroldan.com/posts/actividades-del-cineclub-municipal-hugo-del-carril-en-google-calendar/</guid>
+      <guid>http://localhost:1313/blog/posts/actividades-del-cineclub-municipal-hugo-del-carril-en-google-calendar/</guid>
       <description>&lt;p&gt;Les dejo el cronograma de actividades de septiembre del Cineclub Hugo del Carril cargado en Google Calendar y público para que lo puedan guardar en sus cuentas, solo presionen el +Calendar que aparece al final del cuadro.
 Cada película aparece con el día y horario, título en español, título original, enlance a IMDb, ciclo al que pertenece, país, año y duración.
 El sitio oficial del Cineclub es &lt;a href=&#34;http://www.cineclubmunicipal.org.ar/&#34;&gt;http://www.cineclubmunicipal.org.ar/&lt;/a&gt;, tiene mucha más información de las películas, así como un calendario en la parte inferior. Les recuerdo que las entradas para socios salen 1$, para no socios 10$.&lt;/p&gt;

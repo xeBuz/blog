@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Peliculas on Personal Blog</title>
+    <link>http://localhost:1313/blog/tags/peliculas/</link>
+    <description>Recent content in Peliculas on Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Sep 2011 12:43:24 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/peliculas/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Actividades del Cineclub Municipal Hugo del Carril en Google Calendar</title>
+      <link>http://localhost:1313/blog/posts/actividades-del-cineclub-municipal-hugo-del-carril-en-google-calendar/</link>
+      <pubDate>Thu, 01 Sep 2011 12:43:24 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/actividades-del-cineclub-municipal-hugo-del-carril-en-google-calendar/</guid>
+      <description>&lt;p&gt;Les dejo el cronograma de actividades de septiembre del Cineclub Hugo del Carril cargado en Google Calendar y público para que lo puedan guardar en sus cuentas, solo presionen el +Calendar que aparece al final del cuadro.
+Cada película aparece con el día y horario, título en español, título original, enlance a IMDb, ciclo al que pertenece, país, año y duración.
+El sitio oficial del Cineclub es &lt;a href=&#34;http://www.cineclubmunicipal.org.ar/&#34;&gt;http://www.cineclubmunicipal.org.ar/&lt;/a&gt;, tiene mucha más información de las películas, así como un calendario en la parte inferior. Les recuerdo que las entradas para socios salen 1$, para no socios 10$.&lt;/p&gt;
+
+&lt;p&gt;Lo cargué a mano, si encuentrar algún error avisenme, &lt;em&gt;errare humanum est ;)&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

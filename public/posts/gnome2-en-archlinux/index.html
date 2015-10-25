@@ -1,0 +1,209 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="xeBuz">
+		<meta name="description" content="Personal Website">
+		<meta name="generator" content="Hugo 0.14" />
+		<title>Gnome2 en ArchLinux &middot; Personal Blog</title>
+		<link rel="shortcut icon" href="http://localhost:1313/blog/images/favicon.ico">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/style.css">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/highlight.css">
+		<link href="http://localhost:1313/blog/index.xml" rel="alternate" type="application/rss+xml" title="Personal Blog" />
+	</head>
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='http://localhost:1313/blog/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+		<a href='http://localhost:1313/blog/about'>About</a>
+	
+
+	
+	<a class="cta" href="http://localhost:1313/blog/index.xml">Subscribe</a>
+	
+</nav>
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>Gnome2 en ArchLinux</h1>
+                    <h2 class="headline">September 14, 2011</h2>
+                </header>
+                <section id="post-body">
+                    
+
+<p>Como hay mucho usuarios descontentos con el resultado de Gnome 3, incluído Linus Torvals, era evidente que iban a existir formas de volver a la versión anterior, y Arch claro que la permite, y eso que fué de las primeras distros en cambiar :P
+Buscando encontré dos, la primera es un fork, la segunda un downgrade directo; me quedo con la primera. Si no se pudieron acostumbrar al cambio, si gnome-shell ya les dió una úlcera y no pueden esperar la versión 3.2, quizás alguna de estas opciones les sea útil.</p>
+
+<p><strong>Utilizar un fork: Mate</strong></p>
+
+<p>Primero, tiene que editar el archivo <strong>/etc/pacman.conf</strong>, agregando estas lineas al principio de la lista de repositorios
+[code]
+[mate]</p>
+
+<h1 id="contains-official-mate-desktop-packages-gnome2-fork:833a75177de8e75cddde15e0b36cb15f">Contains official mate desktop packages (gnome2 fork)</h1>
+
+<p>Server = <a href="http://germ.winpe.com/archlinux/mate/$arch">http://germ.winpe.com/archlinux/mate/$arch</a>
+[/code]</p>
+
+<p>Para instalar Mate, tiene que correr:</p>
+
+<pre><code> pacman -Syyu &amp;&amp; pacman -Sf mate-desktop-environment
+</code></pre>
+
+<p>En mi caso aparecieron varios conflictos, ponga si a todo, no tuve problemas con ninguno</p>
+
+<p>Despues de eso, tiene varios paquetes mas para instalar, todos opcionales pero suman: mate-extract mate-applets mate-terminal mate-image-viewer mate-themes. Así mismo, deberían instalar temas o cualquier eyecandy que necesiten para Gnome 2 que no sea necesario en el 3.</p>
+
+<p>[caption id=&ldquo;attachment_318&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;300&rdquo; caption=&ldquo;Gnome 3.0.2, antes del update&rdquo;]<a href="http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot.png"><img src="http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-300x225.png" alt="Gnome 3" /></a>[/caption] [caption id=&ldquo;attachment_320&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;300&rdquo; caption=&ldquo;Una vez instalado Mate&rdquo;]<a href="http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-1.png"><img src="http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-1-300x225.png" alt="" /></a>[/caption] [caption id=&ldquo;attachment_322&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;300&rdquo; caption=&ldquo;Mate, despúes de instalar themes y modificar la apariencia.&rdquo;]<a href="http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-2.png"><img src="http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-2-300x225.png" alt="" /></a>[/caption]</p>
+
+<p><strong>Utilizar una versión antigua de paquetes</strong></p>
+
+<p>En este caso, lo que vamos a hacer es cambiar el repositorio en donde se encuentra Gnome, utilizar uno que no haya sido actualizado a Gnome3.x e instalar en cambio Gnome2.32.1, supongo que es la última versión estable antes del cambio.</p>
+
+<p>También tenemos que editar el archivo <strong>/etc/pacman.conf</strong>, pero en lugar de agregar un repositorio cambiamos el extra
+[code]
+[extra]</p>
+
+<h1 id="incluir-etc-pacman-d-mirrorlist:833a75177de8e75cddde15e0b36cb15f">Incluir = / etc / pacman.d / mirrorlist</h1>
+
+<p>Server = <a href="http://arm.konnichi.com/2011/04/30/extra/os/$arch">http://arm.konnichi.com/2011/04/30/extra/os/$arch</a>
+[/code]</p>
+
+<p>Después corren esta aberración:</p>
+
+<pre><code> pacman -Syyfuu -nodep
+</code></pre>
+
+<p>Cuando terminen (básicamente lo que hace es actualizar los repositorios, forzar el update, y en caso de que sea necesario realizar un downgrade de lo que haya, va a instalar todos los paquetes de Gnome que encuentre, son varios megas), en /etc/pacman.conf dejen el repositorio extra como corresponde y además coloquen esto para que no actualice gnome ni gnome-extra (asi no lo pisa con la versión 3)
+[code]
+IgnoreGroup = gnome gnome-extra
+[/code]
+Les debo screenshots de esta prueba, ya borré el snapshot y son muchos megas para descargar como para hacerlo de nuevo sólo para las imágenes :(</p>
+
+<!-- more -->
+
+<p>Ambas pruebas fueron realizadas con una <a href="http://blog.jesusroldan.com/2011/08/31/virtualboxes-org-descarga-de-maquinas-virtuales/">máquina virtual</a>  con una instalación estandar, con gnome y gnome-extra instalado por defecto, es decir, en ambos casos hice un downgrade de Gnome 3, que me pareció el caso en el que podía detectar mas problemas.
+<strong>De las dos opciones, les recomiendo la primera, la segunda da bastantes dolores de cabeza.</strong></p>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/xeBuz">
+                        <img class="avatar" src="http://localhost:1313/blog/images/avatar.png">
+                        <div>
+                            <span class="dark">xeBuz</span>
+                            <span>I&#39;m an enthusiastic gopher.</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2flocalhost%3a1313%2fblog%2fposts%2fgnome2-en-archlinux%2f - Gnome2%20en%20ArchLinux by @xeBuz"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/no-close-tabs-firefox-31/">Close Tab en Firefox 31<aside class="dates">May 14</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/newest/">Just another sample post<aside class="dates">Mar 29</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/middle/">Second Post<aside class="dates">Mar 28</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/oldest/">First Post<aside class="dates">Mar 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/crazy-little-thing-called-perl/">Crazy little thing called Perl: Introducción al lenguaje<aside class="dates">Mar 5</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/bundles-de-juegos-varias-opciones-disponibles/">Bundles de juegos, varias opciones disponibles<aside class="dates">Feb 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-selectores-y-traversing/">jQuery: Selectores y Traversing<aside class="dates">Feb 26</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-doge-such-plugin/">jQuery Doge - such plugin<aside class="dates">Dec 23</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/licencia-para-ir-al-cine/">Licencia para ir al cine<aside class="dates">Jul 1</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/">Barra de progreso de Arch Linux para Python<aside class="dates">Oct 21</aside></a>
+        </li>
+        
+   
+</ul>
+            <footer id="footer">
+    <p class="small">
+        © Copyright 2015 xeBuz
+    </p>
+</footer>
+        </section>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://localhost:1313/blog/js/main.js"></script>
+<script src="http://localhost:1313/blog/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+    </body>
+</html>

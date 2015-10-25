@@ -1,0 +1,186 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="xeBuz">
+		<meta name="description" content="Personal Website">
+		<meta name="generator" content="Hugo 0.14" />
+		<title>Solucionar problemas después de actualizar Gnome 3.4.1 &middot; Personal Blog</title>
+		<link rel="shortcut icon" href="http://localhost:1313/blog/images/favicon.ico">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/style.css">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/highlight.css">
+		<link href="http://localhost:1313/blog/index.xml" rel="alternate" type="application/rss+xml" title="Personal Blog" />
+	</head>
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='http://localhost:1313/blog/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+		<a href='http://localhost:1313/blog/about'>About</a>
+	
+
+	
+	<a class="cta" href="http://localhost:1313/blog/index.xml">Subscribe</a>
+	
+</nav>
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>Solucionar problemas después de actualizar Gnome 3.4.1</h1>
+                    <h2 class="headline">April 23, 2012</h2>
+                </header>
+                <section id="post-body">
+                    <p>Hoy, como para que el lunes arranque con todo, actualicé Arch y después no pude ingresar más la sesión de Gnome3. Aparecía la PC con carita triste y me decía que iba a desactivar las extensiones, pero no soluciona nada. Y cómo se actualizaron muchas drivers, el kernel y gnome no sabía bien donde estaba el problema.</p>
+
+<p>Al parecer la nueva versión de Gnome (3.4.1) tiene como dependencia networkmanager y si no lo encuentra explota por todos lados, pueden verificar el archivo /var/logs/messages.log, deberían tener algo así:
+[spoiler title=&ldquo;messages.log&rdquo; open=&ldquo;0&rdquo; style=&ldquo;1&rdquo;]
+<code>[...]
+Apr 23 17:26:56 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager/Presence interface=org.freedesktop.DBus.Properties method=GetAll
+Apr 23 17:26:56 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager/Presence interface=org.freedesktop.DBus.Properties method=GetAll
+Apr 23 17:26:59 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/freedesktop/DBus interface=org.freedesktop.DBus method=NameOwnerChanged
+Apr 23 17:26:59 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/freedesktop/DBus interface=org.freedesktop.DBus method=NameOwnerChanged
+Apr 23 17:28:24 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager interface=org.gnome.SessionManager method=IsInhibited
+Apr 23 17:28:24 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager interface=org.gnome.SessionManager method=IsInhibited
+Apr 23 17:29:24 localhost dbus[661]: [system] Activating service name='org.freedesktop.NetworkManager' (using servicehelper)
+Apr 23 17:29:24 localhost dbus[661]: [system] Activated service 'org.freedesktop.NetworkManager' failed: Launch helper exited with unknown return code 1
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): Searching for 4194307 in 4194307,4194308
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): Watch 1 fired, idle time = 600053
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): GsmPresence: setting idle: 1
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): Using ConsoleKit for session tracking
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): Updating ConsoleKit idle status: 1
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager interface=org.gnome.SessionManager method=IsInhibited
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager interface=org.gnome.SessionManager method=IsInhibited
+[...]</code>[/spoiler]</p>
+
+<p>Si quieren verificar si el problema se da por esto, pueden correr el siguiente comando (Control + Alt + F1) e intentar entrar a la sesión (Control + Alt + F7/F8):</p>
+
+<pre><code>sudo /etc/rc.d/networkmanager start
+</code></pre>
+
+<p>Para hacer el cambio permanente, agreguen <strong>networkmanager</strong> a los DAEMONS del /etc.rc.conf</p>
+
+<p>Espero que les sirva, a mi me hizo renegar mucho, y es algo bastante simple de solucionar.</p>
+
+<p>Edit: Según la <a href="https://wiki.archlinux.org/index.php/NetworkManager#Edit_daemons">wiki de Arch</a>, hay que sacar el daemon de network y poner el de networkmanager después de dbus</p>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/xeBuz">
+                        <img class="avatar" src="http://localhost:1313/blog/images/avatar.png">
+                        <div>
+                            <span class="dark">xeBuz</span>
+                            <span>I&#39;m an enthusiastic gopher.</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2flocalhost%3a1313%2fblog%2fposts%2fsolucionar-problemas-despues-de-actualizar-gnome-3-4-1%2f - Solucionar%20problemas%20despu%c3%a9s%20de%20actualizar%20Gnome%203.4.1 by @xeBuz"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/no-close-tabs-firefox-31/">Close Tab en Firefox 31<aside class="dates">May 14</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/newest/">Just another sample post<aside class="dates">Mar 29</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/middle/">Second Post<aside class="dates">Mar 28</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/oldest/">First Post<aside class="dates">Mar 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/crazy-little-thing-called-perl/">Crazy little thing called Perl: Introducción al lenguaje<aside class="dates">Mar 5</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/bundles-de-juegos-varias-opciones-disponibles/">Bundles de juegos, varias opciones disponibles<aside class="dates">Feb 27</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-selectores-y-traversing/">jQuery: Selectores y Traversing<aside class="dates">Feb 26</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/jquery-doge-such-plugin/">jQuery Doge - such plugin<aside class="dates">Dec 23</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/licencia-para-ir-al-cine/">Licencia para ir al cine<aside class="dates">Jul 1</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/">Barra de progreso de Arch Linux para Python<aside class="dates">Oct 21</aside></a>
+        </li>
+        
+   
+</ul>
+            <footer id="footer">
+    <p class="small">
+        © Copyright 2015 xeBuz
+    </p>
+</footer>
+        </section>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://localhost:1313/blog/js/main.js"></script>
+<script src="http://localhost:1313/blog/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+    </body>
+</html>

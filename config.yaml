@@ -4,6 +4,10 @@ layoutdir: "layouts"
 publishdir: "public"
 indexes:
   category: "categories"
-baseurl: "jesusroldan.com"
-title: "title"
+
+baseurl: "http://xebuz.github.io/blog"
+
+title: "Jesús Roldán"
+
+canonifyurls: true
 ...

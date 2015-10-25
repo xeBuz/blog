@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Feeds on Personal Blog</title>
+    <link>http://localhost:1313/blog/tags/feeds/</link>
+    <description>Recent content in Feeds on Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Nov 2011 21:02:57 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/feeds/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Optimizar espacio en Google Reader</title>
+      <link>http://localhost:1313/blog/posts/optimizar-espacio-en-google-reader/</link>
+      <pubDate>Wed, 09 Nov 2011 21:02:57 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/optimizar-espacio-en-google-reader/</guid>
+      <description>&lt;p&gt;Como ya todos los usuarios de Google Reader se habrán dado cuenta, Google arruinó un gran servicio.
+No voy a hablar de lo que ya me quejé mucho en Google+ y Twitter ;)&lt;/p&gt;
+
+&lt;p&gt;Estuve buscando alternativas, ninguna satisfació mis necesidades. Por suerte existen algunas modificaciones que podemos hacer para optimizar un poco el espacio, que tanto saca esa fucking barra superior de 0.1% de usabilidad.&lt;/p&gt;
+
+&lt;p&gt;Primer hay que instalar &lt;a href=&#34;https://addons.mozilla.org/es-es/firefox/addon/greasemonkey/&#34;&gt;GraseMonkey&lt;/a&gt; (addon en Firefox, supongo que está en otros navegadores), que permite via Javascript modificar funcionalidades de las páginas.
+El Script que más me gustó es &lt;a href=&#34;http://userscripts.org/scripts/show/116957&#34;&gt;Google Reader Compact Minimal For Small Screen &lt;/a&gt; pero hay muchos mas (muchos usuarios salieron furiosos a hacerlos). Sólo basta apretar &amp;ldquo;Install&amp;rdquo; con la extensión ya activada.&lt;/p&gt;
+
+&lt;p&gt;Así quedaría una vez instalado. Como verán saqué el screenshot en una ventana chica y se ve bastante espacio util. Una pena que la funcionalidad de compartir no pueda ser habilitada tan fácilmente.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/11/Screenshot-at-2011-11-09-175524.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/11/Screenshot-at-2011-11-09-175524-300x125.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
