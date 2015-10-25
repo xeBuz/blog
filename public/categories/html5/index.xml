@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Html5 on xeBuz personal blog</title>
-    <link>http://localhost:1313/blog/categories/html5/</link>
+    <link>http://xebuz.github.io/blog/categories/html5/</link>
     <description>Recent content in Html5 on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 26 Feb 2014 15:56:32 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/categories/html5/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://xebuz.github.io/blog/categories/html5/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>jQuery: Selectores y Traversing</title>
-      <link>http://localhost:1313/blog/posts/jquery-selectores-y-traversing/</link>
+      <link>http://xebuz.github.io/blog/posts/jquery-selectores-y-traversing/</link>
       <pubDate>Wed, 26 Feb 2014 15:56:32 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/jquery-selectores-y-traversing/</guid>
+      <guid>http://xebuz.github.io/blog/posts/jquery-selectores-y-traversing/</guid>
       <description>&lt;p&gt;Voy a poner esto acá, haciendo las veces de ayudamemoria. Además para el que no sepa, siempre viene bien tener un listado e investigarlos.
 Selectores/Traversing (que no encontré una traducción buena) en jQuery.&lt;/p&gt;
 
@@ -97,10 +97,10 @@ Selectores/Traversing (que no encontré una traducción buena) en jQuery.&lt;/p&
     
     <item>
       <title>jQuery Doge - such plugin</title>
-      <link>http://localhost:1313/blog/posts/jquery-doge-such-plugin/</link>
+      <link>http://xebuz.github.io/blog/posts/jquery-doge-such-plugin/</link>
       <pubDate>Mon, 23 Dec 2013 14:31:40 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/jquery-doge-such-plugin/</guid>
+      <guid>http://xebuz.github.io/blog/posts/jquery-doge-such-plugin/</guid>
       <description>&lt;p&gt;Hace unos días había liberado un plugin de jQuery bastante tonto, y ahora hice un update del mismo con unos cuantos bugs corregidos y además ahora pemite parametrizarlo, así pasa a estar un poco mas usable de lo que estaba antes.
 Es mi primer plugin así que quizás no está tan optimizado&amp;hellip; aunque considero que no es tan inestable como pensé que podía quedar :)&lt;/p&gt;
 
@@ -140,10 +140,10 @@ Es mi primer plugin así que quizás no está tan optimizado&amp;hellip; aunque 
     
     <item>
       <title>Lo que quedó de la charla de desarrollo web de videojuegos</title>
-      <link>http://localhost:1313/blog/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</link>
+      <link>http://xebuz.github.io/blog/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</link>
       <pubDate>Fri, 07 Sep 2012 14:33:06 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</guid>
+      <guid>http://xebuz.github.io/blog/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/gSKUEw1.png&#34; alt=&#34;thumbs&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Antes que nada gracias a todos los que fueron ayer a la charla de desarrollo de videojuegos y a la gente de &lt;a href=&#34;http://uni-code-group.blogspot.com.ar/&#34;&gt;&lt;strong&gt;UNI-CODE&lt;/strong&gt;&lt;/a&gt; por la invitación. Les dejo algunos links que había prometido o temas que quedaron en el aire. Cualquier cosa avisen.&lt;/p&gt;

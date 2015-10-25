@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on xeBuz personal blog</title>
-    <link>http://localhost:1313/blog/categories/python/</link>
+    <link>http://xebuz.github.io/blog/categories/python/</link>
     <description>Recent content in Python on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 21 Oct 2012 20:49:21 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://xebuz.github.io/blog/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Barra de progreso de Arch Linux para Python</title>
-      <link>http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/</link>
+      <link>http://xebuz.github.io/blog/posts/barra-de-progreso-de-arch-linux-para-python/</link>
       <pubDate>Sun, 21 Oct 2012 20:49:21 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/</guid>
+      <guid>http://xebuz.github.io/blog/posts/barra-de-progreso-de-arch-linux-para-python/</guid>
       <description>&lt;p&gt;Hace unos días me puse a &lt;em&gt;portar&lt;/em&gt; la barra de progreso que tiene el sistema de paquetes de &lt;a href=&#34;http://blog.jesusroldan.com/2011/12/28/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/&#34;&gt;&lt;strong&gt;Arch Linux&lt;/strong&gt;&lt;/a&gt; (activando la opción &lt;strong&gt;ILoveCandy&lt;/strong&gt;) a Python 3.X y 2.7. De momento está en fase de prueba, pero es dentro de todo funcional, prometo ir actualizándola cuando pueda.&lt;/p&gt;
 
 &lt;p&gt;Para poder instalarlo, pueden bajarse los fuentes &lt;a href=&#34;https://github.com/xeBuz/pacman-progressbar&#34;&gt;desde &lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt; o directamente desde PyPi:&lt;/p&gt;
@@ -47,10 +47,10 @@
     
     <item>
       <title>Script para generar playlists dinámicas en MPD </title>
-      <link>http://localhost:1313/blog/posts/script-para-generar-playlists-dinamicas-en-mpd/</link>
+      <link>http://xebuz.github.io/blog/posts/script-para-generar-playlists-dinamicas-en-mpd/</link>
       <pubDate>Fri, 10 Aug 2012 13:55:24 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/script-para-generar-playlists-dinamicas-en-mpd/</guid>
+      <guid>http://xebuz.github.io/blog/posts/script-para-generar-playlists-dinamicas-en-mpd/</guid>
       <description>&lt;p&gt;Revisando scripts viejos, me encontré con este que quizás a alguno le puede servir. La idea es ir generando dinámicamente la lista de reproducción de un server &lt;a href=&#34;http://mpd.wikia.com/&#34;&gt;MPD&lt;/a&gt; usando la &lt;a href=&#34;http://www.last.fm/api&#34;&gt;API&lt;/a&gt; de &lt;a href=&#34;http://www.last.fm/user/xeBuz&#34;&gt;Last.fm&lt;/a&gt; para encontrar artistas similares en el disco.
 Si bien ya hay clientes que tienen esta funcionalidad, como &lt;a href=&#34;http://mpd.wikia.com/wiki/Client:Ario&#34;&gt;Ario&lt;/a&gt;, suelo conectarme por SSH al server y me resulta cómodo correr el script este cuando no se que escuchar.&lt;/p&gt;
 
@@ -120,10 +120,10 @@ Si bien ya hay clientes que tienen esta funcionalidad, como &lt;a href=&#34;http
     
     <item>
       <title>Un &#34;bot&#34; de Twitter, con Python en un par de minutos</title>
-      <link>http://localhost:1313/blog/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/</link>
+      <link>http://xebuz.github.io/blog/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/</link>
       <pubDate>Wed, 04 Jul 2012 18:40:32 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/</guid>
+      <guid>http://xebuz.github.io/blog/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/</guid>
       <description>
 
 &lt;p&gt;&lt;blockquote&gt;Hace falta un bot que busque los tweets de Foursquare y responda &amp;ldquo;WHO CARES?!&amp;rdquo;&lt;/p&gt;

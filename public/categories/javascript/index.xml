@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Javascript on xeBuz personal blog</title>
-    <link>http://localhost:1313/blog/categories/javascript/</link>
+    <link>http://xebuz.github.io/blog/categories/javascript/</link>
     <description>Recent content in Javascript on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 26 Feb 2014 15:56:32 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://xebuz.github.io/blog/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>jQuery: Selectores y Traversing</title>
-      <link>http://localhost:1313/blog/posts/jquery-selectores-y-traversing/</link>
+      <link>http://xebuz.github.io/blog/posts/jquery-selectores-y-traversing/</link>
       <pubDate>Wed, 26 Feb 2014 15:56:32 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/jquery-selectores-y-traversing/</guid>
+      <guid>http://xebuz.github.io/blog/posts/jquery-selectores-y-traversing/</guid>
       <description>&lt;p&gt;Voy a poner esto acá, haciendo las veces de ayudamemoria. Además para el que no sepa, siempre viene bien tener un listado e investigarlos.
 Selectores/Traversing (que no encontré una traducción buena) en jQuery.&lt;/p&gt;
 
@@ -97,10 +97,10 @@ Selectores/Traversing (que no encontré una traducción buena) en jQuery.&lt;/p&
     
     <item>
       <title>jQuery Doge - such plugin</title>
-      <link>http://localhost:1313/blog/posts/jquery-doge-such-plugin/</link>
+      <link>http://xebuz.github.io/blog/posts/jquery-doge-such-plugin/</link>
       <pubDate>Mon, 23 Dec 2013 14:31:40 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/jquery-doge-such-plugin/</guid>
+      <guid>http://xebuz.github.io/blog/posts/jquery-doge-such-plugin/</guid>
       <description>&lt;p&gt;Hace unos días había liberado un plugin de jQuery bastante tonto, y ahora hice un update del mismo con unos cuantos bugs corregidos y además ahora pemite parametrizarlo, así pasa a estar un poco mas usable de lo que estaba antes.
 Es mi primer plugin así que quizás no está tan optimizado&amp;hellip; aunque considero que no es tan inestable como pensé que podía quedar :)&lt;/p&gt;
 

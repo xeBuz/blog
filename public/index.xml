@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>xeBuz personal blog</title>
-    <link>http://localhost:1313/blog/</link>
+    <link>http://xebuz.github.io/blog/</link>
     <description>Recent content on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 20 Jun 2015 14:02:37 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://xebuz.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>About</title>
-      <link>http://localhost:1313/blog/about/</link>
+      <link>http://xebuz.github.io/blog/about/</link>
       <pubDate>Sat, 20 Jun 2015 14:02:37 +0200</pubDate>
       
-      <guid>http://localhost:1313/blog/about/</guid>
+      <guid>http://xebuz.github.io/blog/about/</guid>
       <description>
 
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ullam earum dolorum! Sed, perspiciatis.&lt;/p&gt;
@@ -31,10 +31,10 @@
     
     <item>
       <title>Crazy little thing called Perl: Introducción al lenguaje</title>
-      <link>http://localhost:1313/blog/posts/crazy-little-thing-called-perl/</link>
+      <link>http://xebuz.github.io/blog/posts/crazy-little-thing-called-perl/</link>
       <pubDate>Wed, 05 Mar 2014 15:04:21 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/crazy-little-thing-called-perl/</guid>
+      <guid>http://xebuz.github.io/blog/posts/crazy-little-thing-called-perl/</guid>
       <description>&lt;p&gt;Perl está disponible para múltimples plataformas, pueden descargarlo desde &lt;a href=&#34;http://www.perl.org/get.html&#34;&gt;acá&lt;/a&gt; o desde el sistema de paquetes que utilicen. Para verificar si tienen instalado perl, en la terminal escriban &lt;em&gt;perl -v&lt;/em&gt;, si hay salida ya lo tienen instalado.&lt;/p&gt;
 
 &lt;p&gt;Para la instalación de librerías se utiliza &lt;a href=&#34;http://www.cpan.org/&#34;&gt;&lt;strong&gt;CPAN&lt;/strong&gt;&lt;/a&gt;, que es una colección de módulos libres para Perl. Pueden descargar este script o sino instalarlo desde los repositorios, por ejemplo, en un Linux basado en Debian basta correr:&lt;/p&gt;
@@ -364,10 +364,10 @@ Acá un ejemplo de como correr un test, sobre una función específica.&lt;/p&gt
     
     <item>
       <title>jQuery: Selectores y Traversing</title>
-      <link>http://localhost:1313/blog/posts/jquery-selectores-y-traversing/</link>
+      <link>http://xebuz.github.io/blog/posts/jquery-selectores-y-traversing/</link>
       <pubDate>Wed, 26 Feb 2014 15:56:32 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/jquery-selectores-y-traversing/</guid>
+      <guid>http://xebuz.github.io/blog/posts/jquery-selectores-y-traversing/</guid>
       <description>&lt;p&gt;Voy a poner esto acá, haciendo las veces de ayudamemoria. Además para el que no sepa, siempre viene bien tener un listado e investigarlos.
 Selectores/Traversing (que no encontré una traducción buena) en jQuery.&lt;/p&gt;
 
@@ -450,10 +450,10 @@ Selectores/Traversing (que no encontré una traducción buena) en jQuery.&lt;/p&
     
     <item>
       <title>jQuery Doge - such plugin</title>
-      <link>http://localhost:1313/blog/posts/jquery-doge-such-plugin/</link>
+      <link>http://xebuz.github.io/blog/posts/jquery-doge-such-plugin/</link>
       <pubDate>Mon, 23 Dec 2013 14:31:40 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/jquery-doge-such-plugin/</guid>
+      <guid>http://xebuz.github.io/blog/posts/jquery-doge-such-plugin/</guid>
       <description>&lt;p&gt;Hace unos días había liberado un plugin de jQuery bastante tonto, y ahora hice un update del mismo con unos cuantos bugs corregidos y además ahora pemite parametrizarlo, así pasa a estar un poco mas usable de lo que estaba antes.
 Es mi primer plugin así que quizás no está tan optimizado&amp;hellip; aunque considero que no es tan inestable como pensé que podía quedar :)&lt;/p&gt;
 
@@ -493,10 +493,10 @@ Es mi primer plugin así que quizás no está tan optimizado&amp;hellip; aunque 
     
     <item>
       <title>Barra de progreso de Arch Linux para Python</title>
-      <link>http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/</link>
+      <link>http://xebuz.github.io/blog/posts/barra-de-progreso-de-arch-linux-para-python/</link>
       <pubDate>Sun, 21 Oct 2012 20:49:21 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/</guid>
+      <guid>http://xebuz.github.io/blog/posts/barra-de-progreso-de-arch-linux-para-python/</guid>
       <description>&lt;p&gt;Hace unos días me puse a &lt;em&gt;portar&lt;/em&gt; la barra de progreso que tiene el sistema de paquetes de &lt;a href=&#34;http://blog.jesusroldan.com/2011/12/28/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/&#34;&gt;&lt;strong&gt;Arch Linux&lt;/strong&gt;&lt;/a&gt; (activando la opción &lt;strong&gt;ILoveCandy&lt;/strong&gt;) a Python 3.X y 2.7. De momento está en fase de prueba, pero es dentro de todo funcional, prometo ir actualizándola cuando pueda.&lt;/p&gt;
 
 &lt;p&gt;Para poder instalarlo, pueden bajarse los fuentes &lt;a href=&#34;https://github.com/xeBuz/pacman-progressbar&#34;&gt;desde &lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt; o directamente desde PyPi:&lt;/p&gt;
@@ -529,10 +529,10 @@ Es mi primer plugin así que quizás no está tan optimizado&amp;hellip; aunque 
     
     <item>
       <title>Script para grabar la consola en un .gif animado</title>
-      <link>http://localhost:1313/blog/posts/script-para-grabar-la-consola-en-un-gif-animado/</link>
+      <link>http://xebuz.github.io/blog/posts/script-para-grabar-la-consola-en-un-gif-animado/</link>
       <pubDate>Thu, 18 Oct 2012 02:03:52 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/script-para-grabar-la-consola-en-un-gif-animado/</guid>
+      <guid>http://xebuz.github.io/blog/posts/script-para-grabar-la-consola-en-un-gif-animado/</guid>
       <description>&lt;p&gt;Hoy me surgió una necesidad, que me pareció bastante simple pero no encontré herramientas simples que me lo solucionaran. Les dejo este script, que graba un gif de la consola durante X segundos (idea de @shinax y @rootmyword). Ese valor se lo pasamos por parámetro (no lo valido ni tiene default, porque la vida es demasiado corta para controlarlo) . Hay que correr el script con un &amp;amp; al final de la línea, asi pasa a correr en background y podemos usar la consola.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    #!/bin/bash
@@ -563,10 +563,10 @@ Línea 13. Toma todas las imágenes de la carpeta, las concatena con un delay de
     
     <item>
       <title>Lo que quedó de la charla de desarrollo web de videojuegos</title>
-      <link>http://localhost:1313/blog/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</link>
+      <link>http://xebuz.github.io/blog/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</link>
       <pubDate>Fri, 07 Sep 2012 14:33:06 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</guid>
+      <guid>http://xebuz.github.io/blog/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/gSKUEw1.png&#34; alt=&#34;thumbs&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Antes que nada gracias a todos los que fueron ayer a la charla de desarrollo de videojuegos y a la gente de &lt;a href=&#34;http://uni-code-group.blogspot.com.ar/&#34;&gt;&lt;strong&gt;UNI-CODE&lt;/strong&gt;&lt;/a&gt; por la invitación. Les dejo algunos links que había prometido o temas que quedaron en el aire. Cualquier cosa avisen.&lt;/p&gt;
@@ -587,10 +587,10 @@ Línea 13. Toma todas las imágenes de la carpeta, las concatena con un delay de
     
     <item>
       <title>Script para generar playlists dinámicas en MPD </title>
-      <link>http://localhost:1313/blog/posts/script-para-generar-playlists-dinamicas-en-mpd/</link>
+      <link>http://xebuz.github.io/blog/posts/script-para-generar-playlists-dinamicas-en-mpd/</link>
       <pubDate>Fri, 10 Aug 2012 13:55:24 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/script-para-generar-playlists-dinamicas-en-mpd/</guid>
+      <guid>http://xebuz.github.io/blog/posts/script-para-generar-playlists-dinamicas-en-mpd/</guid>
       <description>&lt;p&gt;Revisando scripts viejos, me encontré con este que quizás a alguno le puede servir. La idea es ir generando dinámicamente la lista de reproducción de un server &lt;a href=&#34;http://mpd.wikia.com/&#34;&gt;MPD&lt;/a&gt; usando la &lt;a href=&#34;http://www.last.fm/api&#34;&gt;API&lt;/a&gt; de &lt;a href=&#34;http://www.last.fm/user/xeBuz&#34;&gt;Last.fm&lt;/a&gt; para encontrar artistas similares en el disco.
 Si bien ya hay clientes que tienen esta funcionalidad, como &lt;a href=&#34;http://mpd.wikia.com/wiki/Client:Ario&#34;&gt;Ario&lt;/a&gt;, suelo conectarme por SSH al server y me resulta cómodo correr el script este cuando no se que escuchar.&lt;/p&gt;
 
@@ -660,10 +660,10 @@ Si bien ya hay clientes que tienen esta funcionalidad, como &lt;a href=&#34;http
     
     <item>
       <title>Un &#34;bot&#34; de Twitter, con Python en un par de minutos</title>
-      <link>http://localhost:1313/blog/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/</link>
+      <link>http://xebuz.github.io/blog/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/</link>
       <pubDate>Wed, 04 Jul 2012 18:40:32 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/</guid>
+      <guid>http://xebuz.github.io/blog/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/</guid>
       <description>
 
 &lt;p&gt;&lt;blockquote&gt;Hace falta un bot que busque los tweets de Foursquare y responda &amp;ldquo;WHO CARES?!&amp;rdquo;&lt;/p&gt;
@@ -715,10 +715,10 @@ Si bien ya hay clientes que tienen esta funcionalidad, como &lt;a href=&#34;http
     
     <item>
       <title>Cron, automatizar scripts como un titán</title>
-      <link>http://localhost:1313/blog/posts/cron-automatizar-scripts-como-un-titan/</link>
+      <link>http://xebuz.github.io/blog/posts/cron-automatizar-scripts-como-un-titan/</link>
       <pubDate>Tue, 22 May 2012 16:48:07 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/cron-automatizar-scripts-como-un-titan/</guid>
+      <guid>http://xebuz.github.io/blog/posts/cron-automatizar-scripts-como-un-titan/</guid>
       <description>&lt;p&gt;Hace un tiempo escribí sobre [la utilización del comando &lt;strong&gt;at&lt;/strong&gt;], ahora le toca el turno a &lt;strong&gt;cron&lt;/strong&gt;. ¿Tron? No, cron. ¡Troz! (?).
 ¿Qué es cron? Es un administrador de procesos que se ejecuta a un interválo de tiempo específico. Si vienen del Dark Side, sería el equivalente a las &lt;em&gt;Tareas Programadas&lt;/em&gt; de W.&lt;/p&gt;
 
@@ -787,10 +787,10 @@ También pueden editar los archivos de otros usuarios, con **contab -u user -e *
     
     <item>
       <title>Cuentos de Terror narrados por Alberto Laiseca</title>
-      <link>http://localhost:1313/blog/posts/cuentos-de-terror-narrados-por-alberto-laiseca/</link>
+      <link>http://xebuz.github.io/blog/posts/cuentos-de-terror-narrados-por-alberto-laiseca/</link>
       <pubDate>Tue, 24 Apr 2012 15:54:25 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/cuentos-de-terror-narrados-por-alberto-laiseca/</guid>
+      <guid>http://xebuz.github.io/blog/posts/cuentos-de-terror-narrados-por-alberto-laiseca/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/FQsJ1G4.jpg&#34; alt=&#34;a&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Alberto Laiseca, un escritor conocido por su estilo sombrío y por haber dejado la obra de literatura argentina más extensa, Los Sorias, que consta de 1.300 páginas (obra que no tuve la oportunidad ni el tiempo de leer), allá por el 2001 apareció en las noche de I-Sat narrando grandes clásicos de la literatura; cigarrillo en mano, primeros planos, sombras y luces ténues, en 10 minutos era capaz de lograr un ambiente ideal para los cuentos que contaba.&lt;/p&gt;
@@ -836,10 +836,10 @@ También pueden editar los archivos de otros usuarios, con **contab -u user -e *
     
     <item>
       <title>zsh, una shell con Z de &#34;ZOMG que buena shell&#34;</title>
-      <link>http://localhost:1313/blog/posts/zsh/</link>
+      <link>http://xebuz.github.io/blog/posts/zsh/</link>
       <pubDate>Thu, 20 Oct 2011 18:26:48 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/zsh/</guid>
+      <guid>http://xebuz.github.io/blog/posts/zsh/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Z Bash&lt;/strong&gt;, o mejor &lt;strong&gt;zsh&lt;/strong&gt;, es un interprete de comándos (&lt;em&gt;shell&lt;/em&gt;), excelente alternativa al Bash que viene por defecto (&lt;em&gt;Bourne-again Shell&lt;/em&gt;). Como mejoras, se destaca:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -931,10 +931,10 @@ Además, permite compartir el historial entre sesiones, muy comodo si entramos d
     
     <item>
       <title>Tips Linuxeros: Alias para Todos</title>
-      <link>http://localhost:1313/blog/posts/tips-para-linux-alias-para-todos/</link>
+      <link>http://xebuz.github.io/blog/posts/tips-para-linux-alias-para-todos/</link>
       <pubDate>Fri, 02 Sep 2011 21:33:09 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/tips-para-linux-alias-para-todos/</guid>
+      <guid>http://xebuz.github.io/blog/posts/tips-para-linux-alias-para-todos/</guid>
       <description>&lt;p&gt;Los alias en Linux son shortcuts o &lt;em&gt;sinónimos&lt;/em&gt; que podemos emplear para ejecutar comandos en la terminal.
 Son muy útiles para correr comandos largos o simplemente crear nombres mas amigables, para algún comando que nos resulte deficil de recordar o a los que usemos mas seguido.
 Para crearlos debemos escribir en el archivo &lt;strong&gt;~.bashrc&lt;/strong&gt; para dejarlos disponibles al usuario, o en /etc/bash.bashrc para dejarlos disponibles en todo el sistema.&lt;/p&gt;
@@ -1030,10 +1030,10 @@ Para crearlos debemos escribir en el archivo &lt;strong&gt;~.bashrc&lt;/strong&g
     
     <item>
       <title>VirtualBoxes.org - Descarga de máquinas virtuales</title>
-      <link>http://localhost:1313/blog/posts/virtualboxes-org-descarga-de-maquinas-virtuales/</link>
+      <link>http://xebuz.github.io/blog/posts/virtualboxes-org-descarga-de-maquinas-virtuales/</link>
       <pubDate>Wed, 31 Aug 2011 20:43:42 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/virtualboxes-org-descarga-de-maquinas-virtuales/</guid>
+      <guid>http://xebuz.github.io/blog/posts/virtualboxes-org-descarga-de-maquinas-virtuales/</guid>
       <description>&lt;p&gt;¿Les gusta probar diferentes Sistemas Operativos?&lt;/p&gt;
 
 &lt;p&gt;¿Te aburre instalarlos?&lt;/p&gt;
@@ -1061,10 +1061,10 @@ Para crearlos debemos escribir en el archivo &lt;strong&gt;~.bashrc&lt;/strong&g
     
     <item>
       <title>¿De dónde proviene el nombre de Arch Linux?</title>
-      <link>http://localhost:1313/blog/posts/de-donde-proviene-el-nombre-de-arch-linux/</link>
+      <link>http://xebuz.github.io/blog/posts/de-donde-proviene-el-nombre-de-arch-linux/</link>
       <pubDate>Wed, 27 Jul 2011 18:49:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/de-donde-proviene-el-nombre-de-arch-linux/</guid>
+      <guid>http://xebuz.github.io/blog/posts/de-donde-proviene-el-nombre-de-arch-linux/</guid>
       <description>&lt;p&gt;Hace unos cuantos días, @N1colas_ compartío &lt;a href=&#34;http://usemoslinux.blogspot.com/2011/07/de-donde-provienen-los-nombres-de-las.html&#34;&gt;este&lt;/a&gt; enlance, en donde hablaban del origen de los nombres de varias distros de Linux.&lt;/p&gt;
 
 &lt;p&gt;No estaba &lt;strong&gt;Arch&lt;/strong&gt;, y hay varios comentarios al respecto con supuestos bastante buenos.&lt;/p&gt;
