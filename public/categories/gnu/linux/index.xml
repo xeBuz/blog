@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gnu/Linux on title</title>
+    <link>jesusroldan.com/categories/gnu/linux/</link>
+    <description>Recent content in Gnu/Linux on title</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 19 Jun 2012 17:47:45 +0000</lastBuildDate>
+    <atom:link href="jesusroldan.com/categories/gnu/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>GNU/Linux para amas de casa. #BarCampCBA</title>
+      <link>/jesusroldan.com/posts/gnulinux-para-amas-de-casa-barcamp/</link>
+      <pubDate>Tue, 19 Jun 2012 17:47:45 +0000</pubDate>
+      
+      <guid>/jesusroldan.com/posts/gnulinux-para-amas-de-casa-barcamp/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/06/gnu_linux.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/06/gnu_linux.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;El sábado pasado fue el &lt;a href=&#34;http://barcampcordoba.org/&#34;&gt;BarCampCBA&lt;/a&gt; en Córdoba, que dicho sea de paso salió excelente.&lt;/p&gt;
+
+&lt;p&gt;Aproveché la ocasión, sabiendo que el púbico era bastante heterogéneo para dar una charla sobre GNU/Linux y Software Libre, desde lo básico, sin caer en evangelizaciones. La idea era demostrar que cualquiera puede usar Linux, que las opciones de software satisfacen las necesidades de la mayoría e incluso que instalarlo es bastante sencillo. Salí bastante conforme, no me abuchearon jaja y aprendí de algunos errores que después corregiré.&lt;/p&gt;
+
+&lt;p&gt;Les dejo aca &lt;a href=&#34;http://jesusroldan.com/Charlas/linux.html&#34;&gt;la charla&lt;/a&gt;, como no fue grabado ni trasmitida por streaming, sólo son las diapositivas. Algunas van a parecer medio colgadas, sin texto ni nada.&lt;/p&gt;
+
+&lt;p&gt;La presentación está hecha completamente con software libre. El framework que usé para los slides es &lt;a href=&#34;http://bartaz.github.com/impress.js&#34;&gt;impress.js&lt;/a&gt;, para mostrar las imágenes usé &lt;a href=&#34;http://reallysimpleworks.com/slideshow/&#34;&gt;Really Simple™ Slideshow&lt;/a&gt; y después GIMP para editar detalles y gedit para escribir el código. Una vez que le agarrás la mano es bastante simple de hacer.&lt;/p&gt;
+
+&lt;p&gt;Si quieren el código fuente está subido a &lt;a href=&#34;https://github.com/xeBuz/Charlas&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cron, automatizar scripts como un titán</title>
+      <link>/jesusroldan.com/posts/cron-automatizar-scripts-como-un-titan/</link>
+      <pubDate>Tue, 22 May 2012 16:48:07 +0000</pubDate>
+      
+      <guid>/jesusroldan.com/posts/cron-automatizar-scripts-como-un-titan/</guid>
+      <description>&lt;p&gt;Hace un tiempo escribí sobre &lt;a href=&#34;http://blog.jesusroldan.com/2012/01/23/comando-at-automatizar-scripts-sin-usar-crontab/&#34;&gt;la utilización del comando &lt;strong&gt;at&lt;/strong&gt;&lt;/a&gt;, ahora le toca el turno a &lt;strong&gt;cron&lt;/strong&gt;. ¿Tron? No, cron. ¡Troz! (?).
+¿Qué es cron? Es un administrador de procesos que se ejecuta a un interválo de tiempo específico. Si vienen del Dark Side, sería el equivalente a las &lt;em&gt;Tareas Programadas&lt;/em&gt; de W.&lt;/p&gt;
+
+&lt;p&gt;La instalación es simple (está en los repos o incluso ya instalada, en toda distribución que se jacte de ser tal), en fín, en Arch podrían hacer:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pacman -S --needed cronie
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Al principio puede resultar extraña la configuracion de crontab, pero con el tiempo termina siendo más simple de lo que aparenta y se puede lograr cosas muy buenas de una forma muy sencilla.&lt;/p&gt;
+
+&lt;p&gt;Primero, tenemos 5 espacios para colocar los tiempos, que se dividen en minutos, horas, días del mes, meses y días de la semana; si alguno de estos datos no se rellena, se debe colocar un asterísco, que significa &amp;ldquo;todos&amp;rdquo; (para que sea entendible y hasta leíble). Después de eso se coloca la ruta completa del script que quieren que se ejecute en ese determinado lapso de tiempo.&lt;/p&gt;
+
+&lt;p&gt;En cualquier campo, asumiendo que ya entendimos los rangos de cada uno, podemos colocar tanto un valor específico, varios valores separados por coma o un rango separado por un guión. Por ejemplo:&lt;/p&gt;
+
+&lt;p&gt;[code lang=&amp;ldquo;bash&amp;rdquo;]
+#Se ejecuta a las 5 de la mañana, en punto
+0 5 * * * * /home/jesus/Scripts/tomar_cafe.sh&lt;/p&gt;
+
+&lt;p&gt;#Se ejecuta a las 5 y a las 17 horas, en punto
+0 5,17 * * * /home/jesus/Scripts/loquesea.sh&lt;/p&gt;
+
+&lt;p&gt;#Se ejecuta &lt;em&gt;desde&lt;/em&gt; las 5, cada hora &amp;ldquo;en punto&amp;rdquo; &lt;em&gt;hasta&lt;/em&gt; las 17hs.
+0 5-17 * * * /home/jesus/Scripts/latigo.sh&lt;/p&gt;
+
+&lt;p&gt;#Similar al anterior, pero ejecuta cada minuto entre las 5 y las 17
+#miren el primer valor, le estan dicieno &amp;ldquo;todos&amp;rdquo;
+* 5,17 * * * echo &amp;ldquo;trabajen mas duro&amp;rdquo;
+[/code]&lt;/p&gt;
+
+&lt;p&gt;¿Cómo ver las tareas pendientes en cron?
+&lt;strong&gt;crontab -l&lt;/strong&gt; lista las del usuario activo, para ver las de otro usuario, deben ejecutar crontab -u user -l&lt;/p&gt;
+
+&lt;p&gt;¿Cómo se modifican las tareas?
+Con &lt;strong&gt;crontab -e&lt;/strong&gt; se nos abre el archivo para modificar, con el editor que tengamos por defecto. Para cambiarlo debemos cambiar: &lt;em&gt;export EDITOR=&amp;ldquo;/usr/bin/nano&amp;rdquo;&lt;/em&gt;. Como por defecto se abre con vi, por favor no toquen el teclado si no saben como funciona y llamen a un mayor responsable a cargo.
+También pueden editar los archivos de otros usuarios, con **contab -u user -e **.&lt;/p&gt;
+
+&lt;p&gt;Ahora bien, aquí viene lo bueno jóven, algunos ejemplos:&lt;/p&gt;
+
+&lt;p&gt;[code lang=&amp;ldquo;bash&amp;rdquo;]
+#Corre cada minuto, siempre.
+* * * * * /home/xebuz/script/cada_minuto.sh&lt;/p&gt;
+
+&lt;p&gt;#Cada 5 minutos
+*/5 * * * * /home/xebuz/script/cada_cinco_minutos.sh&lt;/p&gt;
+
+&lt;p&gt;#Cada hora, de 8 a 18, de lunes a viernes
+00 08-18 * * 1-5 /home/xebuz/script/laboral.sh&lt;/p&gt;
+
+&lt;p&gt;#Una vez cada mes y medio
+* * */15 */1 * /home/xebuz/goldequilmes.sh&lt;/p&gt;
+
+&lt;p&gt;#Cada 4 años
+* * * */48 * /home/xebuz/script/mundial.sh
+[/code]&lt;/p&gt;
+
+&lt;p&gt;¿Muy engorroso para escribir? ¿Sos un lazy-sysadmin? Existen también algunos (llamémosle) &lt;a href=&#34;http://blog.jesusroldan.com/2011/09/02/tips-para-linux-alias-para-todos/&#34;&gt;alias&lt;/a&gt;, para agilizar la administración, són cómodos y reemplazan a todos los campos de tiempo, es decir, sólo deben poner el alias y despues el script.&lt;/p&gt;
+
+&lt;p&gt;[code lang=&amp;ldquo;bash&amp;rdquo;]
+#Tiempos específicos
+@hourly
+@daily
+@weekly
+@monthly
+#Este se ejecuta (como lo indica el nombre), cuando se resetea el equipo
+@reboot
+[/code]&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Gracias, vuelva prontos.&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Solucionar problemas después de actualizar Gnome 3.4.1</title>
+      <link>/jesusroldan.com/posts/solucionar-problemas-despues-de-actualizar-gnome-3-4-1/</link>
+      <pubDate>Mon, 23 Apr 2012 20:58:48 +0000</pubDate>
+      
+      <guid>/jesusroldan.com/posts/solucionar-problemas-despues-de-actualizar-gnome-3-4-1/</guid>
+      <description>&lt;p&gt;Hoy, como para que el lunes arranque con todo, actualicé Arch y después no pude ingresar más la sesión de Gnome3. Aparecía la PC con carita triste y me decía que iba a desactivar las extensiones, pero no soluciona nada. Y cómo se actualizaron muchas drivers, el kernel y gnome no sabía bien donde estaba el problema.&lt;/p&gt;
+
+&lt;p&gt;Al parecer la nueva versión de Gnome (3.4.1) tiene como dependencia networkmanager y si no lo encuentra explota por todos lados, pueden verificar el archivo /var/logs/messages.log, deberían tener algo así:
+[spoiler title=&amp;ldquo;messages.log&amp;rdquo; open=&amp;ldquo;0&amp;rdquo; style=&amp;ldquo;1&amp;rdquo;]
+&lt;code&gt;[...]
+Apr 23 17:26:56 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager/Presence interface=org.freedesktop.DBus.Properties method=GetAll
+Apr 23 17:26:56 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager/Presence interface=org.freedesktop.DBus.Properties method=GetAll
+Apr 23 17:26:59 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/freedesktop/DBus interface=org.freedesktop.DBus method=NameOwnerChanged
+Apr 23 17:26:59 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/freedesktop/DBus interface=org.freedesktop.DBus method=NameOwnerChanged
+Apr 23 17:28:24 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager interface=org.gnome.SessionManager method=IsInhibited
+Apr 23 17:28:24 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager interface=org.gnome.SessionManager method=IsInhibited
+Apr 23 17:29:24 localhost dbus[661]: [system] Activating service name=&#39;org.freedesktop.NetworkManager&#39; (using servicehelper)
+Apr 23 17:29:24 localhost dbus[661]: [system] Activated service &#39;org.freedesktop.NetworkManager&#39; failed: Launch helper exited with unknown return code 1
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): Searching for 4194307 in 4194307,4194308
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): Watch 1 fired, idle time = 600053
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): GsmPresence: setting idle: 1
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): Using ConsoleKit for session tracking
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): Updating ConsoleKit idle status: 1
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager interface=org.gnome.SessionManager method=IsInhibited
+Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager interface=org.gnome.SessionManager method=IsInhibited
+[...]&lt;/code&gt;[/spoiler]&lt;/p&gt;
+
+&lt;p&gt;Si quieren verificar si el problema se da por esto, pueden correr el siguiente comando (Control + Alt + F1) e intentar entrar a la sesión (Control + Alt + F7/F8):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo /etc/rc.d/networkmanager start
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Para hacer el cambio permanente, agreguen &lt;strong&gt;networkmanager&lt;/strong&gt; a los DAEMONS del /etc.rc.conf&lt;/p&gt;
+
+&lt;p&gt;Espero que les sirva, a mi me hizo renegar mucho, y es algo bastante simple de solucionar.&lt;/p&gt;
+
+&lt;p&gt;Edit: Según la &lt;a href=&#34;https://wiki.archlinux.org/index.php/NetworkManager#Edit_daemons&#34;&gt;wiki de Arch&lt;/a&gt;, hay que sacar el daemon de network y poner el de networkmanager después de dbus&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Comando at, automatizar scripts sin usar crontab</title>
+      <link>/jesusroldan.com/posts/comando-at-automatizar-scripts-sin-usar-crontab/</link>
+      <pubDate>Mon, 23 Jan 2012 16:34:56 +0000</pubDate>
+      
+      <guid>/jesusroldan.com/posts/comando-at-automatizar-scripts-sin-usar-crontab/</guid>
+      <description>&lt;p&gt;A diferencia de &lt;strong&gt;cron&lt;/strong&gt;, &lt;strong&gt;at&lt;/strong&gt; permite programar un comando/script para que sea ejecutado sólo una vez y no periodicamente.&lt;/p&gt;
+
+&lt;p&gt;Antes que nada deben instalarlo, no suele venir en las distribuciones por defecto. Usen pacman, aptitude, yum o lo que sea, tiene que estar en los repositorios.
+Una vez instalado, deben correr el servicio y por que no agregarlo en el /etc/rc.conf para que arranque solo. Si no hacen esto no van a correrse los scripts.&lt;/p&gt;
+
+&lt;p&gt;Para utilizarlo tenemos varias alternativas, la primera es &lt;em&gt;especificarle la fecha y hora&lt;/em&gt;, luego escribir el script (es importante que una vez que terminemos, presionemos Control+D):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;at 10:31am Jan 23 
+warning: commands will be executed using /bin/sh
+at&amp;gt; yaourt -Syu      
+at&amp;gt; (Control +D) &amp;lt;eot&amp;gt;
+job 5 at Mon Jan 23 10:31:00 2012
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;También acepta otros &lt;em&gt;formatos&lt;/em&gt; de fechas, por ejemplo, para ejecutar algo mañana a esta misma hora, sería&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;at now tomorrow
+at&amp;gt; blah blah
+at&amp;gt; meh
+at&amp;gt; (Control +D) &amp;lt;eot&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Para mostrar los comandos que están en cola de ejecución, basta con hacer &lt;strong&gt;at -l&lt;/strong&gt; o &lt;strong&gt;atq&lt;/strong&gt;, esto nos traerá un id, la fecha/hora en la que se ejecuta y el usuario que lo creó.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;at -l
+6   Mon Jan 23 11:41:00 2012 a xebuz
+7   Wed Jan 25 00:01:00 2012 a xebuz
+5   Mon Jan 23 10:31:00 2012 a xebuz
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Para cancelar o eliminar una tarea pendiente, se utiliza &lt;strong&gt;atrm&lt;/strong&gt; o &lt;strong&gt;at -r&lt;/strong&gt; o &lt;strong&gt;at -d&lt;/strong&gt; :P, seguida del id de la tarea (obtenida desde el comando anterior).
+Por último, si quieren ver todo el contenido del script, con &lt;strong&gt;at -c &lt;em&gt;id&lt;/em&gt;&lt;/strong&gt; lo obtienen completo.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tips Linuxeros: Optimizar pacman y la instalación de aplicaciones en Arch Linux</title>
+      <link>/jesusroldan.com/posts/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/</link>
+      <pubDate>Wed, 28 Dec 2011 18:19:48 +0000</pubDate>
+      
+      <guid>/jesusroldan.com/posts/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/</guid>
+      <description>&lt;p&gt;La idea del post es hacer un compilado de tips y aplicaciones que puedan llegar a servir para mejorar &lt;a href=&#34;https://wiki.archlinux.org/index.php/Pacman&#34;&gt;pacman&lt;/a&gt; y la instalación de aplicaciones en Arch Linux. Si, escribí lo mismo que en el título pero con más palabras.
+Para el usuario que venga de otras distros, como Ubuntu, le puede resultar díficil no tener esa &amp;lsquo;cosa&amp;rsquo; llamada Centro de Software, pero con un poco de maña se puede potenciar muchisimo la instalación (además no van a escuchar nunca más de los PPA).&lt;/p&gt;
+
+&lt;p&gt;Vamos suponiendo que saben como usar &lt;strong&gt;pacman&lt;/strong&gt;. Básicamente tenemos:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;pacman -Ss wally&lt;/em&gt; para buscar aplicaciones&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;_pacman -S chucknorri_s para instalar&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;pacman -Syu&lt;/em&gt; para actualizar&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;pacman -Rnd cristina&lt;/em&gt; para eliminar algo&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[note color=&amp;ldquo;#cfcfcf&amp;rdquo;]Antes de empezar, la configuración está en &lt;strong&gt;/etc/pacman.conf **&amp;hellip; y lo primero que tienen que agregar es una línea que diga **ILoveCandy&lt;/strong&gt;.
+Si ya la agregaron, pueden seguir con el post, si no lo hacen no merecen usar Arch Linux.[/note]&lt;/p&gt;
+
+&lt;p&gt;Optimizar el cache y la base de datos, tienen que correr &lt;strong&gt;sudo pacman -Sc &amp;amp;&amp;amp; sudo pacman-optimize&lt;/strong&gt;, pueden ponerlo en cron, es más fácil que acordarselo; &lt;strong&gt;yapos&lt;/strong&gt; también suele ser una buena opción para esto.
+Instalen &lt;strong&gt;pacman-color&lt;/strong&gt;, es eye-candy nunca viene mal. Eso si, deberían crear una &lt;a href=&#34;http://blog.jesusroldan.com/2011/09/02/tips-para-linux-alias-para-todos/&#34;&gt;alias&lt;/a&gt; pacman=&amp;lsquo;pacman-color&amp;rsquo; sino creanme que nunca lo van a usar.
+&lt;strong&gt;&lt;a href=&#34;https://wiki.archlinux.org/index.php/Reflector&#34;&gt;Reflector&lt;/a&gt;&lt;/strong&gt; me lo recomendaron en un &lt;a href=&#34;http://blog.jesusroldan.com/2011/09/06/lentitud-en-la-instalacion-de-paquetes-con-pacman/&#34;&gt;post&lt;/a&gt; y está muy bueno, mantiene actualizado el mirrorlist
+Se puede optimizar un poco el tamaño de los paquetes a descargar con &lt;strong&gt;xdelta3&lt;/strong&gt; (y activando UseDelta en la configuración de pacman), no es una locura, pero algo se logra.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Ni hablar de que tienen que instalar &lt;strong&gt;yaourt&lt;/strong&gt;, es básico en cualquier Arch Linux, la forma más fácil es agregar el repositorio, actualizar e instalarlo con pacman.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[archlinuxfr]
+Server = http://repo.archlinux.fr/$arch
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;¿Qué hace? Funciona igual que pacman, pero también permite instalar paquetes del &lt;a href=&#34;https://aur.archlinux.org/&#34;&gt;AUR&lt;/a&gt;, que es basicamente la fucking gloria.&lt;/p&gt;
+
+&lt;p&gt;Si se sienten como princesas del bosque de las hadas, también pueden probar algun GUI, de los que usé, creo que &lt;strong&gt;Wakka&lt;/strong&gt; - I see what you did there! - es el mejor (sin entrar en la categoría KDE que no la probé). Rápido y simple. Lo que además tiene de bueno es que las acciones que hacemos muestran el comando, entonces, con el tiempo, podemos ir perdiendo el miedo a la consola&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Manejar procesos en Linux, Like a Sir</title>
+      <link>/jesusroldan.com/posts/manejar-procesos-en-linux-like-a-sir/</link>
+      <pubDate>Wed, 14 Dec 2011 18:24:08 +0000</pubDate>
+      
+      <guid>/jesusroldan.com/posts/manejar-procesos-en-linux-like-a-sir/</guid>
+      <description>&lt;p&gt;Particularmente me gusta tener alguna de las aplicaciones listo corriendo en la tty1 y cuando algo falla, porque siempre algo puede malir sal, control + alt +F1 viene como piña para ver el problema rápido.
+Me pasó de tener problemas en ambientes Windows, y es una de las cosas que mas se extrañan; el administrador de tareas no hace todo lo que debería (como el de Gnome o KDE, si algo falla en el X o te quedás sin recursos no los vas a poder usar)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ps y kill&lt;/strong&gt;
+Estos comandos son los clásicos, por excelencia.
+El uso estandar, cavernícola y mas difundido es &lt;em&gt;ps aux&lt;/em&gt;, tambien &lt;em&gt;ps aux | grep &lt;app&gt;&lt;/em&gt; para filtrar, y después un &lt;em&gt;kill -9 UID&lt;/em&gt; obtenido con el comando anterior, pero eso no es lo que un Sir haría.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;pgrep y pkill&lt;/strong&gt;
+Tenemos pgrep funcionaría como pidof, pero con mejor parametrización e información; mientras que pkill sirve para mandar señales, si, como kill, pero permite expersiones regulares y algunos filtros muy interesantes.
+Algunos ejemplos: &lt;em&gt;pgrep -u firebird -l&lt;/em&gt; mostraría todos los nombres de los procesos que esta usando el usuario firebird, &lt;em&gt;pkill -9 firefox&lt;/em&gt; es mucho más cómodo que el ps y después el kill.. dirán &amp;ldquo;¡Dejate de joder! ¡es igual que killall!&amp;rdquo; pero no, pueden potenciarlo más, digamos, matar la tty0 o mejor aún una sesión ssh basta correr con &lt;em&gt;pkill -9 -t pts/5&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;top&lt;/strong&gt;
+Visualizador de procesos. Si llegaste hasta acá imagino que ya lo usaste y sabés lo básico, les tengo fe. Sólo para el registro, me gusta activar las opciones B, 1 y z.
+De nuevo, es lo más usado, lo mas enseñado y lo mas clásico. Siempre hay mejores opciones.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;htop&lt;/strong&gt;
+Es como top, pero con esteroides. Mejores shortcuts, colores, permite usar el mouse, mejor navegabilidad, filtros, ordenación, threads y otras chucherías.
+Las funcionalidades mas uso: &amp;lt; para ordenar, F9 para matar apps, F3 para buscat, t para treeview,
+Ya que estamos, la H es de Hisham, el nombre del desarrollador.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;atop&lt;/strong&gt;
+Es una de esas aplicaciones que está buena para abrirlas cuando alguien no-linuxero se acerca a tu PC, así piensa que te conectas a la Matrix desde el teclado y le vas pasando órdenes por ósmosis.
+Sería una versión mas detallada de las dos aplicaciones anteriores, pero menos interactiva. Les daría algun tip, pero lo uso de poser nada más :P
+&amp;lt;!&amp;ndash; more &amp;ndash;&amp;gt;
+Aca una imágen comparativa, a la izquierda top, a la dercha htop, abajo atop.&lt;/p&gt;
+
+&lt;p&gt;[caption id=&amp;ldquo;attachment_541&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;695&amp;rdquo; caption=&amp;ldquo;Comparativa entre Top, Htop y Atop&amp;rdquo;]&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/12/top.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/12/top-1024x538.png&#34; alt=&#34;Comparativa entre Top, Htop y Atop&#34; /&gt;&lt;/a&gt;[/caption]&lt;/p&gt;
+
+&lt;p&gt;Espero que les sirva, dígale no al ps blah grep blah kill blah. Iba a escribir también sobre prioridades y estados, pero lo hago otro día, post largo y denso = post que no se lee.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>De cómo llegué a ArchLinux y por qué no lo cambio...</title>
+      <link>/jesusroldan.com/posts/de-como-llegue-a-arch-linux-y-porque-no-lo-cambio/</link>
+      <pubDate>Mon, 21 Nov 2011 21:27:23 +0000</pubDate>
+      
+      <guid>/jesusroldan.com/posts/de-como-llegue-a-arch-linux-y-porque-no-lo-cambio/</guid>
+      <description>&lt;p&gt;Hace unos cuantos años que uso GNU/Linux, no muchos, pero los suficientes como para ir probando diferentes distros hasta llegar al lugar en donde más cómodo me sentí: &lt;strong&gt;Arch Linux&lt;/strong&gt;
+El primer contacto que tuve con GNU/Linux fue, como muchos, desde un LiveCD&amp;hellip; &lt;strong&gt;Knoppix&lt;/strong&gt; en este caso. recuerdo que me había gustado hasta visualmente (eso que era KDE, pobre de mi), pero mucho uso no le podía dar; nunca pude levantar el cablemodem por USB.
+En ese momento, compartía la PC con mi familia y tenía un disco de 4Gb, ergo, era imposible hacer una instalación con doble booteo, mucho menos con mis conocimientos de infranewbie.&lt;/p&gt;
+
+&lt;p&gt;Después llegó mi primer PC en el laburo, en la municipalidad de Río Grande. ¡Instalación en disco! La distro elegida fue &lt;strong&gt;Mandrake&lt;/strong&gt; 7; era joven y leía la &lt;strong&gt;Tira Ecol&lt;/strong&gt; siempre :P
+También fue a los ponchazos el uso, estuve un tiempo muy largo usando el fondo de pantalla en rojo porque me loggeaba como root, sin saber las consecuencias que podía traer. Pero sirvió de mucho, darse cuenta que el uso diario era indistinto en el Sistema Operativo y descubir el sistema de repositorios para instalar aplicaciones&amp;hellip; ¡era algo formidable!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Debian&lt;/strong&gt; fue la distro que le siguió, y ahí conocí &lt;strong&gt;Gnome&lt;/strong&gt; (¡Hallelujah!); no recuerdo como llegué a Debian, pero a lo mejor fue porque dije &lt;em&gt;&amp;ldquo;Ah mirá, las versiones son como los de Toy Story&amp;rdquo;&lt;/em&gt;.&amp;lt;!&amp;ndash; more &amp;ndash;&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;El siguiente turno fue para &lt;strong&gt;Ubuntu&lt;/strong&gt; 5.10 (Breezy Badger), después de que me llegara un paquete de CDs desde, si no recuerdo mal, Canadá. Desde ese momento me hice ubuntero a morir, era fachero, era rápido, te mandaban CDs gratis, tenía un buen nombre&amp;hellip;&lt;em&gt;era como la nueva soda de cola, llegó para quedarse&lt;/em&gt;. Era la época en la que evangelizaba a más no poder, repartía CDs, probaba las alfas, betas, release candidate y cuanto podía&amp;hellip; cosa que hoy me parece totalmente ridícula teniendo una distro rolling release. Así pasaron los años, los wallpapers, y poco más.&lt;/p&gt;
+
+&lt;p&gt;Al pasar unos años sentía que me quedaba corto Ubuntu. Probé diferentes versiones, pero el destkop enviorment no era el problema. Ahi fue &lt;strong&gt;XFCE&lt;/strong&gt;, &lt;strong&gt;KDE&lt;/strong&gt; de nuevo, &lt;strong&gt;LXDE&lt;/strong&gt;, &lt;strong&gt;E17&lt;/strong&gt;&amp;hellip; y así. Volví a Debian, pero sentía que era poco el cambio, de hecho lo era.&lt;/p&gt;
+
+&lt;p&gt;Me quise hacer hombrecito, bajé &lt;strong&gt;Gentoo&lt;/strong&gt;, me puse el casco, la cota de malla a la notebook y fui&amp;hellip; para chocar de frente con un kernel que no aceptaba mi placa inalámbrica. [pullquote align=&amp;ldquo;right&amp;rdquo;]Así como el viejo chiste &amp;ldquo;&lt;em&gt;Ubuntu es una palabra africana que significa &amp;lsquo;No puedo instalar Debian&amp;rsquo;&lt;/em&gt;&amp;rdquo;, en este caso Arch fue la solución a &amp;lsquo;No puedo instalar Gentoo&amp;rsquo;.[/pullquote] Algo más pasaba que ahora no recuerdo, pero actualizaba el kernel y se me rompía todo. Después de mucha frustraciones, googleadas y demás, bajé &lt;strong&gt;Arch&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Al principio hubo una relación de amor-odio, fueron varias reinstaladas hasta lograr un sistema estable, que probando algo tarde o temprano se rompía. Pero el concepto de tener un sistema limpio, con la posibilidad de instalar lo que uno quisiera era tentador.
+La wiki de Arch Linux fue todo lo que necesitaba, completisima, y si algo no estaba ahi, el foro se encargaba de solucionarme los problemas. ¿Acaso la comunidad no es lo mejor de GNU/Linux? Bueno, Arch Linux tiene una gran comunidad. En Ubuntu, y sin ofender, se veian muchas respuestas sin ayuda, del tipo &amp;lsquo;Lo que vos estas haciendo mal es usar la aplicación que vos queres y no la que yo uso&amp;rsquo;, que incluso yo los habŕe hecho en algun momento, sin dudas.&lt;/p&gt;
+
+&lt;p&gt;Una vez que estabilicé el sistema, en la notebook, y con un tiempo de uso me pareció que era tiempo de abandonar el doble booteo. Ya me había recibido, asi que no necesitaba programar más en Delphi, los juegos no me tentaban, ya había podido dejar la adicción al WoW, era el momento justo.
+Eso hará ya dos años, casi tres.&lt;/p&gt;
+
+&lt;p&gt;Hoy en día, a parte de esa flexibilidad de poder dejar el sistema configurado como yo quiera, están los repositorios oficiales y el gran &lt;strong&gt;AUR&lt;/strong&gt; (aplausos) que tiene casi toda aplicación o libreria que necesites, eso, a una distro la hacen sumamente potente, no importa que review lea en los blogs, se que &amp;ldquo;yaourt -Ss app&amp;rdquo; en el 99% de los casos me trae lo que quiero, y me resuelve las dependencias que hagan falta y todo es alegría.&lt;/p&gt;
+
+&lt;p&gt;¿Por qué no cambiaría otra vez, si ya cambié de distros mas que de medias?
+En primer lugar, para mi perdió sentido la idea de tener que actualizar cada tantos meses&amp;hellip; ¿por que? ¿que necesidad? Detalles visuales, aplicaciones nuevas que se podrian instalar normalmente y muy poco más, a riesgo de instalar aplicaciones innecesarias, problemas en la actualización, cambios sin avisar ya sea instalando de mas, o desinstalando sin dar opción&amp;hellip; en fin, los riesgos son muchos, los beneficios reales muy pocos.
+Segundo, desconozco otra distro con un repositorio tan grande, ya me puse viejo y vago, quiero todo al alcance de un comando.
+Tercero, la comunidad. Ya sea en la wiki, en el foro o en canales IRC, siempre hay información o gente dispuesta. No digo que en otros lados no exista, pero Arch no se queda atrás.
+Cuarta, Arch no sólo tiene gran cantidad de aplicaciones, sino que es de los primeros en actualizar. Recuerdo cuando salió Gnome3 fue la primera distro en tomarlo, cuando ahora recién algunos lo estan probando. Esto, para los que siempre quieren probar lo mas nuevo es la gloria. Habilitar el repositorio [testing] es poner tu distro en modo Chuck Norris.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Gracias por haber llegado hasta el final, por más que sea scolleando, era largo, ¿no?&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hacer un radio casera con MPD y con Icecast</title>
+      <link>/jesusroldan.com/posts/streaming-con-mpd-y-icecast-en-arch-linux/</link>
+      <pubDate>Tue, 01 Nov 2011 19:09:58 +0000</pubDate>
+      
+      <guid>/jesusroldan.com/posts/streaming-con-mpd-y-icecast-en-arch-linux/</guid>
+      <description>&lt;p&gt;Empecemos&amp;hellip; pero &lt;em&gt;¿Qué e&amp;rsquo; lo que e&amp;rsquo; eso?&lt;/em&gt;
+&lt;strong&gt;MPD&lt;/strong&gt;: Básicamente, es un servidor para escuchar música. Con la particularidad de que es muy configurable y nos permite acceder a traves de la red para controlar la lista de reproducción. &lt;a href=&#34;http://images.wikia.com/mpd/images/6/68/Mpd-overview.png&#34;&gt;Esta&lt;/a&gt; imagen lo explica bien.
+&lt;strong&gt;Clientes MPD&lt;/strong&gt;: El servidor por sí sólo nos gestiona los archivos, los salidas de audio y la lista de reproducción, para acceder a esto necesitamos clientes, que visualmente son similares a las clasicas aplicaciones para escuchar música.
+Algunos a destacar: Sonata, Ario, ncmpcpp, MPDroid y una &lt;a href=&#34;http://mpd.wikia.com/wiki/Clients&#34;&gt;larga lista más&lt;/a&gt;.
+&lt;strong&gt;Icecast&lt;/strong&gt; : Es un proyecto open source para hacer streaming, que aparece como competencia libre de SHOUTcast (también compatible con este).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1.- Instalar el servidor MPD&lt;/strong&gt;
+La instalación es simple, también esta en los repositorios de las principales distros. La configuración y puesta a punto es lo que va a llevar mas tiempo y pueden surgir tantos problemas como lineas de configuración tenga el archivo /etc/mpd.conf
+Lo importante (a este nivel) es dejar bien la base de datos y los archivos básicos, cualquier tipo de configuración de salida de audio (excepto en el paso 3) o detalles excede lo que tenemos que hacer para que funcione el streaming. TODO lo que necesitan saber está en la &lt;a href=&#34;http://mpd.wikia.com/wiki/Configuration&#34;&gt;wiki oficial&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;music_directory       &amp;quot;/media/music/&amp;quot;
+playlist_directory    &amp;quot;/var/lib/mpd/playlists&amp;quot;
+db_file               &amp;quot;/var/lib/mpd/mpd.db&amp;quot;
+log_file              &amp;quot;/var/log/mpd/mpd.log&amp;quot;
+pid_file              &amp;quot;/var/run/mpd/mpd.pid&amp;quot;
+state_file            &amp;quot;/var/lib/mpd/mpdstate&amp;quot;
+user                  &amp;quot;mpd&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nota: Es importante que la música esté bien taggeada.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2.- Instalar y configurar Icecast&lt;/strong&gt;
+Supongamos que ya lo instalaron, el archivo de configuración es un XML, está en /etc/icecast.xml. Algunos detalles de configuración:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!-- Dato de conexion ---&amp;gt;
+&amp;lt;listen-socket&amp;gt;
+    &amp;lt;port&amp;gt;8899&amp;lt;/port&amp;gt;
+    &amp;lt;shoutcast-mount&amp;gt;/stream&amp;lt;/shoutcast-mount&amp;gt; 
+&amp;lt;/listen-socket&amp;gt;
+
+&amp;lt;!-- Para publicar en los directorios ---&amp;gt;
+&amp;lt;directory&amp;gt;
+    &amp;lt;yp-url-timeout&amp;gt;30&amp;lt;/yp-url-timeout&amp;gt;
+    &amp;lt;yp-url&amp;gt;http://dir.xiph.org/cgi-bin/yp-cgi&amp;lt;/yp-url&amp;gt;
+&amp;lt;/directory&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;La configuración escencial se hace en /etc/mpd.conf, ahi agregamos una salida de audio que direccione a nuestro Icecast. Para esto hay que agregrar:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;audio_output {
+    type        &amp;quot;shout&amp;quot;
+    encoding    &amp;quot;ogg&amp;quot;
+    name        &amp;quot;KBBL me va a dar algo estupido&amp;quot;
+    host        &amp;quot;localhost&amp;quot;   # lo sacan de la configuración de Icecast
+    port        &amp;quot;8000&amp;quot;        # lo sacan de la configuración de Icecast
+    mount       &amp;quot;/mpd.ogg&amp;quot;    # Importante para conectarse
+    password    &amp;quot;xxxxx&amp;quot;       # lo sacan de la configuración de Icecast
+    quality     &amp;quot;5.0&amp;quot;
+    bitrate     &amp;quot;192&amp;quot;         # http://en.wikipedia.org/wiki/Bit_rate#Audio     
+    format      &amp;quot;44100:16:2&amp;quot;  # Default 44100:16:1
+    user        &amp;quot;source&amp;quot;
+    description &amp;quot;Descripción mas larga, util para directorios&amp;quot;
+    genre       &amp;quot;powa&amp;quot;
+    public      &amp;quot;yes&amp;quot;          # Para publicación en un directorio
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;3.- Conectarse&lt;/strong&gt;
+Primero, levantan los servicios (primero mpd, despues icecast), si todo va bien, ya pueden entrar con algún cliente MPD para armar la playlist. Si no hay nada reproduciéndose cuando quieran abrir la conexión de streaming va a dar error 404.
+Una forma facil de testear la reproducción es con mplayer de forma local.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mplayer -playlist http://127.0.0.1:8000/mpd.ogg.m3u
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Casi cualquier reproductor está preparado para streaming, hasta pueden hacerlo desde el celular, en Android uso &amp;ldquo;A Radio Player&amp;rdquo;, anda de 10.
+Si dejan la configuración de arriba van a poder figurar en el &lt;a href=&#34;http://dir.xiph.org/&#34;&gt;Directorio de Icecast&lt;/a&gt;, con un link al streaming por M3U y otro por XSPF.&lt;/p&gt;
+
+&lt;p&gt;Post para @elpibepantalla y @Nestor_Navarro y gracias a @Rhapsody_Girl por ser la tester :P&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Z Bash, o zsh, una shell con Z de &#34;ZOMG que buena shell&#34;</title>
+      <link>/jesusroldan.com/posts/zsh/</link>
+      <pubDate>Thu, 20 Oct 2011 18:26:48 +0000</pubDate>
+      
+      <guid>/jesusroldan.com/posts/zsh/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Z Bash&lt;/strong&gt;, o mejor &lt;strong&gt;zsh&lt;/strong&gt;, es un interprete de comándos (&lt;em&gt;shell&lt;/em&gt;), excelente alternativa al Bash que viene por defecto (&lt;em&gt;Bourne-again Shell&lt;/em&gt;). Como mejoras, se destaca:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Mejorado en el autocompletado.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Muy customizable.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Corrección de tipeo.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Mejor manejo de funciones.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Es una shell mas hipster (?)._ (En realidad no, tiene mas de 20 años, y se usa bastante&amp;hellip;pero no viene por defecto)_&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;La instalación es simple, son unos poco kilobytes y seguro esta disponible en la distro que usen. En mi caso basta con:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pacman -S zsh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Una vez instalada, debería figurar en el archivo /etc/shells, para setearla como shell por defecto tenemos que correr:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;chsh -s $(which zsh)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;La primera vez que ingresan, la shell les sugiere que ejecuten &lt;strong&gt;zsh-newuser-install&lt;/strong&gt;, lo cual es recomendable, da una pequeña pero útil instroducción, con asistentes de configuración.&lt;/p&gt;
+
+&lt;p&gt;Ahora sí, veamos algunas cosas que tiene para ofrecernos&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Autocompletado de parametros&lt;/strong&gt;
+Antes pensaba que bash era buena con el autocompletado, claro que viniendo del cmd de Windows cualquier cosa es mejor; zsh vino a abrir una nueva puerta a la comodidad en la línea de comandos.
+Es rápidisimo y funciona con todos* los comandos, sólo pongan el - y para que liste las opciones.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Historial de bash, compatible con zsh&lt;/strong&gt;
+Una de las primeras cosas que necesité migrando de shell fue el historial. Pueden copiar &lt;em&gt;~/.bash_history _a _~/.histfile&lt;/em&gt; y van a tener lo mismo que bash, imprescindible si usan &lt;strong&gt;Control + R&lt;/strong&gt;.
+Tambien es compatible el archivo &lt;em&gt;~/.bashrc _con el _~/.zshrc&lt;/em&gt; y el_ ~/.bash&lt;em&gt;profile&lt;/em&gt; con &lt;em&gt;~/.zprofile&lt;/em&gt;, pero en mi caso preferí hacer copias a mano de lo que necesitaba. Sólo cuestión de gustos.
+Además, permite compartir el historial entre sesiones, muy comodo si entramos desde ssh y localmente a una PC.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;zsh-yaourt&lt;/strong&gt;
+Este paquete está en el AUR, y si, adivinaron, agrega autocompletado de paquetes a yaourt, es increiblemente útil, a lo _apt-get _si quieren una comparación, es muy bueno y rápido.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Paginador &amp;lsquo;inteligente&amp;rsquo;&lt;/strong&gt;
+No se si Paginador es la palabra apropiada, tampoco se si inteligente sería el adjetivo indicador. Todos somos unos vagos, por eso usamos la terminal, que mejor que escribir cat LEAME, cat LEAME | less, si, escribir solo LEAME, bueno, zsh nos entiende, así que funciona así.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Diferentes &amp;ldquo;key bindings&amp;rdquo;&lt;/strong&gt;
+En este caso, zsh los meneja de otra forma, y es frustrante mover las fechas de dirección y no obtener lo que pretendemos. No me resultó cómodo (porque no le dí tiempo a ver como funcionaba, ya estoy viejo para algunas cosas). Para dejarlo funcionando &amp;ldquo;a lo Bash&amp;rdquo;, tienen que editar el archivo &lt;em&gt;~/.zshrc&lt;/em&gt;
+[spoiler title=&amp;ldquo;Agregar estas líneas&amp;rdquo;]&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;bindkey &amp;quot;e[1~&amp;quot; beginning-of-line # Home
+bindkey &amp;quot;e[4~&amp;quot; end-of-line # End
+bindkey &amp;quot;e[5~&amp;quot; beginning-of-history # PageUp
+bindkey &amp;quot;e[6~&amp;quot; end-of-history # PageDown
+bindkey &amp;quot;e[2~&amp;quot; quoted-insert # Ins
+bindkey &amp;quot;e[3~&amp;quot; delete-char # Del
+bindkey &amp;quot;e[5C&amp;quot; forward-word
+bindkey &amp;quot;eOc&amp;quot; emacs-forward-word
+bindkey &amp;quot;e[5D&amp;quot; backward-word
+bindkey &amp;quot;eOd&amp;quot; emacs-backward-word
+bindkey &amp;quot;ee[C&amp;quot; forward-word
+bindkey &amp;quot;ee[D&amp;quot; backward-word
+bindkey &amp;quot;e[Z&amp;quot; reverse-menu-complete # Shift+Tab
+# for rxvt
+bindkey &amp;quot;e[7~&amp;quot; beginning-of-line # Home
+bindkey &amp;quot;e[8~&amp;quot; end-of-line # End
+# for non RH/Debian xterm, can&#39;t hurt for RH/Debian xterm
+bindkey &amp;quot;eOH&amp;quot; beginning-of-line
+bindkey &amp;quot;eOF&amp;quot; end-of-line
+# for freebsd console
+bindkey &amp;quot;e[H&amp;quot; beginning-of-line
+bindkey &amp;quot;e[F&amp;quot; end-of-line
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;[/spoiler]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Correccion de typos&lt;/strong&gt;
+Para los dislexicos como uno, esto es muy bueno, nos autocorrige directorios, comandos, archivos&amp;hellip; probandolo es muy bueno, no perfecto, pero ayuda a la hora de escribir rapido.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Links recomendados y fuentes para el post&lt;/strong&gt;
+&lt;a href=&#34;http://zsh.sourceforge.net/Guide/zshguide.html&#34;&gt;Guía oficial (en inglés)&lt;/a&gt;
+&lt;a href=&#34;https://wiki.archlinux.org/index.php/Zsh&#34;&gt;Wiki de Zsh, para Arch&lt;/a&gt;
+&lt;a href=&#34;http://pwet.fr/man/linux/commandes/zsh_lovers&#34;&gt;zhs-lovers&lt;/a&gt;
+&lt;a href=&#34;http://zshwiki.org/home/start&#34;&gt;Una wiki muy completa&lt;/a&gt;
+&lt;a href=&#34;http://fausto23.wordpress.com/2010/01/31/zsh-esa-shell/&#34;&gt;Buena info para el .zshrc, en español&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;*Quizas no todos&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tips Linuxeros: Moverse entre directorios como un ninja</title>
+      <link>/jesusroldan.com/posts/tips-linuxeros-moverse-entre-directorios-como-un-ninja/</link>
+      <pubDate>Wed, 28 Sep 2011 14:28:14 +0000</pubDate>
+      
+      <guid>/jesusroldan.com/posts/tips-linuxeros-moverse-entre-directorios-como-un-ninja/</guid>
+      <description>&lt;p&gt;Seguramente &lt;strong&gt;cd&lt;/strong&gt; es uno de los comandos que más usamos, y también de los primeros que aprendemos a usar (junto con ls, rm, mkdir y esas cosas).
+Es posible que no usen todo el potencial que tiene, tampoco es la locura, pero tiene algunos detalles con los que vamos a poder ahorrarnos tiempo y optimizar la navegación entre directorios, porque desde la consola todo es mejor y mas rápido :P&lt;/p&gt;
+
+&lt;p&gt;El uso estandar sería: **cd directorio/ **&lt;/p&gt;
+
+&lt;p&gt;Para ir al home del usuario, podemos hacer &lt;strong&gt;cd $HOME&lt;/strong&gt; o &lt;strong&gt;cd ~&lt;/strong&gt; o mucho mejor (porque ese símbolo nunca me sale) &lt;strong&gt;cd&lt;/strong&gt;, sin espacio.
+Para ir al home de otro usuario, basta con &lt;strong&gt;cd ~marvin&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Podemos volver posiciones hacia atrás e incluso seguir navegando a partir de esa posicion, por ejemplo, aca volvemos 2 niveles atras y etramos a otrodir: &lt;strong&gt;cd ../../otrodir/&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Para volver al directorio previo (al directorio donde nos encontrabamos antes, no a un nivel anterior) hay que usar &lt;strong&gt;cd -&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Para crear un directorio y movernos al mismo: &lt;strong&gt;mkdir test &amp;amp;&amp;amp; cd $_&lt;/strong&gt; (pueden ponerlo en un &lt;a href=&#34;http://blog.jesusroldan.com/2011/09/02/tips-para-linux-alias-para-todos/&#34;&gt;alias&lt;/a&gt;, sería mas comódo)&lt;/p&gt;
+
+&lt;p&gt;También existe una solución a la dislexia, los teclados duros, o la utilización de la consola apenas nos levantamos. Si corremos &lt;strong&gt;shopt -s cdspell&lt;/strong&gt; (o mejor aún. si lo agregamos al ~bashrc) nos corrige errores de tipeo, por ejemplo, si hacemos cd /hom/xebuz nos lleva a /home/xebuz, muy útil.&lt;/p&gt;
+
+&lt;p&gt;Bueno, eso.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Versionar el directorio /etc con Git</title>
+      <link>/jesusroldan.com/posts/versionar-el-directorio-etc-con-git/</link>
+      <pubDate>Mon, 26 Sep 2011 17:23:59 +0000</pubDate>
+      
+      <guid>/jesusroldan.com/posts/versionar-el-directorio-etc-con-git/</guid>
+      <description>&lt;p&gt;Una buena práctica, sobre todo si les gusta modificar los archivos de configuración para probar cosas o instalar aplicaciones constantemnte, es versionar el directorio /etc, para el caso en el que nos &lt;del&gt;mandemos alguna cagada&lt;/del&gt; equivoquemos en alguna configuración, el problema sea facilmente remediable.
+La instalación y configuración es muy sencilla, en este caso es todo manual, si quieren saltearse todo e instalar directamente &lt;strong&gt;&lt;a href=&#34;http://kitenet.net/~joey/code/etckeeper/&#34;&gt;etckeeper&lt;/a&gt;&lt;/strong&gt; es válido igual ;)&lt;/p&gt;
+
+&lt;p&gt;Antes que todo, hay que instalar &lt;strong&gt;git&lt;/strong&gt; (usé git porque&amp;hellip;si)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;yaourt -S git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Después vamos al directorio correspondiente y creamos el repositorio:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /etc &amp;amp;&amp;amp; git init 
+Initialized empty Git repository in /etc/.git/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Agregamos todos los archivos:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git add --all
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hacemos nuestro primer commit:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git commit -m &amp;quot;Mira mama, estoy usando versionado&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pueden crear un nuevo brach, como para tener una copia inicial del directorio, solo basta hacer:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git branch inicial
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Para verificar cambios sin commitear, pueden usar:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git status
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;En crontab crear commits diarios, no se, esas cosas las manejan a gusto, prefiero hacerlo manual&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Pueden cambiar de branch con &amp;ldquo;git checkout &amp;ldquo;&amp;hellip;en fin, a partir de ahora los cambios que quieran hacer corren por su cuenta, esta es la configuración basica para que funcione. Mas información de git pueden encontrarla en &lt;a href=&#34;http://schacon.github.com/git/gittutorial.html&#34;&gt;http://schacon.github.com/git/gittutorial.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Para ver los cambios, puede usar algunas apps como:
+&lt;strong&gt;SmartGit&lt;/strong&gt;
+Bastante cómoda, y eso que está hecho en &lt;a href=&#34;http://gifninja.com/animatedgifs/250429/trollface.gif&#34;&gt;Java&lt;/a&gt;! :P
+Aca les dejo una imagen de como se ve, por si les interesa
+&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-14.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-14-300x197.png&#34; alt=&#34;SmartGit on pacman.conf&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Pero no conozco más herramientas con GUI, si usan alguna en particular bienvenida sea&amp;hellip;
+[quote style=&amp;ldquo;1&amp;rdquo;]Si no te equivocas de vez en cuando, es que no lo intentas.&lt;/p&gt;
+
+&lt;p&gt;_ Woody Allen_&lt;/p&gt;
+
+&lt;p&gt;[/quote]&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Big Brother is watching you. Monitorear usuarios en Linux.</title>
+      <link>/jesusroldan.com/posts/big-brother-is-watching-you-monitorear-usuarios-en-linux/</link>
+      <pubDate>Sun, 25 Sep 2011 16:18:50 +0000</pubDate>
+      
+      <guid>/jesusroldan.com/posts/big-brother-is-watching-you-monitorear-usuarios-en-linux/</guid>
+      <description>&lt;p&gt;Mantener un sistema estable a veces requiere observar que estan haciendo los usuarios.
+No significa que tengamos que ponernos la gorra del Partido y salir a perseguir a Emmanuel Goldstein, sino sólo controlar un poco los recursos, evitando picos altos que puedan provocarnos inestabilidad.
+Acá les dejo un par de comandos o de aplicaciones que tienen este propósito, espero que alguna les sirva&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;who&lt;/strong&gt;
+El más simple, devuelve una lista de usuarios loggeados, y la tty donde están.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;w&lt;/strong&gt;
+Similar a who, pero en este caso da un poco mas de información (no demasiada). Lista usuario, tty, tiempo loggeado, carga del sistema general y del usuario y que esta haciendo en ese momento. Un comando rápido, fácil y útil.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;whowatch&lt;/strong&gt;
+Una aplicación bastante útil, crea un árbol con los usuarios loggeados, y
+Con_ control + k_ mandamos un SIGKILL, con c switcheamos entre &amp;ldquo;comando/nombre de aplicacion&amp;rdquo;, la &lt;em&gt;o&lt;/em&gt; nos muestra el owner.
+Pueden bajarla desde aca &lt;a href=&#34;http://wizard.ae.krakow.pl/~mike/&#34;&gt;http://wizard.ae.krakow.pl/~mike/&lt;/a&gt; aunque segurmente esté el los repositorios de la distro que usen.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;last&lt;/strong&gt; y &lt;strong&gt;lastlog&lt;/strong&gt;
+Muestra el ultimo acceso de los usuarios, el segundo es el mas simple y cómodo para leer, lista los usuarios, tty, desde donde y fecha y hora del acceso.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;psacct&lt;/strong&gt;
+Este es un conjunto de aplicaciones, muy utiles (informacion detallada &lt;a href=&#34;http://generationip.com/documentation/system-documentation/113-howto-on-psacct-for-a-complete-monitoring-of-processus-and-users-activities-on-your-system&#34;&gt;aca&lt;/a&gt;), dentro de las cuales se encuentra:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;ac&lt;/em&gt;: Muestra informacion acerca de cuanto tiempo estuvo loggeado el usuario.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;lastcomm&lt;/em&gt;: Información sobre el ultimo comando ejecutado.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;sa&lt;/em&gt;: Informacion sumarizada con los datos del comando anterior.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;last y lastb&lt;/em&gt;: Funciona muy similar al comando nombrado anteriormente, pero el segundo muestra tambien accesos fallidos.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Gnome2 en ArchLinux</title>
+      <link>/jesusroldan.com/posts/gnome2-en-archlinux/</link>
+      <pubDate>Wed, 14 Sep 2011 04:41:31 +0000</pubDate>
+      
+      <guid>/jesusroldan.com/posts/gnome2-en-archlinux/</guid>
+      <description>
+
+&lt;p&gt;Como hay mucho usuarios descontentos con el resultado de Gnome 3, incluído Linus Torvals, era evidente que iban a existir formas de volver a la versión anterior, y Arch claro que la permite, y eso que fué de las primeras distros en cambiar :P
+Buscando encontré dos, la primera es un fork, la segunda un downgrade directo; me quedo con la primera. Si no se pudieron acostumbrar al cambio, si gnome-shell ya les dió una úlcera y no pueden esperar la versión 3.2, quizás alguna de estas opciones les sea útil.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Utilizar un fork: Mate&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Primero, tiene que editar el archivo &lt;strong&gt;/etc/pacman.conf&lt;/strong&gt;, agregando estas lineas al principio de la lista de repositorios
+[code]
+[mate]&lt;/p&gt;
+
+&lt;h1 id=&#34;contains-official-mate-desktop-packages-gnome2-fork:833a75177de8e75cddde15e0b36cb15f&#34;&gt;Contains official mate desktop packages (gnome2 fork)&lt;/h1&gt;
+
+&lt;p&gt;Server = &lt;a href=&#34;http://germ.winpe.com/archlinux/mate/$arch&#34;&gt;http://germ.winpe.com/archlinux/mate/$arch&lt;/a&gt;
+[/code]&lt;/p&gt;
+
+&lt;p&gt;Para instalar Mate, tiene que correr:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; pacman -Syyu &amp;amp;&amp;amp; pacman -Sf mate-desktop-environment
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;En mi caso aparecieron varios conflictos, ponga si a todo, no tuve problemas con ninguno&lt;/p&gt;
+
+&lt;p&gt;Despues de eso, tiene varios paquetes mas para instalar, todos opcionales pero suman: mate-extract mate-applets mate-terminal mate-image-viewer mate-themes. Así mismo, deberían instalar temas o cualquier eyecandy que necesiten para Gnome 2 que no sea necesario en el 3.&lt;/p&gt;
+
+&lt;p&gt;[caption id=&amp;ldquo;attachment_318&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo; caption=&amp;ldquo;Gnome 3.0.2, antes del update&amp;rdquo;]&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-300x225.png&#34; alt=&#34;Gnome 3&#34; /&gt;&lt;/a&gt;[/caption] [caption id=&amp;ldquo;attachment_320&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo; caption=&amp;ldquo;Una vez instalado Mate&amp;rdquo;]&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-1.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-1-300x225.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;[/caption] [caption id=&amp;ldquo;attachment_322&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo; caption=&amp;ldquo;Mate, despúes de instalar themes y modificar la apariencia.&amp;rdquo;]&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-2.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-2-300x225.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;[/caption]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Utilizar una versión antigua de paquetes&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;En este caso, lo que vamos a hacer es cambiar el repositorio en donde se encuentra Gnome, utilizar uno que no haya sido actualizado a Gnome3.x e instalar en cambio Gnome2.32.1, supongo que es la última versión estable antes del cambio.&lt;/p&gt;
+
+&lt;p&gt;También tenemos que editar el archivo &lt;strong&gt;/etc/pacman.conf&lt;/strong&gt;, pero en lugar de agregar un repositorio cambiamos el extra
+[code]
+[extra]&lt;/p&gt;
+
+&lt;h1 id=&#34;incluir-etc-pacman-d-mirrorlist:833a75177de8e75cddde15e0b36cb15f&#34;&gt;Incluir = / etc / pacman.d / mirrorlist&lt;/h1&gt;
+
+&lt;p&gt;Server = &lt;a href=&#34;http://arm.konnichi.com/2011/04/30/extra/os/$arch&#34;&gt;http://arm.konnichi.com/2011/04/30/extra/os/$arch&lt;/a&gt;
+[/code]&lt;/p&gt;
+
+&lt;p&gt;Después corren esta aberración:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; pacman -Syyfuu -nodep
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Cuando terminen (básicamente lo que hace es actualizar los repositorios, forzar el update, y en caso de que sea necesario realizar un downgrade de lo que haya, va a instalar todos los paquetes de Gnome que encuentre, son varios megas), en /etc/pacman.conf dejen el repositorio extra como corresponde y además coloquen esto para que no actualice gnome ni gnome-extra (asi no lo pisa con la versión 3)
+[code]
+IgnoreGroup = gnome gnome-extra
+[/code]
+Les debo screenshots de esta prueba, ya borré el snapshot y son muchos megas para descargar como para hacerlo de nuevo sólo para las imágenes :(&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Ambas pruebas fueron realizadas con una &lt;a href=&#34;http://blog.jesusroldan.com/2011/08/31/virtualboxes-org-descarga-de-maquinas-virtuales/&#34;&gt;máquina virtual&lt;/a&gt;  con una instalación estandar, con gnome y gnome-extra instalado por defecto, es decir, en ambos casos hice un downgrade de Gnome 3, que me pareció el caso en el que podía detectar mas problemas.
+&lt;strong&gt;De las dos opciones, les recomiendo la primera, la segunda da bastantes dolores de cabeza.&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lentitud en la instalacion de paquetes con pacman</title>
+      <link>/jesusroldan.com/posts/lentitud-en-la-instalacion-de-paquetes-con-pacman/</link>
+      <pubDate>Tue, 06 Sep 2011 14:12:54 +0000</pubDate>
+      
+      <guid>/jesusroldan.com/posts/lentitud-en-la-instalacion-de-paquetes-con-pacman/</guid>
+      <description>&lt;p&gt;Desde hace unos días noto que al actualizar o instalar nuevos paquetes con pacman o yaourt se toma una eternidad en actualizar.
+En un primer momento pensé que era problema de la conexión, pero me pasaba en casa y en el laburo, con dos ISP diferentes, entonces el problema pasaba por otro lado.&lt;/p&gt;
+
+&lt;p&gt;Buscando en el foro encontré a alguien que le pasaba algo similar, la solución surgió corriendo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; url=$(pacman -Sp linux | tee /dev/stderr) &amp;amp;&amp;amp; curl --verbose &amp;quot;${url}&amp;quot; -o /dev/null
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Se puede ver que trata de conectarse a mirror.kernel.org, que esta caído: &lt;a href=&#34;http://www.archlinux.org/mirrors/status/&#34;&gt;http://www.archlinux.org/mirrors/status/&lt;/a&gt;. Basta con editar el archivo /etc/pacman.d/mirrorlist&lt;/p&gt;
+
+&lt;p&gt;Después deben correr pacman -Syy para actualizar los repositorios.&lt;/p&gt;
+
+&lt;p&gt;En caso de que deseen ver los más rápidos, pueden seguir los pasos de la wiki, correr rankmirror la verdad que ayuda mucho en la velocidad &lt;a href=&#34;https://wiki.archlinux.org/index.php/Mirrors#List_by_speed&#34;&gt;https://wiki.archlinux.org/index.php/Mirrors#List_by_speed&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tips Linuxeros: Alias para Todos</title>
+      <link>/jesusroldan.com/posts/tips-para-linux-alias-para-todos/</link>
+      <pubDate>Fri, 02 Sep 2011 21:33:09 +0000</pubDate>
+      
+      <guid>/jesusroldan.com/posts/tips-para-linux-alias-para-todos/</guid>
+      <description>&lt;p&gt;Los alias en Linux son shortcuts o &lt;em&gt;sinónimos&lt;/em&gt; que podemos emplear para ejecutar comandos en la terminal.
+Son muy útiles para correr comandos largos o simplemente crear nombres mas amigables, para algún comando que nos resulte deficil de recordar o a los que usemos mas seguido.
+Para crearlos debemos escribir en el archivo &lt;strong&gt;~.bashrc&lt;/strong&gt; para dejarlos disponibles al usuario, o en /etc/bash.bashrc para dejarlos disponibles en todo el sistema.&lt;/p&gt;
+
+&lt;p&gt;Las sintaxis es muy sencilla: &lt;em&gt;alias nombre=&amp;lsquo;comando&amp;rsquo;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Algunos ejemplos&amp;hellip;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#Gestión rapida de paquetería
+alias instalar=&#39;sudo apt-get install&#39;
+alias clearcache=&#39;yaourt -Scc&#39;
+alias update=&#39;emerge --update --deep&#39;
+
+#Vaciado de archivos
+alias empty=&#39;:&amp;gt; $1&#39;
+
+#Copiado con barra de progreso, velocidad y estadísticas
+alias copy=&#39;rsync -avz --stats --progress&#39;
+
+#Compartir la carpeta, via HTTP (http://127.0.0.1:8000)
+alias sharehttp=&#39;python -m SimpleHTTPServer&#39;
+
+#Mostrar unidades montadas, en columnas
+alias mountt=&#39;mount | column -t&#39;
+
+#Mostrar top 10 deprocesos que consuman mas memoria
+alias pstop=&#39;ps aux | sort -nk +4 | tail&#39;
+
+#Buscar proceso
+alias psx=&#39;ps aux | grep &#39;
+
+#Me olvide de poner sudo en el comando anterior
+alias grrrrrrr=&#39;sudo !!&#39;
+
+#Listar los puertos abiertos
+alias openports=&#39;netstat --all --numeric --programs --inet&#39;
+
+# Tambien podemos modificar el prompt o la terminal
+# Agregandole la hora
+alias hora=&#39;export PS1=&amp;quot;${PS1%\$*}&amp;quot;&#39; t $ &#39;
+# o mejor aun, poniendola en la parte superior
+alias horasuperior=&#39;while sleep 1;do tput sc;tput cup 0 $(($(tput cols)-29));date;tput rc;done &amp;amp;&#39;
+
+#Alias con parametros (en realidad es una funcion)
+#Crear un directorio y posicionarnos sobre el mismo
+MKdir() { mkdir $1 &amp;amp;&amp;amp; cd $1 }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Hacer los comandos &amp;ldquo;human-readeable&amp;rdquo; por defecto&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;alias ls=&#39;ls -h&#39;
+alias du=&#39;du -h&#39;
+alias df=-df -h&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Simplificar los parámetros&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;alias ls=&#39;ls -hF --color=always&#39;
+alias lr=&#39;ls -hR&#39;                    # recursive ls
+alias ll=&#39;ls -hl&#39;
+alias la=&#39;ll -hA&#39;
+alias lx=&#39;ll -hBX&#39;                   # sort by extension
+alias lz=&#39;ll -hrS&#39;                   # sort by size
+alias lt=&#39;ll -rt&#39;                    # sort by date
+alias lm=&#39;la | more&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;También podemos crear alias que solo funcionen para usuarios con privilegios de root&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;if [ $UID -ne 0 ]; then
+    alias scat=&#39;sudo cat&#39;
+    alias svim=&#39;sudo vim&#39;
+    alias root=&#39;sudo su&#39;
+    alias reboot=&#39;sudo reboot&#39;
+    alias halt=&#39;sudo halt&#39;
+    alias netcfg=&#39;sudo netcfg2&#39;
+fi
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Si queren saber cuales son los comandos que más se utilizan en el sistema, como para ver si pueden agilizar creando alias mas cortos, pueden correr esto:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; history | awk &#39;{print $2}&#39; | awk &#39;BEGIN {FS=&amp;quot;|&amp;quot;}{print $1}&#39; | sort | uniq -c | sort -n | tail -n 20 | sort -nr
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;[quote style=&amp;ldquo;1&amp;rdquo;] See, you not only have to be a good coder to create a system like Linux, you have to be a sneaky bastard too ;-) [/quote]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Linus Torvalds&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

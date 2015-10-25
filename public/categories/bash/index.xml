@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bash on title</title>
+    <link>jesusroldan.com/categories/bash/</link>
+    <description>Recent content in Bash on title</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 21 Oct 2012 20:49:21 +0000</lastBuildDate>
+    <atom:link href="jesusroldan.com/categories/bash/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Barra de progreso de Arch Linux para Python</title>
+      <link>/jesusroldan.com/posts/barra-de-progreso-de-arch-linux-para-python/</link>
+      <pubDate>Sun, 21 Oct 2012 20:49:21 +0000</pubDate>
+      
+      <guid>/jesusroldan.com/posts/barra-de-progreso-de-arch-linux-para-python/</guid>
+      <description>&lt;p&gt;Hace unos días me puse a &lt;em&gt;portar&lt;/em&gt; la barra de progreso que tiene el sistema de paquetes de &lt;a href=&#34;http://blog.jesusroldan.com/2011/12/28/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/&#34;&gt;&lt;strong&gt;Arch Linux&lt;/strong&gt;&lt;/a&gt; (activando la opción &lt;strong&gt;ILoveCandy&lt;/strong&gt;) a Python &lt;del&gt;3&lt;/del&gt; 3.X y 2.7. De momento está en fase de prueba, pero es dentro de todo funcional, prometo ir actualizándola cuando pueda.&lt;/p&gt;
+
+&lt;p&gt;Para poder instalarlo, pueden bajarse los fuentes &lt;a href=&#34;https://github.com/xeBuz/pacman-progressbar&#34;&gt;desde &lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt; (es licencia Beer-ware, una adaptación de BSD) o mejor aún directamente desde PyPi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo pip install pacmanprogressbar
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;La utilización es la siguiente (proximamente voy a hacer que se pueda iterar directamente):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#!/usr/bin/env python
+import time
+from pacmanprogressbar import Pacman
+
+if __name__ == &amp;quot;__main__&amp;quot;:
+    p = Pacman(end=100)
+
+    for x in range(p.len):
+        p.update()
+        time.sleep(.2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Una vez instanciada la clase, tiene dos métodos públicos:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;update([value])&lt;/strong&gt;, actualiza el progreso sumándole el valor del parámetro, por defecto suma 1.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;progress(value)&lt;/strong&gt;, en vez de sumarizar, se le pasa directamente el valor del progreso.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;La salida en consola sería más o menos como esta:
+&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/10/animacion.gif&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/10/animacion.gif&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Script para grabar la consola en un .gif animado</title>
+      <link>/jesusroldan.com/posts/script-para-grabar-la-consola-en-un-gif-animado/</link>
+      <pubDate>Thu, 18 Oct 2012 02:03:52 +0000</pubDate>
+      
+      <guid>/jesusroldan.com/posts/script-para-grabar-la-consola-en-un-gif-animado/</guid>
+      <description>&lt;p&gt;Hoy me surgió una necesidad, que me pareció bastante simple pero no encontré herramientas simples que me lo solucionaran. Les dejo este script, que graba un gif de la consola durante X segundos (idea de @shinax y @rootmyword). Ese valor se lo pasamos por parámetro (no lo valido ni tiene default, porque la vida es demasiado corta para controlarlo) . Hay que correr el script con un &amp;amp; al final de la línea, asi pasa a correr en background y podemos usar la consola.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#!/bin/bash
+clear
+mkdir temp_gif
+
+segs=`expr $1 \* 5`
+
+for (( i = 1; i &amp;lt;= $segs ; i++ ));
+do
+    printf -v number &amp;quot;%06d&amp;quot; $i
+    import -window $WINDOWID temp_gif/$number.gif 
+    sleep 0.2
+done
+
+convert -delay 20 -loop 0 temp_gif/*.gif animacion.gif
+
+rm -R temp_gif
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;El código terminó siendo más simple de lo que pensaba, toda la magia la hace &lt;strong&gt;ImageMagick&lt;/strong&gt;. Explico por línea, porque la idea siempre es aprender como funciona:
+Línea 5. Toma el primer parámetro que le demos, lo multiplica por 5 porque cada imagen la saco cada 0.2 segundos ;)
+Línea 9. El &lt;strong&gt;printf&lt;/strong&gt; lo utilizo para formatear &amp;i;, neceito hacer un zero-padding, o sea, rellenar con ceros a la izquierda, para que después el conversor me tome el orden correcto. El parámetro -v indica que no lo imprima, sino que lo almacene en una variable.
+Línea 10. ImageMagick se encarga de guardar la imágen de la ventana que le digo, para $WINDOWSID creo que es necesario &lt;strong&gt;xorg-xwininfo&lt;/strong&gt;, ya lo tenía instalado.
+Línea 13. Toma todas las imágenes de la carpeta, las concatena con un delay de 0.2 segundos y hace un loop infinito.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Descargar La Venganza Será Terrible, via Bash</title>
+      <link>/jesusroldan.com/posts/descargar-la-venganza-sera-terrible-via-bash/</link>
+      <pubDate>Thu, 21 Jul 2011 02:31:17 +0000</pubDate>
+      
+      <guid>/jesusroldan.com/posts/descargar-la-venganza-sera-terrible-via-bash/</guid>
+      <description>
+
+&lt;p&gt;Este es un pequeño script que descarga (via wget) el programa La Venganza Sera Terrible de &lt;a href=&#34;http://www.alejandrodolina.com.ar/&#34;&gt;Alejando Dolina&lt;/a&gt;; utilizando los archivos que genera a diario el sitio &lt;a href=&#34;http://venganzasdelpasado.com.ar/&#34;&gt;Venganzas del Pasado&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[sourcecode language=&amp;ldquo;bash&amp;rdquo;]
+#!/bin/bash&lt;/p&gt;
+
+&lt;h1 id=&#34;medio-rustico-pero-si-lo-ejecuto-hoy:e7fb311ab5e08ba834ea459d13c1892b&#34;&gt;Medio rustico, pero si lo ejecuto hoy..&lt;/h1&gt;
+
+&lt;h1 id=&#34;necesito-bajar-el-programa-de-anoche:e7fb311ab5e08ba834ea459d13c1892b&#34;&gt;necesito bajar el programa de anoche&lt;/h1&gt;
+
+&lt;p&gt;day=&lt;code&gt;date +%d &#39;--date=-1 day&#39;&lt;/code&gt;
+month=&lt;code&gt;date +%m &#39;--date=-1 day&#39;&lt;/code&gt;
+year=&lt;code&gt;date +%Y &#39;--date=-1 day&#39;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;directorio-en-donde-se-guarda-el-archivo:e7fb311ab5e08ba834ea459d13c1892b&#34;&gt;Directorio en donde se guarda el archivo&lt;/h1&gt;
+
+&lt;p&gt;folder=&amp;ldquo;$HOME/Dolina/&amp;rdquo;$year&amp;rdquo;/&amp;ldquo;$month&amp;rdquo;/&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;#Si lo ejecuto un lunes o un domingo, no hay nada para bajar
+if [ &lt;code&gt;date +%u&lt;/code&gt; = 1 ] || [ &lt;code&gt;date +%u&lt;/code&gt; = 7 ]; then
+echo &amp;ldquo;Anoche no hubo programa&amp;rdquo;
+else
+wget -q -w 600 -P $folder &amp;ldquo;&lt;a href=&#34;http://venganzasdelpasado.com.ar/&amp;quot;$year&amp;quot;/lavenganza_&amp;quot;$year&amp;quot;-&amp;quot;$month&amp;quot;-&amp;quot;$day&amp;quot;.mp3&amp;quot;&#34;&gt;http://venganzasdelpasado.com.ar/&amp;quot;$year&amp;quot;/lavenganza_&amp;quot;$year&amp;quot;-&amp;quot;$month&amp;quot;-&amp;quot;$day&amp;quot;.mp3&amp;quot;&lt;/a&gt;
+fi
+[/sourcecode]&lt;/p&gt;
+
+&lt;p&gt;Yo lo tengo corriendo con crontab, a las 5 madrugada, cosa de que al levantarme ya lo haya bajado :)
+Así como esta deberia funcionar solo en Linux, estaba haciendo algo con wxWidgets para jugar un rato con eso, que deberia ser multiplataforma, despues (o sea, cuando funcione) lo subo.&lt;/p&gt;
+
+&lt;p&gt;Disponible en &lt;a href=&#34;https://gist.github.com/1079511&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

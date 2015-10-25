@@ -1,4 +1,4 @@
-hugo_gh_blog
+Personal Website
 ============
 
-Template repo for a blog built with Hugo deployed on github-pages
+Migrated form WP to Hugo
