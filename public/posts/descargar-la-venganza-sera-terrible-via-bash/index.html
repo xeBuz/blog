@@ -7,11 +7,11 @@
 		<meta name="author" content="xeBuz">
 		<meta name="description" content="Personal Website">
 		<meta name="generator" content="Hugo 0.14" />
-		<title>Descargar La Venganza Será Terrible, via Bash &middot; Personal Blog</title>
+		<title>Descargar La Venganza Será Terrible, via Bash &middot; xeBuz personal blog</title>
 		<link rel="shortcut icon" href="http://localhost:1313/blog/images/favicon.ico">
 		<link rel="stylesheet" href="http://localhost:1313/blog/css/style.css">
 		<link rel="stylesheet" href="http://localhost:1313/blog/css/highlight.css">
-		<link href="http://localhost:1313/blog/index.xml" rel="alternate" type="application/rss+xml" title="Personal Blog" />
+		<link href="http://localhost:1313/blog/index.xml" rel="alternate" type="application/rss+xml" title="xeBuz personal blog" />
 	</head>
     <body>
        <nav class="main-nav">
@@ -34,34 +34,37 @@
                 <header>
                     <h1>Descargar La Venganza Será Terrible, via Bash</h1>
                     <h2 class="headline">July 21, 2011</h2>
+
+                    <h2 class="tags">
+                     
+                          #<a href="http://localhost:1313/blog/tags/dev">dev</a>&nbsp;
+                    
+                          #<a href="http://localhost:1313/blog/tags/offtopic">offtopic</a>&nbsp;
+                    
+                    </h2>
+
                 </header>
                 <section id="post-body">
-                    
+                    <p>Este es un pequeño script que descarga (via wget) el programa La Venganza Sera Terrible de <a href="http://www.alejandrodolina.com.ar/">Alejando Dolina</a>; utilizando los archivos que genera a diario el sitio <a href="http://venganzasdelpasado.com.ar/">Venganzas del Pasado</a></p>
 
-<p>Este es un pequeño script que descarga (via wget) el programa La Venganza Sera Terrible de <a href="http://www.alejandrodolina.com.ar/">Alejando Dolina</a>; utilizando los archivos que genera a diario el sitio <a href="http://venganzasdelpasado.com.ar/">Venganzas del Pasado</a></p>
+<pre><code class="language-bash">#!/bin/bash
 
-<p>[sourcecode language=&ldquo;bash&rdquo;]
-#!/bin/bash</p>
+# Medio rustico, pero si lo ejecuto hoy..
+# necesito bajar el programa de anoche
+day=`date +%d '--date=-1 day'`
+month=`date +%m '--date=-1 day'`
+year=`date +%Y '--date=-1 day'`
 
-<h1 id="medio-rustico-pero-si-lo-ejecuto-hoy:e7fb311ab5e08ba834ea459d13c1892b">Medio rustico, pero si lo ejecuto hoy..</h1>
+# Directorio en donde se guarda el archivo
+folder=&quot;$HOME/Dolina/&quot;$year&quot;/&quot;$month&quot;/&quot;
 
-<h1 id="necesito-bajar-el-programa-de-anoche:e7fb311ab5e08ba834ea459d13c1892b">necesito bajar el programa de anoche</h1>
-
-<p>day=<code>date +%d '--date=-1 day'</code>
-month=<code>date +%m '--date=-1 day'</code>
-year=<code>date +%Y '--date=-1 day'</code></p>
-
-<h1 id="directorio-en-donde-se-guarda-el-archivo:e7fb311ab5e08ba834ea459d13c1892b">Directorio en donde se guarda el archivo</h1>
-
-<p>folder=&ldquo;$HOME/Dolina/&rdquo;$year&rdquo;/&ldquo;$month&rdquo;/&rdquo;</p>
-
-<p>#Si lo ejecuto un lunes o un domingo, no hay nada para bajar
-if [ <code>date +%u</code> = 1 ] || [ <code>date +%u</code> = 7 ]; then
-echo &ldquo;Anoche no hubo programa&rdquo;
+#Si lo ejecuto un lunes o un domingo, no hay nada para bajar
+if [ `date +%u` = 1 ] || [ `date +%u` = 7 ]; then
+echo &quot;Anoche no hubo programa&quot;
 else
-wget -q -w 600 -P $folder &ldquo;<a href="http://venganzasdelpasado.com.ar/&quot;$year&quot;/lavenganza_&quot;$year&quot;-&quot;$month&quot;-&quot;$day&quot;.mp3&quot;">http://venganzasdelpasado.com.ar/&quot;$year&quot;/lavenganza_&quot;$year&quot;-&quot;$month&quot;-&quot;$day&quot;.mp3&quot;</a>
+wget -q -w 600 -P $folder &quot;http://venganzasdelpasado.com.ar/&quot;$year&quot;/lavenganza_&quot;$year&quot;-&quot;$month&quot;-&quot;$day&quot;.mp3&quot;
 fi
-[/sourcecode]</p>
+</code></pre>
 
 <p>Yo lo tengo corriendo con crontab, a las 5 madrugada, cosa de que al levantarme ya lo haya bajado :)
 Así como esta deberia funcionar solo en Linux, estaba haciendo algo con wxWidgets para jugar un rato con eso, que deberia ser multiplataforma, despues (o sea, cuando funcione) lo subo.</p>
@@ -75,7 +78,7 @@ Así como esta deberia funcionar solo en Linux, estaba haciendo algo con wxWidge
                         <img class="avatar" src="http://localhost:1313/blog/images/avatar.png">
                         <div>
                             <span class="dark">xeBuz</span>
-                            <span>I&#39;m an enthusiastic gopher.</span>
+                            <span>lalalala</span>
                         </div>
                     </a>
                 <section id="sharing">
@@ -99,43 +102,11 @@ Así como esta deberia funcionar solo en Linux, estaba haciendo algo con wxWidge
     
     
         
-        <li>
-            <a href="http://localhost:1313/blog/posts/no-close-tabs-firefox-31/">Close Tab en Firefox 31<aside class="dates">May 14</aside></a>
-        </li>
-        
-   
-    
-        
-        <li>
-            <a href="http://localhost:1313/blog/posts/newest/">Just another sample post<aside class="dates">Mar 29</aside></a>
-        </li>
-        
-   
-    
-        
-        <li>
-            <a href="http://localhost:1313/blog/posts/middle/">Second Post<aside class="dates">Mar 28</aside></a>
-        </li>
-        
-   
-    
-        
-        <li>
-            <a href="http://localhost:1313/blog/posts/oldest/">First Post<aside class="dates">Mar 27</aside></a>
-        </li>
-        
    
     
         
         <li>
             <a href="http://localhost:1313/blog/posts/crazy-little-thing-called-perl/">Crazy little thing called Perl: Introducción al lenguaje<aside class="dates">Mar 5</aside></a>
-        </li>
-        
-   
-    
-        
-        <li>
-            <a href="http://localhost:1313/blog/posts/bundles-de-juegos-varias-opciones-disponibles/">Bundles de juegos, varias opciones disponibles<aside class="dates">Feb 27</aside></a>
         </li>
         
    
@@ -156,14 +127,42 @@ Así como esta deberia funcionar solo en Linux, estaba haciendo algo con wxWidge
     
         
         <li>
-            <a href="http://localhost:1313/blog/posts/licencia-para-ir-al-cine/">Licencia para ir al cine<aside class="dates">Jul 1</aside></a>
+            <a href="http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/">Barra de progreso de Arch Linux para Python<aside class="dates">Oct 21</aside></a>
         </li>
         
    
     
         
         <li>
-            <a href="http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/">Barra de progreso de Arch Linux para Python<aside class="dates">Oct 21</aside></a>
+            <a href="http://localhost:1313/blog/posts/script-para-grabar-la-consola-en-un-gif-animado/">Script para grabar la consola en un .gif animado<aside class="dates">Oct 18</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/">Lo que quedó de la charla de desarrollo web de videojuegos<aside class="dates">Sep 7</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/script-para-generar-playlists-dinamicas-en-mpd/">Script para generar playlists dinámicas en MPD <aside class="dates">Aug 10</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/">Un &#34;bot&#34; de Twitter, con Python en un par de minutos<aside class="dates">Jul 4</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/cron-automatizar-scripts-como-un-titan/">Cron, automatizar scripts como un titán<aside class="dates">May 22</aside></a>
         </li>
         
    
@@ -181,5 +180,8 @@ Así como esta deberia funcionar solo en Linux, estaba haciendo algo con wxWidge
 <script>hljs.initHighlightingOnLoad();</script>
 
 
-    </body>
+    <script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
 </html>

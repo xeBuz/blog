@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Grep on Personal Blog</title>
+    <title>Grep on xeBuz personal blog</title>
     <link>http://localhost:1313/blog/tags/grep/</link>
-    <description>Recent content in Grep on Personal Blog</description>
+    <description>Recent content in Grep on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 02 Sep 2011 21:33:09 +0000</lastBuildDate>
@@ -104,52 +104,6 @@ fi
 &lt;p&gt;[quote style=&amp;ldquo;1&amp;rdquo;] See, you not only have to be a good coder to create a system like Linux, you have to be a sneaky bastard too ;-) [/quote]&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Linus Torvalds&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Tips Linuxeros: Manejo del historial</title>
-      <link>http://localhost:1313/blog/posts/tips-para-linux-manejo-del-historial/</link>
-      <pubDate>Fri, 22 Jul 2011 00:16:16 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/tips-para-linux-manejo-del-historial/</guid>
-      <description>&lt;p&gt;Quizás una de las mejores funcionalidades en la terminal de Linux, o por lo menos una de las más productivas, es la capacidad de generar un historial de lo que ejecutamos.
-Ahora bien, existen varias formas de recorrerlo. La más común y la que seguramente todos usan, es mediante las flechas arriba y abajo, muy util, pero también existen otras formas de hacerlo :)&lt;/p&gt;
-
-&lt;p&gt;Podemos hacer una búsqueda utilizando &lt;strong&gt;Ctrl+R&lt;/strong&gt; y el texto que deseamos. La búsqueda es incremental, en caso de que la primera opción no es la que queremos, sólo basta volver a presionar &lt;strong&gt;Ctrl+R&lt;/strong&gt;. Si queremos hacer la búsqueda en orden inverso, basta utilizar &lt;strong&gt;Ctrl+I&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Otra opción muy interesante es volver a ejecutar el comando anterior con &lt;strong&gt;!!&lt;/strong&gt; (doble signo de admiración). Es genial si nos olvidamos de ejecutar algo con permisos de superuser:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; sudo !!
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;También se puede utilizar el &lt;strong&gt;!foo&lt;/strong&gt; para repetir la última vez que usamos foo, o &lt;strong&gt;!?foo&lt;/strong&gt; para volver a ejecutar el ultimo comando &lt;em&gt;que contenga&lt;/em&gt; foo.&lt;/p&gt;
-
-&lt;p&gt;En caso de que querramos &lt;em&gt;reemplazar&lt;/em&gt; parte del script ejectutado anteriormente, por ejemplo, abrimos un archivo con nano pero ahora queremos abrirlo con vi, podemos correr&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;^nano^vi
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;En caso de que necesitemos mostrar todos los comandos que contengan cierto termino basta con hacer un &lt;strong&gt;grep&lt;/strong&gt; de lo que devuelve el comando history:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; history | grep foo
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;El número de la izquierda es el orden del comando, podemos correr esa linea usando &lt;strong&gt;!numero&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Un detalle&amp;hellip;&lt;/em&gt;
-Es posible que si usan múltipes instancias de la terminal (desde tty, gnome-terminal, guake, yakuke, etc), no se guarde el historial, para esto  basta con editar el archivo &lt;strong&gt;~/.bashrc&lt;/strong&gt; de esta forma:
-[sourcecode language=&amp;ldquo;bash&amp;rdquo;]
- unset HISTFILESIZE
- HISTSIZE=5000 # cantidad de registros que quieran guardar
- PROMPT_COMMAND=&amp;ldquo;history -a&amp;rdquo;
- export HISTSIZE PROMPT_COMMAND
-[/sourcecode]&lt;/p&gt;
-
-&lt;p&gt;Y correr una vez el siguiente comando&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; shopt -s histappend
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

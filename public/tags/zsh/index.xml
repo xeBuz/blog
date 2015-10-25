@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Zsh on Personal Blog</title>
+    <title>Zsh on xeBuz personal blog</title>
     <link>http://localhost:1313/blog/tags/zsh/</link>
-    <description>Recent content in Zsh on Personal Blog</description>
+    <description>Recent content in Zsh on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 20 Oct 2011 18:26:48 +0000</lastBuildDate>
@@ -18,15 +18,11 @@
       <description>&lt;p&gt;&lt;strong&gt;Z Bash&lt;/strong&gt;, o mejor &lt;strong&gt;zsh&lt;/strong&gt;, es un interprete de comándos (&lt;em&gt;shell&lt;/em&gt;), excelente alternativa al Bash que viene por defecto (&lt;em&gt;Bourne-again Shell&lt;/em&gt;). Como mejoras, se destaca:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Mejorado en el autocompletado.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Muy customizable.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Corrección de tipeo.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Mejor manejo de funciones.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Es una shell mas hipster (?)._ (En realidad no, tiene mas de 20 años, y se usa bastante&amp;hellip;pero no viene por defecto)_&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Mejorado en el autocompletado.&lt;/li&gt;
+&lt;li&gt;Muy customizable.&lt;/li&gt;
+&lt;li&gt;Corrección de tipeo.&lt;/li&gt;
+&lt;li&gt;Mejor manejo de funciones.&lt;/li&gt;
+&lt;li&gt;Es una shell mas hipster (?)._ (En realidad no, tiene mas de 20 años, y se usa bastante&amp;hellip;pero no viene por defecto)_&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;La instalación es simple, son unos poco kilobytes y seguro esta disponible en la distro que usen. En mi caso basta con:&lt;/p&gt;
@@ -59,34 +55,31 @@ Este paquete está en el AUR, y si, adivinaron, agrega autocompletado de paquete
 No se si Paginador es la palabra apropiada, tampoco se si inteligente sería el adjetivo indicador. Todos somos unos vagos, por eso usamos la terminal, que mejor que escribir cat LEAME, cat LEAME | less, si, escribir solo LEAME, bueno, zsh nos entiende, así que funciona así.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Diferentes &amp;ldquo;key bindings&amp;rdquo;&lt;/strong&gt;
-En este caso, zsh los meneja de otra forma, y es frustrante mover las fechas de dirección y no obtener lo que pretendemos. No me resultó cómodo (porque no le dí tiempo a ver como funcionaba, ya estoy viejo para algunas cosas). Para dejarlo funcionando &amp;ldquo;a lo Bash&amp;rdquo;, tienen que editar el archivo &lt;em&gt;~/.zshrc&lt;/em&gt;
-[spoiler title=&amp;ldquo;Agregar estas líneas&amp;rdquo;]&lt;/p&gt;
+En este caso, zsh los meneja de otra forma, y es frustrante mover las fechas de dirección y no obtener lo que pretendemos. No me resultó cómodo (porque no le dí tiempo a ver como funcionaba, ya estoy viejo para algunas cosas). Para dejarlo funcionando &amp;ldquo;a lo Bash&amp;rdquo;, tienen que editar el archivo &lt;em&gt;~/.zshrc&lt;/em&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;bindkey &amp;quot;e[1~&amp;quot; beginning-of-line # Home
-bindkey &amp;quot;e[4~&amp;quot; end-of-line # End
-bindkey &amp;quot;e[5~&amp;quot; beginning-of-history # PageUp
-bindkey &amp;quot;e[6~&amp;quot; end-of-history # PageDown
-bindkey &amp;quot;e[2~&amp;quot; quoted-insert # Ins
-bindkey &amp;quot;e[3~&amp;quot; delete-char # Del
-bindkey &amp;quot;e[5C&amp;quot; forward-word
-bindkey &amp;quot;eOc&amp;quot; emacs-forward-word
-bindkey &amp;quot;e[5D&amp;quot; backward-word
-bindkey &amp;quot;eOd&amp;quot; emacs-backward-word
-bindkey &amp;quot;ee[C&amp;quot; forward-word
-bindkey &amp;quot;ee[D&amp;quot; backward-word
-bindkey &amp;quot;e[Z&amp;quot; reverse-menu-complete # Shift+Tab
-# for rxvt
-bindkey &amp;quot;e[7~&amp;quot; beginning-of-line # Home
-bindkey &amp;quot;e[8~&amp;quot; end-of-line # End
-# for non RH/Debian xterm, can&#39;t hurt for RH/Debian xterm
-bindkey &amp;quot;eOH&amp;quot; beginning-of-line
-bindkey &amp;quot;eOF&amp;quot; end-of-line
-# for freebsd console
-bindkey &amp;quot;e[H&amp;quot; beginning-of-line
-bindkey &amp;quot;e[F&amp;quot; end-of-line
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    bindkey &amp;quot;e[1~&amp;quot; beginning-of-line # Home
+    bindkey &amp;quot;e[4~&amp;quot; end-of-line # End
+    bindkey &amp;quot;e[5~&amp;quot; beginning-of-history # PageUp
+    bindkey &amp;quot;e[6~&amp;quot; end-of-history # PageDown
+    bindkey &amp;quot;e[2~&amp;quot; quoted-insert # Ins
+    bindkey &amp;quot;e[3~&amp;quot; delete-char # Del
+    bindkey &amp;quot;e[5C&amp;quot; forward-word
+    bindkey &amp;quot;eOc&amp;quot; emacs-forward-word
+    bindkey &amp;quot;e[5D&amp;quot; backward-word
+    bindkey &amp;quot;eOd&amp;quot; emacs-backward-word
+    bindkey &amp;quot;ee[C&amp;quot; forward-word
+    bindkey &amp;quot;ee[D&amp;quot; backward-word
+    bindkey &amp;quot;e[Z&amp;quot; reverse-menu-complete # Shift+Tab
+    # for rxvt
+    bindkey &amp;quot;e[7~&amp;quot; beginning-of-line # Home
+    bindkey &amp;quot;e[8~&amp;quot; end-of-line # End
+    # for non RH/Debian xterm, can&#39;t hurt for RH/Debian xterm
+    bindkey &amp;quot;eOH&amp;quot; beginning-of-line
+    bindkey &amp;quot;eOF&amp;quot; end-of-line
+    # for freebsd console
+    bindkey &amp;quot;e[H&amp;quot; beginning-of-line
+    bindkey &amp;quot;e[F&amp;quot; end-of-line
 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;[/spoiler]&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Correccion de typos&lt;/strong&gt;
 Para los dislexicos como uno, esto es muy bueno, nos autocorrige directorios, comandos, archivos&amp;hellip; probandolo es muy bueno, no perfecto, pero ayuda a la hora de escribir rapido.&lt;/p&gt;

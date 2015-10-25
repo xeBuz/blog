@@ -2,367 +2,439 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on xeBuz personal blog</title>
-    <link>http://xebuz.github.io/blog/tags/linux/</link>
+    <link>http://localhost:1313/blog/tags/linux/</link>
     <description>Recent content in Linux on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Mar 2014 15:04:21 +0000</lastBuildDate>
-    <atom:link href="http://xebuz.github.io/blog/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Oct 2012 02:03:52 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Crazy little thing called Perl: Introducción al lenguaje</title>
-      <link>http://xebuz.github.io/blog/posts/crazy-little-thing-called-perl/</link>
-      <pubDate>Wed, 05 Mar 2014 15:04:21 +0000</pubDate>
+      <title>Script para grabar la consola en un .gif animado</title>
+      <link>http://localhost:1313/blog/posts/script-para-grabar-la-consola-en-un-gif-animado/</link>
+      <pubDate>Thu, 18 Oct 2012 02:03:52 +0000</pubDate>
       
-      <guid>http://xebuz.github.io/blog/posts/crazy-little-thing-called-perl/</guid>
-      <description>&lt;p&gt;Perl está disponible para múltimples plataformas, pueden descargarlo desde &lt;a href=&#34;http://www.perl.org/get.html&#34;&gt;acá&lt;/a&gt; o desde el sistema de paquetes que utilicen. Para verificar si tienen instalado perl, en la terminal escriban &lt;em&gt;perl -v&lt;/em&gt;, si hay salida ya lo tienen instalado.&lt;/p&gt;
+      <guid>http://localhost:1313/blog/posts/script-para-grabar-la-consola-en-un-gif-animado/</guid>
+      <description>&lt;p&gt;Hoy me surgió una necesidad, que me pareció bastante simple pero no encontré herramientas simples que me lo solucionaran. Les dejo este script, que graba un gif de la consola durante X segundos (idea de @shinax y @rootmyword). Ese valor se lo pasamos por parámetro (no lo valido ni tiene default, porque la vida es demasiado corta para controlarlo) . Hay que correr el script con un &amp;amp; al final de la línea, asi pasa a correr en background y podemos usar la consola.&lt;/p&gt;
 
-&lt;p&gt;Para la instalación de librerías se utiliza &lt;a href=&#34;http://www.cpan.org/&#34;&gt;&lt;strong&gt;CPAN&lt;/strong&gt;&lt;/a&gt;, que es una colección de módulos libres para Perl. Pueden descargar este script o sino instalarlo desde los repositorios, por ejemplo, en un Linux basado en Debian basta correr:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    #!/bin/bash
+    clear
+    mkdir temp_gif
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    aptitude install cpanminus
+    segs=`expr $1 \* 5`
+
+    for (( i = 1; i &amp;lt;= $segs ; i++ ));
+    do
+        printf -v number &amp;quot;%06d&amp;quot; $i
+        import -window $WINDOWID temp_gif/$number.gif
+        sleep 0.2
+    done
+
+    convert -delay 20 -loop 0 temp_gif/*.gif animacion.gif
+
+    rm -R temp_gif
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Una vez instalado, para instalar módulos deben correr desde la consola el siguiente comando (teniendo en cuenta que el nombre del módulo es case-sensitive):&lt;/p&gt;
+&lt;p&gt;El código terminó siendo más simple de lo que pensaba, toda la magia la hace &lt;strong&gt;ImageMagick&lt;/strong&gt;. Explico por línea, porque la idea siempre es aprender como funciona:
+Línea 5. Toma el primer parámetro que le demos, lo multiplica por 5 porque cada imagen la saco cada 0.2 segundos ;)
+Línea 9. El &lt;strong&gt;printf&lt;/strong&gt; lo utilizo para formatear &amp;i;, neceito hacer un zero-padding, o sea, rellenar con ceros a la izquierda, para que después el conversor me tome el orden correcto. El parámetro -v indica que no lo imprima, sino que lo almacene en una variable.
+Línea 10. ImageMagick se encarga de guardar la imágen de la ventana que le digo, para $WINDOWSID creo que es necesario &lt;strong&gt;xorg-xwininfo&lt;/strong&gt;, ya lo tenía instalado.
+Línea 13. Toma todas las imágenes de la carpeta, las concatena con un delay de 0.2 segundos y hace un loop infinito.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cron, automatizar scripts como un titán</title>
+      <link>http://localhost:1313/blog/posts/cron-automatizar-scripts-como-un-titan/</link>
+      <pubDate>Tue, 22 May 2012 16:48:07 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/cron-automatizar-scripts-como-un-titan/</guid>
+      <description>&lt;p&gt;Hace un tiempo escribí sobre [la utilización del comando &lt;strong&gt;at&lt;/strong&gt;], ahora le toca el turno a &lt;strong&gt;cron&lt;/strong&gt;. ¿Tron? No, cron. ¡Troz! (?).
+¿Qué es cron? Es un administrador de procesos que se ejecuta a un interválo de tiempo específico. Si vienen del Dark Side, sería el equivalente a las &lt;em&gt;Tareas Programadas&lt;/em&gt; de W.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;    cpan install Modulo
+&lt;p&gt;La instalación es simple (está en los repos o incluso ya instalada, en toda distribución que se jacte de ser tal), en fín, en Arch podrían hacer:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    pacman -S --needed cronie
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.tiraecol.net/modules/comic/cache/images/tiraecol-15.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Al principio puede resultar extraña la configuracion de crontab, pero con el tiempo termina siendo más simple de lo que aparenta y se puede lograr cosas muy buenas de una forma muy sencilla.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Variables&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Primero, tenemos 5 espacios para colocar los tiempos, que se dividen en minutos, horas, días del mes, meses y días de la semana; si alguno de estos datos no se rellena, se debe colocar un asterísco, que significa &amp;ldquo;todos&amp;rdquo; (para que sea entendible y hasta leíble). Después de eso se coloca la ruta completa del script que quieren que se ejecute en ese determinado lapso de tiempo.&lt;/p&gt;
 
-&lt;p&gt;Perl maneja tres tipos de variables:&lt;/p&gt;
+&lt;p&gt;En cualquier campo, asumiendo que ya entendimos los rangos de cada uno, podemos colocar tanto un valor específico, varios valores separados por coma o un rango separado por un guión. Por ejemplo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#Se ejecuta a las 5 de la mañana, en punto
+0 5 * * * * /home/jesus/Scripts/tomar_cafe.sh
+
+#Se ejecuta a las 5 y a las 17 horas, en punto
+0 5,17 * * * /home/jesus/Scripts/loquesea.sh
+
+#Se ejecuta *desde* las 5, cada hora &amp;quot;en punto&amp;quot; *hasta* las 17hs.
+0 5-17 * * * /home/jesus/Scripts/latigo.sh
+
+#Similar al anterior, pero ejecuta cada minuto entre las 5 y las 17
+#miren el primer valor, le estan dicieno &amp;quot;todos&amp;quot;
+* 5,17 * * * echo &amp;quot;trabajen mas duro&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;¿Cómo ver las tareas pendientes en cron?
+&lt;strong&gt;crontab -l&lt;/strong&gt; lista las del usuario activo, para ver las de otro usuario, deben ejecutar crontab -u user -l&lt;/p&gt;
+
+&lt;p&gt;¿Cómo se modifican las tareas?
+Con &lt;strong&gt;crontab -e&lt;/strong&gt; se nos abre el archivo para modificar, con el editor que tengamos por defecto. Para cambiarlo debemos cambiar: &lt;em&gt;export EDITOR=&amp;ldquo;/usr/bin/nano&amp;rdquo;&lt;/em&gt;. Como por defecto se abre con vi, por favor no toquen el teclado si no saben como funciona y llamen a un mayor responsable a cargo.
+También pueden editar los archivos de otros usuarios, con **contab -u user -e **.&lt;/p&gt;
+
+&lt;p&gt;Ahora bien, aquí viene lo bueno jóven, algunos ejemplos:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#Corre cada minuto, siempre.
+* * * * * /home/xebuz/script/cada_minuto.sh
+
+#Cada 5 minutos
+*/5 * * * * /home/xebuz/script/cada_cinco_minutos.sh
+
+#Cada hora, de 8 a 18, de lunes a viernes
+00 08-18 * * 1-5 /home/xebuz/script/laboral.sh
+
+#Una vez cada mes y medio
+* * */15 */1 * /home/xebuz/goldequilmes.sh
+
+#Cada 4 años
+* * * */48 * /home/xebuz/script/mundial.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;¿Muy engorroso para escribir? ¿Sos un lazy-sysadmin? Existen también algunos alias, para agilizar la administración, són cómodos y reemplazan a todos los campos de tiempo, es decir, sólo deben poner el alias y despues el script.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#Tiempos específicos
+@hourly
+@daily
+@weekly
+@monthly
+#Este se ejecuta (como lo indica el nombre), cuando se resetea el equipo
+@reboot
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>zsh, una shell con Z de &#34;ZOMG que buena shell&#34;</title>
+      <link>http://localhost:1313/blog/posts/zsh/</link>
+      <pubDate>Thu, 20 Oct 2011 18:26:48 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/zsh/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Z Bash&lt;/strong&gt;, o mejor &lt;strong&gt;zsh&lt;/strong&gt;, es un interprete de comándos (&lt;em&gt;shell&lt;/em&gt;), excelente alternativa al Bash que viene por defecto (&lt;em&gt;Bourne-again Shell&lt;/em&gt;). Como mejoras, se destaca:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Scalar&lt;/li&gt;
-&lt;li&gt;Array&lt;/li&gt;
-&lt;li&gt;Hash&lt;/li&gt;
+&lt;li&gt;Mejorado en el autocompletado.&lt;/li&gt;
+&lt;li&gt;Muy customizable.&lt;/li&gt;
+&lt;li&gt;Corrección de tipeo.&lt;/li&gt;
+&lt;li&gt;Mejor manejo de funciones.&lt;/li&gt;
+&lt;li&gt;Es una shell mas hipster (?)._ (En realidad no, tiene mas de 20 años, y se usa bastante&amp;hellip;pero no viene por defecto)_&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Scalar&lt;/strong&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
-&lt;p&gt;Las variables escalares representan un valor simple. Los valores escalares pueden ser cadenas, enteros o números de coma flotante y se definen anteponiendo el signo &lt;strong&gt;$&lt;/strong&gt; al nombre de la variable.
-No hay necesidad de pre-declarar sus tipos de variables, Perl los convertirá automáticamente entre ellos según sea necesario.&lt;/p&gt;
+&lt;p&gt;La instalación es simple, son unos poco kilobytes y seguro esta disponible en la distro que usen. En mi caso basta con:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    my $animal = &amp;quot;turtle&amp;quot;;
-    my $answer = 42;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    pacman -S zsh
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;Array&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Una vez instalada, debería figurar en el archivo /etc/shells, para setearla como shell por defecto tenemos que correr:&lt;/p&gt;
 
-&lt;p&gt;Las variables de tipo Array representan una lista de valores. Se declaran anteponiendo el signo &lt;strong&gt;@&lt;/strong&gt; al nombre de la variable&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    my @animals = (&amp;quot;turtle&amp;quot;, &amp;quot;llama&amp;quot;, &amp;quot;cat&amp;quot;);
-    my @numbers = (23, 42, 69);
-    my @mixed   = (&amp;quot;whale&amp;quot;, 666, 1.23);
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    chsh -s $(which zsh)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Los Arrays son indexados a cero. Se puede acceder a los valores de la siguiente manera:&lt;/p&gt;
+&lt;p&gt;La primera vez que ingresan, la shell les sugiere que ejecuten &lt;strong&gt;zsh-newuser-install&lt;/strong&gt;, lo cual es recomendable, da una pequeña pero útil instroducción, con asistentes de configuración.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    print $animals[0];              # imprime &amp;quot;turtle&amp;quot;. Se utiliza $ porque es un valor scalar
-    print $animals[1];              # imprime &amp;quot;llama&amp;quot;
-``
+&lt;p&gt;Ahora sí, veamos algunas cosas que tiene para ofrecernos&amp;hellip;&lt;/p&gt;
 
-La variable especial $#nombrearray nos indica el índice del último elemento.
+&lt;p&gt;&lt;strong&gt;Autocompletado de parametros&lt;/strong&gt;&lt;/p&gt;
 
-```perl
-    print $#mixed;                # imprime 2
-    print $mixed[$#mixed];        # último elemento, imprime 1.23
+&lt;p&gt;Antes pensaba que bash era buena con el autocompletado, claro que viniendo del cmd de Windows cualquier cosa es mejor; zsh vino a abrir una nueva puerta a la comodidad en la línea de comandos.
+Es rápidisimo y funciona con todos* los comandos, sólo pongan el - y para que liste las opciones.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Historial de bash, compatible con zsh&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Una de las primeras cosas que necesité migrando de shell fue el historial. Pueden copiar &lt;em&gt;~/.bash_history _a _~/.histfile&lt;/em&gt; y van a tener lo mismo que bash, imprescindible si usan &lt;strong&gt;Control + R&lt;/strong&gt;.
+Tambien es compatible el archivo &lt;em&gt;~/.bashrc _con el _~/.zshrc&lt;/em&gt; y el_ ~/.bash&lt;em&gt;profile&lt;/em&gt; con &lt;em&gt;~/.zprofile&lt;/em&gt;, pero en mi caso preferí hacer copias a mano de lo que necesitaba. Sólo cuestión de gustos.
+Además, permite compartir el historial entre sesiones, muy comodo si entramos desde ssh y localmente a una PC.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;zsh-yaourt&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Este paquete está en el AUR, y si, adivinaron, agrega autocompletado de paquetes a yaourt, es increiblemente útil, a lo _apt-get _si quieren una comparación, es muy bueno y rápido.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Paginador &amp;lsquo;inteligente&amp;rsquo;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;No se si Paginador es la palabra apropiada, tampoco se si inteligente sería el adjetivo indicador. Todos somos unos vagos, por eso usamos la terminal, que mejor que escribir cat LEAME, cat LEAME | less, si, escribir solo LEAME, bueno, zsh nos entiende, así que funciona así.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Diferentes &amp;ldquo;key bindings&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;En este caso, zsh los meneja de otra forma, y es frustrante mover las fechas de dirección y no obtener lo que pretendemos. No me resultó cómodo (porque no le dí tiempo a ver como funcionaba, ya estoy viejo para algunas cosas). Para dejarlo funcionando &amp;ldquo;a lo Bash&amp;rdquo;, tienen que editar el archivo &lt;em&gt;~/.zshrc&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    bindkey &amp;quot;e[1~&amp;quot; beginning-of-line # Home
+    bindkey &amp;quot;e[4~&amp;quot; end-of-line # End
+    bindkey &amp;quot;e[5~&amp;quot; beginning-of-history # PageUp
+    bindkey &amp;quot;e[6~&amp;quot; end-of-history # PageDown
+    bindkey &amp;quot;e[2~&amp;quot; quoted-insert # Ins
+    bindkey &amp;quot;e[3~&amp;quot; delete-char # Del
+    bindkey &amp;quot;e[5C&amp;quot; forward-word
+    bindkey &amp;quot;eOc&amp;quot; emacs-forward-word
+    bindkey &amp;quot;e[5D&amp;quot; backward-word
+    bindkey &amp;quot;eOd&amp;quot; emacs-backward-word
+    bindkey &amp;quot;ee[C&amp;quot; forward-word
+    bindkey &amp;quot;ee[D&amp;quot; backward-word
+    bindkey &amp;quot;e[Z&amp;quot; reverse-menu-complete # Shift+Tab
+    # for rxvt
+    bindkey &amp;quot;e[7~&amp;quot; beginning-of-line # Home
+    bindkey &amp;quot;e[8~&amp;quot; end-of-line # End
+    # for non RH/Debian xterm, can&#39;t hurt for RH/Debian xterm
+    bindkey &amp;quot;eOH&amp;quot; beginning-of-line
+    bindkey &amp;quot;eOF&amp;quot; end-of-line
+    # for freebsd console
+    bindkey &amp;quot;e[H&amp;quot; beginning-of-line
+    bindkey &amp;quot;e[F&amp;quot; end-of-line
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Si utilizamos @mixed en contexto escalar, obtendremos el tamaño de nuestro Array:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Correccion de typos&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    $arrayLength = @mixed;
-    print $arraylength;            #imprime 3
+&lt;p&gt;Para los dislexicos como uno, esto es muy bueno, nos autocorrige directorios, comandos, archivos&amp;hellip; probandolo es muy bueno, no perfecto, pero ayuda a la hora de escribir rapido.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Links recomendados y fuentes para el post&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://zsh.sourceforge.net/Guide/zshguide.html&#34;&gt;Guía oficial (en inglés)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.archlinux.org/index.php/Zsh&#34;&gt;Wiki de Zsh, para Arch&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://pwet.fr/man/linux/commandes/zsh_lovers&#34;&gt;zhs-lovers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://zshwiki.org/home/start&#34;&gt;Una wiki muy completa&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://fausto23.wordpress.com/2010/01/31/zsh-esa-shell/&#34;&gt;Buena info para el .zshrc, en español&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tips Linuxeros: Alias para Todos</title>
+      <link>http://localhost:1313/blog/posts/tips-para-linux-alias-para-todos/</link>
+      <pubDate>Fri, 02 Sep 2011 21:33:09 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/tips-para-linux-alias-para-todos/</guid>
+      <description>&lt;p&gt;Los alias en Linux son shortcuts o &lt;em&gt;sinónimos&lt;/em&gt; que podemos emplear para ejecutar comandos en la terminal.
+Son muy útiles para correr comandos largos o simplemente crear nombres mas amigables, para algún comando que nos resulte deficil de recordar o a los que usemos mas seguido.
+Para crearlos debemos escribir en el archivo &lt;strong&gt;~.bashrc&lt;/strong&gt; para dejarlos disponibles al usuario, o en /etc/bash.bashrc para dejarlos disponibles en todo el sistema.&lt;/p&gt;
+
+&lt;p&gt;Las sintaxis es muy sencilla: &lt;em&gt;alias nombre=&amp;lsquo;comando&amp;rsquo;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Algunos ejemplos&amp;hellip;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    #Gestión rapida de paquetería
+    alias instalar=&#39;sudo apt-get install&#39;
+    alias clearcache=&#39;yaourt -Scc&#39;
+    alias update=&#39;emerge --update --deep&#39;
+
+    #Vaciado de archivos
+    alias empty=&#39;:&amp;gt; $1&#39;
+
+    #Copiado con barra de progreso, velocidad y estadísticas
+    alias copy=&#39;rsync -avz --stats --progress&#39;
+
+    #Compartir la carpeta, via HTTP (http://127.0.0.1:8000)
+    alias sharehttp=&#39;python -m SimpleHTTPServer&#39;
+
+    #Mostrar unidades montadas, en columnas
+    alias mountt=&#39;mount | column -t&#39;
+
+    #Mostrar top 10 deprocesos que consuman mas memoria
+    alias pstop=&#39;ps aux | sort -nk +4 | tail&#39;
+
+    #Buscar proceso
+    alias psx=&#39;ps aux | grep &#39;
+
+    #Me olvide de poner sudo en el comando anterior
+    alias grrrrrrr=&#39;sudo !!&#39;
+
+    #Listar los puertos abiertos
+    alias openports=&#39;netstat --all --numeric --programs --inet&#39;
+
+    # Tambien podemos modificar el prompt o la terminal
+    # Agregandole la hora
+    alias hora=&#39;export PS1=&amp;quot;${PS1%\$*}&amp;quot;&#39; t $ &#39;
+    # o mejor aun, poniendola en la parte superior
+    alias horasuperior=&#39;while sleep 1;do tput sc;tput cup 0 $(($(tput cols)-29));date;tput rc;done &amp;amp;&#39;
+
+    #Alias con parametros (en realidad es una funcion)
+    #Crear un directorio y posicionarnos sobre el mismo
+    MKdir() { mkdir $1 &amp;amp;&amp;amp; cd $1 }
+
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Para obtener múltiples valores de nuestro Array:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hacer los comandos &amp;ldquo;human-readeable&amp;rdquo; por defecto&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    @animals[0,1];           # Devuelve (&amp;quot;turtle&amp;quot;, &amp;quot;llama&amp;quot;), @ porque devuelve un array;
-    @animals[0..2];          # Devuelve (&amp;quot;turtle&amp;quot;, &amp;quot;llama&amp;quot;, &amp;quot;cat&amp;quot;);
-    @animals[1..$#animals];  # Devuelve todo excepto el primer elemento
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    alias ls=&#39;ls -h&#39;
+    alias du=&#39;du -h&#39;
+    alias df=-df -h&#39;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;Hash&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Simplificar los parámetros&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Un hash representa un conjunto de pares clave / valor. En realidad hash son tipo de Arrays, con la excepción de que el índice puede ser un número o una cadena. Están precedidos por el signo &lt;strong&gt;%&lt;/strong&gt; de la siguiente manera:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    my %fruta_color = (&amp;quot;manzana&amp;quot;, &amp;quot;rojo&amp;quot;, &amp;quot;banana&amp;quot;, &amp;quot;amarillo&amp;quot;);
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    alias ls=&#39;ls -hF --color=always&#39;
+    alias lr=&#39;ls -hR&#39;                    # recursive ls
+    alias ll=&#39;ls -hl&#39;
+    alias la=&#39;ll -hA&#39;
+    alias lx=&#39;ll -hBX&#39;                   # sort by extension
+    alias lz=&#39;ll -hrS&#39;                   # sort by size
+    alias lt=&#39;ll -rt&#39;                    # sort by date
+    alias lm=&#39;la | more&#39;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Se pueden utilizar los espacios en blanco y el operador =&amp;gt; para dejarlo mas claro:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;También podemos crear alias que solo funcionen para usuarios con privilegios de root&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    my %fruta_color = (
-        manzana =&amp;gt; &amp;quot;red&amp;quot;,
-        banana =&amp;gt; &amp;quot;amarillo&amp;quot;,
-    );
+&lt;p&gt;```bash
+    if [ $UID -ne 0 ]; then
+        alias scat=&amp;lsquo;sudo cat&amp;rsquo;
+        alias svim=&amp;lsquo;sudo vim&amp;rsquo;
+        alias root=&amp;lsquo;sudo su&amp;rsquo;
+        alias reboot=&amp;lsquo;sudo reboot&amp;rsquo;
+        alias halt=&amp;lsquo;sudo halt&amp;rsquo;
+        alias netcfg=&amp;lsquo;sudo netcfg2&amp;rsquo;
+    fi&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Si queren saber cuales son los comandos que más se utilizan en el sistema, como para ver si pueden agilizar creando alias mas cortos, pueden correr esto:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; history | awk &#39;{print $2}&#39; | awk &#39;BEGIN {FS=&amp;quot;|&amp;quot;}{print $1}&#39; | sort | uniq -c | sort -n | tail -n 20 | sort -nr
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Para obtener un elemento del hash:&lt;/p&gt;
+&lt;p&gt;[quote style=&amp;ldquo;1&amp;rdquo;] See, you not only have to be a good coder to create a system like Linux, you have to be a sneaky bastard too ;-) [/quote]&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    $fruta_color{&amp;quot;manzana&amp;quot;}       # Devuelve &amp;quot;rojo&amp;quot;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Linus Torvalds&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>VirtualBoxes.org - Descarga de máquinas virtuales</title>
+      <link>http://localhost:1313/blog/posts/virtualboxes-org-descarga-de-maquinas-virtuales/</link>
+      <pubDate>Wed, 31 Aug 2011 20:43:42 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/virtualboxes-org-descarga-de-maquinas-virtuales/</guid>
+      <description>&lt;p&gt;¿Les gusta probar diferentes Sistemas Operativos?&lt;/p&gt;
+
+&lt;p&gt;¿Te aburre instalarlos?&lt;/p&gt;
+
+&lt;p&gt;¿Virtualizas?&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Entonces &lt;a href=&#34;http://virtualboxes.org/&#34;&gt;&lt;strong&gt;VirtualBoxes.org&lt;/strong&gt;&lt;/a&gt; es eso que no sabías que necesitabas. Al momento de escribir el texto, el sitio tiene 42 Sistemas Operativos diferentes, algunos con varias versiones del mismo.&lt;/p&gt;
+
+&lt;p&gt;El sitio se encarga de subir los archivos &lt;a href=&#34;http://filext.com/file-extension/VDI&#34;&gt;.vdi&lt;/a&gt; para importar en VirtualBox. Las descargas son directas, compresiones en 7zip hosteadas en Sourceforge.&lt;/p&gt;
+
+&lt;p&gt;Tiene imágenes de sistemas:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;GNU/Linux&lt;/strong&gt;: Desde los más comunes como Fedora, Ubuntu o Debian hasta algunas menos populares como DeLi, gNewSense (la recomienda RMS), Moblin (orientada a netbooks) entre muchas otras.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Solaris&lt;/strong&gt;: OpenSolaris, MilaX, Nexenta&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FreeBSD/BSD&lt;/strong&gt;: Debian GNU/kFreeBSD, FreeBSD&lt;/li&gt;
+&lt;li&gt;y algunos mas como MINIX, Haiku (basado en BeOS), ReactOS, Android, FreeDOS y algunos más&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;En donde están los links, tambien se encuentran los datos de login&lt;/em&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>¿De dónde proviene el nombre de Arch Linux?</title>
+      <link>http://localhost:1313/blog/posts/de-donde-proviene-el-nombre-de-arch-linux/</link>
+      <pubDate>Wed, 27 Jul 2011 18:49:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/de-donde-proviene-el-nombre-de-arch-linux/</guid>
+      <description>&lt;p&gt;Hace unos cuantos días, @N1colas_ compartío &lt;a href=&#34;http://usemoslinux.blogspot.com/2011/07/de-donde-provienen-los-nombres-de-las.html&#34;&gt;este&lt;/a&gt; enlance, en donde hablaban del origen de los nombres de varias distros de Linux.&lt;/p&gt;
+
+&lt;p&gt;No estaba &lt;strong&gt;Arch&lt;/strong&gt;, y hay varios comentarios al respecto con supuestos bastante buenos.&lt;/p&gt;
+
+&lt;p&gt;Busqué en la Wiki, en los FAQs, en el Foro y en varios otros sitios pero no encontré información al respecto, asi que lo mejor fue ir a la fuente y le mandé un e-mail a Judd Vinet, creador de la distro, que me contestó en apenas unos días :D&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Hi Jesus,&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m happy to hear you&amp;rsquo;re liking Arch!&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m surprised that the origins of the name haven&amp;rsquo;t found their way on to the wiki - I did find a copy of an old FAQ that explained my choice - you can see it here:  &lt;a href=&#34;http://web.archive.org/web/20020605061933/www.archlinux.org/faq.php&#34;&gt;http://web.archive.org/web/20020605061933/www.archlinux.org/faq.php&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I hope that helps!&lt;/p&gt;
+
+&lt;p&gt;Best,
+Judd&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Como verán en ese link (una copia de la FAQ del sitio) dice:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;[Q]  Why the name Arch Linux?
+[A]  From dictionary.com:
+    arch (ärch)
+    adj.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;1. Chief; principal: their arch foe.
+2. Mischievous; roguish: an arch glance.
+
+
+I came across the well-known term &amp;quot;arch-enemy&amp;quot; in a book and
+clued in that &amp;quot;arch&amp;quot; means &amp;quot;the primary&amp;quot;, &amp;quot;the principal&amp;quot;, the one
+that comes first among others.  Far from true with regard to
+Arch Linux perhaps, but I&#39;m proud of it.  Now, the second
+definition may or may not fit; I guess it depends on how you use
+your computer.  ;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&amp;hellip; que sería &lt;em&gt;algo asi&lt;/em&gt; como:
+_Me encontré con la conocida expresión &amp;ldquo;achienemigo&amp;rdquo; en un libro y supuse que ese &amp;ldquo;arch&amp;rdquo; significa &amp;ldquo;primario&amp;rdquo;, &amp;ldquo;el principal&amp;rdquo;, el que viene primero antes que otros.
+Tal vez lejos de la verdad con respecto a Arch Linux, pero estoy orgulloso de el. Ahora, la segunda definición puede o no ser conveniente; supongo que depende de cómo usted use su computadora.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tips Linuxeros: Manejo del historial</title>
+      <link>http://localhost:1313/blog/posts/tips-para-linux-manejo-del-historial/</link>
+      <pubDate>Fri, 22 Jul 2011 00:16:16 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/tips-para-linux-manejo-del-historial/</guid>
+      <description>&lt;p&gt;Quizás una de las mejores funcionalidades en la terminal de Linux, o por lo menos una de las más productivas, es la capacidad de generar un historial de lo que ejecutamos.
+Ahora bien, existen varias formas de recorrerlo. La más común y la que seguramente todos usan, es mediante las flechas arriba y abajo, muy util, pero también existen otras formas de hacerlo :)&lt;/p&gt;
+
+&lt;p&gt;Podemos hacer una búsqueda utilizando &lt;strong&gt;Ctrl+R&lt;/strong&gt; y el texto que deseamos. La búsqueda es incremental, en caso de que la primera opción no es la que queremos, sólo basta volver a presionar &lt;strong&gt;Ctrl+R&lt;/strong&gt;. Si queremos hacer la búsqueda en orden inverso, basta utilizar &lt;strong&gt;Ctrl+I&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Otra opción muy interesante es volver a ejecutar el comando anterior con &lt;strong&gt;!!&lt;/strong&gt; (doble signo de admiración). Es genial si nos olvidamos de ejecutar algo con permisos de superuser:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;     sudo !!
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Podemos obtener una lista con las claves o valores con las funciones predefinidas keys() y values():&lt;/p&gt;
+&lt;p&gt;También se puede utilizar el &lt;strong&gt;!foo&lt;/strong&gt; para repetir la última vez que usamos foo, o &lt;strong&gt;!?foo&lt;/strong&gt; para volver a ejecutar el ultimo comando &lt;em&gt;que contenga&lt;/em&gt; foo.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    my @frutas = keys(%fruta_color);
-    my colores = values(%fruta_color);
+&lt;p&gt;En caso de que querramos &lt;em&gt;reemplazar&lt;/em&gt; parte del script ejectutado anteriormente, por ejemplo, abrimos un archivo con nano pero ahora queremos abrirlo con vi, podemos correr&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    ^nano^vi
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;Alcance de las variables&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;En caso de que necesitemos mostrar todos los comandos que contengan cierto termino basta con hacer un &lt;strong&gt;grep&lt;/strong&gt; de lo que devuelve el comando history:&lt;/p&gt;
 
-&lt;p&gt;En la sección anterior declaramos:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    my $animal = &amp;quot;tortuga&amp;quot;;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;     history | grep foo
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;El modificador my no es necesario, también se puede usar:&lt;/p&gt;
+&lt;p&gt;El número de la izquierda es el orden del comando, podemos correr esa linea usando &lt;strong&gt;!numero&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    $animal = &amp;quot;tortuga&amp;quot;;
+&lt;p&gt;&lt;em&gt;Un detalle&amp;hellip;&lt;/em&gt;
+Es posible que si usan múltipes instancias de la terminal (desde tty, gnome-terminal, guake, yakuke, etc), no se guarde el historial, para esto  basta con editar el archivo &lt;strong&gt;~/.bashrc&lt;/strong&gt; de esta forma:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt; unset HISTFILESIZE
+ HISTSIZE=5000 # cantidad de registros que quieran guardar
+ PROMPT_COMMAND=&amp;quot;history -a&amp;quot;
+ export HISTSIZE PROMPT_COMMAND
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Sin embargo, el uso anterior creará variables globales a través de su programa, que es mala práctica de programación. my crea variables con ámbito local. Las variables locales están disponibles en el ámbito del bloque (es decir, un grupo de estados rodeadas de llaves) en el que están definidos.&lt;/p&gt;
+&lt;p&gt;Y correr una vez el siguiente comando&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-perl&#34;&gt;    my $x = &amp;quot;foo&amp;quot;;
-    my $condicion = 1;
-    if ($condicion) {
-        my $y = &amp;quot;bar&amp;quot;;
-        print $x;           # imprime &amp;quot;foo&amp;quot;
-        print $y;           # imprime &amp;quot;bar&amp;quot;
-    }
-    print $x;               # imprime &amp;quot;foo&amp;quot;
-    print $y;               # no imprime nada ; $y no está en ese scope
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;     shopt -s histappend
 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Tabla de conversiones de tipos&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    &amp;lt;table &amp;gt;
-
-            &amp;lt;tr &amp;gt;
-                 (1,2,3) [1,2,3] {a=&amp;gt;x} (a=&amp;gt;1) &amp;quot;pepe&amp;quot;
-            &amp;lt;/tr&amp;gt; 
-
-         &amp;lt;tbody &amp;gt;
-            &amp;lt;tr &amp;gt;
-                Arity
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;td &gt;Lista
-&lt;/td&gt;
-&lt;td &gt;Scalar
-&lt;/td&gt;
-&lt;td &gt;Hash Ref.
-&lt;/td&gt;
-&lt;td &gt;Hash
-&lt;/td&gt;
-&lt;td &gt;Scalar
-&lt;/td&gt;
-                &lt;/tr&gt;
-                &lt;tr &gt;
-                    Elemento
-&lt;td &gt;$x[0]
-&lt;/td&gt;
-&lt;td &gt;$x-&amp;gt;[1]
-&lt;/td&gt;
-&lt;td &gt;$x-&amp;gt;{a}
-&lt;/td&gt;
-&lt;td &gt;$x{a}
-&lt;/td&gt;
-&lt;td &gt;$x
-&lt;/td&gt;&lt;br /&gt;
-                &lt;/tr&gt;
-                &lt;tr &gt;
-                    Lista
-&lt;td &gt;@x
-&lt;/td&gt;
-&lt;td &gt;@{$x}
-&lt;/td&gt;
-&lt;td &gt;%{$x}
-&lt;/td&gt;
-&lt;td &gt;%x
-&lt;/td&gt;
-&lt;td &gt;($x)
-&lt;/td&gt;
-                &lt;/tr&gt;&lt;br /&gt;
-                &lt;tr &gt;
-                    Hash
-&lt;td &gt;-
-&lt;/td&gt;
-&lt;td &gt;-
-&lt;/td&gt;
-&lt;td &gt;%{$x}
-&lt;/td&gt;
-&lt;td &gt;%x
-&lt;/td&gt;
-&lt;td &gt;{e=&amp;gt; $x}
-&lt;/td&gt;
-                &lt;/tr&gt;
-                &lt;tr &gt;
-                    Ref.
-&lt;td &gt;\@x
-&lt;/td&gt;
-&lt;td &gt;$x
-&lt;/td&gt;
-&lt;td &gt;$x
-&lt;/td&gt;
-&lt;td &gt;\%x
-&lt;/td&gt;
-&lt;td &gt;\$x
-&lt;/td&gt;
-                &lt;/tr&gt;
-                &lt;tr &gt;
-                    Ref. Copia
-&lt;td &gt;[@x]
-&lt;/td&gt;
-&lt;td &gt;[@{$x}]
-&lt;/td&gt;
-&lt;td &gt;{%{$x}}
-&lt;/td&gt;
-&lt;td &gt;{%x}
-&lt;/td&gt;
-&lt;td &gt;[$x]
-&lt;/td&gt;
-                &lt;/tr&gt;
-             &lt;/tbody&gt;
-        &lt;/table&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Sintaxis básica&lt;/strong&gt;
-&lt;strong&gt;if, elsif, else, unless&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# La sintaxis es muy similar a otros lenguajes
-if ($var == 3) {
-  do_magic();
-}
-
-# unless se usa para un if negativo
-if (!$var) {
-  do_magic();
-}
-unless ($var) {
-  do_magic();
-}
-
-# Por supuesto también existe else
-if ($var) {
-    do_magic();
-} else {
-   do_another_magic();
-}
-# y se pueden anidar
-if ($var) {
-   do_magic();
-} elsif ($another_var) {
-   do_another_magic();
-} else {
-   do_something_else();
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;while, do while, until&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;my $counter = 10;
-
-while ($counter &amp;gt; 0) {
-   say $counter;
-   $counter -= 1;
-}
-
-do {
-  say $counter;
-  $counter += 1;
-} while ($counter &amp;lt; 10);
-
-
-until( $counter &amp;gt; 20 ){
-   say &amp;quot;$counter&amp;quot;;
-   $counter += 1;
-}
-
-say &#39;tadaaa&#39;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;for, for each&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# for ( init; condition; increment )
-for( $i = 1; $i &amp;lt; 20; $i = $i + 1 ){
-    print &amp;quot;value: $i\n&amp;quot;;
-}
-
-my @list = (1, 20, 33, 45, 59);
-foreach $i (@list){
-    say &#39;$i&#39;;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Funciones&lt;/strong&gt;
-En realidad las funciones son subrutinas, quizás sea porque el lenguaje es viejo :P &amp;hellip; la sintáxis es también bastante común.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sub name{
-   # blablabla
-   return $x;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Para pasar parámetros se hace de esta forma&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sub TestScalar{
-   my $x = @_;      #parámetro scalar 
-   # blabla
-}
-sub TestArray{
-   my @list = @_;   #parámetro array
-   # blabla
-}
-sub TestHash {
-   my (%hash) = @_; #parámetro hash
-   # blabla
-}
-
-# Si esperamos varios parámetros, se pueden acceder desde la variable @_ como un array
-sub TestScalar{
-   my $x = @_[0]; 
-   my $y = @_[1]; 
-   # blabla
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;**Variables privadas **&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sub TestPrivateVars{
-   my $var; # inaccesible fuera de TestPrivateVars()
-   $varx;   # accesible fuera de TestPrivateVars(), no hacerlo
-
-   my ($another, @my_array, %my_hash); # declaración múltiple privada
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;TDD con Perl&lt;/strong&gt;
-&lt;img src=&#34;http://www.aaroncohen.me/wp-content/uploads/2013/04/2011-04-28.tdd_-700x299.png&#34; alt=&#34;TDD&#34; /&gt;
-Para hacer TDD en necesario bajar un paquete de CPAN, Test::More.
-Acá un ejemplo de como correr un test, sobre una función específica.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# En esta línea declaramos el uso de Test::More
-# y le decimos que solo se corre una vez
-use Test::More test =&amp;gt; 1;
-
-# is() es la función que ejecuta el test, consta de 3 parámetros
-# 1ro función a ejecutar con sus respectivos parámetros
-# 2do resultado esperado
-# 3ro nombre descriptivo
-is(replace(&amp;quot;hola&amp;quot;), &amp;quot;chau&amp;quot;, &amp;quot;Reemplazo de nombres&amp;quot;);
-is(replace(&amp;quot;chay&amp;quot;), &amp;quot;chau&amp;quot;, &amp;quot;Reemplazo de nombres&amp;quot;);
-
-# Esta es la función que se ejecuta
-sub replace( my ($text) = @_;
-    $text =~ s/\bhola\b/chau/gi;
-    return $text;
-}
-
-#Con esta función declaramos el fin del testing
-done_testing()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;em&gt;Próximo post: Expresiones regulares en Perl. O sea: Perl.&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     

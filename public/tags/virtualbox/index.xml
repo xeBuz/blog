@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Virtualbox on Personal Blog</title>
+    <title>Virtualbox on xeBuz personal blog</title>
     <link>http://localhost:1313/blog/tags/virtualbox/</link>
-    <description>Recent content in Virtualbox on Personal Blog</description>
+    <description>Recent content in Virtualbox on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 31 Aug 2011 20:43:42 +0000</lastBuildDate>
@@ -16,7 +16,7 @@
       
       <guid>http://localhost:1313/blog/posts/virtualboxes-org-descarga-de-maquinas-virtuales/</guid>
       <description>&lt;p&gt;¿Les gusta probar diferentes Sistemas Operativos?
-¿Te da &lt;del&gt;paja&lt;/del&gt; pereza instalarlos?
+¿Te aburre instalarlos?
 ¿Virtualizas?
 Entonces &lt;a href=&#34;http://virtualboxes.org/&#34;&gt;&lt;strong&gt;VirtualBoxes.org&lt;/strong&gt;&lt;/a&gt; es eso que no sabías que necesitabas. Al momento de escribir el texto, el sitio tiene 42 Sistemas Operativos diferentes, algunos con varias versiones del mismo.
 El sitio se encarga de subir los archivos &lt;a href=&#34;http://filext.com/file-extension/VDI&#34;&gt;.vdi&lt;/a&gt; para importar en VirtualBox. Las descargas son directas, compresiones en 7zip hosteadas en Sourceforge.&lt;/p&gt;

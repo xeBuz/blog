@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fun on xeBuz personal blog</title>
+    <link>http://localhost:1313/blog/tags/fun/</link>
+    <description>Recent content in Fun on xeBuz personal blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Dec 2013 14:31:40 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/fun/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>jQuery Doge - such plugin</title>
+      <link>http://localhost:1313/blog/posts/jquery-doge-such-plugin/</link>
+      <pubDate>Mon, 23 Dec 2013 14:31:40 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/jquery-doge-such-plugin/</guid>
+      <description>&lt;p&gt;Hace unos días había liberado un plugin de jQuery bastante tonto, y ahora hice un update del mismo con unos cuantos bugs corregidos y además ahora pemite parametrizarlo, así pasa a estar un poco mas usable de lo que estaba antes.
+Es mi primer plugin así que quizás no está tan optimizado&amp;hellip; aunque considero que no es tan inestable como pensé que podía quedar :)&lt;/p&gt;
+
+&lt;p&gt;Pueden descargarlo &lt;a href=&#34;https://github.com/xeBuz/jquery-doge&#34;&gt;desde GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;El uso básico es el siguiente, solo deben pasarle un listado de palabras a mostrar, ya incluye algunas por defecto (wow, so doge y asi):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javacript&#34;&gt;$(document).ready( function() {
+   // Create an array with some words
+   $(&#39;body&#39;).doge({
+       wordList :[ &amp;quot;such page&amp;quot;, &amp;quot;lorem impsum&amp;quot;, &amp;quot;so cool&amp;quot;, &amp;quot;much jquery&amp;quot;, &amp;quot;kitten&amp;quot;, &amp;quot;such demo&amp;quot;, &amp;quot;Kitten Ipsum&amp;quot;]
+   });
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;También se puede parametrizar un poco, con estas opciones:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javacript&#34;&gt;$(document).ready( function() {
+   $(&#39;body&#39;).doge({
+       wordList : [
+           &amp;quot;such page&amp;quot;, &amp;quot;lorem impsum&amp;quot;, &amp;quot;so cool&amp;quot;, &amp;quot;much jquery&amp;quot;, &amp;quot;text&amp;quot;, &amp;quot;such demo&amp;quot;, &amp;quot;Kitten Ipsum&amp;quot;
+       ],
+       showDoge : true,
+       fontSize : &amp;quot;2em&amp;quot;,
+       fontBorder: true,
+       dogeImage : &amp;quot;doge.png&amp;quot;,
+       colours : [
+           &amp;quot;red&amp;quot;, &amp;quot;green&amp;quot;, &amp;quot;orange&amp;quot;, &amp;quot;violet&amp;quot;, &amp;quot;aqua&amp;quot;, &amp;quot;yellow&amp;quot;, &amp;quot;slateblue&amp;quot;, &amp;quot;purple&amp;quot;, &amp;quot;pink&amp;quot;, &amp;quot;lime&amp;quot;, &amp;quot;fuchsia&amp;quot;, &amp;quot;gold&amp;quot;, &amp;quot;indigo&amp;quot;
+       ],
+       textDuration: 1200,
+       textRespawn: 1000,
+   });
+});
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

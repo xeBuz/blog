@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Audiolibro on Personal Blog</title>
+    <title>Audiolibro on xeBuz personal blog</title>
     <link>http://localhost:1313/blog/categories/audiolibro/</link>
-    <description>Recent content in Audiolibro on Personal Blog</description>
+    <description>Recent content in Audiolibro on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 24 Apr 2012 15:54:25 +0000</lastBuildDate>
@@ -15,139 +15,46 @@
       <pubDate>Tue, 24 Apr 2012 15:54:25 +0000</pubDate>
       
       <guid>http://localhost:1313/blog/posts/cuentos-de-terror-narrados-por-alberto-laiseca/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/04/Laiseca2.jpg&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/04/Laiseca2.jpg&#34; alt=&#34;Alberto Laiseca&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/FQsJ1G4.jpg&#34; alt=&#34;a&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Alberto Laiseca, un escritor conocido por su estilo sombrío y por haber dejado la obra de literatura argentina más extensa, Los Sorias, que consta de 1.300 páginas (obra que no tuve la oportunidad ni el tiempo de leer), allá por el 2001 apareció en las noche de I-Sat narrando grandes clásicos de la literatura; cigarrillo en mano, primeros planos, sombras y luces ténues, en 10 minutos era capaz de lograr un ambiente ideal para los cuentos que contaba.&lt;/p&gt;
 
 &lt;p&gt;Les dejo los audios de varios capítulos (están en Youtube si quieren ver los videos) son aproximadamente 4 horas de reporducción. La lista de cuentos que van a encontrar es la siguiente:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Aurelia (T.E.A. Hoffmann)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Casa tomado (Julio Cortazar)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Corazón delator (Edgar Allan Poe)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;El alacrán (Fray Gómez)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;El caballito de madera (D. H. Lawrence)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;El derrochador y el alquimista (Li Fou Yen)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;El deseo (James Sthepens)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;El extraño caso del Sr. Valdemar (Edgar Allan Poe)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;El extraño (H.P. Lovecraft)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;El (Guy de Maupassant)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;El hambre (Mujica Lainez)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;El precio de la cabeza (John Russell)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Escuchen (Joe R. Lansdale)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;La cabeza de mi padre (Alberto Laiseca)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;La caída de la Casa Usher (Edgar Allan Poe)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;La casa del juez (Bram Stoker)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;La curiosa aventura de Mr. Bond (Nugent Barker)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;La escudilla de cobre (George Fielding Eliot)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;La esperanza (Villers de L&amp;rsquo;isle Adams)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;La galera (Mujica Linez)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;La gallina degollada (Horacio Quiroga)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;La pata de mono (W.W. Jacobs)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;La Venus de ille (Próspero Mérimée)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Ligeia (Edgar Allan Poe)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Sabueso (H. P. Lovecraft)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Quien sabe (Guy de Maupassant)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Una muerte en la familia (Miriam Allen de Ford)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Aurelia (T.E.A. Hoffmann)&lt;/li&gt;
+&lt;li&gt;Casa tomado (Julio Cortazar)&lt;/li&gt;
+&lt;li&gt;Corazón delator (Edgar Allan Poe)&lt;/li&gt;
+&lt;li&gt;El alacrán (Fray Gómez)&lt;/li&gt;
+&lt;li&gt;El caballito de madera (D. H. Lawrence)&lt;/li&gt;
+&lt;li&gt;El derrochador y el alquimista (Li Fou Yen)&lt;/li&gt;
+&lt;li&gt;El deseo (James Sthepens)&lt;/li&gt;
+&lt;li&gt;El extraño caso del Sr. Valdemar (Edgar Allan Poe)&lt;/li&gt;
+&lt;li&gt;El extraño (H.P. Lovecraft)&lt;/li&gt;
+&lt;li&gt;El (Guy de Maupassant)&lt;/li&gt;
+&lt;li&gt;El hambre (Mujica Lainez)&lt;/li&gt;
+&lt;li&gt;El precio de la cabeza (John Russell)&lt;/li&gt;
+&lt;li&gt;Escuchen (Joe R. Lansdale)&lt;/li&gt;
+&lt;li&gt;La cabeza de mi padre (Alberto Laiseca)&lt;/li&gt;
+&lt;li&gt;La caída de la Casa Usher (Edgar Allan Poe)&lt;/li&gt;
+&lt;li&gt;La casa del juez (Bram Stoker)&lt;/li&gt;
+&lt;li&gt;La curiosa aventura de Mr. Bond (Nugent Barker)&lt;/li&gt;
+&lt;li&gt;La escudilla de cobre (George Fielding Eliot)&lt;/li&gt;
+&lt;li&gt;La esperanza (Villers de L&amp;rsquo;isle Adams)&lt;/li&gt;
+&lt;li&gt;La galera (Mujica Linez)&lt;/li&gt;
+&lt;li&gt;La gallina degollada (Horacio Quiroga)&lt;/li&gt;
+&lt;li&gt;La pata de mono (W.W. Jacobs)&lt;/li&gt;
+&lt;li&gt;La Venus de ille (Próspero Mérimée)&lt;/li&gt;
+&lt;li&gt;Ligeia (Edgar Allan Poe)&lt;/li&gt;
+&lt;li&gt;Sabueso (H. P. Lovecraft)&lt;/li&gt;
+&lt;li&gt;Quien sabe (Guy de Maupassant)&lt;/li&gt;
+&lt;li&gt;Una muerte en la familia (Miriam Allen de Ford)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;descarga-en-formato-mp3-http-www-jesusroldan-com-alberto-20laiseca-20-20cuentos-20de-20terror-rar:b15cced626864032a4bde30c6c3fdfe1&#34;&gt;&lt;a href=&#34;http://www.jesusroldan.com/Alberto%20Laiseca%20-%20Cuentos%20de%20Terror.rar&#34;&gt;Descarga en formato MP3&lt;/a&gt;&lt;/h1&gt;
-
-&lt;h1 id=&#34;descarga-en-formato-ogg-http-www-jesusroldan-com-alberto-20laiseca-20-20cuentos-20de-20terror-tar-gz:b15cced626864032a4bde30c6c3fdfe1&#34;&gt;&lt;a href=&#34;http://www.jesusroldan.com/Alberto%20Laiseca%20-%20Cuentos%20de%20Terror.tar.gz&#34;&gt;Descarga en formato OGG&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.jesusroldan.com/Alberto%20Laiseca%20-%20Cuentos%20de%20Terror.rar&#34;&gt;Descarga en formato MP3&lt;/a&gt;
+&lt;a href=&#34;http://www.jesusroldan.com/Alberto%20Laiseca%20-%20Cuentos%20de%20Terror.tar.gz&#34;&gt;Descarga en formato OGG&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;No dejen de visitar su blog personal &lt;a href=&#34;http://albertolaiseca.blogspot.com.ar/&#34;&gt;http://albertolaiseca.blogspot.com.ar/&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Gnome2 en ArchLinux</title>
-      <link>http://localhost:1313/blog/posts/gnome2-en-archlinux/</link>
-      <pubDate>Wed, 14 Sep 2011 04:41:31 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/gnome2-en-archlinux/</guid>
-      <description>
-
-&lt;p&gt;Como hay mucho usuarios descontentos con el resultado de Gnome 3, incluído Linus Torvals, era evidente que iban a existir formas de volver a la versión anterior, y Arch claro que la permite, y eso que fué de las primeras distros en cambiar :P
-Buscando encontré dos, la primera es un fork, la segunda un downgrade directo; me quedo con la primera. Si no se pudieron acostumbrar al cambio, si gnome-shell ya les dió una úlcera y no pueden esperar la versión 3.2, quizás alguna de estas opciones les sea útil.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Utilizar un fork: Mate&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Primero, tiene que editar el archivo &lt;strong&gt;/etc/pacman.conf&lt;/strong&gt;, agregando estas lineas al principio de la lista de repositorios
-[code]
-[mate]&lt;/p&gt;
-
-&lt;h1 id=&#34;contains-official-mate-desktop-packages-gnome2-fork:833a75177de8e75cddde15e0b36cb15f&#34;&gt;Contains official mate desktop packages (gnome2 fork)&lt;/h1&gt;
-
-&lt;p&gt;Server = &lt;a href=&#34;http://germ.winpe.com/archlinux/mate/$arch&#34;&gt;http://germ.winpe.com/archlinux/mate/$arch&lt;/a&gt;
-[/code]&lt;/p&gt;
-
-&lt;p&gt;Para instalar Mate, tiene que correr:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; pacman -Syyu &amp;amp;&amp;amp; pacman -Sf mate-desktop-environment
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;En mi caso aparecieron varios conflictos, ponga si a todo, no tuve problemas con ninguno&lt;/p&gt;
-
-&lt;p&gt;Despues de eso, tiene varios paquetes mas para instalar, todos opcionales pero suman: mate-extract mate-applets mate-terminal mate-image-viewer mate-themes. Así mismo, deberían instalar temas o cualquier eyecandy que necesiten para Gnome 2 que no sea necesario en el 3.&lt;/p&gt;
-
-&lt;p&gt;[caption id=&amp;ldquo;attachment_318&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo; caption=&amp;ldquo;Gnome 3.0.2, antes del update&amp;rdquo;]&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-300x225.png&#34; alt=&#34;Gnome 3&#34; /&gt;&lt;/a&gt;[/caption] [caption id=&amp;ldquo;attachment_320&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo; caption=&amp;ldquo;Una vez instalado Mate&amp;rdquo;]&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-1.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-1-300x225.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;[/caption] [caption id=&amp;ldquo;attachment_322&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo; caption=&amp;ldquo;Mate, despúes de instalar themes y modificar la apariencia.&amp;rdquo;]&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-2.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-2-300x225.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;[/caption]&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Utilizar una versión antigua de paquetes&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;En este caso, lo que vamos a hacer es cambiar el repositorio en donde se encuentra Gnome, utilizar uno que no haya sido actualizado a Gnome3.x e instalar en cambio Gnome2.32.1, supongo que es la última versión estable antes del cambio.&lt;/p&gt;
-
-&lt;p&gt;También tenemos que editar el archivo &lt;strong&gt;/etc/pacman.conf&lt;/strong&gt;, pero en lugar de agregar un repositorio cambiamos el extra
-[code]
-[extra]&lt;/p&gt;
-
-&lt;h1 id=&#34;incluir-etc-pacman-d-mirrorlist:833a75177de8e75cddde15e0b36cb15f&#34;&gt;Incluir = / etc / pacman.d / mirrorlist&lt;/h1&gt;
-
-&lt;p&gt;Server = &lt;a href=&#34;http://arm.konnichi.com/2011/04/30/extra/os/$arch&#34;&gt;http://arm.konnichi.com/2011/04/30/extra/os/$arch&lt;/a&gt;
-[/code]&lt;/p&gt;
-
-&lt;p&gt;Después corren esta aberración:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; pacman -Syyfuu -nodep
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Cuando terminen (básicamente lo que hace es actualizar los repositorios, forzar el update, y en caso de que sea necesario realizar un downgrade de lo que haya, va a instalar todos los paquetes de Gnome que encuentre, son varios megas), en /etc/pacman.conf dejen el repositorio extra como corresponde y además coloquen esto para que no actualice gnome ni gnome-extra (asi no lo pisa con la versión 3)
-[code]
-IgnoreGroup = gnome gnome-extra
-[/code]
-Les debo screenshots de esta prueba, ya borré el snapshot y son muchos megas para descargar como para hacerlo de nuevo sólo para las imágenes :(&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;Ambas pruebas fueron realizadas con una &lt;a href=&#34;http://blog.jesusroldan.com/2011/08/31/virtualboxes-org-descarga-de-maquinas-virtuales/&#34;&gt;máquina virtual&lt;/a&gt;  con una instalación estandar, con gnome y gnome-extra instalado por defecto, es decir, en ambos casos hice un downgrade de Gnome 3, que me pareció el caso en el que podía detectar mas problemas.
-&lt;strong&gt;De las dos opciones, les recomiendo la primera, la segunda da bastantes dolores de cabeza.&lt;/strong&gt;&lt;/p&gt;
 </description>
     </item>
     

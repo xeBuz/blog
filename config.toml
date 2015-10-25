@@ -3,6 +3,7 @@ baseurl = "http://xebuz.github.io/blog"
 languageCode = "en-us"
 title = "xeBuz personal blog"
 theme = "hugo-cactus-theme"
+
 config = "config.toml"
 canonifyurls = true
 
@@ -10,13 +11,11 @@ canonifyurls = true
   category = "categories"
   tag = "tags"
 
-# [permalinks]
-#     post = :year:month:title
-
 [params]
     name = "xeBuz"
     description = "Personal Website"
     bio = "Developer - Programmer - Gopher"
+
     # Enter optionally your twitter account
     twitter = "xeBuz"
     # Disable comments by leaving disqusShortname empty

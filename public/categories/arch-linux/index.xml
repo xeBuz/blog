@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Arch Linux on Personal Blog</title>
+    <title>Arch Linux on xeBuz personal blog</title>
     <link>http://localhost:1313/blog/categories/arch-linux/</link>
-    <description>Recent content in Arch Linux on Personal Blog</description>
+    <description>Recent content in Arch Linux on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 21 Oct 2012 20:49:21 +0000</lastBuildDate>
@@ -15,230 +15,85 @@
       <pubDate>Sun, 21 Oct 2012 20:49:21 +0000</pubDate>
       
       <guid>http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/</guid>
-      <description>&lt;p&gt;Hace unos días me puse a &lt;em&gt;portar&lt;/em&gt; la barra de progreso que tiene el sistema de paquetes de &lt;a href=&#34;http://blog.jesusroldan.com/2011/12/28/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/&#34;&gt;&lt;strong&gt;Arch Linux&lt;/strong&gt;&lt;/a&gt; (activando la opción &lt;strong&gt;ILoveCandy&lt;/strong&gt;) a Python &lt;del&gt;3&lt;/del&gt; 3.X y 2.7. De momento está en fase de prueba, pero es dentro de todo funcional, prometo ir actualizándola cuando pueda.&lt;/p&gt;
+      <description>&lt;p&gt;Hace unos días me puse a &lt;em&gt;portar&lt;/em&gt; la barra de progreso que tiene el sistema de paquetes de &lt;a href=&#34;http://blog.jesusroldan.com/2011/12/28/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/&#34;&gt;&lt;strong&gt;Arch Linux&lt;/strong&gt;&lt;/a&gt; (activando la opción &lt;strong&gt;ILoveCandy&lt;/strong&gt;) a Python 3.X y 2.7. De momento está en fase de prueba, pero es dentro de todo funcional, prometo ir actualizándola cuando pueda.&lt;/p&gt;
 
-&lt;p&gt;Para poder instalarlo, pueden bajarse los fuentes &lt;a href=&#34;https://github.com/xeBuz/pacman-progressbar&#34;&gt;desde &lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt; (es licencia Beer-ware, una adaptación de BSD) o mejor aún directamente desde PyPi:&lt;/p&gt;
+&lt;p&gt;Para poder instalarlo, pueden bajarse los fuentes &lt;a href=&#34;https://github.com/xeBuz/pacman-progressbar&#34;&gt;desde &lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt; o directamente desde PyPi:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;sudo pip install pacmanprogressbar
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    sudo pip install pacmanprogressbar
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;La utilización es la siguiente (proximamente voy a hacer que se pueda iterar directamente):&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;#!/usr/bin/env python
-import time
-from pacmanprogressbar import Pacman
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;    #!/usr/bin/env python
+    import time
+    from pacmanprogressbar import Pacman
 
-if __name__ == &amp;quot;__main__&amp;quot;:
-    p = Pacman(end=100)
+    if __name__ == &amp;quot;__main__&amp;quot;:
+        p = Pacman(end=100)
 
-    for x in range(p.len):
-        p.update()
-        time.sleep(.2)
+        for x in range(p.len):
+            p.update()
+            time.sleep(.2)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Una vez instanciada la clase, tiene dos métodos públicos:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;update([value])&lt;/strong&gt;, actualiza el progreso sumándole el valor del parámetro, por defecto suma 1.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;progress(value)&lt;/strong&gt;, en vez de sumarizar, se le pasa directamente el valor del progreso.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Una vez instanciada la clase, tiene dos métodos públicos:
+- &lt;strong&gt;update([value])&lt;/strong&gt;, actualiza el progreso sumándole el valor del parámetro, por defecto suma 1.
+- &lt;strong&gt;progress(value)&lt;/strong&gt;, en vez de sumarizar, se le pasa directamente el valor del progreso.&lt;/p&gt;
 
 &lt;p&gt;La salida en consola sería más o menos como esta:
-&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/10/animacion.gif&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/10/animacion.gif&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Solucionar problemas después de actualizar Gnome 3.4.1</title>
-      <link>http://localhost:1313/blog/posts/solucionar-problemas-despues-de-actualizar-gnome-3-4-1/</link>
-      <pubDate>Mon, 23 Apr 2012 20:58:48 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/solucionar-problemas-despues-de-actualizar-gnome-3-4-1/</guid>
-      <description>&lt;p&gt;Hoy, como para que el lunes arranque con todo, actualicé Arch y después no pude ingresar más la sesión de Gnome3. Aparecía la PC con carita triste y me decía que iba a desactivar las extensiones, pero no soluciona nada. Y cómo se actualizaron muchas drivers, el kernel y gnome no sabía bien donde estaba el problema.&lt;/p&gt;
-
-&lt;p&gt;Al parecer la nueva versión de Gnome (3.4.1) tiene como dependencia networkmanager y si no lo encuentra explota por todos lados, pueden verificar el archivo /var/logs/messages.log, deberían tener algo así:
-[spoiler title=&amp;ldquo;messages.log&amp;rdquo; open=&amp;ldquo;0&amp;rdquo; style=&amp;ldquo;1&amp;rdquo;]
-&lt;code&gt;[...]
-Apr 23 17:26:56 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager/Presence interface=org.freedesktop.DBus.Properties method=GetAll
-Apr 23 17:26:56 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager/Presence interface=org.freedesktop.DBus.Properties method=GetAll
-Apr 23 17:26:59 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/freedesktop/DBus interface=org.freedesktop.DBus method=NameOwnerChanged
-Apr 23 17:26:59 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/freedesktop/DBus interface=org.freedesktop.DBus method=NameOwnerChanged
-Apr 23 17:28:24 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager interface=org.gnome.SessionManager method=IsInhibited
-Apr 23 17:28:24 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager interface=org.gnome.SessionManager method=IsInhibited
-Apr 23 17:29:24 localhost dbus[661]: [system] Activating service name=&#39;org.freedesktop.NetworkManager&#39; (using servicehelper)
-Apr 23 17:29:24 localhost dbus[661]: [system] Activated service &#39;org.freedesktop.NetworkManager&#39; failed: Launch helper exited with unknown return code 1
-Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): Searching for 4194307 in 4194307,4194308
-Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): Watch 1 fired, idle time = 600053
-Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): GsmPresence: setting idle: 1
-Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): Using ConsoleKit for session tracking
-Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): Updating ConsoleKit idle status: 1
-Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager interface=org.gnome.SessionManager method=IsInhibited
-Apr 23 17:36:54 localhost gnome-session[13301]: DEBUG(+): GsmDBusClient: obj_path=/org/gnome/SessionManager interface=org.gnome.SessionManager method=IsInhibited
-[...]&lt;/code&gt;[/spoiler]&lt;/p&gt;
-
-&lt;p&gt;Si quieren verificar si el problema se da por esto, pueden correr el siguiente comando (Control + Alt + F1) e intentar entrar a la sesión (Control + Alt + F7/F8):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo /etc/rc.d/networkmanager start
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Para hacer el cambio permanente, agreguen &lt;strong&gt;networkmanager&lt;/strong&gt; a los DAEMONS del /etc.rc.conf&lt;/p&gt;
-
-&lt;p&gt;Espero que les sirva, a mi me hizo renegar mucho, y es algo bastante simple de solucionar.&lt;/p&gt;
-
-&lt;p&gt;Edit: Según la &lt;a href=&#34;https://wiki.archlinux.org/index.php/NetworkManager#Edit_daemons&#34;&gt;wiki de Arch&lt;/a&gt;, hay que sacar el daemon de network y poner el de networkmanager después de dbus&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Tips Linuxeros: Optimizar pacman y la instalación de aplicaciones en Arch Linux</title>
-      <link>http://localhost:1313/blog/posts/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/</link>
-      <pubDate>Wed, 28 Dec 2011 18:19:48 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/</guid>
-      <description>&lt;p&gt;La idea del post es hacer un compilado de tips y aplicaciones que puedan llegar a servir para mejorar &lt;a href=&#34;https://wiki.archlinux.org/index.php/Pacman&#34;&gt;pacman&lt;/a&gt; y la instalación de aplicaciones en Arch Linux. Si, escribí lo mismo que en el título pero con más palabras.
-Para el usuario que venga de otras distros, como Ubuntu, le puede resultar díficil no tener esa &amp;lsquo;cosa&amp;rsquo; llamada Centro de Software, pero con un poco de maña se puede potenciar muchisimo la instalación (además no van a escuchar nunca más de los PPA).&lt;/p&gt;
-
-&lt;p&gt;Vamos suponiendo que saben como usar &lt;strong&gt;pacman&lt;/strong&gt;. Básicamente tenemos:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;pacman -Ss wally&lt;/em&gt; para buscar aplicaciones&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;_pacman -S chucknorri_s para instalar&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;em&gt;pacman -Syu&lt;/em&gt; para actualizar&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;em&gt;pacman -Rnd cristina&lt;/em&gt; para eliminar algo&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;[note color=&amp;ldquo;#cfcfcf&amp;rdquo;]Antes de empezar, la configuración está en &lt;strong&gt;/etc/pacman.conf **&amp;hellip; y lo primero que tienen que agregar es una línea que diga **ILoveCandy&lt;/strong&gt;.
-Si ya la agregaron, pueden seguir con el post, si no lo hacen no merecen usar Arch Linux.[/note]&lt;/p&gt;
-
-&lt;p&gt;Optimizar el cache y la base de datos, tienen que correr &lt;strong&gt;sudo pacman -Sc &amp;amp;&amp;amp; sudo pacman-optimize&lt;/strong&gt;, pueden ponerlo en cron, es más fácil que acordarselo; &lt;strong&gt;yapos&lt;/strong&gt; también suele ser una buena opción para esto.
-Instalen &lt;strong&gt;pacman-color&lt;/strong&gt;, es eye-candy nunca viene mal. Eso si, deberían crear una &lt;a href=&#34;http://blog.jesusroldan.com/2011/09/02/tips-para-linux-alias-para-todos/&#34;&gt;alias&lt;/a&gt; pacman=&amp;lsquo;pacman-color&amp;rsquo; sino creanme que nunca lo van a usar.
-&lt;strong&gt;&lt;a href=&#34;https://wiki.archlinux.org/index.php/Reflector&#34;&gt;Reflector&lt;/a&gt;&lt;/strong&gt; me lo recomendaron en un &lt;a href=&#34;http://blog.jesusroldan.com/2011/09/06/lentitud-en-la-instalacion-de-paquetes-con-pacman/&#34;&gt;post&lt;/a&gt; y está muy bueno, mantiene actualizado el mirrorlist
-Se puede optimizar un poco el tamaño de los paquetes a descargar con &lt;strong&gt;xdelta3&lt;/strong&gt; (y activando UseDelta en la configuración de pacman), no es una locura, pero algo se logra.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;Ni hablar de que tienen que instalar &lt;strong&gt;yaourt&lt;/strong&gt;, es básico en cualquier Arch Linux, la forma más fácil es agregar el repositorio, actualizar e instalarlo con pacman.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[archlinuxfr]
-Server = http://repo.archlinux.fr/$arch
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;¿Qué hace? Funciona igual que pacman, pero también permite instalar paquetes del &lt;a href=&#34;https://aur.archlinux.org/&#34;&gt;AUR&lt;/a&gt;, que es basicamente la fucking gloria.&lt;/p&gt;
-
-&lt;p&gt;Si se sienten como princesas del bosque de las hadas, también pueden probar algun GUI, de los que usé, creo que &lt;strong&gt;Wakka&lt;/strong&gt; - I see what you did there! - es el mejor (sin entrar en la categoría KDE que no la probé). Rápido y simple. Lo que además tiene de bueno es que las acciones que hacemos muestran el comando, entonces, con el tiempo, podemos ir perdiendo el miedo a la consola&amp;hellip;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>De cómo llegué a ArchLinux y por qué no lo cambio...</title>
-      <link>http://localhost:1313/blog/posts/de-como-llegue-a-arch-linux-y-porque-no-lo-cambio/</link>
-      <pubDate>Mon, 21 Nov 2011 21:27:23 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/de-como-llegue-a-arch-linux-y-porque-no-lo-cambio/</guid>
-      <description>&lt;p&gt;Hace unos cuantos años que uso GNU/Linux, no muchos, pero los suficientes como para ir probando diferentes distros hasta llegar al lugar en donde más cómodo me sentí: &lt;strong&gt;Arch Linux&lt;/strong&gt;
-El primer contacto que tuve con GNU/Linux fue, como muchos, desde un LiveCD&amp;hellip; &lt;strong&gt;Knoppix&lt;/strong&gt; en este caso. recuerdo que me había gustado hasta visualmente (eso que era KDE, pobre de mi), pero mucho uso no le podía dar; nunca pude levantar el cablemodem por USB.
-En ese momento, compartía la PC con mi familia y tenía un disco de 4Gb, ergo, era imposible hacer una instalación con doble booteo, mucho menos con mis conocimientos de infranewbie.&lt;/p&gt;
-
-&lt;p&gt;Después llegó mi primer PC en el laburo, en la municipalidad de Río Grande. ¡Instalación en disco! La distro elegida fue &lt;strong&gt;Mandrake&lt;/strong&gt; 7; era joven y leía la &lt;strong&gt;Tira Ecol&lt;/strong&gt; siempre :P
-También fue a los ponchazos el uso, estuve un tiempo muy largo usando el fondo de pantalla en rojo porque me loggeaba como root, sin saber las consecuencias que podía traer. Pero sirvió de mucho, darse cuenta que el uso diario era indistinto en el Sistema Operativo y descubir el sistema de repositorios para instalar aplicaciones&amp;hellip; ¡era algo formidable!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Debian&lt;/strong&gt; fue la distro que le siguió, y ahí conocí &lt;strong&gt;Gnome&lt;/strong&gt; (¡Hallelujah!); no recuerdo como llegué a Debian, pero a lo mejor fue porque dije &lt;em&gt;&amp;ldquo;Ah mirá, las versiones son como los de Toy Story&amp;rdquo;&lt;/em&gt;.&amp;lt;!&amp;ndash; more &amp;ndash;&amp;gt;&lt;/p&gt;
-
-&lt;p&gt;El siguiente turno fue para &lt;strong&gt;Ubuntu&lt;/strong&gt; 5.10 (Breezy Badger), después de que me llegara un paquete de CDs desde, si no recuerdo mal, Canadá. Desde ese momento me hice ubuntero a morir, era fachero, era rápido, te mandaban CDs gratis, tenía un buen nombre&amp;hellip;&lt;em&gt;era como la nueva soda de cola, llegó para quedarse&lt;/em&gt;. Era la época en la que evangelizaba a más no poder, repartía CDs, probaba las alfas, betas, release candidate y cuanto podía&amp;hellip; cosa que hoy me parece totalmente ridícula teniendo una distro rolling release. Así pasaron los años, los wallpapers, y poco más.&lt;/p&gt;
-
-&lt;p&gt;Al pasar unos años sentía que me quedaba corto Ubuntu. Probé diferentes versiones, pero el destkop enviorment no era el problema. Ahi fue &lt;strong&gt;XFCE&lt;/strong&gt;, &lt;strong&gt;KDE&lt;/strong&gt; de nuevo, &lt;strong&gt;LXDE&lt;/strong&gt;, &lt;strong&gt;E17&lt;/strong&gt;&amp;hellip; y así. Volví a Debian, pero sentía que era poco el cambio, de hecho lo era.&lt;/p&gt;
-
-&lt;p&gt;Me quise hacer hombrecito, bajé &lt;strong&gt;Gentoo&lt;/strong&gt;, me puse el casco, la cota de malla a la notebook y fui&amp;hellip; para chocar de frente con un kernel que no aceptaba mi placa inalámbrica. [pullquote align=&amp;ldquo;right&amp;rdquo;]Así como el viejo chiste &amp;ldquo;&lt;em&gt;Ubuntu es una palabra africana que significa &amp;lsquo;No puedo instalar Debian&amp;rsquo;&lt;/em&gt;&amp;rdquo;, en este caso Arch fue la solución a &amp;lsquo;No puedo instalar Gentoo&amp;rsquo;.[/pullquote] Algo más pasaba que ahora no recuerdo, pero actualizaba el kernel y se me rompía todo. Después de mucha frustraciones, googleadas y demás, bajé &lt;strong&gt;Arch&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Al principio hubo una relación de amor-odio, fueron varias reinstaladas hasta lograr un sistema estable, que probando algo tarde o temprano se rompía. Pero el concepto de tener un sistema limpio, con la posibilidad de instalar lo que uno quisiera era tentador.
-La wiki de Arch Linux fue todo lo que necesitaba, completisima, y si algo no estaba ahi, el foro se encargaba de solucionarme los problemas. ¿Acaso la comunidad no es lo mejor de GNU/Linux? Bueno, Arch Linux tiene una gran comunidad. En Ubuntu, y sin ofender, se veian muchas respuestas sin ayuda, del tipo &amp;lsquo;Lo que vos estas haciendo mal es usar la aplicación que vos queres y no la que yo uso&amp;rsquo;, que incluso yo los habŕe hecho en algun momento, sin dudas.&lt;/p&gt;
-
-&lt;p&gt;Una vez que estabilicé el sistema, en la notebook, y con un tiempo de uso me pareció que era tiempo de abandonar el doble booteo. Ya me había recibido, asi que no necesitaba programar más en Delphi, los juegos no me tentaban, ya había podido dejar la adicción al WoW, era el momento justo.
-Eso hará ya dos años, casi tres.&lt;/p&gt;
-
-&lt;p&gt;Hoy en día, a parte de esa flexibilidad de poder dejar el sistema configurado como yo quiera, están los repositorios oficiales y el gran &lt;strong&gt;AUR&lt;/strong&gt; (aplausos) que tiene casi toda aplicación o libreria que necesites, eso, a una distro la hacen sumamente potente, no importa que review lea en los blogs, se que &amp;ldquo;yaourt -Ss app&amp;rdquo; en el 99% de los casos me trae lo que quiero, y me resuelve las dependencias que hagan falta y todo es alegría.&lt;/p&gt;
-
-&lt;p&gt;¿Por qué no cambiaría otra vez, si ya cambié de distros mas que de medias?
-En primer lugar, para mi perdió sentido la idea de tener que actualizar cada tantos meses&amp;hellip; ¿por que? ¿que necesidad? Detalles visuales, aplicaciones nuevas que se podrian instalar normalmente y muy poco más, a riesgo de instalar aplicaciones innecesarias, problemas en la actualización, cambios sin avisar ya sea instalando de mas, o desinstalando sin dar opción&amp;hellip; en fin, los riesgos son muchos, los beneficios reales muy pocos.
-Segundo, desconozco otra distro con un repositorio tan grande, ya me puse viejo y vago, quiero todo al alcance de un comando.
-Tercero, la comunidad. Ya sea en la wiki, en el foro o en canales IRC, siempre hay información o gente dispuesta. No digo que en otros lados no exista, pero Arch no se queda atrás.
-Cuarta, Arch no sólo tiene gran cantidad de aplicaciones, sino que es de los primeros en actualizar. Recuerdo cuando salió Gnome3 fue la primera distro en tomarlo, cuando ahora recién algunos lo estan probando. Esto, para los que siempre quieren probar lo mas nuevo es la gloria. Habilitar el repositorio [testing] es poner tu distro en modo Chuck Norris.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Gracias por haber llegado hasta el final, por más que sea scolleando, era largo, ¿no?&lt;/em&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Lentitud en la instalacion de paquetes con pacman</title>
-      <link>http://localhost:1313/blog/posts/lentitud-en-la-instalacion-de-paquetes-con-pacman/</link>
-      <pubDate>Tue, 06 Sep 2011 14:12:54 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/lentitud-en-la-instalacion-de-paquetes-con-pacman/</guid>
-      <description>&lt;p&gt;Desde hace unos días noto que al actualizar o instalar nuevos paquetes con pacman o yaourt se toma una eternidad en actualizar.
-En un primer momento pensé que era problema de la conexión, pero me pasaba en casa y en el laburo, con dos ISP diferentes, entonces el problema pasaba por otro lado.&lt;/p&gt;
-
-&lt;p&gt;Buscando en el foro encontré a alguien que le pasaba algo similar, la solución surgió corriendo:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; url=$(pacman -Sp linux | tee /dev/stderr) &amp;amp;&amp;amp; curl --verbose &amp;quot;${url}&amp;quot; -o /dev/null
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Se puede ver que trata de conectarse a mirror.kernel.org, que esta caído: &lt;a href=&#34;http://www.archlinux.org/mirrors/status/&#34;&gt;http://www.archlinux.org/mirrors/status/&lt;/a&gt;. Basta con editar el archivo /etc/pacman.d/mirrorlist&lt;/p&gt;
-
-&lt;p&gt;Después deben correr pacman -Syy para actualizar los repositorios.&lt;/p&gt;
-
-&lt;p&gt;En caso de que deseen ver los más rápidos, pueden seguir los pasos de la wiki, correr rankmirror la verdad que ayuda mucho en la velocidad &lt;a href=&#34;https://wiki.archlinux.org/index.php/Mirrors#List_by_speed&#34;&gt;https://wiki.archlinux.org/index.php/Mirrors#List_by_speed&lt;/a&gt;&lt;/p&gt;
+&lt;img src=&#34;http://i.imgur.com/klIcQ2u.gif&#34; alt=&#34;a&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>¿De dónde proviene el nombre de Arch Linux?</title>
-      <link>http://localhost:1313/blog/posts/%C2%BFde-donde-proviene-el-nombre-de-arch-linux/</link>
+      <link>http://localhost:1313/blog/posts/de-donde-proviene-el-nombre-de-arch-linux/</link>
       <pubDate>Wed, 27 Jul 2011 18:49:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/%C2%BFde-donde-proviene-el-nombre-de-arch-linux/</guid>
+      <guid>http://localhost:1313/blog/posts/de-donde-proviene-el-nombre-de-arch-linux/</guid>
       <description>&lt;p&gt;Hace unos cuantos días, @N1colas_ compartío &lt;a href=&#34;http://usemoslinux.blogspot.com/2011/07/de-donde-provienen-los-nombres-de-las.html&#34;&gt;este&lt;/a&gt; enlance, en donde hablaban del origen de los nombres de varias distros de Linux.&lt;/p&gt;
 
 &lt;p&gt;No estaba &lt;strong&gt;Arch&lt;/strong&gt;, y hay varios comentarios al respecto con supuestos bastante buenos.&lt;/p&gt;
 
 &lt;p&gt;Busqué en la Wiki, en los FAQs, en el Foro y en varios otros sitios pero no encontré información al respecto, asi que lo mejor fue ir a la fuente y le mandé un e-mail a Judd Vinet, creador de la distro, que me contestó en apenas unos días :D&lt;/p&gt;
 
-&lt;blockquote&gt;Hi Jesus,
+&lt;blockquote&gt;
+&lt;p&gt;Hi Jesus,&lt;/p&gt;
 
-I&#39;m happy to hear you&#39;re liking Arch!
+&lt;p&gt;I&amp;rsquo;m happy to hear you&amp;rsquo;re liking Arch!&lt;/p&gt;
 
-I&#39;m surprised that the origins of the name haven&#39;t found their way on to the wiki - I did find a copy of an old FAQ that explained my choice - you can see it here:  http://web.archive.org/web/20020605061933/www.archlinux.org/faq.php
+&lt;p&gt;I&amp;rsquo;m surprised that the origins of the name haven&amp;rsquo;t found their way on to the wiki - I did find a copy of an old FAQ that explained my choice - you can see it here:  &lt;a href=&#34;http://web.archive.org/web/20020605061933/www.archlinux.org/faq.php&#34;&gt;http://web.archive.org/web/20020605061933/www.archlinux.org/faq.php&lt;/a&gt;&lt;/p&gt;
 
-I hope that helps!
+&lt;p&gt;I hope that helps!&lt;/p&gt;
 
-Best,
-Judd&lt;/blockquote&gt;
+&lt;p&gt;Best,
+Judd&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;Como verán en ese link (una copia de la FAQ del sitio) dice:&lt;/p&gt;
 
-&lt;blockquote&gt;[Q]  Why the name Arch Linux?
+&lt;blockquote&gt;
+&lt;p&gt;[Q]  Why the name Arch Linux?
 [A]  From dictionary.com:
+    arch (ärch)
+    adj.&lt;/p&gt;
 
-     arch (ärch)
-     adj.
-
-     1. Chief; principal: their arch foe.
-     2. Mischievous; roguish: an arch glance.
+&lt;pre&gt;&lt;code&gt;1. Chief; principal: their arch foe.
+2. Mischievous; roguish: an arch glance.
 
 
-     I came across the well-known term &#34;arch-enemy&#34; in a book and
-     clued in that &#34;arch&#34; means &#34;the primary&#34;, &#34;the principal&#34;, the one
-     that comes first among others.  Far from true with regard to
-     Arch Linux perhaps, but I&#39;m proud of it.  Now, the second
-     definition may or may not fit; I guess it depends on how you use
-     your computer.  ;)&lt;/blockquote&gt;
+I came across the well-known term &amp;quot;arch-enemy&amp;quot; in a book and
+clued in that &amp;quot;arch&amp;quot; means &amp;quot;the primary&amp;quot;, &amp;quot;the principal&amp;quot;, the one
+that comes first among others.  Far from true with regard to
+Arch Linux perhaps, but I&#39;m proud of it.  Now, the second
+definition may or may not fit; I guess it depends on how you use
+your computer.  ;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;&amp;hellip; que sería &lt;em&gt;algo asi&lt;/em&gt; como:
 _Me encontré con la conocida expresión &amp;ldquo;achienemigo&amp;rdquo; en un libro y supuse que ese &amp;ldquo;arch&amp;rdquo; significa &amp;ldquo;primario&amp;rdquo;, &amp;ldquo;el principal&amp;rdquo;, el que viene primero antes que otros.
-Tal vez lejos de la verdad con respecto a Arch Linux, pero estoy orgulloso de el. Ahora, la segunda definición puede o no ser conveniente; supongo que depende de cómo usted use su computadora. ;) _&lt;/p&gt;
+Tal vez lejos de la verdad con respecto a Arch Linux, pero estoy orgulloso de el. Ahora, la segunda definición puede o no ser conveniente; supongo que depende de cómo usted use su computadora.&lt;/p&gt;
 </description>
     </item>
     

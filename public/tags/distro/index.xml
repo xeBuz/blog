@@ -1,77 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Distro on Personal Blog</title>
+    <title>Distro on xeBuz personal blog</title>
     <link>http://localhost:1313/blog/tags/distro/</link>
-    <description>Recent content in Distro on Personal Blog</description>
+    <description>Recent content in Distro on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Sep 2011 04:41:31 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 Jul 2011 18:49:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/tags/distro/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Gnome2 en ArchLinux</title>
-      <link>http://localhost:1313/blog/posts/gnome2-en-archlinux/</link>
-      <pubDate>Wed, 14 Sep 2011 04:41:31 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/gnome2-en-archlinux/</guid>
-      <description>
-
-&lt;p&gt;Como hay mucho usuarios descontentos con el resultado de Gnome 3, incluído Linus Torvals, era evidente que iban a existir formas de volver a la versión anterior, y Arch claro que la permite, y eso que fué de las primeras distros en cambiar :P
-Buscando encontré dos, la primera es un fork, la segunda un downgrade directo; me quedo con la primera. Si no se pudieron acostumbrar al cambio, si gnome-shell ya les dió una úlcera y no pueden esperar la versión 3.2, quizás alguna de estas opciones les sea útil.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Utilizar un fork: Mate&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Primero, tiene que editar el archivo &lt;strong&gt;/etc/pacman.conf&lt;/strong&gt;, agregando estas lineas al principio de la lista de repositorios
-[code]
-[mate]&lt;/p&gt;
-
-&lt;h1 id=&#34;contains-official-mate-desktop-packages-gnome2-fork:833a75177de8e75cddde15e0b36cb15f&#34;&gt;Contains official mate desktop packages (gnome2 fork)&lt;/h1&gt;
-
-&lt;p&gt;Server = &lt;a href=&#34;http://germ.winpe.com/archlinux/mate/$arch&#34;&gt;http://germ.winpe.com/archlinux/mate/$arch&lt;/a&gt;
-[/code]&lt;/p&gt;
-
-&lt;p&gt;Para instalar Mate, tiene que correr:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; pacman -Syyu &amp;amp;&amp;amp; pacman -Sf mate-desktop-environment
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;En mi caso aparecieron varios conflictos, ponga si a todo, no tuve problemas con ninguno&lt;/p&gt;
-
-&lt;p&gt;Despues de eso, tiene varios paquetes mas para instalar, todos opcionales pero suman: mate-extract mate-applets mate-terminal mate-image-viewer mate-themes. Así mismo, deberían instalar temas o cualquier eyecandy que necesiten para Gnome 2 que no sea necesario en el 3.&lt;/p&gt;
-
-&lt;p&gt;[caption id=&amp;ldquo;attachment_318&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo; caption=&amp;ldquo;Gnome 3.0.2, antes del update&amp;rdquo;]&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-300x225.png&#34; alt=&#34;Gnome 3&#34; /&gt;&lt;/a&gt;[/caption] [caption id=&amp;ldquo;attachment_320&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo; caption=&amp;ldquo;Una vez instalado Mate&amp;rdquo;]&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-1.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-1-300x225.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;[/caption] [caption id=&amp;ldquo;attachment_322&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;300&amp;rdquo; caption=&amp;ldquo;Mate, despúes de instalar themes y modificar la apariencia.&amp;rdquo;]&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-2.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/09/Screenshot-2-300x225.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;[/caption]&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Utilizar una versión antigua de paquetes&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;En este caso, lo que vamos a hacer es cambiar el repositorio en donde se encuentra Gnome, utilizar uno que no haya sido actualizado a Gnome3.x e instalar en cambio Gnome2.32.1, supongo que es la última versión estable antes del cambio.&lt;/p&gt;
-
-&lt;p&gt;También tenemos que editar el archivo &lt;strong&gt;/etc/pacman.conf&lt;/strong&gt;, pero en lugar de agregar un repositorio cambiamos el extra
-[code]
-[extra]&lt;/p&gt;
-
-&lt;h1 id=&#34;incluir-etc-pacman-d-mirrorlist:833a75177de8e75cddde15e0b36cb15f&#34;&gt;Incluir = / etc / pacman.d / mirrorlist&lt;/h1&gt;
-
-&lt;p&gt;Server = &lt;a href=&#34;http://arm.konnichi.com/2011/04/30/extra/os/$arch&#34;&gt;http://arm.konnichi.com/2011/04/30/extra/os/$arch&lt;/a&gt;
-[/code]&lt;/p&gt;
-
-&lt;p&gt;Después corren esta aberración:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; pacman -Syyfuu -nodep
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Cuando terminen (básicamente lo que hace es actualizar los repositorios, forzar el update, y en caso de que sea necesario realizar un downgrade de lo que haya, va a instalar todos los paquetes de Gnome que encuentre, son varios megas), en /etc/pacman.conf dejen el repositorio extra como corresponde y además coloquen esto para que no actualice gnome ni gnome-extra (asi no lo pisa con la versión 3)
-[code]
-IgnoreGroup = gnome gnome-extra
-[/code]
-Les debo screenshots de esta prueba, ya borré el snapshot y son muchos megas para descargar como para hacerlo de nuevo sólo para las imágenes :(&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;Ambas pruebas fueron realizadas con una &lt;a href=&#34;http://blog.jesusroldan.com/2011/08/31/virtualboxes-org-descarga-de-maquinas-virtuales/&#34;&gt;máquina virtual&lt;/a&gt;  con una instalación estandar, con gnome y gnome-extra instalado por defecto, es decir, en ambos casos hice un downgrade de Gnome 3, que me pareció el caso en el que podía detectar mas problemas.
-&lt;strong&gt;De las dos opciones, les recomiendo la primera, la segunda da bastantes dolores de cabeza.&lt;/strong&gt;&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>¿De dónde proviene el nombre de Arch Linux?</title>

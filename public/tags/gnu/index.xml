@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Gnu on Personal Blog</title>
+    <title>Gnu on xeBuz personal blog</title>
     <link>http://localhost:1313/blog/tags/gnu/</link>
-    <description>Recent content in Gnu on Personal Blog</description>
+    <description>Recent content in Gnu on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 05 Sep 2012 12:54:41 +0000</lastBuildDate>
@@ -20,65 +20,6 @@
 &lt;p&gt;La charla es abierta para todos y está de más decir que es gratis, va a ser muy introductoria con algunos conceptos básicos. También se va a mostrar un framework, &lt;a href=&#34;http://craftyjs.com/&#34;&gt;&lt;strong&gt;Crafty&lt;/strong&gt;&lt;/a&gt;, para simplificar el desarrollo. Si bien está pensada para programadores, la idea es juntar gente con ganas, quien sabe, puede surgir algun proyecto entre las personas que asistan. Las ganas de muchos están, falta organizarnos.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/09/Flyer-6-9-12.jpg&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/09/Flyer-6-9-12-353x500.jpg&#34; alt=&#34;Desarrollo de videojuegos&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>GNU/Linux para amas de casa. #BarCampCBA</title>
-      <link>http://localhost:1313/blog/posts/gnulinux-para-amas-de-casa-barcamp/</link>
-      <pubDate>Tue, 19 Jun 2012 17:47:45 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/gnulinux-para-amas-de-casa-barcamp/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/06/gnu_linux.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/06/gnu_linux.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;El sábado pasado fue el &lt;a href=&#34;http://barcampcordoba.org/&#34;&gt;BarCampCBA&lt;/a&gt; en Córdoba, que dicho sea de paso salió excelente.&lt;/p&gt;
-
-&lt;p&gt;Aproveché la ocasión, sabiendo que el púbico era bastante heterogéneo para dar una charla sobre GNU/Linux y Software Libre, desde lo básico, sin caer en evangelizaciones. La idea era demostrar que cualquiera puede usar Linux, que las opciones de software satisfacen las necesidades de la mayoría e incluso que instalarlo es bastante sencillo. Salí bastante conforme, no me abuchearon jaja y aprendí de algunos errores que después corregiré.&lt;/p&gt;
-
-&lt;p&gt;Les dejo aca &lt;a href=&#34;http://jesusroldan.com/Charlas/linux.html&#34;&gt;la charla&lt;/a&gt;, como no fue grabado ni trasmitida por streaming, sólo son las diapositivas. Algunas van a parecer medio colgadas, sin texto ni nada.&lt;/p&gt;
-
-&lt;p&gt;La presentación está hecha completamente con software libre. El framework que usé para los slides es &lt;a href=&#34;http://bartaz.github.com/impress.js&#34;&gt;impress.js&lt;/a&gt;, para mostrar las imágenes usé &lt;a href=&#34;http://reallysimpleworks.com/slideshow/&#34;&gt;Really Simple™ Slideshow&lt;/a&gt; y después GIMP para editar detalles y gedit para escribir el código. Una vez que le agarrás la mano es bastante simple de hacer.&lt;/p&gt;
-
-&lt;p&gt;Si quieren el código fuente está subido a &lt;a href=&#34;https://github.com/xeBuz/Charlas&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>De cómo llegué a ArchLinux y por qué no lo cambio...</title>
-      <link>http://localhost:1313/blog/posts/de-como-llegue-a-arch-linux-y-porque-no-lo-cambio/</link>
-      <pubDate>Mon, 21 Nov 2011 21:27:23 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/de-como-llegue-a-arch-linux-y-porque-no-lo-cambio/</guid>
-      <description>&lt;p&gt;Hace unos cuantos años que uso GNU/Linux, no muchos, pero los suficientes como para ir probando diferentes distros hasta llegar al lugar en donde más cómodo me sentí: &lt;strong&gt;Arch Linux&lt;/strong&gt;
-El primer contacto que tuve con GNU/Linux fue, como muchos, desde un LiveCD&amp;hellip; &lt;strong&gt;Knoppix&lt;/strong&gt; en este caso. recuerdo que me había gustado hasta visualmente (eso que era KDE, pobre de mi), pero mucho uso no le podía dar; nunca pude levantar el cablemodem por USB.
-En ese momento, compartía la PC con mi familia y tenía un disco de 4Gb, ergo, era imposible hacer una instalación con doble booteo, mucho menos con mis conocimientos de infranewbie.&lt;/p&gt;
-
-&lt;p&gt;Después llegó mi primer PC en el laburo, en la municipalidad de Río Grande. ¡Instalación en disco! La distro elegida fue &lt;strong&gt;Mandrake&lt;/strong&gt; 7; era joven y leía la &lt;strong&gt;Tira Ecol&lt;/strong&gt; siempre :P
-También fue a los ponchazos el uso, estuve un tiempo muy largo usando el fondo de pantalla en rojo porque me loggeaba como root, sin saber las consecuencias que podía traer. Pero sirvió de mucho, darse cuenta que el uso diario era indistinto en el Sistema Operativo y descubir el sistema de repositorios para instalar aplicaciones&amp;hellip; ¡era algo formidable!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Debian&lt;/strong&gt; fue la distro que le siguió, y ahí conocí &lt;strong&gt;Gnome&lt;/strong&gt; (¡Hallelujah!); no recuerdo como llegué a Debian, pero a lo mejor fue porque dije &lt;em&gt;&amp;ldquo;Ah mirá, las versiones son como los de Toy Story&amp;rdquo;&lt;/em&gt;.&amp;lt;!&amp;ndash; more &amp;ndash;&amp;gt;&lt;/p&gt;
-
-&lt;p&gt;El siguiente turno fue para &lt;strong&gt;Ubuntu&lt;/strong&gt; 5.10 (Breezy Badger), después de que me llegara un paquete de CDs desde, si no recuerdo mal, Canadá. Desde ese momento me hice ubuntero a morir, era fachero, era rápido, te mandaban CDs gratis, tenía un buen nombre&amp;hellip;&lt;em&gt;era como la nueva soda de cola, llegó para quedarse&lt;/em&gt;. Era la época en la que evangelizaba a más no poder, repartía CDs, probaba las alfas, betas, release candidate y cuanto podía&amp;hellip; cosa que hoy me parece totalmente ridícula teniendo una distro rolling release. Así pasaron los años, los wallpapers, y poco más.&lt;/p&gt;
-
-&lt;p&gt;Al pasar unos años sentía que me quedaba corto Ubuntu. Probé diferentes versiones, pero el destkop enviorment no era el problema. Ahi fue &lt;strong&gt;XFCE&lt;/strong&gt;, &lt;strong&gt;KDE&lt;/strong&gt; de nuevo, &lt;strong&gt;LXDE&lt;/strong&gt;, &lt;strong&gt;E17&lt;/strong&gt;&amp;hellip; y así. Volví a Debian, pero sentía que era poco el cambio, de hecho lo era.&lt;/p&gt;
-
-&lt;p&gt;Me quise hacer hombrecito, bajé &lt;strong&gt;Gentoo&lt;/strong&gt;, me puse el casco, la cota de malla a la notebook y fui&amp;hellip; para chocar de frente con un kernel que no aceptaba mi placa inalámbrica. [pullquote align=&amp;ldquo;right&amp;rdquo;]Así como el viejo chiste &amp;ldquo;&lt;em&gt;Ubuntu es una palabra africana que significa &amp;lsquo;No puedo instalar Debian&amp;rsquo;&lt;/em&gt;&amp;rdquo;, en este caso Arch fue la solución a &amp;lsquo;No puedo instalar Gentoo&amp;rsquo;.[/pullquote] Algo más pasaba que ahora no recuerdo, pero actualizaba el kernel y se me rompía todo. Después de mucha frustraciones, googleadas y demás, bajé &lt;strong&gt;Arch&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Al principio hubo una relación de amor-odio, fueron varias reinstaladas hasta lograr un sistema estable, que probando algo tarde o temprano se rompía. Pero el concepto de tener un sistema limpio, con la posibilidad de instalar lo que uno quisiera era tentador.
-La wiki de Arch Linux fue todo lo que necesitaba, completisima, y si algo no estaba ahi, el foro se encargaba de solucionarme los problemas. ¿Acaso la comunidad no es lo mejor de GNU/Linux? Bueno, Arch Linux tiene una gran comunidad. En Ubuntu, y sin ofender, se veian muchas respuestas sin ayuda, del tipo &amp;lsquo;Lo que vos estas haciendo mal es usar la aplicación que vos queres y no la que yo uso&amp;rsquo;, que incluso yo los habŕe hecho en algun momento, sin dudas.&lt;/p&gt;
-
-&lt;p&gt;Una vez que estabilicé el sistema, en la notebook, y con un tiempo de uso me pareció que era tiempo de abandonar el doble booteo. Ya me había recibido, asi que no necesitaba programar más en Delphi, los juegos no me tentaban, ya había podido dejar la adicción al WoW, era el momento justo.
-Eso hará ya dos años, casi tres.&lt;/p&gt;
-
-&lt;p&gt;Hoy en día, a parte de esa flexibilidad de poder dejar el sistema configurado como yo quiera, están los repositorios oficiales y el gran &lt;strong&gt;AUR&lt;/strong&gt; (aplausos) que tiene casi toda aplicación o libreria que necesites, eso, a una distro la hacen sumamente potente, no importa que review lea en los blogs, se que &amp;ldquo;yaourt -Ss app&amp;rdquo; en el 99% de los casos me trae lo que quiero, y me resuelve las dependencias que hagan falta y todo es alegría.&lt;/p&gt;
-
-&lt;p&gt;¿Por qué no cambiaría otra vez, si ya cambié de distros mas que de medias?
-En primer lugar, para mi perdió sentido la idea de tener que actualizar cada tantos meses&amp;hellip; ¿por que? ¿que necesidad? Detalles visuales, aplicaciones nuevas que se podrian instalar normalmente y muy poco más, a riesgo de instalar aplicaciones innecesarias, problemas en la actualización, cambios sin avisar ya sea instalando de mas, o desinstalando sin dar opción&amp;hellip; en fin, los riesgos son muchos, los beneficios reales muy pocos.
-Segundo, desconozco otra distro con un repositorio tan grande, ya me puse viejo y vago, quiero todo al alcance de un comando.
-Tercero, la comunidad. Ya sea en la wiki, en el foro o en canales IRC, siempre hay información o gente dispuesta. No digo que en otros lados no exista, pero Arch no se queda atrás.
-Cuarta, Arch no sólo tiene gran cantidad de aplicaciones, sino que es de los primeros en actualizar. Recuerdo cuando salió Gnome3 fue la primera distro en tomarlo, cuando ahora recién algunos lo estan probando. Esto, para los que siempre quieren probar lo mas nuevo es la gloria. Habilitar el repositorio [testing] es poner tu distro en modo Chuck Norris.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Gracias por haber llegado hasta el final, por más que sea scolleando, era largo, ¿no?&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     

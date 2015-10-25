@@ -8,24 +8,24 @@
 		<meta name="description" content="Personal Website">
 		<meta name="generator" content="Hugo 0.14" />
 		<title>Crazy little thing called Perl: Introducción al lenguaje &middot; xeBuz personal blog</title>
-		<link rel="shortcut icon" href="http://xebuz.github.io/blogimages/favicon.ico">
-		<link rel="stylesheet" href="http://xebuz.github.io/blogcss/style.css">
-		<link rel="stylesheet" href="http://xebuz.github.io/blogcss/highlight.css">
-		<link href="http://xebuz.github.io/blogindex.xml" rel="alternate" type="application/rss+xml" title="xeBuz personal blog" />
+		<link rel="shortcut icon" href="http://localhost:1313/blog/images/favicon.ico">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/style.css">
+		<link rel="stylesheet" href="http://localhost:1313/blog/css/highlight.css">
+		<link href="http://localhost:1313/blog/index.xml" rel="alternate" type="application/rss+xml" title="xeBuz personal blog" />
 	</head>
     <body>
        <nav class="main-nav">
 	
 	
-		<a href='http://xebuz.github.io/blog'> <span class="arrow">←</span>Home</a>
+		<a href='http://localhost:1313/blog/'> <span class="arrow">←</span>Home</a>
 	
 
 	
-		<a href='http://xebuz.github.io/blogabout'>About</a>
+		<a href='http://localhost:1313/blog/about'>About</a>
 	
 
 	
-	<a class="cta" href="http://xebuz.github.io/blogindex.xml">Subscribe</a>
+	<a class="cta" href="http://localhost:1313/blog/index.xml">Subscribe</a>
 	
 </nav>
 
@@ -34,6 +34,15 @@
                 <header>
                     <h1>Crazy little thing called Perl: Introducción al lenguaje</h1>
                     <h2 class="headline">March 5, 2014</h2>
+
+                    <h2 class="tags">
+                     
+                          #<a href="http://localhost:1313/blog/tags/dev">dev</a>&nbsp;
+                    
+                          #<a href="http://localhost:1313/blog/tags/perl">perl</a>&nbsp;
+                    
+                    </h2>
+
                 </header>
                 <section id="post-body">
                     <p>Perl está disponible para múltimples plataformas, pueden descargarlo desde <a href="http://www.perl.org/get.html">acá</a> o desde el sistema de paquetes que utilicen. Para verificar si tienen instalado perl, en la terminal escriban <em>perl -v</em>, si hay salida ya lo tienen instalado.</p>
@@ -80,66 +89,65 @@ No hay necesidad de pre-declarar sus tipos de variables, Perl los convertirá au
 
 <p>Los Arrays son indexados a cero. Se puede acceder a los valores de la siguiente manera:</p>
 
-<pre><code class="language-perl">    print $animals[0];              # imprime &quot;turtle&quot;. Se utiliza $ porque es un valor scalar
-    print $animals[1];              # imprime &quot;llama&quot;
-``
+<pre><code class="language-perl">    print $animals[0];    # imprime &quot;turtle&quot;. Se utiliza $ porque es un valor scalar
+    print $animals[1];    # imprime &quot;llama&quot;
+</code></pre>
 
-La variable especial $#nombrearray nos indica el índice del último elemento.
+<p>La variable especial $#nombrearray nos indica el índice del último elemento.</p>
 
-```perl
-    print $#mixed;                # imprime 2
-    print $mixed[$#mixed];        # último elemento, imprime 1.23
+<pre><code class="language-perl">    print $#mixed;            # imprime 2
+    print $mixed[$#mixed];    # último elemento, imprime 1.23
 </code></pre>
 
 <p>Si utilizamos @mixed en contexto escalar, obtendremos el tamaño de nuestro Array:</p>
 
 <pre><code class="language-perl">    $arrayLength = @mixed;
-    print $arraylength;            #imprime 3
+    print $arraylength;     #imprime 3
 </code></pre>
 
 <p>Para obtener múltiples valores de nuestro Array:</p>
 
-<pre><code class="language-perl">    @animals[0,1];           # Devuelve (&quot;turtle&quot;, &quot;llama&quot;), @ porque devuelve un array;
-    @animals[0..2];          # Devuelve (&quot;turtle&quot;, &quot;llama&quot;, &quot;cat&quot;);
-    @animals[1..$#animals];  # Devuelve todo excepto el primer elemento
+<pre><code class="language-perl">    @animals[0,1];          # Devuelve (&quot;turtle&quot;, &quot;llama&quot;), @ porque devuelve un array;
+    @animals[0..2];         # Devuelve (&quot;turtle&quot;, &quot;llama&quot;, &quot;cat&quot;);
+    @animals[1..$#animals]; # Devuelve todo excepto el primer elemento
 </code></pre>
 
 <p><strong>Hash</strong></p>
 
 <p>Un hash representa un conjunto de pares clave / valor. En realidad hash son tipo de Arrays, con la excepción de que el índice puede ser un número o una cadena. Están precedidos por el signo <strong>%</strong> de la siguiente manera:</p>
 
-<pre><code class="language-perl">    my %fruta_color = (&quot;manzana&quot;, &quot;rojo&quot;, &quot;banana&quot;, &quot;amarillo&quot;);
+<pre><code class="language-perl">    my %fruit_color = (&quot;apple&quot;, &quot;red&quot;, &quot;banana&quot;, &quot;yellow&quot;);
 </code></pre>
 
 <p>Se pueden utilizar los espacios en blanco y el operador =&gt; para dejarlo mas claro:</p>
 
-<pre><code class="language-perl">    my %fruta_color = (
-        manzana =&gt; &quot;red&quot;,
-        banana =&gt; &quot;amarillo&quot;,
+<pre><code class="language-perl">    my %fruit_color = (
+        apple =&gt; &quot;red&quot;,
+        banana =&gt; &quot;yellow&quot;,
     );
 </code></pre>
 
 <p>Para obtener un elemento del hash:</p>
 
-<pre><code class="language-perl">    $fruta_color{&quot;manzana&quot;}       # Devuelve &quot;rojo&quot;
+<pre><code class="language-perl">    $fruit_color{&quot;apple&quot;}      # Devuelve &quot;red&quot;
 </code></pre>
 
 <p>Podemos obtener una lista con las claves o valores con las funciones predefinidas keys() y values():</p>
 
-<pre><code class="language-perl">    my @frutas = keys(%fruta_color);
-    my colores = values(%fruta_color);
+<pre><code class="language-perl">    my @frutas = keys(%fruit_color);
+    my colores = values(%fruit_color);
 </code></pre>
 
 <p><strong>Alcance de las variables</strong></p>
 
 <p>En la sección anterior declaramos:</p>
 
-<pre><code class="language-perl">    my $animal = &quot;tortuga&quot;;
+<pre><code class="language-perl">    my $animal = &quot;turtle&quot;;
 </code></pre>
 
 <p>El modificador my no es necesario, también se puede usar:</p>
 
-<pre><code class="language-perl">    $animal = &quot;tortuga&quot;;
+<pre><code class="language-perl">    $animal = &quot;turtle&quot;;
 </code></pre>
 
 <p>Sin embargo, el uso anterior creará variables globales a través de su programa, que es mala práctica de programación. my crea variables con ámbito local. Las variables locales están disponibles en el ámbito del bloque (es decir, un grupo de estados rodeadas de llaves) en el que están definidos.</p>
@@ -157,204 +165,183 @@ La variable especial $#nombrearray nos indica el índice del último elemento.
 
 <p><strong>Tabla de conversiones de tipos</strong></p>
 
-<pre><code>    &lt;table &gt;
+<table>
+<thead>
+<tr>
+<th></th>
+<th>(1,2,3)</th>
+<th>[1,2,3]</th>
+<th>{a=&gt;x}</th>
+<th>(a=&gt;1)</th>
+<th>&ldquo;pepe&rdquo;</th>
+</tr>
+</thead>
 
-            &lt;tr &gt;
-                 (1,2,3) [1,2,3] {a=&gt;x} (a=&gt;1) &quot;pepe&quot;
-            &lt;/tr&gt; 
+<tbody>
+<tr>
+<td>Arity</td>
+<td>Lista</td>
+<td>Scalar</td>
+<td>Hash Ref.</td>
+<td>Hash</td>
+<td>Scalar</td>
+</tr>
 
-         &lt;tbody &gt;
-            &lt;tr &gt;
-                Arity
-</code></pre>
+<tr>
+<td>Elemento</td>
+<td>$x[0]</td>
+<td>$x-&gt;[1]</td>
+<td>$x-&gt;{a}</td>
+<td>$x{a}</td>
+<td>$x</td>
+</tr>
 
-<p><td >Lista
-</td>
-<td >Scalar
-</td>
-<td >Hash Ref.
-</td>
-<td >Hash
-</td>
-<td >Scalar
-</td>
-                </tr>
-                <tr >
-                    Elemento
-<td >$x[0]
-</td>
-<td >$x-&gt;[1]
-</td>
-<td >$x-&gt;{a}
-</td>
-<td >$x{a}
-</td>
-<td >$x
-</td><br />
-                </tr>
-                <tr >
-                    Lista
-<td >@x
-</td>
-<td >@{$x}
-</td>
-<td >%{$x}
-</td>
-<td >%x
-</td>
-<td >($x)
-</td>
-                </tr><br />
-                <tr >
-                    Hash
-<td >-
-</td>
-<td >-
-</td>
-<td >%{$x}
-</td>
-<td >%x
-</td>
-<td >{e=&gt; $x}
-</td>
-                </tr>
-                <tr >
-                    Ref.
-<td >\@x
-</td>
-<td >$x
-</td>
-<td >$x
-</td>
-<td >\%x
-</td>
-<td >\$x
-</td>
-                </tr>
-                <tr >
-                    Ref. Copia
-<td >[@x]
-</td>
-<td >[@{$x}]
-</td>
-<td >{%{$x}}
-</td>
-<td >{%x}
-</td>
-<td >[$x]
-</td>
-                </tr>
-             </tbody>
-        </table></p>
+<tr>
+<td>Lista</td>
+<td>@x</td>
+<td>@{$x}</td>
+<td>%{$x}</td>
+<td>%x</td>
+<td>($x)</td>
+</tr>
+
+<tr>
+<td>Hash</td>
+<td></td>
+<td></td>
+<td>%{$x}</td>
+<td>%x</td>
+<td>{e=&gt; $x}</td>
+</tr>
+
+<tr>
+<td>Ref.</td>
+<td>\@x</td>
+<td>$x</td>
+<td>$x</td>
+<td>\%x</td>
+<td>\$x</td>
+</tr>
+
+<tr>
+<td>Ref. Copia</td>
+<td>[@x]</td>
+<td>[@{$x}]</td>
+<td>{%{$x}}</td>
+<td>{%x}</td>
+<td>[$x]</td>
+</tr>
+</tbody>
+</table>
 
 <p><strong>Sintaxis básica</strong>
 <strong>if, elsif, else, unless</strong></p>
 
-<pre><code># La sintaxis es muy similar a otros lenguajes
-if ($var == 3) {
-  do_magic();
-}
+<pre><code class="language-perl">    # La sintaxis es muy similar a otros lenguajes
+    if ($var == 3) {
+      do_magic();
+    }
 
-# unless se usa para un if negativo
-if (!$var) {
-  do_magic();
-}
-unless ($var) {
-  do_magic();
-}
+    # unless se usa para un if negativo
+    if (!$var) {
+      do_magic();
+    }
+    unless ($var) {
+      do_magic();
+    }
 
-# Por supuesto también existe else
-if ($var) {
-    do_magic();
-} else {
-   do_another_magic();
-}
-# y se pueden anidar
-if ($var) {
-   do_magic();
-} elsif ($another_var) {
-   do_another_magic();
-} else {
-   do_something_else();
-}
+    # Por supuesto también existe else
+    if ($var) {
+        do_magic();
+    } else {
+       do_another_magic();
+    }
+    # y se pueden anidar
+    if ($var) {
+       do_magic();
+    } elsif ($another_var) {
+       do_another_magic();
+    } else {
+       do_something_else();
+    }
 </code></pre>
 
 <p><strong>while, do while, until</strong></p>
 
-<pre><code>my $counter = 10;
+<pre><code class="language-perl">    my $counter = 10;
 
-while ($counter &gt; 0) {
-   say $counter;
-   $counter -= 1;
-}
+    while ($counter &gt; 0) {
+       say $counter;
+       $counter -= 1;
+    }
 
-do {
-  say $counter;
-  $counter += 1;
-} while ($counter &lt; 10);
+    do {
+      say $counter;
+      $counter += 1;
+    } while ($counter &lt; 10);
 
+    until( $counter &gt; 20 ){
+       say &quot;$counter&quot;;
+       $counter += 1;
+    }
 
-until( $counter &gt; 20 ){
-   say &quot;$counter&quot;;
-   $counter += 1;
-}
-
-say 'tadaaa';
+    say 'tadaaa';
 </code></pre>
 
 <p><strong>for, for each</strong></p>
 
-<pre><code># for ( init; condition; increment )
-for( $i = 1; $i &lt; 20; $i = $i + 1 ){
-    print &quot;value: $i\n&quot;;
-}
+<pre><code class="language-perl">    # for ( init; condition; increment )
+    for( $i = 1; $i &lt; 20; $i = $i + 1 ){
+        print &quot;value: $i\n&quot;;
+    }
 
-my @list = (1, 20, 33, 45, 59);
-foreach $i (@list){
-    say '$i';
-}
+    my @list = (1, 20, 33, 45, 59);
+    foreach $i (@list){
+        say '$i';
+    }
 </code></pre>
 
 <p><strong>Funciones</strong>
 En realidad las funciones son subrutinas, quizás sea porque el lenguaje es viejo :P &hellip; la sintáxis es también bastante común.</p>
 
-<pre><code>sub name{
-   # blablabla
-   return $x;
-}
+<pre><code class="language-perl">    sub name{
+       # blablabla
+       return $x;
+    }
 </code></pre>
 
 <p>Para pasar parámetros se hace de esta forma</p>
 
-<pre><code>sub TestScalar{
-   my $x = @_;      #parámetro scalar 
-   # blabla
-}
-sub TestArray{
-   my @list = @_;   #parámetro array
-   # blabla
-}
-sub TestHash {
-   my (%hash) = @_; #parámetro hash
-   # blabla
-}
+<pre><code class="language-perl">    sub TestScalar{
+       my $x = @_;      #parámetro scalar
+       # blabla
+    }
+    sub TestArray{
+       my @list = @_;   #parámetro array
+       # blabla
+    }
+    sub TestHash {
+       my (%hash) = @_; #parámetro hash
+       # blabla
+    }
 
-# Si esperamos varios parámetros, se pueden acceder desde la variable @_ como un array
-sub TestScalar{
-   my $x = @_[0]; 
-   my $y = @_[1]; 
-   # blabla
-}
+    # Si esperamos varios parámetros, se pueden acceder
+    # desde la variable @_ como un array
+    sub TestScalar{
+       my $x = @_[0];
+       my $y = @_[1];
+       # blabla
+    }
 </code></pre>
 
 <p>**Variables privadas **</p>
 
-<pre><code>sub TestPrivateVars{
-   my $var; # inaccesible fuera de TestPrivateVars()
-   $varx;   # accesible fuera de TestPrivateVars(), no hacerlo
+<pre><code class="language-perl">    sub TestPrivateVars{
+       my $var; # inaccesible fuera de TestPrivateVars()
+       $varx;   # accesible fuera de TestPrivateVars(), no hacerlo
 
-   my ($another, @my_array, %my_hash); # declaración múltiple privada
-}
+       my ($another, @my_array, %my_hash); # declaración múltiple privada
+    }
 </code></pre>
 
 <p><strong>TDD con Perl</strong>
@@ -362,41 +349,39 @@ sub TestScalar{
 Para hacer TDD en necesario bajar un paquete de CPAN, Test::More.
 Acá un ejemplo de como correr un test, sobre una función específica.</p>
 
-<pre><code># En esta línea declaramos el uso de Test::More
-# y le decimos que solo se corre una vez
-use Test::More test =&gt; 1;
+<pre><code class="language-perl">    # En esta línea declaramos el uso de Test::More
+    # y le decimos que solo se corre una vez
+    use Test::More test =&gt; 1;
 
-# is() es la función que ejecuta el test, consta de 3 parámetros
-# 1ro función a ejecutar con sus respectivos parámetros
-# 2do resultado esperado
-# 3ro nombre descriptivo
-is(replace(&quot;hola&quot;), &quot;chau&quot;, &quot;Reemplazo de nombres&quot;);
-is(replace(&quot;chay&quot;), &quot;chau&quot;, &quot;Reemplazo de nombres&quot;);
+    # is() es la función que ejecuta el test, consta de 3 parámetros
+    # 1ro función a ejecutar con sus respectivos parámetros
+    # 2do resultado esperado
+    # 3ro nombre descriptivo
+    is(replace(&quot;hola&quot;), &quot;chau&quot;, &quot;Reemplazo de nombres&quot;);
+    is(replace(&quot;chay&quot;), &quot;chau&quot;, &quot;Reemplazo de nombres&quot;);
 
-# Esta es la función que se ejecuta
-sub replace( my ($text) = @_;
-    $text =~ s/\bhola\b/chau/gi;
-    return $text;
-}
+    # Esta es la función que se ejecuta
+    sub replace( my ($text) = @_;
+        $text =~ s/\bhola\b/chau/gi;
+        return $text;
+    }
 
-#Con esta función declaramos el fin del testing
-done_testing()
+    #Con esta función declaramos el fin del testing
+    done_testing()
 </code></pre>
-
-<p><em>Próximo post: Expresiones regulares en Perl. O sea: Perl.</em></p>
 
                 </section>
             </article>
             <footer id="post-meta" class="clearfix">
                 <a href="https://twitter.com/xeBuz">
-                        <img class="avatar" src="http://xebuz.github.io/blogimages/avatar.png">
+                        <img class="avatar" src="http://localhost:1313/blog/images/avatar.png">
                         <div>
                             <span class="dark">xeBuz</span>
                             <span>lalalala</span>
                         </div>
                     </a>
                 <section id="sharing">
-                    <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fxebuz.github.io%2fblog%2fposts%2fcrazy-little-thing-called-perl%2f - Crazy%20little%20thing%20called%20Perl%3a%20Introducci%c3%b3n%20al%20lenguaje by @xeBuz"><span class="icon-twitter"> Tweet</span></a>
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2flocalhost%3a1313%2fblog%2fposts%2fcrazy-little-thing-called-perl%2f - Crazy%20little%20thing%20called%20Perl%3a%20Introducci%c3%b3n%20al%20lenguaje by @xeBuz"><span class="icon-twitter"> Tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(
@@ -416,26 +401,64 @@ done_testing()
     
     
         
+   
+    
+        
+   
+    
+        
         <li>
-            <a href="http://xebuz.github.io/blog/posts/newest/">Just another sample post<aside class="dates">Mar 29</aside></a>
+            <a href="http://localhost:1313/blog/posts/jquery-selectores-y-traversing/">jQuery: Selectores y Traversing<aside class="dates">Feb 26</aside></a>
         </li>
         
    
     
         
         <li>
-            <a href="http://xebuz.github.io/blog/posts/middle/">Second Post<aside class="dates">Mar 28</aside></a>
+            <a href="http://localhost:1313/blog/posts/jquery-doge-such-plugin/">jQuery Doge - such plugin<aside class="dates">Dec 23</aside></a>
         </li>
         
    
     
         
         <li>
-            <a href="http://xebuz.github.io/blog/posts/oldest/">First Post<aside class="dates">Mar 27</aside></a>
+            <a href="http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/">Barra de progreso de Arch Linux para Python<aside class="dates">Oct 21</aside></a>
         </li>
         
    
     
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/script-para-grabar-la-consola-en-un-gif-animado/">Script para grabar la consola en un .gif animado<aside class="dates">Oct 18</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/">Lo que quedó de la charla de desarrollo web de videojuegos<aside class="dates">Sep 7</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/script-para-generar-playlists-dinamicas-en-mpd/">Script para generar playlists dinámicas en MPD <aside class="dates">Aug 10</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/">Un &#34;bot&#34; de Twitter, con Python en un par de minutos<aside class="dates">Jul 4</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/cron-automatizar-scripts-como-un-titan/">Cron, automatizar scripts como un titán<aside class="dates">May 22</aside></a>
+        </li>
         
    
 </ul>
@@ -447,10 +470,13 @@ done_testing()
         </section>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="http://xebuz.github.io/blogjs/main.js"></script>
-<script src="http://xebuz.github.io/blogjs/highlight.js"></script>
+<script src="http://localhost:1313/blog/js/main.js"></script>
+<script src="http://localhost:1313/blog/js/highlight.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
 
-    </body>
+    <script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
 </html>

@@ -1,67 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sitios on Personal Blog</title>
+    <title>Sitios on xeBuz personal blog</title>
     <link>http://localhost:1313/blog/categories/sitios/</link>
-    <description>Recent content in Sitios on Personal Blog</description>
+    <description>Recent content in Sitios on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Feb 2014 16:30:20 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Dec 2013 14:31:40 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/categories/sitios/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Bundles de juegos, varias opciones disponibles</title>
-      <link>http://localhost:1313/blog/posts/bundles-de-juegos-varias-opciones-disponibles/</link>
-      <pubDate>Thu, 27 Feb 2014 16:30:20 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/bundles-de-juegos-varias-opciones-disponibles/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://humblebundle.com/&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2014/02/Humble-Bundle-500x123.png&#34; alt=&#34;Humble Bundle&#34; /&gt;&lt;/a&gt;
-&lt;strong&gt;The Humble Bundle&lt;/strong&gt; - &lt;em&gt;&lt;a href=&#34;http://humblebundle.com/&#34;&gt;http://humblebundle.com/&lt;/a&gt;&lt;/em&gt;
-Por lejos el más conocido de todos, no hace falta que explique como funciona :D&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.bundlestars.com&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2014/02/bundlestars2.png&#34; alt=&#34;bundlestars2&#34; /&gt;&lt;/a&gt;
-&lt;strong&gt;Bundle Star&lt;/strong&gt; - &lt;em&gt;&lt;a href=&#34;http://bundlestars.com&#34;&gt;bundlestars.com&lt;/a&gt;&lt;/em&gt;
-Este sitio está bueno por varios motivos. Primero tiene una buena cantidad de bundles, suele tener entre 8-10 al mismo tiempo, todos muy diferentes y suelen ser con alguna temática o tipo de juego similar, no es tan aleatorio como otros. Rondan entre los 3 y 5 USD.
-Por otro lado, también tiene un Store de juegos individuales y DLCs, con descuentos entre 35% y 70%.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.indiegala.com/&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2014/02/Indie-Gala.png&#34; alt=&#34;Indie Gala&#34; /&gt;&lt;/a&gt;
-&lt;strong&gt;The Indie Gala&lt;/strong&gt; - &lt;em&gt;&lt;a href=&#34;http://www.indiegala.com/&#34;&gt;www.indiegala.com&lt;/a&gt;&lt;/em&gt;
-Sistema parecido al de Humble Bundle, con unos juegos desbloqueables a 1 USD, las primeras 12 horas del bundle se paga 3.99 USD para desbloquear los juegos, después 5.99 USD. También tiene 2 juegos que se muestran más adelante, para los que pagaron el precio del desbloqueo. Dato a tener en cuenta, algunas keys son para Desura.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://groupees.com&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2014/02/Groupees-500x139.png&#34; alt=&#34;Groupees&#34; /&gt;&lt;/a&gt;
-&lt;strong&gt;Groupees&lt;/strong&gt; - &lt;em&gt;&lt;a href=&#34;http://groupees.com&#34;&gt;groupees.com&lt;/a&gt;&lt;/em&gt;
-Este tiene un sistema raro. Te da 8 juegos para elegir y te regala 3 más, de esos 8 podés elegir entra 4 y 8. Te sugiere un valor aproximado para pagar pero podés optar por 2 USD como mínimo. Además tenés la opción de donar 20% a &lt;a href=&#34;http://www.fotas.org/&#34;&gt;Friends of the Animal Shelter&lt;/a&gt; y bundles que no son de juegos (epbus, comics, etc)
-Venden juegos que salen de Steam Greenlight, es una buena forma de apoyar desarrolladores indie.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.blinkbundle.com&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2014/02/blink-bundle.gif&#34; alt=&#34;blink bundle&#34; /&gt;&lt;/a&gt; &lt;a href=&#34;http://www.blinkbundle.com&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2014/02/blink-bundle.jpg&#34; alt=&#34;blink-bundle&#34; /&gt;&lt;/a&gt;
-&lt;strong&gt;Blink Bundle&lt;/strong&gt; - &lt;em&gt;&lt;a href=&#34;http://www.blinkbundle.com&#34;&gt;blinkbundle.com&lt;/a&gt;&lt;/em&gt;
-Un piso de 1.99 USD para 4 juegos, el resto se desbloquean con 4.99 y tiene un juego extra bonus. Todos para Windows, Linux, Mac, Steam. Suele tener juegos interesantes.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://bigbadbundle.bundledragon.com&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2014/02/bbbLogo-500x461.png&#34; alt=&#34;bbbLogo&#34; /&gt;&lt;/a&gt;
-&lt;strong&gt;Big Bad Bundle&lt;/strong&gt; - &lt;em&gt;&lt;a href=&#34;http://bigbadbundle.bundledragon.com&#34;&gt;bigbadbundle.bundledragon.com&lt;/a&gt;&lt;/em&gt;
-Tiene 3 niveles de compra progresivos y cada nivel contiene 4 juegos. Los valores mínimos para desbloquear cada nivel sería 1 USD, 5 USD y 8 USD. Todos disponibles para Steam.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flyingbundle.com&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2014/02/Flyingbundle1-500x375.png&#34; alt=&#34;Flyingbundle1&#34; /&gt;&lt;/a&gt;
-&lt;strong&gt;Flying Bundle&lt;/strong&gt; - &lt;em&gt;&lt;a href=&#34;http://www.flyingbundle.com&#34;&gt;flyingbundle.com&lt;/a&gt;&lt;/em&gt;
-Constra de varios juegos, con clave Steam y/o Desura y hay que pagar mínimo 3 USD para desbloquarlos. Tiene un juego sorpresa pero no se si lo sacás una vez que pagás o después de un tiempo.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.dailyroyale.com/&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2014/02/Daily-Royale.png&#34; alt=&#34;Daily Royale&#34; /&gt;&lt;/a&gt;
-&lt;strong&gt;Daily Royale&lt;/strong&gt; - &lt;em&gt;&lt;a href=&#34;http://www.dailyroyale.com/&#34;&gt;dailyroyale.com/&lt;/a&gt;&lt;/em&gt;
-Tiene un sistema diferente, en lugar de ofrecer un paquete de juegos, es uno solo con un descuento alto y cantidad de keys limitadas para vender.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://indiegamestand.com&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2014/02/Indie-Game-Stand.png&#34; alt=&#34;Indie Game Stand&#34; /&gt;&lt;/a&gt;
-&lt;strong&gt;Indie Game Stand&lt;/strong&gt; - &lt;em&gt;&lt;a href=&#34;https://indiegamestand.com&#34;&gt;indiegamestand.com&lt;/a&gt;&lt;/em&gt;
-Este sitio vende un solo juego a la vez, con un mínimo de 1 USD para la clave de Steam. Agregando un poco te ganás la OST, con 10 USD te ganás el juego anterior que vendían más otro juego sorpresa y si están entre los top 3 de contribuidores ganan una remera de la página. Además, fuera de la oferta diaria, tiene un store.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://ikoid.com/&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2014/02/ikoid_black-500x130.png&#34; alt=&#34;ikoid_black&#34; /&gt;&lt;/a&gt;
-&lt;strong&gt;Ikoid&lt;/strong&gt; - &lt;em&gt;&lt;a href=&#34;https://ikoid.com/&#34;&gt;ikoid.com/&lt;/a&gt;&lt;/em&gt;
-También tiene un sistema diferente, tiene 3 juegos bastante baratos (menos de 2 USD) y se desbloquean más juegos dependiendo de la cantidad de shares en FB o +1 en Google+ o tweets, depende del bundle. Buena forma de hacerse promoción.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://bundle-in-a-box.com/&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2014/02/Bundle-in-a-box.png&#34; alt=&#34;Bundle in a box&#34; /&gt;&lt;/a&gt;
-&lt;del&gt;Dick&lt;/del&gt;Bundle in a box - &lt;em&gt;[bundle-in-a-box.com&lt;/em&gt;/](&lt;a href=&#34;http://bundle-in-a-box.com/&#34;&gt;http://bundle-in-a-box.com/&lt;/a&gt;)
-Tiene varios juegos desbloqueables con 0.99 USD y varios que se desbloquean pasando el promedio a lo Humble Bundle (también incluye OST). Detalle, algunos juegos se descargan, otros tienen clave Steam, otros Desura; para Windows y/o Mac y/o Linux.&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>jQuery Doge - such plugin</title>
@@ -72,164 +18,37 @@ Tiene varios juegos desbloqueables con 0.99 USD y varios que se desbloquean pasa
       <description>&lt;p&gt;Hace unos días había liberado un plugin de jQuery bastante tonto, y ahora hice un update del mismo con unos cuantos bugs corregidos y además ahora pemite parametrizarlo, así pasa a estar un poco mas usable de lo que estaba antes.
 Es mi primer plugin así que quizás no está tan optimizado&amp;hellip; aunque considero que no es tan inestable como pensé que podía quedar :)&lt;/p&gt;
 
-&lt;p&gt;Pueden descargarlo &lt;a href=&#34;https://github.com/xeBuz/jquery-doge&#34;&gt;desde GitHub&lt;/a&gt; o ver un ejemplo del funcionamiento &lt;a href=&#34;http://jesusroldan.com/doge/demo.html&#34;&gt;desde esta demo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Pueden descargarlo &lt;a href=&#34;https://github.com/xeBuz/jquery-doge&#34;&gt;desde GitHub&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;El uso básico es el siguiente, solo deben pasarle un listado de palabras a mostrar, ya incluye algunas por defecto (wow, so doge y asi):&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$(document).ready( function() {
+&lt;pre&gt;&lt;code class=&#34;language-javacript&#34;&gt;$(document).ready( function() {
    // Create an array with some words
-   $(&#39;body&#39;).doge({ 
-       wordList : [&amp;quot;such page&amp;quot;, &amp;quot;lorem impsum&amp;quot;, &amp;quot;so cool&amp;quot;, &amp;quot;much jquery&amp;quot;, &amp;quot;kitten&amp;quot;, &amp;quot;such demo&amp;quot;, &amp;quot;Kitten Ipsum&amp;quot;]
+   $(&#39;body&#39;).doge({
+       wordList :[ &amp;quot;such page&amp;quot;, &amp;quot;lorem impsum&amp;quot;, &amp;quot;so cool&amp;quot;, &amp;quot;much jquery&amp;quot;, &amp;quot;kitten&amp;quot;, &amp;quot;such demo&amp;quot;, &amp;quot;Kitten Ipsum&amp;quot;]
    });
 });
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;También se puede parametrizar un poco, con estas opciones:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$(document).ready( function() {
-   $(&#39;body&#39;).doge({ 
-       wordList : [&amp;quot;such page&amp;quot;, &amp;quot;lorem impsum&amp;quot;, &amp;quot;so cool&amp;quot;, &amp;quot;much jquery&amp;quot;, &amp;quot;text&amp;quot;, &amp;quot;such demo&amp;quot;, &amp;quot;Kitten Ipsum&amp;quot;],
+&lt;pre&gt;&lt;code class=&#34;language-javacript&#34;&gt;$(document).ready( function() {
+   $(&#39;body&#39;).doge({
+       wordList : [
+           &amp;quot;such page&amp;quot;, &amp;quot;lorem impsum&amp;quot;, &amp;quot;so cool&amp;quot;, &amp;quot;much jquery&amp;quot;, &amp;quot;text&amp;quot;, &amp;quot;such demo&amp;quot;, &amp;quot;Kitten Ipsum&amp;quot;
+       ],
        showDoge : true,
        fontSize : &amp;quot;2em&amp;quot;,
        fontBorder: true,
        dogeImage : &amp;quot;doge.png&amp;quot;,
-       colours : [&amp;quot;red&amp;quot;, &amp;quot;green&amp;quot;, &amp;quot;orange&amp;quot;, &amp;quot;violet&amp;quot;, &amp;quot;aqua&amp;quot;, &amp;quot;yellow&amp;quot;, &amp;quot;slateblue&amp;quot;, &amp;quot;purple&amp;quot;, &amp;quot;pink&amp;quot;, &amp;quot;lime&amp;quot;, &amp;quot;fuchsia&amp;quot;, &amp;quot;gold&amp;quot;, &amp;quot;indigo&amp;quot;],
+       colours : [
+           &amp;quot;red&amp;quot;, &amp;quot;green&amp;quot;, &amp;quot;orange&amp;quot;, &amp;quot;violet&amp;quot;, &amp;quot;aqua&amp;quot;, &amp;quot;yellow&amp;quot;, &amp;quot;slateblue&amp;quot;, &amp;quot;purple&amp;quot;, &amp;quot;pink&amp;quot;, &amp;quot;lime&amp;quot;, &amp;quot;fuchsia&amp;quot;, &amp;quot;gold&amp;quot;, &amp;quot;indigo&amp;quot;
+       ],
        textDuration: 1200,
-       textRespawn: 1000,       
+       textRespawn: 1000,
    });
 });
 &lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Comprar en el exterior, con envíos gratuitos a la Argentina [DealExtreme, FocalPrice, DinoDirect]</title>
-      <link>http://localhost:1313/blog/posts/comprar-en-el-exterior-con-envios-gratuitos-a-la-argentina-dealextreme-focalprice-dinodirect/</link>
-      <pubDate>Tue, 03 Jan 2012 14:04:56 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/comprar-en-el-exterior-con-envios-gratuitos-a-la-argentina-dealextreme-focalprice-dinodirect/</guid>
-      <description>&lt;p&gt;Voy a contarles un poco la experiencia que tuve en compras a sitios asiáticos de envío gratuito o &amp;ldquo;free shipping&amp;rdquo;.
-En los últimos años hice varias compras, muchas en realidad, todas idioteces&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Antes que nada, las compras las vengo haciendo desde el 2009 aproximadamente, ahora desde el bloqueo de las importaciones se puso mucho más complicada la compra, voy a tirarles tips que puede que sirvan, pueden que no. Un saludo a Cristina de paso ¬¬&lt;/p&gt;
-
-&lt;p&gt;El &lt;strong&gt;tiempo&lt;/strong&gt; que tarda un pedido en llegar, siempre suponiendo que el tipo de envío es el básico, es decir, el gratuito, oscila entre los 20 y los 40 días. Se que no despachan automáticamente lo que compres, acumulan cierta cantidad y recién hacen el envío (por eso todos ponen mas o menos al mismo tiempo que le llegaron cosas).
-Pueden pagar por otros servicios de envío como EMS, DHL, Fedex o UPS. Todos tienen el beneficio del tiempo, pero suelen ser precios altos.&lt;/p&gt;
-
-&lt;p&gt;El &lt;strong&gt;pago&lt;/strong&gt; depende del sitio. Pueden hacerlo directamente con la tarjeta de cŕedito sin página intermedia (por supuesto que tienen que ser tarjetas internacionales: Visa, MasterCard, American Express) o con servicios como PayPal (es el que suelo usar), Moneybookers, Wire Transfer (o sea Western Union) y algún que otro método que desconozco como funcionan.&lt;/p&gt;
-
-&lt;p&gt;Es muy importante que antes de entregarse a un frenesí capitalista tengan en cuenta algunos &lt;strong&gt;límites de compra&lt;/strong&gt;. Traten de que los artículos que compran no excedan los 25 dólares, &lt;a href=&#34;http://www.afip.gov.ar/aduana/envios.asp#encpart&#34;&gt;está reglamentado ese límite&lt;/a&gt;; si superan ese monto puede quedar parado en la Aduana, lo que conlleva a un tramite personal y tedioso para sacarlo, y además tienen que pagar la mitad del excedente de esos 25 USD. Si la aduana les llega a parar el producto que sale menos de 25 USD nombrenles la reglamentación, quedan de cara. Me pasó una vez que pedi algo de 10 USD, pero que parecía el lente de una cámara reflex entonces me lo pararon. Al final sólo tuve que pagar $2 por cada día que estuvo en el depósito.
-Si piden varios artículos que en la suma exceden los 25 USD, los chinos son unos genios y dividen los artículos en varios envíos de menos costo :D&lt;/p&gt;
-
-&lt;p&gt;El &lt;strong&gt;tamaño&lt;/strong&gt; del paquete no se si influye tanto, puede que si, pero compre un helicóptero a radio control con una caja de un metro de largo y me llegó a la puerta de casa, pero el cartero no estaba tan feliz como yo. Ojo, fue el único pedido medianamente grande que me llegó, pero no era pesado, a lo mejor eso si influye. &lt;em&gt;(Acá comenta @Darem0 que el peso no tiene que ser mayor de medio kilo)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Los &lt;strong&gt;sitios&lt;/strong&gt; que más uso son DealExtreme, FocalPrice y DinoDirect:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.dealextreme.com/default.dx/r.32003360&#34;&gt; &lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/01/DealExtreme.png&#34; alt=&#34;DX Logo&#34; /&gt;
-&lt;strong&gt;DealExtreme.com&lt;/strong&gt;&lt;/a&gt;
-&lt;table border=&#34;0&#34; &gt;
-&lt;tbody &gt;
-&lt;tr &gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;td &gt;Es el primero que conocí, quizás sea el que tiene la mejor relación entre cantidad de productos y precios. Tiene gran cantidad de artículos, desde juguetes a tablets, con una gama muy variada (por ejemplo, tiene muchas cosas de electrónica a muy buen precio).
-No tuve muchos problemas comprando. Una vez me llegó un reloj roto, hice el reclamo desde el sitio y me lo reenviaron, sin costo&amp;hellip; pero bueno, el reloj no valía mucho, sólo fueron un par de latigazos a algún empleado y ya.
-El método de pago que usé siempre fué PayPal, me debitan de la VISA pesos, tenés que elegir la conversión antes de confirmar el pago.
-Es mi preferida para comprar idioteces innecesarias.
-&lt;/td&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;td width=&#34;150px&#34; &gt;[xrr rating=4.&lt;sup&gt;8&lt;/sup&gt;&amp;frasl;&lt;sub&gt;5&lt;/sub&gt; imageset=default label=&amp;ldquo;Precio&amp;rdquo;]
-[xrr rating=3.&lt;sup&gt;3&lt;/sup&gt;&amp;frasl;&lt;sub&gt;5&lt;/sub&gt; imageset=default label=&amp;ldquo;Calidad&amp;rdquo;]
-[xrr rating=4.0/5 imageset=default label=&amp;ldquo;Soporte&amp;rdquo;]
-[xrr rating=3.&lt;sup&gt;6&lt;/sup&gt;&amp;frasl;&lt;sub&gt;5&lt;/sub&gt; imageset=default label=&amp;ldquo;Envío&amp;rdquo;]
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;a href=&#34;http://www.focalprice.com&#34;&gt; &lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/01/focalprice.gif&#34; alt=&#34;FP Logo&#34; /&gt;
-&lt;strong&gt;FocalPrice.com&lt;/strong&gt;&lt;/a&gt;
-&lt;table border=&#34;0&#34; &gt;
-&lt;tbody &gt;
-&lt;tr &gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;td &gt;Este sitio se parece bastante a DealExtreme, en cuanto a cantidad de artículos y precios. Algunas cosas hay mas en uno que en otro, pero son muy similares.
-También hice varias compras sin problemas. Puntualmente un envió no me llegó y al mes y medio lo reclamé&amp;hellip; me lo reenviaron sin pagar nada; pero insisto, eran boludeces, nada demasiado caro.
-El envio al igual que DX está rondando el mes, días más días menos.
-Quizás si quieren comprar algun celular (hay una nota abajo al respecto) en FocalPrice tienen mas variedad para elegir
-&lt;/td&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;td width=&#34;150px&#34; &gt;[xrr rating=&lt;sup&gt;4&lt;/sup&gt;&amp;frasl;&lt;sub&gt;5&lt;/sub&gt; imageset=default label=&amp;ldquo;Precio&amp;rdquo;]
-[xrr rating=&lt;sup&gt;4&lt;/sup&gt;&amp;frasl;&lt;sub&gt;5&lt;/sub&gt; imageset=default label=&amp;ldquo;Calidad&amp;rdquo;]
-[xrr rating=4.&lt;sup&gt;5&lt;/sup&gt;&amp;frasl;&lt;sub&gt;5&lt;/sub&gt; imageset=default label=&amp;ldquo;Soporte&amp;rdquo;]
-[xrr rating=4.&lt;sup&gt;5&lt;/sup&gt;&amp;frasl;&lt;sub&gt;5&lt;/sub&gt; imageset=default label=&amp;ldquo;Envío&amp;rdquo;]
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;a href=&#34;http://www.dinodirect.com&#34;&gt; &lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2012/01/DinoDirect-Logo.gif&#34; alt=&#34;DD Logo&#34; /&gt;
-&lt;strong&gt;DinoDirect.com&lt;/strong&gt;&lt;/a&gt;
-&lt;table border=&#34;0&#34; &gt;
-&lt;tbody &gt;
-&lt;tr &gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;td &gt;Este es el mejor sitio en cuanto a calidad de artículos, opciones y envío, pero asi también es el mas caro, por más que todo diga que está en promoción, es una mentira.
-Para que que den una idea, una compra que hice en DinoDirect me dio para elegir si era 110/220V, la ficha del enchufe y el color de lo que quería; en los otros sitios suele ser bastante azaroso.
-La variedad que tiene también supera a los sitios anteriores, tiene mucha ropa y cosas para la casa que a los demás les falta.
-En el envió tiene mucho más cuidado, suelen mandar todo con mucha protección así que es dificil que algo llegue roto. Además quizas sea sólo casualidad, pero los pedidos no me demoraron mucho más de 20 días.
-&lt;/td&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;td width=&#34;150px&#34; &gt;[xrr rating=2.&lt;sup&gt;5&lt;/sup&gt;&amp;frasl;&lt;sub&gt;5&lt;/sub&gt; imageset=default label=&amp;ldquo;Precio&amp;rdquo;]
-[xrr rating=4.&lt;sup&gt;5&lt;/sup&gt;&amp;frasl;&lt;sub&gt;5&lt;/sub&gt; imageset=default label=&amp;ldquo;Calidad&amp;rdquo;]
-[xrr rating=4.&lt;sup&gt;5&lt;/sup&gt;&amp;frasl;&lt;sub&gt;5&lt;/sub&gt; imageset=default label=&amp;ldquo;Soporte&amp;rdquo;]
-[xrr rating=&lt;sup&gt;5&lt;/sup&gt;&amp;frasl;&lt;sub&gt;5&lt;/sub&gt; imageset=default label=&amp;ldquo;Envío&amp;rdquo;]
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-Algunas ultimas recomendaciones, más allá del monto que compren y el tamaño del envío, tengan especial atención a:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Assorted Colos significa: &amp;ldquo;Tenemos muchos colores, te vamos a mandar el peor de todos&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Celulares: Si bien &lt;em&gt;creo que todos&lt;/em&gt; los celulares que venden esos sitios tienen una banda compatible con la de Argentina, tengan en cuenta que las importaciones a celulares están bloqueadas. Yo compré uno, dual chip, antes de que se pongan densos con el bloqueo y funcionó genial con cualquier compañia.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Tipo de pantalla de celulares: si son touchscreen, fijense que sean capacitivas y no resistivas, las primeras tienen mucha mas calidad, a las resistivas les van a tener que pegar con un martillo para que funcionen, y se rompen mucho mas fácil.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Se que esta prohibido el ingreso de cigarrillos electrónicos, por si se les ocurre comprar eso.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;El Helicóptero a radiocontrol es bueno, pero la autonomía que tiene es de unos 5 minutos con una carga de 20-25.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Si compran un muñeco de Android o de Super Mario, van a querer todos.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Para artículos que pueden llegar a romperse en el envío, traten de hacer la compra por DinoDirect, todo el packaging reduce las chances de que se rompa.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Siempre es posible que a personal del Correo Argentino le guste lo que compraron. (un saludo al hijo de puta que tiene mis remeras de Threadless, ojalá hayas sido el flaco del Tres Tiros en la boca).&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;¿Ustedes tiene alguna otra recomendación?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Para terminar, algunas compras que hice. No me juzguen, se que son idioteces, pero soy feliz con esas idioteces.&lt;/p&gt;
-
-&lt;p&gt;[nggallery id=4]&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Optimizar espacio en Google Reader</title>
-      <link>http://localhost:1313/blog/posts/optimizar-espacio-en-google-reader/</link>
-      <pubDate>Wed, 09 Nov 2011 21:02:57 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/optimizar-espacio-en-google-reader/</guid>
-      <description>&lt;p&gt;Como ya todos los usuarios de Google Reader se habrán dado cuenta, Google arruinó un gran servicio.
-No voy a hablar de lo que ya me quejé mucho en Google+ y Twitter ;)&lt;/p&gt;
-
-&lt;p&gt;Estuve buscando alternativas, ninguna satisfació mis necesidades. Por suerte existen algunas modificaciones que podemos hacer para optimizar un poco el espacio, que tanto saca esa fucking barra superior de 0.1% de usabilidad.&lt;/p&gt;
-
-&lt;p&gt;Primer hay que instalar &lt;a href=&#34;https://addons.mozilla.org/es-es/firefox/addon/greasemonkey/&#34;&gt;GraseMonkey&lt;/a&gt; (addon en Firefox, supongo que está en otros navegadores), que permite via Javascript modificar funcionalidades de las páginas.
-El Script que más me gustó es &lt;a href=&#34;http://userscripts.org/scripts/show/116957&#34;&gt;Google Reader Compact Minimal For Small Screen &lt;/a&gt; pero hay muchos mas (muchos usuarios salieron furiosos a hacerlos). Sólo basta apretar &amp;ldquo;Install&amp;rdquo; con la extensión ya activada.&lt;/p&gt;
-
-&lt;p&gt;Así quedaría una vez instalado. Como verán saqué el screenshot en una ventana chica y se ve bastante espacio util. Una pena que la funcionalidad de compartir no pueda ser habilitada tan fácilmente.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/11/Screenshot-at-2011-11-09-175524.png&#34;&gt;&lt;img src=&#34;http://blog.jesusroldan.com/wp-content/uploads/2011/11/Screenshot-at-2011-11-09-175524-300x125.png&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -239,24 +58,25 @@ El Script que más me gustó es &lt;a href=&#34;http://userscripts.org/scripts/s
       <pubDate>Wed, 31 Aug 2011 20:43:42 +0000</pubDate>
       
       <guid>http://localhost:1313/blog/posts/virtualboxes-org-descarga-de-maquinas-virtuales/</guid>
-      <description>&lt;p&gt;¿Les gusta probar diferentes Sistemas Operativos?
-¿Te da &lt;del&gt;paja&lt;/del&gt; pereza instalarlos?
-¿Virtualizas?
-Entonces &lt;a href=&#34;http://virtualboxes.org/&#34;&gt;&lt;strong&gt;VirtualBoxes.org&lt;/strong&gt;&lt;/a&gt; es eso que no sabías que necesitabas. Al momento de escribir el texto, el sitio tiene 42 Sistemas Operativos diferentes, algunos con varias versiones del mismo.
-El sitio se encarga de subir los archivos &lt;a href=&#34;http://filext.com/file-extension/VDI&#34;&gt;.vdi&lt;/a&gt; para importar en VirtualBox. Las descargas son directas, compresiones en 7zip hosteadas en Sourceforge.&lt;/p&gt;
+      <description>&lt;p&gt;¿Les gusta probar diferentes Sistemas Operativos?&lt;/p&gt;
 
-&lt;!-- more --&gt;
+&lt;p&gt;¿Te aburre instalarlos?&lt;/p&gt;
+
+&lt;p&gt;¿Virtualizas?&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Entonces &lt;a href=&#34;http://virtualboxes.org/&#34;&gt;&lt;strong&gt;VirtualBoxes.org&lt;/strong&gt;&lt;/a&gt; es eso que no sabías que necesitabas. Al momento de escribir el texto, el sitio tiene 42 Sistemas Operativos diferentes, algunos con varias versiones del mismo.&lt;/p&gt;
+
+&lt;p&gt;El sitio se encarga de subir los archivos &lt;a href=&#34;http://filext.com/file-extension/VDI&#34;&gt;.vdi&lt;/a&gt; para importar en VirtualBox. Las descargas son directas, compresiones en 7zip hosteadas en Sourceforge.&lt;/p&gt;
 
 &lt;p&gt;Tiene imágenes de sistemas:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;GNU/Linux&lt;/strong&gt;: Desde los más comunes como Fedora, Ubuntu o Debian hasta algunas menos populares como DeLi, gNewSense (la recomienda RMS), Moblin (orientada a netbooks) entre muchas otras.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Solaris&lt;/strong&gt;: OpenSolaris, MilaX, Nexenta&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;FreeBSD/BSD&lt;/strong&gt;: Debian GNU/kFreeBSD, FreeBSD&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;y algunos mas como MINIX, Haiku (basado en BeOS), ReactOS, Android, FreeDOS y algunos más&amp;hellip;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GNU/Linux&lt;/strong&gt;: Desde los más comunes como Fedora, Ubuntu o Debian hasta algunas menos populares como DeLi, gNewSense (la recomienda RMS), Moblin (orientada a netbooks) entre muchas otras.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Solaris&lt;/strong&gt;: OpenSolaris, MilaX, Nexenta&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FreeBSD/BSD&lt;/strong&gt;: Debian GNU/kFreeBSD, FreeBSD&lt;/li&gt;
+&lt;li&gt;y algunos mas como MINIX, Haiku (basado en BeOS), ReactOS, Android, FreeDOS y algunos más&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;em&gt;En donde están los links, tambien se encuentran los datos de login&lt;/em&gt;.&lt;/p&gt;

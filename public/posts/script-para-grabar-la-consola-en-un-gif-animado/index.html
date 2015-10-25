@@ -7,11 +7,11 @@
 		<meta name="author" content="xeBuz">
 		<meta name="description" content="Personal Website">
 		<meta name="generator" content="Hugo 0.14" />
-		<title>Script para grabar la consola en un .gif animado &middot; Personal Blog</title>
+		<title>Script para grabar la consola en un .gif animado &middot; xeBuz personal blog</title>
 		<link rel="shortcut icon" href="http://localhost:1313/blog/images/favicon.ico">
 		<link rel="stylesheet" href="http://localhost:1313/blog/css/style.css">
 		<link rel="stylesheet" href="http://localhost:1313/blog/css/highlight.css">
-		<link href="http://localhost:1313/blog/index.xml" rel="alternate" type="application/rss+xml" title="Personal Blog" />
+		<link href="http://localhost:1313/blog/index.xml" rel="alternate" type="application/rss+xml" title="xeBuz personal blog" />
 	</head>
     <body>
        <nav class="main-nav">
@@ -34,26 +34,37 @@
                 <header>
                     <h1>Script para grabar la consola en un .gif animado</h1>
                     <h2 class="headline">October 18, 2012</h2>
+
+                    <h2 class="tags">
+                     
+                          #<a href="http://localhost:1313/blog/tags/dev">dev</a>&nbsp;
+                    
+                          #<a href="http://localhost:1313/blog/tags/bash">bash</a>&nbsp;
+                    
+                          #<a href="http://localhost:1313/blog/tags/linux">linux</a>&nbsp;
+                    
+                    </h2>
+
                 </header>
                 <section id="post-body">
                     <p>Hoy me surgió una necesidad, que me pareció bastante simple pero no encontré herramientas simples que me lo solucionaran. Les dejo este script, que graba un gif de la consola durante X segundos (idea de @shinax y @rootmyword). Ese valor se lo pasamos por parámetro (no lo valido ni tiene default, porque la vida es demasiado corta para controlarlo) . Hay que correr el script con un &amp; al final de la línea, asi pasa a correr en background y podemos usar la consola.</p>
 
-<pre><code>#!/bin/bash
-clear
-mkdir temp_gif
+<pre><code class="language-bash">    #!/bin/bash
+    clear
+    mkdir temp_gif
 
-segs=`expr $1 \* 5`
+    segs=`expr $1 \* 5`
 
-for (( i = 1; i &lt;= $segs ; i++ ));
-do
-    printf -v number &quot;%06d&quot; $i
-    import -window $WINDOWID temp_gif/$number.gif 
-    sleep 0.2
-done
+    for (( i = 1; i &lt;= $segs ; i++ ));
+    do
+        printf -v number &quot;%06d&quot; $i
+        import -window $WINDOWID temp_gif/$number.gif
+        sleep 0.2
+    done
 
-convert -delay 20 -loop 0 temp_gif/*.gif animacion.gif
+    convert -delay 20 -loop 0 temp_gif/*.gif animacion.gif
 
-rm -R temp_gif
+    rm -R temp_gif
 </code></pre>
 
 <p>El código terminó siendo más simple de lo que pensaba, toda la magia la hace <strong>ImageMagick</strong>. Explico por línea, porque la idea siempre es aprender como funciona:
@@ -69,7 +80,7 @@ Línea 13. Toma todas las imágenes de la carpeta, las concatena con un delay de
                         <img class="avatar" src="http://localhost:1313/blog/images/avatar.png">
                         <div>
                             <span class="dark">xeBuz</span>
-                            <span>I&#39;m an enthusiastic gopher.</span>
+                            <span>lalalala</span>
                         </div>
                     </a>
                 <section id="sharing">
@@ -93,43 +104,11 @@ Línea 13. Toma todas las imágenes de la carpeta, las concatena con un delay de
     
     
         
-        <li>
-            <a href="http://localhost:1313/blog/posts/no-close-tabs-firefox-31/">Close Tab en Firefox 31<aside class="dates">May 14</aside></a>
-        </li>
-        
-   
-    
-        
-        <li>
-            <a href="http://localhost:1313/blog/posts/newest/">Just another sample post<aside class="dates">Mar 29</aside></a>
-        </li>
-        
-   
-    
-        
-        <li>
-            <a href="http://localhost:1313/blog/posts/middle/">Second Post<aside class="dates">Mar 28</aside></a>
-        </li>
-        
-   
-    
-        
-        <li>
-            <a href="http://localhost:1313/blog/posts/oldest/">First Post<aside class="dates">Mar 27</aside></a>
-        </li>
-        
    
     
         
         <li>
             <a href="http://localhost:1313/blog/posts/crazy-little-thing-called-perl/">Crazy little thing called Perl: Introducción al lenguaje<aside class="dates">Mar 5</aside></a>
-        </li>
-        
-   
-    
-        
-        <li>
-            <a href="http://localhost:1313/blog/posts/bundles-de-juegos-varias-opciones-disponibles/">Bundles de juegos, varias opciones disponibles<aside class="dates">Feb 27</aside></a>
         </li>
         
    
@@ -150,14 +129,38 @@ Línea 13. Toma todas las imágenes de la carpeta, las concatena con un delay de
     
         
         <li>
-            <a href="http://localhost:1313/blog/posts/licencia-para-ir-al-cine/">Licencia para ir al cine<aside class="dates">Jul 1</aside></a>
+            <a href="http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/">Barra de progreso de Arch Linux para Python<aside class="dates">Oct 21</aside></a>
+        </li>
+        
+   
+    
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/">Lo que quedó de la charla de desarrollo web de videojuegos<aside class="dates">Sep 7</aside></a>
         </li>
         
    
     
         
         <li>
-            <a href="http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/">Barra de progreso de Arch Linux para Python<aside class="dates">Oct 21</aside></a>
+            <a href="http://localhost:1313/blog/posts/script-para-generar-playlists-dinamicas-en-mpd/">Script para generar playlists dinámicas en MPD <aside class="dates">Aug 10</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/">Un &#34;bot&#34; de Twitter, con Python en un par de minutos<aside class="dates">Jul 4</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://localhost:1313/blog/posts/cron-automatizar-scripts-como-un-titan/">Cron, automatizar scripts como un titán<aside class="dates">May 22</aside></a>
         </li>
         
    
@@ -175,5 +178,8 @@ Línea 13. Toma todas las imágenes de la carpeta, las concatena con un delay de
 <script>hljs.initHighlightingOnLoad();</script>
 
 
-    </body>
+    <script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
 </html>
