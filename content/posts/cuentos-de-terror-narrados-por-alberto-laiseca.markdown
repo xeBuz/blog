@@ -52,8 +52,8 @@ Les dejo los audios de varios capítulos (están en Youtube si quieren ver los v
 
 
 
-[Descarga en formato MP3](http://www.jesusroldan.com/Alberto%20Laiseca%20-%20Cuentos%20de%20Terror.rar)
-[Descarga en formato OGG](http://www.jesusroldan.com/Alberto%20Laiseca%20-%20Cuentos%20de%20Terror.tar.gz)
+[Descarga en formato MP3](https://mega.nz/#!3IImGIAQ!JqYYuDDX1W_J85tBJ8EWxsaHH9zzp3vor1MTYfAQ9sc)
+[Descarga en formato OGG](https://mega.nz/#!7JxWlKrI!3cvCLzYeHSYpg62DLoMfRsnW_L0dr6bia4UPfIyX75Y)
 
 
 

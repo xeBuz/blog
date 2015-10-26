@@ -14,7 +14,7 @@ canonifyurls = true
 [params]
     name = "xeBuz"
     description = "Personal Website"
-    bio = "Developer - Programmer - Gopher"
+    bio = "Developer - Viking.tag.gz - Nerd"
 
     # Enter optionally your twitter account
     twitter = "xeBuz"
@@ -37,7 +37,7 @@ canonifyurls = true
     readMore = ""
     copyright = ""
     # Sharing options and author information in posts
-    aboutAuthor = "lalalala"
+    aboutAuthor = "Salteño patagónico. Dev. Pagan. Burger-maker. Brewer-wannabie. Metalhead"
     tweet = ""
     share = ""
     # 404 page
