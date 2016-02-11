@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cvs on xeBuz personal blog</title>
+    <link>http://localhost:1313/blog/cv/</link>
+    <description>Recent content in Cvs on xeBuz personal blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 20 Jun 2015 14:02:37 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/cv/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Resume</title>
+      <link>http://localhost:1313/blog/cv/</link>
+      <pubDate>Sat, 20 Jun 2015 14:02:37 +0200</pubDate>
+      
+      <guid>http://localhost:1313/blog/cv/</guid>
+      <description>
+
+&lt;h2 id=&#34;software-developer:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Software Developer&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;e-mail&lt;/em&gt;: jesus.roldan@gmail.com&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;phone&lt;/em&gt;: +54 9 351 2550002&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;skype&lt;/em&gt;: @jesusfroldan&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;GitHub&lt;/em&gt; @xeBuz&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;site&lt;/em&gt;: &lt;a href=&#34;http://blog.jesusroldan.com&#34;&gt;http://blog.jesusroldan.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;birthplace&lt;/em&gt;: Córdoba, Argentina&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;skills:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Skills&lt;/h2&gt;
+
+&lt;h4 id=&#34;back-end:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Back-End&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;li&gt;Delphi&lt;/li&gt;
+&lt;li&gt;PHP&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;front-end:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Front-End&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;JavaScript&lt;/li&gt;
+&lt;li&gt;HTML5&lt;/li&gt;
+&lt;li&gt;CSS&lt;/li&gt;
+&lt;li&gt;SASS&lt;/li&gt;
+&lt;li&gt;jQuery&lt;/li&gt;
+&lt;li&gt;Foundation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;work-experience:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Work Experience&lt;/h3&gt;
+
+&lt;h4 id=&#34;globant:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Globant&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;WebUI Developer&lt;/em&gt;
+&lt;em&gt;Córdoba, Córdoba&lt;/em&gt;
+&lt;em&gt;May 2013 - May 2014&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I worked as front-end and back-end.
+In the first project, I was working for Tarjeta Naranja, a financial entity, with JavaScript (without any framework), HTML5, SASS, Compass and Foundation developing a responsive site (desktop/tablet/mobile).
+On the second project, I was working with JavaScript and Perl, for the LANTAM website, one of the biggest airline in South America.&lt;/p&gt;
+
+&lt;h4 id=&#34;flexxus:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Flexxus&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;Delphi Developer&lt;/em&gt;
+&lt;em&gt;Córdoba, Córdoba&lt;/em&gt;
+&lt;em&gt;August 2009 - May 2013&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I worked for a company with over 200 clients that use the ERP software we developed with Delphi and Firebird.
+My functions were bug fixing and application upgrades.
+Daily relational database use. SQL knowledge.&lt;/p&gt;
+
+&lt;h4 id=&#34;delphi-famar-río-grande-tierra-del-fuego:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Delphi - Famar Río Grande, Tierra del Fuego&lt;/h4&gt;
+
+&lt;p&gt;SysAdmin - Helpdesk
+March 2006 July 2009&lt;/p&gt;
+
+&lt;p&gt;I was in charge of hardware maintenance (printers and computers) and on-site IT support at first.
+After that I started developing, but I was mainly in charge of Windows Server and Debian server administration, with services like: ISS, Active Directory, WSUS, Squid Proxy, Nagios and MS-SQL Server.
+Education
+Blas Pascal University&lt;/p&gt;
+
+&lt;p&gt;IT Degree, 2009 - 2010&lt;/p&gt;
+
+&lt;p&gt;UTN - Río Grande&lt;/p&gt;
+
+&lt;p&gt;Technical Degree in Programming, 2008 - 2009&lt;/p&gt;
+
+&lt;p&gt;CENT35&lt;/p&gt;
+
+&lt;p&gt;Technical Degree in Systems Analysis, 2004 - 2007
+Hobbies and Interests&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Frustrated draughtsman.
+Frustrated bass player.
+Music enthusiast.
+Avid reader.
+Casual gamer.
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
