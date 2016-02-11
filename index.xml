@@ -10,15 +10,6 @@
     <atom:link href="http://xebuz.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>About</title>
-      <link>http://xebuz.github.io/blog/about/</link>
-      <pubDate>Sat, 20 Jun 2015 14:02:37 +0200</pubDate>
-      
-      <guid>http://xebuz.github.io/blog/about/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Resume</title>
       <link>http://xebuz.github.io/blog/cv/</link>
       <pubDate>Sat, 20 Jun 2015 14:02:37 +0200</pubDate>
@@ -107,6 +98,16 @@ Music enthusiast.
 Avid reader.
 Casual gamer.
 &lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://xebuz.github.io/blog/about/</link>
+      <pubDate>Sat, 20 Jun 2015 14:02:37 +0200</pubDate>
+      
+      <guid>http://xebuz.github.io/blog/about/</guid>
+      <description>&lt;p&gt;I am terse writing self-descriptions&lt;/p&gt;
 </description>
     </item>
     
