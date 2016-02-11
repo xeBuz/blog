@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cvs on xeBuz personal blog</title>
-    <link>http://localhost:1313/blog/cv/</link>
+    <link>http://xebuz.github.io/blog/cv/</link>
     <description>Recent content in Cvs on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 20 Jun 2015 14:02:37 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/cv/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://xebuz.github.io/blog/cv/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Resume</title>
-      <link>http://localhost:1313/blog/cv/</link>
+      <link>http://xebuz.github.io/blog/cv/</link>
       <pubDate>Sat, 20 Jun 2015 14:02:37 +0200</pubDate>
       
-      <guid>http://localhost:1313/blog/cv/</guid>
+      <guid>http://xebuz.github.io/blog/cv/</guid>
       <description>
 
 &lt;h2 id=&#34;software-developer:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Software Developer&lt;/h2&gt;
