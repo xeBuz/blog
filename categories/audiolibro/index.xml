@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Audiolibro on xeBuz personal blog</title>
-    <link>http://xebuz.github.io/blog/categories/audiolibro/</link>
+    <link>http://localhost:1313/blog/categories/audiolibro/</link>
     <description>Recent content in Audiolibro on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 24 Apr 2012 15:54:25 +0000</lastBuildDate>
-    <atom:link href="http://xebuz.github.io/blog/categories/audiolibro/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/categories/audiolibro/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Cuentos de Terror narrados por Alberto Laiseca</title>
-      <link>http://xebuz.github.io/blog/posts/cuentos-de-terror-narrados-por-alberto-laiseca/</link>
+      <link>http://localhost:1313/blog/posts/cuentos-de-terror-narrados-por-alberto-laiseca/</link>
       <pubDate>Tue, 24 Apr 2012 15:54:25 +0000</pubDate>
       
-      <guid>http://xebuz.github.io/blog/posts/cuentos-de-terror-narrados-por-alberto-laiseca/</guid>
+      <guid>http://localhost:1313/blog/posts/cuentos-de-terror-narrados-por-alberto-laiseca/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/FQsJ1G4.jpg&#34; alt=&#34;a&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Alberto Laiseca, un escritor conocido por su estilo sombrío y por haber dejado la obra de literatura argentina más extensa, Los Sorias, que consta de 1.300 páginas (obra que no tuve la oportunidad ni el tiempo de leer), allá por el 2001 apareció en las noche de I-Sat narrando grandes clásicos de la literatura; cigarrillo en mano, primeros planos, sombras y luces ténues, en 10 minutos era capaz de lograr un ambiente ideal para los cuentos que contaba.&lt;/p&gt;

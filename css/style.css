@@ -305,7 +305,7 @@ hr {
 	display: block;
 	border: none;
 	height: 1px;
-	margin: 40px auto;
+	margin: 10px auto 30px;
 	background: #eee;
 }
 
@@ -659,4 +659,63 @@ h2.month {
 	.post h2.headline { font-size: 13px; }
 	.post h1 { font-size:24px; }
 	.post h2 { font-size:20px; }
+}
+
+
+.cv ul 	{ margin:0; padding:0; }
+.cv .basic li { list-style-type:none; list-style-position:inside; padding-bottom: 1em;}
+
+.cv .basic strong {width: 6em; display: inline-block;}
+.cv .basic i {width: 1.2em;}
+.cv #wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 40px;
+}
+
+.cv .job li {
+	list-style-type:none;
+	list-style-position:inside;
+	padding-bottom: .5em;
+}
+.cv .job .company {
+	font-weight: bold;
+	font-size: 1.35em;
+}
+.cv .job .position{
+	font-weight: bold;
+}
+.cv .job .date {
+	font-style: italic;
+	color: rgb(187, 187, 187);
+	font-size: 0.9em;
+}
+.cv .job .description {
+	padding-bottom: 2.5em;
+}
+
+.cv .study li {
+	list-style-type:none;
+	list-style-position:inside;
+	padding-bottom: .5em;
+}
+
+.cv .study .place {
+	font-weight: bold;
+	font-size: 1.1em
+}
+
+.cv .study .city {
+	font-style: italic;
+	color: rgb(187, 187, 187);
+	font-size: 0.9em;
+}
+
+.cv .study .info {}
+
+.cv .study .status {
+	font-style: italic;
+	color: rgb(187, 187, 187);
+	font-size: 0.8em;
+	padding-bottom: 2.5em;
 }
