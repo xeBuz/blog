@@ -719,3 +719,13 @@ h2.month {
 	font-size: 0.8em;
 	padding-bottom: 2.5em;
 }
+
+.center {
+	text-align: center;
+}
+
+.network {
+	color: #B1B1B1;
+	font-size: 25px;
+	padding: 10px;
+}
