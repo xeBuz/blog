@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Talks on xeBuz personal blog</title>
-    <link>http://xebuz.github.io/blog/tags/talks/</link>
+    <link>http://localhost:1313/blog/tags/talks/</link>
     <description>Recent content in Talks on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 07 Sep 2012 14:33:06 +0000</lastBuildDate>
-    <atom:link href="http://xebuz.github.io/blog/tags/talks/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/tags/talks/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Lo que quedó de la charla de desarrollo web de videojuegos</title>
-      <link>http://xebuz.github.io/blog/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</link>
+      <link>http://localhost:1313/blog/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</link>
       <pubDate>Fri, 07 Sep 2012 14:33:06 +0000</pubDate>
       
-      <guid>http://xebuz.github.io/blog/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</guid>
+      <guid>http://localhost:1313/blog/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/gSKUEw1.png&#34; alt=&#34;thumbs&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Antes que nada gracias a todos los que fueron ayer a la charla de desarrollo de videojuegos y a la gente de &lt;a href=&#34;http://uni-code-group.blogspot.com.ar/&#34;&gt;&lt;strong&gt;UNI-CODE&lt;/strong&gt;&lt;/a&gt; por la invitación. Les dejo algunos links que había prometido o temas que quedaron en el aire. Cualquier cosa avisen.&lt;/p&gt;

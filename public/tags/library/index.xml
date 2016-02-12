@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Library on xeBuz personal blog</title>
-    <link>http://xebuz.github.io/blog/tags/library/</link>
+    <link>http://localhost:1313/blog/tags/library/</link>
     <description>Recent content in Library on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 21 Oct 2012 20:49:21 +0000</lastBuildDate>
-    <atom:link href="http://xebuz.github.io/blog/tags/library/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/tags/library/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Barra de progreso de Arch Linux para Python</title>
-      <link>http://xebuz.github.io/blog/posts/barra-de-progreso-de-arch-linux-para-python/</link>
+      <link>http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/</link>
       <pubDate>Sun, 21 Oct 2012 20:49:21 +0000</pubDate>
       
-      <guid>http://xebuz.github.io/blog/posts/barra-de-progreso-de-arch-linux-para-python/</guid>
+      <guid>http://localhost:1313/blog/posts/barra-de-progreso-de-arch-linux-para-python/</guid>
       <description>&lt;p&gt;Hace unos días me puse a &lt;em&gt;portar&lt;/em&gt; la barra de progreso que tiene el sistema de paquetes de &lt;a href=&#34;http://blog.jesusroldan.com/2011/12/28/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/&#34;&gt;&lt;strong&gt;Arch Linux&lt;/strong&gt;&lt;/a&gt; (activando la opción &lt;strong&gt;ILoveCandy&lt;/strong&gt;) a Python 3.X y 2.7. De momento está en fase de prueba, pero es dentro de todo funcional, prometo ir actualizándola cuando pueda.&lt;/p&gt;
 
 &lt;p&gt;Para poder instalarlo, pueden bajarse los fuentes &lt;a href=&#34;https://github.com/xeBuz/pacman-progressbar&#34;&gt;desde &lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt; o directamente desde PyPi:&lt;/p&gt;

@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on xeBuz personal blog</title>
-    <link>http://xebuz.github.io/blog/tags/linux/</link>
+    <link>http://localhost:1313/blog/tags/linux/</link>
     <description>Recent content in Linux on xeBuz personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 18 Oct 2012 02:03:52 +0000</lastBuildDate>
-    <atom:link href="http://xebuz.github.io/blog/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Script para grabar la consola en un .gif animado</title>
-      <link>http://xebuz.github.io/blog/posts/script-para-grabar-la-consola-en-un-gif-animado/</link>
+      <link>http://localhost:1313/blog/posts/script-para-grabar-la-consola-en-un-gif-animado/</link>
       <pubDate>Thu, 18 Oct 2012 02:03:52 +0000</pubDate>
       
-      <guid>http://xebuz.github.io/blog/posts/script-para-grabar-la-consola-en-un-gif-animado/</guid>
+      <guid>http://localhost:1313/blog/posts/script-para-grabar-la-consola-en-un-gif-animado/</guid>
       <description>&lt;p&gt;Hoy me surgió una necesidad, que me pareció bastante simple pero no encontré herramientas simples que me lo solucionaran. Les dejo este script, que graba un gif de la consola durante X segundos (idea de @shinax y @rootmyword). Ese valor se lo pasamos por parámetro (no lo valido ni tiene default, porque la vida es demasiado corta para controlarlo) . Hay que correr el script con un &amp;amp; al final de la línea, asi pasa a correr en background y podemos usar la consola.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    #!/bin/bash
@@ -45,10 +45,10 @@ Línea 13. Toma todas las imágenes de la carpeta, las concatena con un delay de
     
     <item>
       <title>Cron, automatizar scripts como un titán</title>
-      <link>http://xebuz.github.io/blog/posts/cron-automatizar-scripts-como-un-titan/</link>
+      <link>http://localhost:1313/blog/posts/cron-automatizar-scripts-como-un-titan/</link>
       <pubDate>Tue, 22 May 2012 16:48:07 +0000</pubDate>
       
-      <guid>http://xebuz.github.io/blog/posts/cron-automatizar-scripts-como-un-titan/</guid>
+      <guid>http://localhost:1313/blog/posts/cron-automatizar-scripts-como-un-titan/</guid>
       <description>&lt;p&gt;Hace un tiempo escribí sobre [la utilización del comando &lt;strong&gt;at&lt;/strong&gt;], ahora le toca el turno a &lt;strong&gt;cron&lt;/strong&gt;. ¿Tron? No, cron. ¡Troz! (?).
 ¿Qué es cron? Es un administrador de procesos que se ejecuta a un interválo de tiempo específico. Si vienen del Dark Side, sería el equivalente a las &lt;em&gt;Tareas Programadas&lt;/em&gt; de W.&lt;/p&gt;
 
@@ -117,10 +117,10 @@ También pueden editar los archivos de otros usuarios, con **contab -u user -e *
     
     <item>
       <title>zsh, una shell con Z de &#34;ZOMG que buena shell&#34;</title>
-      <link>http://xebuz.github.io/blog/posts/zsh/</link>
+      <link>http://localhost:1313/blog/posts/zsh/</link>
       <pubDate>Thu, 20 Oct 2011 18:26:48 +0000</pubDate>
       
-      <guid>http://xebuz.github.io/blog/posts/zsh/</guid>
+      <guid>http://localhost:1313/blog/posts/zsh/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Z Bash&lt;/strong&gt;, o mejor &lt;strong&gt;zsh&lt;/strong&gt;, es un interprete de comándos (&lt;em&gt;shell&lt;/em&gt;), excelente alternativa al Bash que viene por defecto (&lt;em&gt;Bourne-again Shell&lt;/em&gt;). Como mejoras, se destaca:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -212,10 +212,10 @@ Además, permite compartir el historial entre sesiones, muy comodo si entramos d
     
     <item>
       <title>Tips Linuxeros: Alias para Todos</title>
-      <link>http://xebuz.github.io/blog/posts/tips-para-linux-alias-para-todos/</link>
+      <link>http://localhost:1313/blog/posts/tips-para-linux-alias-para-todos/</link>
       <pubDate>Fri, 02 Sep 2011 21:33:09 +0000</pubDate>
       
-      <guid>http://xebuz.github.io/blog/posts/tips-para-linux-alias-para-todos/</guid>
+      <guid>http://localhost:1313/blog/posts/tips-para-linux-alias-para-todos/</guid>
       <description>&lt;p&gt;Los alias en Linux son shortcuts o &lt;em&gt;sinónimos&lt;/em&gt; que podemos emplear para ejecutar comandos en la terminal.
 Son muy útiles para correr comandos largos o simplemente crear nombres mas amigables, para algún comando que nos resulte deficil de recordar o a los que usemos mas seguido.
 Para crearlos debemos escribir en el archivo &lt;strong&gt;~.bashrc&lt;/strong&gt; para dejarlos disponibles al usuario, o en /etc/bash.bashrc para dejarlos disponibles en todo el sistema.&lt;/p&gt;
@@ -311,10 +311,10 @@ Para crearlos debemos escribir en el archivo &lt;strong&gt;~.bashrc&lt;/strong&g
     
     <item>
       <title>VirtualBoxes.org - Descarga de máquinas virtuales</title>
-      <link>http://xebuz.github.io/blog/posts/virtualboxes-org-descarga-de-maquinas-virtuales/</link>
+      <link>http://localhost:1313/blog/posts/virtualboxes-org-descarga-de-maquinas-virtuales/</link>
       <pubDate>Wed, 31 Aug 2011 20:43:42 +0000</pubDate>
       
-      <guid>http://xebuz.github.io/blog/posts/virtualboxes-org-descarga-de-maquinas-virtuales/</guid>
+      <guid>http://localhost:1313/blog/posts/virtualboxes-org-descarga-de-maquinas-virtuales/</guid>
       <description>&lt;p&gt;¿Les gusta probar diferentes Sistemas Operativos?&lt;/p&gt;
 
 &lt;p&gt;¿Te aburre instalarlos?&lt;/p&gt;
@@ -342,10 +342,10 @@ Para crearlos debemos escribir en el archivo &lt;strong&gt;~.bashrc&lt;/strong&g
     
     <item>
       <title>¿De dónde proviene el nombre de Arch Linux?</title>
-      <link>http://xebuz.github.io/blog/posts/de-donde-proviene-el-nombre-de-arch-linux/</link>
+      <link>http://localhost:1313/blog/posts/de-donde-proviene-el-nombre-de-arch-linux/</link>
       <pubDate>Wed, 27 Jul 2011 18:49:00 +0000</pubDate>
       
-      <guid>http://xebuz.github.io/blog/posts/de-donde-proviene-el-nombre-de-arch-linux/</guid>
+      <guid>http://localhost:1313/blog/posts/de-donde-proviene-el-nombre-de-arch-linux/</guid>
       <description>&lt;p&gt;Hace unos cuantos días, @N1colas_ compartío &lt;a href=&#34;http://usemoslinux.blogspot.com/2011/07/de-donde-provienen-los-nombres-de-las.html&#34;&gt;este&lt;/a&gt; enlance, en donde hablaban del origen de los nombres de varias distros de Linux.&lt;/p&gt;
 
 &lt;p&gt;No estaba &lt;strong&gt;Arch&lt;/strong&gt;, y hay varios comentarios al respecto con supuestos bastante buenos.&lt;/p&gt;
@@ -394,10 +394,10 @@ Tal vez lejos de la verdad con respecto a Arch Linux, pero estoy orgulloso de el
     
     <item>
       <title>Tips Linuxeros: Manejo del historial</title>
-      <link>http://xebuz.github.io/blog/posts/tips-para-linux-manejo-del-historial/</link>
+      <link>http://localhost:1313/blog/posts/tips-para-linux-manejo-del-historial/</link>
       <pubDate>Fri, 22 Jul 2011 00:16:16 +0000</pubDate>
       
-      <guid>http://xebuz.github.io/blog/posts/tips-para-linux-manejo-del-historial/</guid>
+      <guid>http://localhost:1313/blog/posts/tips-para-linux-manejo-del-historial/</guid>
       <description>&lt;p&gt;Quizás una de las mejores funcionalidades en la terminal de Linux, o por lo menos una de las más productivas, es la capacidad de generar un historial de lo que ejecutamos.
 Ahora bien, existen varias formas de recorrerlo. La más común y la que seguramente todos usan, es mediante las flechas arriba y abajo, muy util, pero también existen otras formas de hacerlo :)&lt;/p&gt;
 
