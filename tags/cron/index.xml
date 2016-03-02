@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cron on xeBuz personal blog</title>
-    <link>http://xebuz.github.io/blog/tags/cron/</link>
-    <description>Recent content in Cron on xeBuz personal blog</description>
+    <title>Cron on xeBuz Personal Website</title>
+    <link>http://localhost:1313/tags/cron/</link>
+    <description>Recent content in Cron on xeBuz Personal Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 22 May 2012 16:48:07 +0000</lastBuildDate>
-    <atom:link href="http://xebuz.github.io/blog/tags/cron/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/cron/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Cron, automatizar scripts como un titán</title>
-      <link>http://xebuz.github.io/blog/posts/cron-automatizar-scripts-como-un-titan/</link>
+      <link>http://localhost:1313/posts/cron-automatizar-scripts-como-un-titan/</link>
       <pubDate>Tue, 22 May 2012 16:48:07 +0000</pubDate>
       
-      <guid>http://xebuz.github.io/blog/posts/cron-automatizar-scripts-como-un-titan/</guid>
+      <guid>http://localhost:1313/posts/cron-automatizar-scripts-como-un-titan/</guid>
       <description>&lt;p&gt;Hace un tiempo escribí sobre [la utilización del comando &lt;strong&gt;at&lt;/strong&gt;], ahora le toca el turno a &lt;strong&gt;cron&lt;/strong&gt;. ¿Tron? No, cron. ¡Troz! (?).
 ¿Qué es cron? Es un administrador de procesos que se ejecuta a un interválo de tiempo específico. Si vienen del Dark Side, sería el equivalente a las &lt;em&gt;Tareas Programadas&lt;/em&gt; de W.&lt;/p&gt;
 

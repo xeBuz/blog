@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bash on xeBuz personal blog</title>
-    <link>http://xebuz.github.io/blog/tags/bash/</link>
-    <description>Recent content in Bash on xeBuz personal blog</description>
+    <title>Bash on xeBuz Personal Website</title>
+    <link>http://localhost:1313/tags/bash/</link>
+    <description>Recent content in Bash on xeBuz Personal Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 18 Oct 2012 02:03:52 +0000</lastBuildDate>
-    <atom:link href="http://xebuz.github.io/blog/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/bash/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Script para grabar la consola en un .gif animado</title>
-      <link>http://xebuz.github.io/blog/posts/script-para-grabar-la-consola-en-un-gif-animado/</link>
+      <link>http://localhost:1313/posts/script-para-grabar-la-consola-en-un-gif-animado/</link>
       <pubDate>Thu, 18 Oct 2012 02:03:52 +0000</pubDate>
       
-      <guid>http://xebuz.github.io/blog/posts/script-para-grabar-la-consola-en-un-gif-animado/</guid>
+      <guid>http://localhost:1313/posts/script-para-grabar-la-consola-en-un-gif-animado/</guid>
       <description>&lt;p&gt;Hoy me surgió una necesidad, que me pareció bastante simple pero no encontré herramientas simples que me lo solucionaran. Les dejo este script, que graba un gif de la consola durante X segundos (idea de @shinax y @rootmyword). Ese valor se lo pasamos por parámetro (no lo valido ni tiene default, porque la vida es demasiado corta para controlarlo) . Hay que correr el script con un &amp;amp; al final de la línea, asi pasa a correr en background y podemos usar la consola.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    #!/bin/bash
@@ -45,10 +45,10 @@ Línea 13. Toma todas las imágenes de la carpeta, las concatena con un delay de
     
     <item>
       <title>zsh, una shell con Z de &#34;ZOMG que buena shell&#34;</title>
-      <link>http://xebuz.github.io/blog/posts/zsh/</link>
+      <link>http://localhost:1313/posts/zsh/</link>
       <pubDate>Thu, 20 Oct 2011 18:26:48 +0000</pubDate>
       
-      <guid>http://xebuz.github.io/blog/posts/zsh/</guid>
+      <guid>http://localhost:1313/posts/zsh/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Z Bash&lt;/strong&gt;, o mejor &lt;strong&gt;zsh&lt;/strong&gt;, es un interprete de comándos (&lt;em&gt;shell&lt;/em&gt;), excelente alternativa al Bash que viene por defecto (&lt;em&gt;Bourne-again Shell&lt;/em&gt;). Como mejoras, se destaca:&lt;/p&gt;
 
 &lt;ul&gt;
