@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dev on xeBuz Personal Website</title>
-    <link>http://localhost:1313/tags/dev/</link>
+    <link>http://jesusroldan.com/tags/dev/</link>
     <description>Recent content in Dev on xeBuz Personal Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 05 Mar 2014 15:04:21 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/dev/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jesusroldan.com/tags/dev/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Crazy little thing called Perl: Introducción al lenguaje</title>
-      <link>http://localhost:1313/posts/crazy-little-thing-called-perl/</link>
+      <link>http://jesusroldan.com/posts/crazy-little-thing-called-perl/</link>
       <pubDate>Wed, 05 Mar 2014 15:04:21 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/crazy-little-thing-called-perl/</guid>
+      <guid>http://jesusroldan.com/posts/crazy-little-thing-called-perl/</guid>
       <description>&lt;p&gt;Perl está disponible para múltimples plataformas, pueden descargarlo desde &lt;a href=&#34;http://www.perl.org/get.html&#34;&gt;acá&lt;/a&gt; o desde el sistema de paquetes que utilicen. Para verificar si tienen instalado perl, en la terminal escriban &lt;em&gt;perl -v&lt;/em&gt;, si hay salida ya lo tienen instalado.&lt;/p&gt;
 
 &lt;p&gt;Para la instalación de librerías se utiliza &lt;a href=&#34;http://www.cpan.org/&#34;&gt;&lt;strong&gt;CPAN&lt;/strong&gt;&lt;/a&gt;, que es una colección de módulos libres para Perl. Pueden descargar este script o sino instalarlo desde los repositorios, por ejemplo, en un Linux basado en Debian basta correr:&lt;/p&gt;
@@ -344,10 +344,10 @@ Acá un ejemplo de como correr un test, sobre una función específica.&lt;/p&gt
     
     <item>
       <title>jQuery: Selectores y Traversing</title>
-      <link>http://localhost:1313/posts/jquery-selectores-y-traversing/</link>
+      <link>http://jesusroldan.com/posts/jquery-selectores-y-traversing/</link>
       <pubDate>Wed, 26 Feb 2014 15:56:32 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/jquery-selectores-y-traversing/</guid>
+      <guid>http://jesusroldan.com/posts/jquery-selectores-y-traversing/</guid>
       <description>&lt;p&gt;Voy a poner esto acá, haciendo las veces de ayudamemoria. Además para el que no sepa, siempre viene bien tener un listado e investigarlos.
 Selectores/Traversing (que no encontré una traducción buena) en jQuery.&lt;/p&gt;
 
@@ -430,10 +430,10 @@ Selectores/Traversing (que no encontré una traducción buena) en jQuery.&lt;/p&
     
     <item>
       <title>Barra de progreso de Arch Linux para Python</title>
-      <link>http://localhost:1313/posts/barra-de-progreso-de-arch-linux-para-python/</link>
+      <link>http://jesusroldan.com/posts/barra-de-progreso-de-arch-linux-para-python/</link>
       <pubDate>Sun, 21 Oct 2012 20:49:21 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/barra-de-progreso-de-arch-linux-para-python/</guid>
+      <guid>http://jesusroldan.com/posts/barra-de-progreso-de-arch-linux-para-python/</guid>
       <description>&lt;p&gt;Hace unos días me puse a &lt;em&gt;portar&lt;/em&gt; la barra de progreso que tiene el sistema de paquetes de &lt;a href=&#34;http://blog.jesusroldan.com/2011/12/28/tips-para-mejorar-la-instacion-de-aplicaciones-en-arch/&#34;&gt;&lt;strong&gt;Arch Linux&lt;/strong&gt;&lt;/a&gt; (activando la opción &lt;strong&gt;ILoveCandy&lt;/strong&gt;) a Python 3.X y 2.7. De momento está en fase de prueba, pero es dentro de todo funcional, prometo ir actualizándola cuando pueda.&lt;/p&gt;
 
 &lt;p&gt;Para poder instalarlo, pueden bajarse los fuentes &lt;a href=&#34;https://github.com/xeBuz/pacman-progressbar&#34;&gt;desde &lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt; o directamente desde PyPi:&lt;/p&gt;
@@ -466,10 +466,10 @@ Selectores/Traversing (que no encontré una traducción buena) en jQuery.&lt;/p&
     
     <item>
       <title>Script para grabar la consola en un .gif animado</title>
-      <link>http://localhost:1313/posts/script-para-grabar-la-consola-en-un-gif-animado/</link>
+      <link>http://jesusroldan.com/posts/script-para-grabar-la-consola-en-un-gif-animado/</link>
       <pubDate>Thu, 18 Oct 2012 02:03:52 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/script-para-grabar-la-consola-en-un-gif-animado/</guid>
+      <guid>http://jesusroldan.com/posts/script-para-grabar-la-consola-en-un-gif-animado/</guid>
       <description>&lt;p&gt;Hoy me surgió una necesidad, que me pareció bastante simple pero no encontré herramientas simples que me lo solucionaran. Les dejo este script, que graba un gif de la consola durante X segundos (idea de @shinax y @rootmyword). Ese valor se lo pasamos por parámetro (no lo valido ni tiene default, porque la vida es demasiado corta para controlarlo) . Hay que correr el script con un &amp;amp; al final de la línea, asi pasa a correr en background y podemos usar la consola.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    #!/bin/bash
@@ -500,10 +500,10 @@ Línea 13. Toma todas las imágenes de la carpeta, las concatena con un delay de
     
     <item>
       <title>Lo que quedó de la charla de desarrollo web de videojuegos</title>
-      <link>http://localhost:1313/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</link>
+      <link>http://jesusroldan.com/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</link>
       <pubDate>Fri, 07 Sep 2012 14:33:06 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</guid>
+      <guid>http://jesusroldan.com/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/gSKUEw1.png&#34; alt=&#34;thumbs&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Antes que nada gracias a todos los que fueron ayer a la charla de desarrollo de videojuegos y a la gente de &lt;a href=&#34;http://uni-code-group.blogspot.com.ar/&#34;&gt;&lt;strong&gt;UNI-CODE&lt;/strong&gt;&lt;/a&gt; por la invitación. Les dejo algunos links que había prometido o temas que quedaron en el aire. Cualquier cosa avisen.&lt;/p&gt;
@@ -524,10 +524,10 @@ Línea 13. Toma todas las imágenes de la carpeta, las concatena con un delay de
     
     <item>
       <title>Script para generar playlists dinámicas en MPD </title>
-      <link>http://localhost:1313/posts/script-para-generar-playlists-dinamicas-en-mpd/</link>
+      <link>http://jesusroldan.com/posts/script-para-generar-playlists-dinamicas-en-mpd/</link>
       <pubDate>Fri, 10 Aug 2012 13:55:24 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/script-para-generar-playlists-dinamicas-en-mpd/</guid>
+      <guid>http://jesusroldan.com/posts/script-para-generar-playlists-dinamicas-en-mpd/</guid>
       <description>&lt;p&gt;Revisando scripts viejos, me encontré con este que quizás a alguno le puede servir. La idea es ir generando dinámicamente la lista de reproducción de un server &lt;a href=&#34;http://mpd.wikia.com/&#34;&gt;MPD&lt;/a&gt; usando la &lt;a href=&#34;http://www.last.fm/api&#34;&gt;API&lt;/a&gt; de &lt;a href=&#34;http://www.last.fm/user/xeBuz&#34;&gt;Last.fm&lt;/a&gt; para encontrar artistas similares en el disco.
 Si bien ya hay clientes que tienen esta funcionalidad, como &lt;a href=&#34;http://mpd.wikia.com/wiki/Client:Ario&#34;&gt;Ario&lt;/a&gt;, suelo conectarme por SSH al server y me resulta cómodo correr el script este cuando no se que escuchar.&lt;/p&gt;
 
@@ -597,10 +597,10 @@ Si bien ya hay clientes que tienen esta funcionalidad, como &lt;a href=&#34;http
     
     <item>
       <title>Un &#34;bot&#34; de Twitter, con Python en un par de minutos</title>
-      <link>http://localhost:1313/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/</link>
+      <link>http://jesusroldan.com/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/</link>
       <pubDate>Wed, 04 Jul 2012 18:40:32 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/</guid>
+      <guid>http://jesusroldan.com/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/</guid>
       <description>
 
 &lt;p&gt;&lt;blockquote&gt;Hace falta un bot que busque los tweets de Foursquare y responda &amp;ldquo;WHO CARES?!&amp;rdquo;&lt;/p&gt;
@@ -652,10 +652,10 @@ Si bien ya hay clientes que tienen esta funcionalidad, como &lt;a href=&#34;http
     
     <item>
       <title>Descargar La Venganza Será Terrible, via Bash</title>
-      <link>http://localhost:1313/posts/descargar-la-venganza-sera-terrible-via-bash/</link>
+      <link>http://jesusroldan.com/posts/descargar-la-venganza-sera-terrible-via-bash/</link>
       <pubDate>Thu, 21 Jul 2011 02:31:17 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/descargar-la-venganza-sera-terrible-via-bash/</guid>
+      <guid>http://jesusroldan.com/posts/descargar-la-venganza-sera-terrible-via-bash/</guid>
       <description>&lt;p&gt;Este es un pequeño script que descarga (via wget) el programa La Venganza Sera Terrible de &lt;a href=&#34;http://www.alejandrodolina.com.ar/&#34;&gt;Alejando Dolina&lt;/a&gt;; utilizando los archivos que genera a diario el sitio &lt;a href=&#34;http://venganzasdelpasado.com.ar/&#34;&gt;Venganzas del Pasado&lt;/a&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
