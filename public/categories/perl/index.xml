@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Perl on xeBuz Personal Website</title>
-    <link>http://localhost:1313/categories/perl/</link>
+    <link>http://jesusroldan.com/categories/perl/</link>
     <description>Recent content in Perl on xeBuz Personal Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 05 Mar 2014 15:04:21 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/perl/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jesusroldan.com/categories/perl/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Crazy little thing called Perl: Introducción al lenguaje</title>
-      <link>http://localhost:1313/posts/crazy-little-thing-called-perl/</link>
+      <link>http://jesusroldan.com/posts/crazy-little-thing-called-perl/</link>
       <pubDate>Wed, 05 Mar 2014 15:04:21 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/crazy-little-thing-called-perl/</guid>
+      <guid>http://jesusroldan.com/posts/crazy-little-thing-called-perl/</guid>
       <description>&lt;p&gt;Perl está disponible para múltimples plataformas, pueden descargarlo desde &lt;a href=&#34;http://www.perl.org/get.html&#34;&gt;acá&lt;/a&gt; o desde el sistema de paquetes que utilicen. Para verificar si tienen instalado perl, en la terminal escriban &lt;em&gt;perl -v&lt;/em&gt;, si hay salida ya lo tienen instalado.&lt;/p&gt;
 
 &lt;p&gt;Para la instalación de librerías se utiliza &lt;a href=&#34;http://www.cpan.org/&#34;&gt;&lt;strong&gt;CPAN&lt;/strong&gt;&lt;/a&gt;, que es una colección de módulos libres para Perl. Pueden descargar este script o sino instalarlo desde los repositorios, por ejemplo, en un Linux basado en Debian basta correr:&lt;/p&gt;

@@ -2,98 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://jesusroldan.com/</loc>
     <lastmod>2015-06-20T14:02:37+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>http://jesusroldan.com/cv/</loc>
     <lastmod>2015-06-20T14:02:37+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/cv/</loc>
+    <loc>http://jesusroldan.com/about/</loc>
     <lastmod>2015-06-20T14:02:37+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/posts/crazy-little-thing-called-perl/</loc>
+    <loc>http://jesusroldan.com/posts/crazy-little-thing-called-perl/</loc>
     <lastmod>2014-03-05T15:04:21+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/posts/jquery-selectores-y-traversing/</loc>
+    <loc>http://jesusroldan.com/posts/jquery-selectores-y-traversing/</loc>
     <lastmod>2014-02-26T15:56:32+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/posts/jquery-doge-such-plugin/</loc>
+    <loc>http://jesusroldan.com/posts/jquery-doge-such-plugin/</loc>
     <lastmod>2013-12-23T14:31:40+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/posts/barra-de-progreso-de-arch-linux-para-python/</loc>
+    <loc>http://jesusroldan.com/posts/barra-de-progreso-de-arch-linux-para-python/</loc>
     <lastmod>2012-10-21T20:49:21+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/posts/script-para-grabar-la-consola-en-un-gif-animado/</loc>
+    <loc>http://jesusroldan.com/posts/script-para-grabar-la-consola-en-un-gif-animado/</loc>
     <lastmod>2012-10-18T02:03:52+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</loc>
+    <loc>http://jesusroldan.com/posts/post-charla-introduccion-al-desarrollo-web-de-videojuegos/</loc>
     <lastmod>2012-09-07T14:33:06+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/posts/script-para-generar-playlists-dinamicas-en-mpd/</loc>
+    <loc>http://jesusroldan.com/posts/script-para-generar-playlists-dinamicas-en-mpd/</loc>
     <lastmod>2012-08-10T13:55:24+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/</loc>
+    <loc>http://jesusroldan.com/posts/un-bot-de-twitter-con-python-en-un-par-de-minutos/</loc>
     <lastmod>2012-07-04T18:40:32+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/posts/cron-automatizar-scripts-como-un-titan/</loc>
+    <loc>http://jesusroldan.com/posts/cron-automatizar-scripts-como-un-titan/</loc>
     <lastmod>2012-05-22T16:48:07+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/posts/cuentos-de-terror-narrados-por-alberto-laiseca/</loc>
+    <loc>http://jesusroldan.com/posts/cuentos-de-terror-narrados-por-alberto-laiseca/</loc>
     <lastmod>2012-04-24T15:54:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/posts/zsh/</loc>
+    <loc>http://jesusroldan.com/posts/zsh/</loc>
     <lastmod>2011-10-20T18:26:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/posts/tips-para-linux-alias-para-todos/</loc>
+    <loc>http://jesusroldan.com/posts/tips-para-linux-alias-para-todos/</loc>
     <lastmod>2011-09-02T21:33:09+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/posts/virtualboxes-org-descarga-de-maquinas-virtuales/</loc>
+    <loc>http://jesusroldan.com/posts/virtualboxes-org-descarga-de-maquinas-virtuales/</loc>
     <lastmod>2011-08-31T20:43:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/posts/de-donde-proviene-el-nombre-de-arch-linux/</loc>
+    <loc>http://jesusroldan.com/posts/de-donde-proviene-el-nombre-de-arch-linux/</loc>
     <lastmod>2011-07-27T18:49:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/posts/tips-para-linux-manejo-del-historial/</loc>
+    <loc>http://jesusroldan.com/posts/tips-para-linux-manejo-del-historial/</loc>
     <lastmod>2011-07-22T00:16:16+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/posts/descargar-la-venganza-sera-terrible-via-bash/</loc>
+    <loc>http://jesusroldan.com/posts/descargar-la-venganza-sera-terrible-via-bash/</loc>
     <lastmod>2011-07-21T02:31:17+00:00</lastmod>
   </url>
   

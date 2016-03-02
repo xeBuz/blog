@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Html5 on xeBuz Personal Website</title>
-    <link>http://localhost:1313/tags/html5/</link>
+    <link>http://jesusroldan.com/tags/html5/</link>
     <description>Recent content in Html5 on xeBuz Personal Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 26 Feb 2014 15:56:32 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/html5/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jesusroldan.com/tags/html5/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>jQuery: Selectores y Traversing</title>
-      <link>http://localhost:1313/posts/jquery-selectores-y-traversing/</link>
+      <link>http://jesusroldan.com/posts/jquery-selectores-y-traversing/</link>
       <pubDate>Wed, 26 Feb 2014 15:56:32 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/jquery-selectores-y-traversing/</guid>
+      <guid>http://jesusroldan.com/posts/jquery-selectores-y-traversing/</guid>
       <description>&lt;p&gt;Voy a poner esto acá, haciendo las veces de ayudamemoria. Además para el que no sepa, siempre viene bien tener un listado e investigarlos.
 Selectores/Traversing (que no encontré una traducción buena) en jQuery.&lt;/p&gt;
 
